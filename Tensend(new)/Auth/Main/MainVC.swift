@@ -106,12 +106,12 @@ class MainVC: UIViewController {
         }
     }
     @IBAction func skipAuth(_ sender: Any) {
-        
+     
     }
     @IBAction func loginPressed(_ sender: Any) {
         if self.phoneNumberTextField.text != ""{
-            self.presenter.login(phone: self.phoneNumberTextField.text!)
-        }
+                 self.presenter.login(phone: self.phoneNumberTextField.text!)
+             }
     }
     
 

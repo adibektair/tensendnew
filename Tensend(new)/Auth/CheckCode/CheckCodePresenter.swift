@@ -8,6 +8,7 @@
 
 import UIKit
 protocol CheckCodeProtocol {
+    func setView(phone:String)
     func codeSent()
     func errorOccured()
     func correctCode()
@@ -17,9 +18,12 @@ protocol CheckCodePresenterProtocol {
     var phone: String { get set }
     func sendSmsCode(phone: String)
     func checkCode(phone: String, code: String)
+    func setView()
     init(phone: String, view: CheckCodeProtocol, router: RouterProtocol)
 }
 class CheckCodePresenter: CheckCodePresenterProtocol {
+  
+    
     
     var phone: String
     var view : CheckCodeProtocol
@@ -37,7 +41,10 @@ class CheckCodePresenter: CheckCodePresenterProtocol {
         self.phone = phone
         self.view = view
         self.router = router
+        self.setView()
     }
-    
+    func setView() {
+        self.view.setView(phone: self.phone)
+    }
     
 }

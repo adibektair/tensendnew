@@ -14,17 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
             window = UIWindow(frame: UIScreen.main.bounds)
         
-//             window.windowScene = windowScene
-             let navigationController = UINavigationController()
-             let builder = AssemblyModuleBuilder()
-             let router = Router(navController: navigationController, assemblyProtocol: builder)
-             router.initialViewController()
-             window?.rootViewController = navigationController
-             window?.makeKeyAndVisible()
+            let navigationController = UINavigationController()
+            let builder = AssemblyModuleBuilder()
+            let router = Router(navController: navigationController, assemblyProtocol: builder)
+            router.initialViewController()
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
         
         return true
     }
