@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ForYouCVC" customModule="Tensend" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="218"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="317" height="218"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Снимок экрана -4" translatesAutoresizingMaskIntoConstraints="NO" id="PJ4-FV-maQ">
+                        <rect key="frame" x="0.0" y="0.0" width="317" height="164"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="164" id="Vrd-h9-2ED"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zej-JI-kgy">
+                        <rect key="frame" x="0.0" y="174" width="34" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="iYO-B5-P62"/>
+                            <constraint firstAttribute="width" constant="34" id="lH4-dT-UCL"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сымбатты мүсін" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mY-bS-4c7">
+                        <rect key="frame" x="41" y="174" width="104" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Інжү Әнуарбекқызы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aY-dx-IhH">
+                        <rect key="frame" x="41" y="196" width="103" height="12"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                        <color key="textColor" red="0.0" green="0.28235294117647058" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="0aY-dx-IhH" firstAttribute="leading" secondItem="zej-JI-kgy" secondAttribute="trailing" constant="7" id="1hT-th-MX9"/>
+                <constraint firstItem="5mY-bS-4c7" firstAttribute="top" secondItem="zej-JI-kgy" secondAttribute="top" id="KHl-kj-RzU"/>
+                <constraint firstItem="PJ4-FV-maQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VDR-bT-f8a"/>
+                <constraint firstAttribute="bottom" secondItem="zej-JI-kgy" secondAttribute="bottom" constant="10" id="bf7-a6-QIp"/>
+                <constraint firstAttribute="trailing" secondItem="PJ4-FV-maQ" secondAttribute="trailing" id="cY3-70-x9u"/>
+                <constraint firstItem="PJ4-FV-maQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="emq-CK-544"/>
+                <constraint firstItem="zej-JI-kgy" firstAttribute="top" secondItem="PJ4-FV-maQ" secondAttribute="bottom" constant="10" id="gAx-U3-xg8"/>
+                <constraint firstItem="0aY-dx-IhH" firstAttribute="bottom" secondItem="zej-JI-kgy" secondAttribute="bottom" id="meb-Ka-fls"/>
+                <constraint firstItem="5mY-bS-4c7" firstAttribute="leading" secondItem="zej-JI-kgy" secondAttribute="trailing" constant="7" id="oDx-nh-eFp"/>
+                <constraint firstItem="zej-JI-kgy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tCU-Dm-7GM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="317" height="218"/>
+            <connections>
+                <outlet property="ava" destination="zej-JI-kgy" id="2y8-4G-abm"/>
+                <outlet property="img" destination="PJ4-FV-maQ" id="ubZ-TO-dkb"/>
+                <outlet property="name" destination="0aY-dx-IhH" id="nor-EO-xD8"/>
+                <outlet property="title" destination="5mY-bS-4c7" id="vvc-pe-O16"/>
+            </connections>
+            <point key="canvasLocation" x="290.57971014492756" y="174.10714285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Снимок экрана -4" width="157.5" height="93.5"/>
+    </resources>
+</document>
