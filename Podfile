@@ -12,6 +12,7 @@ pod 'AlamofireObjectMapper', '~> 5.0'
 pod 'SDWebImage'
 pod 'AKMaskField'
 pod 'DropDown'
+pod "EasyPeasy"
 
 
   target 'Tensend(new)Tests' do
