@@ -14,7 +14,7 @@ protocol AssemblyBuilderProtocol {
 class AssemblyModuleBuilder: AssemblyBuilderProtocol {
     func createCheckCodeVC(phone: String, router: Router) -> UIViewController {
         let view = CheckCodeView()
-        let presenter = CheckCodePresenter(phone: phone, view: view, router: router)
+        let presenter = CheckCodePresenter(phone: phone, view: view, router: router, networkLayer: NetworkLayer())
         view.presenter = presenter
         return view
     }

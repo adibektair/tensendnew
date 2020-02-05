@@ -17,18 +17,21 @@ protocol NetworkLayoutProtocol {
     func sendSMS(phone: String, callback: @escaping (_ success: Bool) -> ())
 }
 class NetworkLayer: NetworkLayoutProtocol {
+    
+    
     func sendSMS(phone: String, callback: @escaping (Bool) -> ()) {
-        Alamofire.request(apiUrl + "countries", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject{
-            (response: DataResponse<CountriesResponse>) in
+        Alamofire.request(apiUrl + "code/send", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject{
+            (response: DataResponse<StandartResponse>) in
             if let _ = response.response{
                 let model  = response.result
+                callback(model.value?.success ?? false)
 //                callback(model.value?.countries ?? [])
             }
         }
     }
     
     func getCountries(callback: @escaping ([Country]) -> ()) {
-        Alamofire.request(apiUrl + "code/send", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject{
+        Alamofire.request(apiUrl + "countries", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject{
             (response: DataResponse<CountriesResponse>) in
             if let _ = response.response{
                 let model  = response.result
