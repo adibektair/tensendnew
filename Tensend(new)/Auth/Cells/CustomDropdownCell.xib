@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CustomDropdownCell" customModule="Tensend_new_" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Ri-R1-g6x">
+                        <rect key="frame" x="3" y="3" width="38" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="8Ri-R1-g6x" secondAttribute="height" multiplier="8:8" id="mYU-pY-kd3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnU-gB-aed">
+                        <rect key="frame" x="51" y="13.5" width="37" height="17.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vnU-gB-aed" firstAttribute="centerY" secondItem="8Ri-R1-g6x" secondAttribute="centerY" id="IPx-ZK-ONj"/>
+                    <constraint firstAttribute="bottom" secondItem="8Ri-R1-g6x" secondAttribute="bottom" constant="3" id="NZl-0d-NoU"/>
+                    <constraint firstItem="8Ri-R1-g6x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="SxT-lh-qK9"/>
+                    <constraint firstItem="8Ri-R1-g6x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="gz1-Z7-zig"/>
+                    <constraint firstItem="vnU-gB-aed" firstAttribute="leading" secondItem="8Ri-R1-g6x" secondAttribute="trailing" constant="10" id="hZH-8g-fg4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countryNameLabel" destination="vnU-gB-aed" id="or2-8H-jsG"/>
+                <outlet property="flagImageView" destination="8Ri-R1-g6x" id="XL0-7W-qUR"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="104"/>
+        </tableViewCell>
+    </objects>
+</document>

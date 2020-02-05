@@ -1,0 +1,6 @@
+framework module Pods_Tensend_new_ {
+  umbrella header "Pods-Tensend(new)-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,39 @@
+PODS:
+  - AKMaskField (2.0.3)
+  - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - DropDown (2.3.13)
+  - ObjectMapper (3.5.1)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
+
+DEPENDENCIES:
+  - AKMaskField
+  - Alamofire
+  - AlamofireObjectMapper (~> 5.0)
+  - DropDown
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - AKMaskField
+    - Alamofire
+    - AlamofireObjectMapper
+    - DropDown
+    - ObjectMapper
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  AKMaskField: b6d147524813e62cd3f15475fa2200ce7a3d2620
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+
+PODFILE CHECKSUM: 99d75def93f4a507050ec5b51dc1911c2177cb21
+
+COCOAPODS: 1.8.4

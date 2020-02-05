@@ -3,17 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69CACAC7F5AEA47A35CDCCA9 /* Pods_Tensend_new_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */; };
+		AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */; };
+		AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19B23E9704100617132 /* CheckCodeView.swift */; };
+		AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA30C19C23E9704100617132 /* CheckCodeView.xib */; };
+		AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */; };
+		AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */; };
+		AACC4DAD23E828310072F77D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC4DAC23E828310072F77D /* Country.swift */; };
 		AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DA8023E169ED00D9F7D0 /* AppDelegate.swift */; };
 		AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DA8223E169ED00D9F7D0 /* SceneDelegate.swift */; };
-		AAD5DA8523E169ED00D9F7D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DA8423E169ED00D9F7D0 /* ViewController.swift */; };
+		AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DA8423E169ED00D9F7D0 /* MainViewController.swift */; };
 		AAD5DA8823E169ED00D9F7D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD5DA8623E169ED00D9F7D0 /* Main.storyboard */; };
-		AAD5DA8A23E169EE00D9F7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD5DA8923E169EE00D9F7D0 /* Assets.xcassets */; };
 		AAD5DA8D23E169EE00D9F7D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD5DA8B23E169EE00D9F7D0 /* LaunchScreen.storyboard */; };
 		AAD5DA9823E169EF00D9F7D0 /* Tensend_new_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DA9723E169EF00D9F7D0 /* Tensend_new_Tests.swift */; };
+		AAD5DAA323E174B100D9F7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD5DAA223E174B100D9F7D0 /* Assets.xcassets */; };
+		AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DAA623E1774000D9F7D0 /* Builder.swift */; };
+		AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DAA723E1774000D9F7D0 /* Router.swift */; };
+		AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DAB323E1784F00D9F7D0 /* MainPresenter.swift */; };
+		AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B7A23E405DB00CAFA47 /* MainVC.swift */; };
+		AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE71B7B23E405DB00CAFA47 /* MainVC.xib */; };
+		AAE71B8523E40FD600CAFA47 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8123E40FD500CAFA47 /* LabelExtensions.swift */; };
+		AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8223E40FD500CAFA47 /* ViewControllerExtension.swift */; };
+		AAE71B8723E40FD600CAFA47 /* ScrollStackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8323E40FD500CAFA47 /* ScrollStackController.swift */; };
+		AAE71B8823E40FD600CAFA47 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8423E40FD600CAFA47 /* UIViewExtensions.swift */; };
+		AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */; };
+		CAD1B55D908B6BFCA02A070C /* Pods_Tensend_new_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +45,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E62ED0DA18E2558035BEAEA /* Pods-Tensend(new)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodePresenter.swift; sourceTree = "<group>"; };
+		AA30C19B23E9704100617132 /* CheckCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeView.swift; sourceTree = "<group>"; };
+		AA30C19C23E9704100617132 /* CheckCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckCodeView.xib; sourceTree = "<group>"; };
+		AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdownCell.swift; sourceTree = "<group>"; };
+		AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDropdownCell.xib; sourceTree = "<group>"; };
+		AACC4DAC23E828310072F77D /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		AAD5DA7D23E169ED00D9F7D0 /* Tensend(new).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tensend(new).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD5DA8023E169ED00D9F7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD5DA8223E169ED00D9F7D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AAD5DA8423E169ED00D9F7D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAD5DA8423E169ED00D9F7D0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AAD5DA8723E169ED00D9F7D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AAD5DA8923E169EE00D9F7D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD5DA8C23E169EE00D9F7D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD5DA8E23E169EE00D9F7D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD5DA9323E169EF00D9F7D0 /* Tensend(new)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tensend(new)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD5DA9723E169EF00D9F7D0 /* Tensend_new_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tensend_new_Tests.swift; sourceTree = "<group>"; };
 		AAD5DA9923E169EF00D9F7D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD5DAA223E174B100D9F7D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAD5DAA623E1774000D9F7D0 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		AAD5DAA723E1774000D9F7D0 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AAD5DAB323E1784F00D9F7D0 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		AAE71B7A23E405DB00CAFA47 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		AAE71B7B23E405DB00CAFA47 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		AAE71B8123E40FD500CAFA47 /* LabelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
+		AAE71B8223E40FD500CAFA47 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		AAE71B8323E40FD500CAFA47 /* ScrollStackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollStackController.swift; sourceTree = "<group>"; };
+		AAE71B8423E40FD600CAFA47 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayout.swift; sourceTree = "<group>"; };
+		EAA3C1192A90A8A41CD4BB81 /* Pods-Tensend(new).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new).debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)/Pods-Tensend(new).debug.xcconfig"; sourceTree = "<group>"; };
+		ED1983BC29CCFC1ED6CA7B58 /* Pods-Tensend(new).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new).release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)/Pods-Tensend(new).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD1B55D908B6BFCA02A070C /* Pods_Tensend_new_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +93,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69CACAC7F5AEA47A35CDCCA9 /* Pods_Tensend_new_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA30C19823E96E4700617132 /* CheckCode */ = {
+			isa = PBXGroup;
+			children = (
+				AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */,
+				AA30C19B23E9704100617132 /* CheckCodeView.swift */,
+				AA30C19C23E9704100617132 /* CheckCodeView.xib */,
+			);
+			path = CheckCode;
+			sourceTree = "<group>";
+		};
+		AA47C4CC23E95E1D003FA110 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */,
+				AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AACC4DAB23E828240072F77D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AACC4DAC23E828310072F77D /* Country.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AAD5DA7423E169ED00D9F7D0 = {
 			isa = PBXGroup;
 			children = (
 				AAD5DA7F23E169ED00D9F7D0 /* Tensend(new) */,
 				AAD5DA9623E169EF00D9F7D0 /* Tensend(new)Tests */,
 				AAD5DA7E23E169ED00D9F7D0 /* Products */,
+				EF5ADEB4E439FDF19187504B /* Pods */,
+				DC0D7A50D1B49646D1C5E3F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +150,18 @@
 		AAD5DA7F23E169ED00D9F7D0 /* Tensend(new) */ = {
 			isa = PBXGroup;
 			children = (
+				AAE71B8023E40FC800CAFA47 /* Extensions */,
+				AAD5DAAA23E177AD00D9F7D0 /* Auth */,
 				AAD5DA8023E169ED00D9F7D0 /* AppDelegate.swift */,
 				AAD5DA8223E169ED00D9F7D0 /* SceneDelegate.swift */,
-				AAD5DA8423E169ED00D9F7D0 /* ViewController.swift */,
+				AAD5DA8423E169ED00D9F7D0 /* MainViewController.swift */,
+				AAD5DAA623E1774000D9F7D0 /* Builder.swift */,
+				AAD5DAA723E1774000D9F7D0 /* Router.swift */,
 				AAD5DA8623E169ED00D9F7D0 /* Main.storyboard */,
-				AAD5DA8923E169EE00D9F7D0 /* Assets.xcassets */,
 				AAD5DA8B23E169EE00D9F7D0 /* LaunchScreen.storyboard */,
 				AAD5DA8E23E169EE00D9F7D0 /* Info.plist */,
+				AAD5DAA223E174B100D9F7D0 /* Assets.xcassets */,
+				AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */,
 			);
 			path = "Tensend(new)";
 			sourceTree = "<group>";
@@ -99,6 +175,58 @@
 			path = "Tensend(new)Tests";
 			sourceTree = "<group>";
 		};
+		AAD5DAAA23E177AD00D9F7D0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AA30C19823E96E4700617132 /* CheckCode */,
+				AA47C4CC23E95E1D003FA110 /* Cells */,
+				AACC4DAB23E828240072F77D /* Models */,
+				AAD5DAAB23E177B400D9F7D0 /* Main */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AAD5DAAB23E177B400D9F7D0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AAD5DAB323E1784F00D9F7D0 /* MainPresenter.swift */,
+				AAE71B7A23E405DB00CAFA47 /* MainVC.swift */,
+				AAE71B7B23E405DB00CAFA47 /* MainVC.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AAE71B8023E40FC800CAFA47 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AAE71B8123E40FD500CAFA47 /* LabelExtensions.swift */,
+				AAE71B8323E40FD500CAFA47 /* ScrollStackController.swift */,
+				AAE71B8423E40FD600CAFA47 /* UIViewExtensions.swift */,
+				AAE71B8223E40FD500CAFA47 /* ViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC0D7A50D1B49646D1C5E3F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */,
+				A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF5ADEB4E439FDF19187504B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAA3C1192A90A8A41CD4BB81 /* Pods-Tensend(new).debug.xcconfig */,
+				ED1983BC29CCFC1ED6CA7B58 /* Pods-Tensend(new).release.xcconfig */,
+				0E62ED0DA18E2558035BEAEA /* Pods-Tensend(new)Tests.debug.xcconfig */,
+				3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAD5DA9C23E169EF00D9F7D0 /* Build configuration list for PBXNativeTarget "Tensend(new)" */;
 			buildPhases = (
+				2374ADA36B305760A8DDA47C /* [CP] Check Pods Manifest.lock */,
 				AAD5DA7923E169ED00D9F7D0 /* Sources */,
 				AAD5DA7A23E169ED00D9F7D0 /* Frameworks */,
 				AAD5DA7B23E169ED00D9F7D0 /* Resources */,
+				C2D8F4A6B857BEE6BBB60698 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAD5DA9F23E169EF00D9F7D0 /* Build configuration list for PBXNativeTarget "Tensend(new)Tests" */;
 			buildPhases = (
+				58A5ABBC283776CF359161C2 /* [CP] Check Pods Manifest.lock */,
 				AAD5DA8F23E169EF00D9F7D0 /* Sources */,
 				AAD5DA9023E169EF00D9F7D0 /* Frameworks */,
 				AAD5DA9123E169EF00D9F7D0 /* Resources */,
@@ -180,8 +311,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */,
 				AAD5DA8D23E169EE00D9F7D0 /* LaunchScreen.storyboard in Resources */,
-				AAD5DA8A23E169EE00D9F7D0 /* Assets.xcassets in Resources */,
+				AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */,
+				AAD5DAA323E174B100D9F7D0 /* Assets.xcassets in Resources */,
+				AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */,
 				AAD5DA8823E169ED00D9F7D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,14 +329,91 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2374ADA36B305760A8DDA47C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tensend(new)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58A5ABBC283776CF359161C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tensend(new)Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D8F4A6B857BEE6BBB60698 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tensend(new)/Pods-Tensend(new)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tensend(new)/Pods-Tensend(new)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tensend(new)/Pods-Tensend(new)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAD5DA7923E169ED00D9F7D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD5DA8523E169ED00D9F7D0 /* ViewController.swift in Sources */,
+				AAE71B8823E40FD600CAFA47 /* UIViewExtensions.swift in Sources */,
+				AAE71B8523E40FD600CAFA47 /* LabelExtensions.swift in Sources */,
+				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
+				AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */,
+				AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */,
+				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
+				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
 				AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */,
+				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
+				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
 				AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */,
+				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
+				AAE71B8723E40FD600CAFA47 /* ScrollStackController.swift in Sources */,
+				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
+				AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */,
+				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,10 +571,11 @@
 		};
 		AAD5DA9D23E169EF00D9F7D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAA3C1192A90A8A41CD4BB81 /* Pods-Tensend(new).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 485F549R3Y;
+				DEVELOPMENT_TEAM = BN62376H24;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,10 +590,11 @@
 		};
 		AAD5DA9E23E169EF00D9F7D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED1983BC29CCFC1ED6CA7B58 /* Pods-Tensend(new).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 485F549R3Y;
+				DEVELOPMENT_TEAM = BN62376H24;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,6 +609,7 @@
 		};
 		AAD5DAA023E169EF00D9F7D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E62ED0DA18E2558035BEAEA /* Pods-Tensend(new)Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +632,7 @@
 		};
 		AAD5DAA123E169EF00D9F7D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

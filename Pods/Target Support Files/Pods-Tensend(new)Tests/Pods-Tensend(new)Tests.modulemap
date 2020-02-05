@@ -1,0 +1,6 @@
+framework module Pods_Tensend_new_Tests {
+  umbrella header "Pods-Tensend(new)Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
