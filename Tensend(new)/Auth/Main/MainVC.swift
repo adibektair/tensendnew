@@ -83,7 +83,9 @@ class MainVC: UIViewController {
     
     // MARK: Actions
     @IBAction func continueButtonPressed(_ sender: Any) {
-        
+        if self.phoneNumberTextField.text != ""{
+                        self.presenter.login(phone: self.phoneNumberTextField.text!)
+                    }
     }
     @IBAction func changeCountryPressed(_ sender: Any) {
         self.presenter.changeCountry()
@@ -109,9 +111,7 @@ class MainVC: UIViewController {
      
     }
     @IBAction func loginPressed(_ sender: Any) {
-        if self.phoneNumberTextField.text != ""{
-                 self.presenter.login(phone: self.phoneNumberTextField.text!)
-             }
+       
     }
     
 

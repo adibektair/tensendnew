@@ -17,7 +17,7 @@ protocol CheckCodeProtocol {
 protocol CheckCodePresenterProtocol {
     var phone: String { get set }
     func sendSmsCode(phone: String)
-    func checkCode(phone: String, code: String)
+    func checkCode(code: String)
     func setView()
     init(phone: String, view: CheckCodeProtocol, router: RouterProtocol, networkLayer: NetworkLayer)
 }
@@ -29,15 +29,26 @@ class CheckCodePresenter: CheckCodePresenterProtocol {
     var networkLayer : NetworkLayer
     
     func sendSmsCode(phone: String) {
-        self.networkLayer.sendSMS(phone: phone, callback: { success in
+        self.networkLayer.sendSMS(phone: "+7" + phone.filter("1234567890".contains), callback: { success in
             if !success{
                 self.view.errorOccured()
+             
             }
         })
     }
     
-    func checkCode(phone: String, code: String) {
+    func checkCode(code: String) {
+        let phoneNumber = self.phone.filter("1234567890".contains)
         
+        networkLayer.checkCode(phone: phoneNumber, code: code, callback: { success in
+            if success{
+                self.view.correctCode()
+                   self.router?.createPasswordViewController(phone: phoneNumber)
+            }else{
+                self.view.incorrectCode()
+                   self.router?.createPasswordViewController(phone: phoneNumber)
+            }
+        })
     }
     
     required init(phone: String, view: CheckCodeProtocol, router: RouterProtocol, networkLayer: NetworkLayer) {

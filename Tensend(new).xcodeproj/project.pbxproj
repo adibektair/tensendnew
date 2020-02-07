@@ -24,6 +24,12 @@
 		AAB1302623EB0D1800D86BAC /* ForYouCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302123EB0D1800D86BAC /* ForYouCVC.swift */; };
 		AAB1302723EB0D1800D86BAC /* ForYouCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302223EB0D1800D86BAC /* ForYouCVC.xib */; };
 		AAB1302823EB0D1800D86BAC /* ImagesWithTitleCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302323EB0D1800D86BAC /* ImagesWithTitleCVC.swift */; };
+		AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */; };
+		AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */; };
+		AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302E23EC805E00D86BAC /* CreatePasswordPresenter.swift */; };
+		AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1303123ED5D7300D86BAC /* CreatePasscodeView.swift */; };
+		AAB1303423ED5D7300D86BAC /* CreatePasscodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1303223ED5D7300D86BAC /* CreatePasscodeView.xib */; };
+		AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1303523ED5F0500D86BAC /* CreatePasscodePresenter.swift */; };
 		AACC4DAD23E828310072F77D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC4DAC23E828310072F77D /* Country.swift */; };
 		AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DA8023E169ED00D9F7D0 /* AppDelegate.swift */; };
 		AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DA8223E169ED00D9F7D0 /* SceneDelegate.swift */; };
@@ -76,6 +82,12 @@
 		AAB1302123EB0D1800D86BAC /* ForYouCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForYouCVC.swift; sourceTree = "<group>"; };
 		AAB1302223EB0D1800D86BAC /* ForYouCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForYouCVC.xib; sourceTree = "<group>"; };
 		AAB1302323EB0D1800D86BAC /* ImagesWithTitleCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesWithTitleCVC.swift; sourceTree = "<group>"; };
+		AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
+		AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordView.xib; sourceTree = "<group>"; };
+		AAB1302E23EC805E00D86BAC /* CreatePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordPresenter.swift; sourceTree = "<group>"; };
+		AAB1303123ED5D7300D86BAC /* CreatePasscodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasscodeView.swift; sourceTree = "<group>"; };
+		AAB1303223ED5D7300D86BAC /* CreatePasscodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasscodeView.xib; sourceTree = "<group>"; };
+		AAB1303523ED5F0500D86BAC /* CreatePasscodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasscodePresenter.swift; sourceTree = "<group>"; };
 		AACC4DAC23E828310072F77D /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		AAD5DA7D23E169ED00D9F7D0 /* Tensend(new).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tensend(new).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD5DA8023E169ED00D9F7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +187,26 @@
 			path = ../../iOS/Tensend/Tensend/CollectionViewCells;
 			sourceTree = "<group>";
 		};
+		AAB1302923EC7D7100D86BAC /* CreatePassword */ = {
+			isa = PBXGroup;
+			children = (
+				AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */,
+				AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */,
+				AAB1302E23EC805E00D86BAC /* CreatePasswordPresenter.swift */,
+			);
+			path = CreatePassword;
+			sourceTree = "<group>";
+		};
+		AAB1303023ED5D5500D86BAC /* CreatePasscode */ = {
+			isa = PBXGroup;
+			children = (
+				AAB1303123ED5D7300D86BAC /* CreatePasscodeView.swift */,
+				AAB1303223ED5D7300D86BAC /* CreatePasscodeView.xib */,
+				AAB1303523ED5F0500D86BAC /* CreatePasscodePresenter.swift */,
+			);
+			path = CreatePasscode;
+			sourceTree = "<group>";
+		};
 		AACC4DAB23E828240072F77D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +269,8 @@
 		AAD5DAAA23E177AD00D9F7D0 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				AAB1303023ED5D5500D86BAC /* CreatePasscode */,
+				AAB1302923EC7D7100D86BAC /* CreatePassword */,
 				AA30C19823E96E4700617132 /* CheckCode */,
 				AA47C4CC23E95E1D003FA110 /* Cells */,
 				AACC4DAB23E828240072F77D /* Models */,
@@ -378,6 +412,8 @@
 				AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */,
 				AAB1302723EB0D1800D86BAC /* ForYouCVC.xib in Resources */,
 				AAD5DA8823E169ED00D9F7D0 /* Main.storyboard in Resources */,
+				AAB1303423ED5D7300D86BAC /* CreatePasscodeView.xib in Resources */,
+				AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,9 +507,12 @@
 				AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */,
 				AAB1301C23EB0D0E00D86BAC /* ForYou.swift in Sources */,
 				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
+				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
 				AAB1301B23EB0D0E00D86BAC /* CategoriesView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
+				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
 				AAB1301A23EB0D0E00D86BAC /* SectionsName.swift in Sources */,
+				AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */,
 				AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */,
 				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
 				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
@@ -484,6 +523,7 @@
 				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
 				AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
+				AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

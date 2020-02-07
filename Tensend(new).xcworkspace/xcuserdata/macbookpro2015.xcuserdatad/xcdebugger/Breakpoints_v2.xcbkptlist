@@ -30,42 +30,58 @@
             filePath = "Tensend(new)/Auth/CheckCode/CheckCodeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "setView(phone:)"
-            landmarkType = "7">
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "CheckCodeView"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E4C4AF00-1ACA-4E7D-8A54-52267EFCCDCD"
+            uuid = "D145C43D-3015-4D0C-89E6-466FB6F0AB54"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/AppDelegate.swift"
+            filePath = "Tensend(new)/Auth/CreatePassword/CreatePasswordPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "setPassword(password:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2D5351A0-5DEF-4918-8824-528F738BD102"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/SceneDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "scene(_:willConnectTo:options:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D145C43D-3015-4D0C-89E6-466FB6F0AB54 - 2790ff66b90d8557"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tensend_new_.CreatePasswordPresenter.setPassword(password: Swift.String) -&gt; ()"
+                  moduleName = "Tensend(new)"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/Tensend(new)/Tensend(new)/Auth/CreatePassword/CreatePasswordPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "D145C43D-3015-4D0C-89E6-466FB6F0AB54 - 40e81b9e747ac15d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Tensend_new_.CreatePasswordPresenter.setPassword(password: Swift.String) -&gt; ()"
+                  moduleName = "Tensend(new)"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/Tensend(new)/Tensend(new)/Auth/CreatePassword/CreatePasswordPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

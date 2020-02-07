@@ -10,8 +10,27 @@ import UIKit
 protocol AssemblyBuilderProtocol {
     func createAuthModule(router: Router) -> UIViewController
     func createCheckCodeVC(phone: String, router: Router) -> UIViewController
+    func createCreatePasswordVC(phone: String, router: Router) -> UIViewController
+    func createCreatePasscode() -> UIViewController
 }
+
 class AssemblyModuleBuilder: AssemblyBuilderProtocol {
+    
+    func createCreatePasscode() -> UIViewController {
+        let view = CreatePasscodeView()
+        let presenter = CreatePasscodePresenter(view: view)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createCreatePasswordVC(phone: String, router: Router) -> UIViewController {
+        let networkLayer = NetworkLayer()
+        let view = CreatePasswordView()
+        let presenter = CreatePasswordPresenter(view: view, phone: phone, networkLayer: networkLayer, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
     func createCheckCodeVC(phone: String, router: Router) -> UIViewController {
         let view = CheckCodeView()
         let presenter = CheckCodePresenter(phone: phone, view: view, router: router, networkLayer: NetworkLayer())

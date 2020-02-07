@@ -14,10 +14,33 @@ protocol RouterMain {
 
 protocol RouterProtocol : RouterMain {
     func initialViewController()
+    func createPasswordViewController(phone: String)
     func checkCodeViewController(phone: String)
+    func openCreatePasscodeController()
     func popToRoot()
 }
 class Router: RouterProtocol {
+    
+    func openCreatePasscodeController() {
+        if let navigationController = navigationController{
+            guard let mainViewController = assemblyBuilder?.createCreatePasscode() else {
+                return
+            }
+        navigationController.pushViewController(mainViewController, animated: true)
+        }
+    }
+    
+    
+    
+    func createPasswordViewController(phone: String) {
+       if let navigationController = navigationController{
+           guard let mainViewController = assemblyBuilder?.createCreatePasswordVC(phone: phone, router: self) else {
+               return
+           }
+       navigationController.pushViewController(mainViewController, animated: true)
+       }
+    }
+    
 
     var navigationController: UINavigationController?
     
@@ -50,6 +73,7 @@ class Router: RouterProtocol {
             navigationController.popViewController(animated: true)
         }
     }
+
     
     
     
