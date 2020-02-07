@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let router = Router(navController: navigationController, assemblyProtocol: builder)
             router.initialViewController()
             window?.rootViewController = navigationController
-            window?.makeKeyAndVisible()
+           // window?.makeKeyAndVisible()
         
         return true
     }
