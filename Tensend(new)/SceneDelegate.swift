@@ -23,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let builder = AssemblyModuleBuilder()
         let router = Router(navController: navigationController, assemblyProtocol: builder)
         router.initialViewController()
-        window?.rootViewController = navigationController
-     //   window?.makeKeyAndVisible()
+        window?.rootViewController = HomeVC()
+        window?.makeKeyAndVisible()
             
         
         
