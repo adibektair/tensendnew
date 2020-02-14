@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		2F28B84B23F6DA7B00AE77EA /* HomeRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B84A23F6DA7B00AE77EA /* HomeRequests.swift */; };
 		2F28B85123F6E63D00AE77EA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B85023F6E63D00AE77EA /* StringExtension.swift */; };
-		2F28B86123F6EB4000AE77EA /* BannersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B85C23F6EB4000AE77EA /* BannersResponse.swift */; };
-		2F28B86223F6EB4000AE77EA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B85D23F6EB4000AE77EA /* Data.swift */; };
-		2F28B86323F6EB4000AE77EA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B85E23F6EB4000AE77EA /* Category.swift */; };
-		2F28B86423F6EB4000AE77EA /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B85F23F6EB4000AE77EA /* CategoriesResponse.swift */; };
-		2F28B86523F6EB4000AE77EA /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B86023F6EB4000AE77EA /* Banner.swift */; };
+		2F28B87123F6EDDE00AE77EA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B86C23F6EDDE00AE77EA /* Data.swift */; };
+		2F28B87223F6EDDE00AE77EA /* BannersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B86D23F6EDDE00AE77EA /* BannersResponse.swift */; };
+		2F28B87323F6EDDE00AE77EA /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B86E23F6EDDE00AE77EA /* Banner.swift */; };
+		2F28B87423F6EDDE00AE77EA /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B86F23F6EDDE00AE77EA /* CategoriesResponse.swift */; };
+		2F28B87523F6EDDE00AE77EA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B87023F6EDDE00AE77EA /* Category.swift */; };
+		2F28B87823F6F1F600AE77EA /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B87623F6F1F500AE77EA /* Meditation.swift */; };
+		2F28B87A23F6F3A300AE77EA /* MeditationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B87723F6F1F500AE77EA /* MeditationsResponse.swift */; };
 		2F4699E823F58D9800461E9C /* MyCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699E723F58D9700461E9C /* MyCourses.swift */; };
 		2F4699EA23F58DB500461E9C /* StackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699E923F58DB500461E9C /* StackViewExtensions.swift */; };
 		2F4699EC23F58DD300461E9C /* EachCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699EB23F58DD300461E9C /* EachCourse.swift */; };
-		2F4699EE23F58DF000461E9C /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699ED23F58DF000461E9C /* Meditation.swift */; };
+		2F4699EE23F58DF000461E9C /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699ED23F58DF000461E9C /* MeditationView.swift */; };
 		2F4699F123F58E3500461E9C /* MeditationCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4699EF23F58E3500461E9C /* MeditationCVC.xib */; };
 		2F4699F223F58E3500461E9C /* MeditationCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699F023F58E3500461E9C /* MeditationCVC.swift */; };
 		2F4699F423F58EB900461E9C /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699F323F58EB900461E9C /* ViewExtensions.swift */; };
@@ -80,15 +82,17 @@
 		0E62ED0DA18E2558035BEAEA /* Pods-Tensend(new)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F28B84A23F6DA7B00AE77EA /* HomeRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRequests.swift; sourceTree = "<group>"; };
 		2F28B85023F6E63D00AE77EA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		2F28B85C23F6EB4000AE77EA /* BannersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannersResponse.swift; sourceTree = "<group>"; };
-		2F28B85D23F6EB4000AE77EA /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		2F28B85E23F6EB4000AE77EA /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		2F28B85F23F6EB4000AE77EA /* CategoriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
-		2F28B86023F6EB4000AE77EA /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		2F28B86C23F6EDDE00AE77EA /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2F28B86D23F6EDDE00AE77EA /* BannersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannersResponse.swift; sourceTree = "<group>"; };
+		2F28B86E23F6EDDE00AE77EA /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		2F28B86F23F6EDDE00AE77EA /* CategoriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
+		2F28B87023F6EDDE00AE77EA /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2F28B87623F6F1F500AE77EA /* Meditation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		2F28B87723F6F1F500AE77EA /* MeditationsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationsResponse.swift; sourceTree = "<group>"; };
 		2F4699E723F58D9700461E9C /* MyCourses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCourses.swift; sourceTree = "<group>"; };
 		2F4699E923F58DB500461E9C /* StackViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewExtensions.swift; sourceTree = "<group>"; };
 		2F4699EB23F58DD300461E9C /* EachCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EachCourse.swift; sourceTree = "<group>"; };
-		2F4699ED23F58DF000461E9C /* Meditation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		2F4699ED23F58DF000461E9C /* MeditationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
 		2F4699EF23F58E3500461E9C /* MeditationCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeditationCVC.xib; sourceTree = "<group>"; };
 		2F4699F023F58E3500461E9C /* MeditationCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationCVC.swift; sourceTree = "<group>"; };
 		2F4699F323F58EB900461E9C /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
@@ -167,11 +171,13 @@
 		2F28B84323F6D90B00AE77EA /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				2F28B86023F6EB4000AE77EA /* Banner.swift */,
-				2F28B85C23F6EB4000AE77EA /* BannersResponse.swift */,
-				2F28B85F23F6EB4000AE77EA /* CategoriesResponse.swift */,
-				2F28B85E23F6EB4000AE77EA /* Category.swift */,
-				2F28B85D23F6EB4000AE77EA /* Data.swift */,
+				2F28B86E23F6EDDE00AE77EA /* Banner.swift */,
+				2F28B86D23F6EDDE00AE77EA /* BannersResponse.swift */,
+				2F28B86F23F6EDDE00AE77EA /* CategoriesResponse.swift */,
+				2F28B87023F6EDDE00AE77EA /* Category.swift */,
+				2F28B86C23F6EDDE00AE77EA /* Data.swift */,
+				2F28B87623F6F1F500AE77EA /* Meditation.swift */,
+				2F28B87723F6F1F500AE77EA /* MeditationsResponse.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -215,7 +221,7 @@
 				2F4699E723F58D9700461E9C /* MyCourses.swift */,
 				2F4699EB23F58DD300461E9C /* EachCourse.swift */,
 				AAB1301723EB0D0E00D86BAC /* ForYou.swift */,
-				2F4699ED23F58DF000461E9C /* Meditation.swift */,
+				2F4699ED23F58DF000461E9C /* MeditationView.swift */,
 				AAB1301823EB0D0E00D86BAC /* FirstBannerView.swift */,
 			);
 			path = "Home Views";
@@ -550,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE71B8823E40FD600CAFA47 /* UIViewExtensions.swift in Sources */,
+				2F28B87823F6F1F600AE77EA /* Meditation.swift in Sources */,
 				2F4699F623F58F0900461E9C /* Colors.swift in Sources */,
 				AAE71B8523E40FD600CAFA47 /* LabelExtensions.swift in Sources */,
 				AAB1302623EB0D1800D86BAC /* ForYouCVC.swift in Sources */,
@@ -558,40 +565,41 @@
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
 				AAB1301923EB0D0E00D86BAC /* HomeVC.swift in Sources */,
 				AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */,
-				2F28B86323F6EB4000AE77EA /* Category.swift in Sources */,
 				2F4699F423F58EB900461E9C /* ViewExtensions.swift in Sources */,
 				2F28B84B23F6DA7B00AE77EA /* HomeRequests.swift in Sources */,
-				2F28B86523F6EB4000AE77EA /* Banner.swift in Sources */,
-				2F28B86423F6EB4000AE77EA /* CategoriesResponse.swift in Sources */,
 				2F28B85123F6E63D00AE77EA /* StringExtension.swift in Sources */,
+				2F28B87423F6EDDE00AE77EA /* CategoriesResponse.swift in Sources */,
 				AAB1302523EB0D1800D86BAC /* OnlyImageCVC.swift in Sources */,
 				AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */,
 				AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */,
 				AAB1301C23EB0D0E00D86BAC /* ForYou.swift in Sources */,
 				2F4699F223F58E3500461E9C /* MeditationCVC.swift in Sources */,
-				2F4699EE23F58DF000461E9C /* Meditation.swift in Sources */,
+				2F4699EE23F58DF000461E9C /* MeditationView.swift in Sources */,
 				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
 				2F4699EC23F58DD300461E9C /* EachCourse.swift in Sources */,
 				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
 				AAB1301B23EB0D0E00D86BAC /* CategoriesView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
 				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
+				2F28B87223F6EDDE00AE77EA /* BannersResponse.swift in Sources */,
 				AAB1301A23EB0D0E00D86BAC /* SectionsName.swift in Sources */,
 				AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */,
 				2F4699E823F58D9800461E9C /* MyCourses.swift in Sources */,
 				AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */,
 				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
+				2F28B87A23F6F3A300AE77EA /* MeditationsResponse.swift in Sources */,
 				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
 				AAB1301D23EB0D0E00D86BAC /* FirstBannerView.swift in Sources */,
-				2F28B86223F6EB4000AE77EA /* Data.swift in Sources */,
 				AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */,
 				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
-				2F28B86123F6EB4000AE77EA /* BannersResponse.swift in Sources */,
 				AAE71B8723E40FD600CAFA47 /* ScrollStackController.swift in Sources */,
+				2F28B87123F6EDDE00AE77EA /* Data.swift in Sources */,
 				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
 				AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */,
+				2F28B87323F6EDDE00AE77EA /* Banner.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
 				AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */,
+				2F28B87523F6EDDE00AE77EA /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

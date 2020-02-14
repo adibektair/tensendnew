@@ -16,6 +16,12 @@ class Data : NSObject, NSCoding, Mappable{
 	var name : String?
 	var parentCategoryId : Int?
 	var updatedAt : String?
+    
+    var categoryId : Int?
+    var descriptionField : String?
+    var durationTime : Int?
+    var title : String?
+
 
 
 	class func newInstance(map: Map) -> Mappable?{
@@ -26,13 +32,17 @@ class Data : NSObject, NSCoding, Mappable{
 
 	func mapping(map: Map)
 	{
+        categoryId <- map["category_id"]
 		categoryTypeId <- map["category_type_id"]
 		createdAt <- map["created_at"]
 		deletedAt <- map["deleted_at"]
+        descriptionField <- map["description"]
+        durationTime <- map["duration_time"]
 		id <- map["id"]
 		imgPath <- map["img_path"]
 		name <- map["name"]
 		parentCategoryId <- map["parent_category_id"]
+        title <- map["title"]
 		updatedAt <- map["updated_at"]
 		
 	}
