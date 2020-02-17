@@ -10,7 +10,8 @@ import UIKit
 import EasyPeasy
 class CategoriesView: UIView {
     
-    //    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
+    var categories : CategoriesResponse?
+    
     lazy var collectionView : UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
@@ -33,23 +34,36 @@ class CategoriesView: UIView {
         super.init(frame: frame)
         self.addSubview(collectionView)
         collectionView.easy.layout(Edges(),Height(100))
+        getData()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    func getData(){
+        HomeRequests.sharedInstance.getCategories { (result) in
+            self.categories = result
+            self.collectionView.reloadData()
+        }
+    }
 }
 extension CategoriesView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 7
+        if let count = categories?.categories?.data?.count, count > 0 {
+            self.isHidden = false
+            return count
+        }
+        self.isHidden = true
+        return 0
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImagesWithTitleCVC", for: indexPath) as! ImagesWithTitleCVC
-        cell.img.image = #imageLiteral(resourceName: "asset-2")
-        cell.title.text = "name"
+        if let data = self.categories?.categories?.data?[indexPath.row] {
+            cell.categoryData = data
+        }
         print("indexpath row = \(indexPath.row)")
         return cell
     }

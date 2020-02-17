@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import EasyPeasy
 class ScrollStackController: UIViewController {
 
 
@@ -33,14 +33,14 @@ class ScrollStackController: UIViewController {
             ])
         
         stackView.axis = .vertical
-        stackView.spacing = 24
+        stackView.spacing = 15
         stackView.alignment = .fill
         stackView.distribution = .fill
         stackView.isLayoutMarginsRelativeArrangement = true
         if #available(iOS 11.0, *) {
-            stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 24, bottom: 20, trailing: 24)
+            stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
         } else {
-            stackView.layoutMargins = UIEdgeInsets(top: 20, left: 24, bottom: 20, right: 24)
+            stackView.layoutMargins = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         }
         scrollView.addSubview(stackView)
         
@@ -87,8 +87,10 @@ class ScrollStackController: UIViewController {
     
     open func addLine() {
         let line = UIView()
-        line.backgroundColor = .gray
+        line.backgroundColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 0.05)
         line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+        line.easy.layout(Left(30),Right(30))
         stackView.addArrangedSubview(line)
+        
     }
 }
