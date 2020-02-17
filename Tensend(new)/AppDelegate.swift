@@ -18,11 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window = UIWindow(frame: UIScreen.main.bounds)
         
             let navigationController = UINavigationController()
+            navigationController.navigationBar.isTranslucent = true
+//        navigationController.navigationBar.setBackgroundImage(UIView(), for: .any)
             let builder = AssemblyModuleBuilder()
             let router = Router(navController: navigationController, assemblyProtocol: builder)
             router.initialViewController()
             window?.rootViewController = navigationController
-           // window?.makeKeyAndVisible()
+            window?.makeKeyAndVisible()
         
         return true
     }

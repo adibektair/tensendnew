@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 protocol CreatePasscodeProtocol {
     func success()
@@ -34,11 +35,16 @@ class CreatePasscodePresenter: CreatePasscodePresenterProtocol {
     
     func acceptSecondPasscode(code: String) {
         if self.firstPasscode == code{
+            
+       
             self.view.success()
         }else{
             self.view.passcodesIncorrect()
         }
     }
+    
+    
+    
     required init(view: CreatePasscodeProtocol) {
         self.view = view
     }

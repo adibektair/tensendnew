@@ -48,19 +48,22 @@ class MainVC: UIViewController {
         // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         self.continueButton.isHidden = true
         phoneNumberTextField.maskExpression = "({ddd}) {ddd} {dd} {dd}"
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
 
     @objc func keyboardWillAppear() {
         self.logoImageView.isHidden = true
+        
         self.topImageHeightConstraint.constant = 0
         self.continueButton.isHidden = false
-        self.bottomConstraint.constant = -150
+        
+        self.bottomConstraint.constant = -170
         self.tensendLabel.isHidden = true
     }
 
