@@ -44,7 +44,6 @@ class HomeVC: ScrollStackController {
         stackView.addArrangedSubview(forYou)
         
         let oneBanner = UIImageView()
-        oneBanner.image = #imageLiteral(resourceName: "oneBanner")
         oneBanner.contentMode = .scaleToFill
         oneBanner.easy.layout(Height(126))
         stackView.addArrangedSubview(oneBanner)
@@ -60,7 +59,7 @@ class HomeVC: ScrollStackController {
         let meditacion = SectionsName()
            meditacion.setData(title: "МЕДИТАЦИЯ", desc: "Бүгінгі күнге күш қуат пен энергия алыңыз")
            stackView.addArrangedSubview(meditacion)
-        let meditationList = Meditation()
+        let meditationList = MeditationView()
         stackView.addArrangedSubview(meditationList)
         let bottomImage = UIImageView()
         bottomImage.image = #imageLiteral(resourceName: "bottomIMG")

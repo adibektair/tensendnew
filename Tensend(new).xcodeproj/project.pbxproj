@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F386C1923FC2EC60058579E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C1823FC2EC50058579E /* HomeVC.swift */; };
 		2F386C2723FC2F320058579E /* ForYouCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F386C2223FC2F320058579E /* ForYouCVC.xib */; };
 		2F386C2823FC2F320058579E /* ForYouCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C2323FC2F320058579E /* ForYouCVC.swift */; };
 		2F386C2923FC2F320058579E /* OnlyImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C2423FC2F320058579E /* OnlyImageCVC.swift */; };
@@ -27,6 +26,7 @@
 		2F386EF923FC6C6E0058579E /* EachCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EF223FC6C6E0058579E /* EachCourse.swift */; };
 		2F386EFA23FC6C6E0058579E /* FirstBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EF323FC6C6E0058579E /* FirstBannerView.swift */; };
 		2F386EFB23FC6C6E0058579E /* MyCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EF423FC6C6E0058579E /* MyCourses.swift */; };
+		2F386EFD23FC6CD40058579E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EFC23FC6CD40058579E /* HomeVC.swift */; };
 		69CACAC7F5AEA47A35CDCCA9 /* Pods_Tensend_new_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */; };
 		AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */; };
 		AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19B23E9704100617132 /* CheckCodeView.swift */; };
@@ -76,7 +76,6 @@
 
 /* Begin PBXFileReference section */
 		0E62ED0DA18E2558035BEAEA /* Pods-Tensend(new)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2F386C1823FC2EC50058579E /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = "Tensend(new)/Home/HomeVC.swift"; sourceTree = SOURCE_ROOT; };
 		2F386C2223FC2F320058579E /* ForYouCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ForYouCVC.xib; path = "Tensend(new)/CollectionViewCells/ForYouCVC.xib"; sourceTree = SOURCE_ROOT; };
 		2F386C2323FC2F320058579E /* ForYouCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForYouCVC.swift; path = "Tensend(new)/CollectionViewCells/ForYouCVC.swift"; sourceTree = SOURCE_ROOT; };
 		2F386C2423FC2F320058579E /* OnlyImageCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnlyImageCVC.swift; path = "Tensend(new)/CollectionViewCells/OnlyImageCVC.swift"; sourceTree = SOURCE_ROOT; };
@@ -96,6 +95,7 @@
 		2F386EF223FC6C6E0058579E /* EachCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EachCourse.swift; path = "Tensend(new)/Home/Home Views/EachCourse.swift"; sourceTree = SOURCE_ROOT; };
 		2F386EF323FC6C6E0058579E /* FirstBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstBannerView.swift; path = "Tensend(new)/Home/Home Views/FirstBannerView.swift"; sourceTree = SOURCE_ROOT; };
 		2F386EF423FC6C6E0058579E /* MyCourses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCourses.swift; path = "Tensend(new)/Home/Home Views/MyCourses.swift"; sourceTree = SOURCE_ROOT; };
+		2F386EFC23FC6CD40058579E /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = "Tensend(new)/Home/HomeVC.swift"; sourceTree = SOURCE_ROOT; };
 		3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,8 +196,8 @@
 		AAB1301223EB0D0E00D86BAC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2F386C1823FC2EC50058579E /* HomeVC.swift */,
 				2F386EDE23FC6B6F0058579E /* HomeRequests.swift */,
+				2F386EFC23FC6CD40058579E /* HomeVC.swift */,
 				2F386EE123FC6BD70058579E /* Objects */,
 				AAB1301423EB0D0E00D86BAC /* Home Views */,
 			);
@@ -576,13 +576,13 @@
 				AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */,
 				2F386EE923FC6BD70058579E /* MeditationsResponse.swift in Sources */,
 				2F386EEC23FC6BD70058579E /* BannersResponse.swift in Sources */,
-				2F386C1923FC2EC60058579E /* HomeVC.swift in Sources */,
 				AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */,
 				AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */,
 				2F386C2823FC2F320058579E /* ForYouCVC.swift in Sources */,
 				2F386EEA23FC6BD70058579E /* CategoriesResponse.swift in Sources */,
 				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
 				2F386EDF23FC6B6F0058579E /* HomeRequests.swift in Sources */,
+				2F386EFD23FC6CD40058579E /* HomeVC.swift in Sources */,
 				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
 				AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
