@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F386C1923FC2EC60058579E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C1823FC2EC50058579E /* HomeVC.swift */; };
+		2F386C1E23FC2F230058579E /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C1A23FC2F230058579E /* CategoriesView.swift */; };
+		2F386C1F23FC2F230058579E /* ForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C1B23FC2F230058579E /* ForYou.swift */; };
+		2F386C2023FC2F230058579E /* FirstBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C1C23FC2F230058579E /* FirstBannerView.swift */; };
+		2F386C2123FC2F230058579E /* SectionsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C1D23FC2F230058579E /* SectionsName.swift */; };
+		2F386C2723FC2F320058579E /* ForYouCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F386C2223FC2F320058579E /* ForYouCVC.xib */; };
+		2F386C2823FC2F320058579E /* ForYouCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C2323FC2F320058579E /* ForYouCVC.swift */; };
+		2F386C2923FC2F320058579E /* OnlyImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C2423FC2F320058579E /* OnlyImageCVC.swift */; };
+		2F386C2A23FC2F320058579E /* ImagesWithTitleCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F386C2523FC2F320058579E /* ImagesWithTitleCVC.xib */; };
+		2F386C2B23FC2F320058579E /* ImagesWithTitleCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C2623FC2F320058579E /* ImagesWithTitleCVC.swift */; };
 		69CACAC7F5AEA47A35CDCCA9 /* Pods_Tensend_new_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */; };
 		AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */; };
 		AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19B23E9704100617132 /* CheckCodeView.swift */; };
@@ -14,16 +24,6 @@
 		AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */; };
 		AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */; };
 		AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1300623EAFBE900D86BAC /* StandartResponse.swift */; };
-		AAB1301923EB0D0E00D86BAC /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1301323EB0D0E00D86BAC /* HomeVC.swift */; };
-		AAB1301A23EB0D0E00D86BAC /* SectionsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1301523EB0D0E00D86BAC /* SectionsName.swift */; };
-		AAB1301B23EB0D0E00D86BAC /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1301623EB0D0E00D86BAC /* CategoriesView.swift */; };
-		AAB1301C23EB0D0E00D86BAC /* ForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1301723EB0D0E00D86BAC /* ForYou.swift */; };
-		AAB1301D23EB0D0E00D86BAC /* FirstBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1301823EB0D0E00D86BAC /* FirstBannerView.swift */; };
-		AAB1302423EB0D1800D86BAC /* ImagesWithTitleCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1301F23EB0D1800D86BAC /* ImagesWithTitleCVC.xib */; };
-		AAB1302523EB0D1800D86BAC /* OnlyImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302023EB0D1800D86BAC /* OnlyImageCVC.swift */; };
-		AAB1302623EB0D1800D86BAC /* ForYouCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302123EB0D1800D86BAC /* ForYouCVC.swift */; };
-		AAB1302723EB0D1800D86BAC /* ForYouCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302223EB0D1800D86BAC /* ForYouCVC.xib */; };
-		AAB1302823EB0D1800D86BAC /* ImagesWithTitleCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302323EB0D1800D86BAC /* ImagesWithTitleCVC.swift */; };
 		AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */; };
 		AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */; };
 		AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302E23EC805E00D86BAC /* CreatePasswordPresenter.swift */; };
@@ -66,6 +66,16 @@
 
 /* Begin PBXFileReference section */
 		0E62ED0DA18E2558035BEAEA /* Pods-Tensend(new)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F386C1823FC2EC50058579E /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = "Tensend(new)/Home/HomeVC.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C1A23FC2F230058579E /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesView.swift; path = "Tensend(new)/Home/Home Views/CategoriesView.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C1B23FC2F230058579E /* ForYou.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForYou.swift; path = "Tensend(new)/Home/Home Views/ForYou.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C1C23FC2F230058579E /* FirstBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstBannerView.swift; path = "Tensend(new)/Home/Home Views/FirstBannerView.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C1D23FC2F230058579E /* SectionsName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionsName.swift; path = "Tensend(new)/Home/Home Views/SectionsName.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C2223FC2F320058579E /* ForYouCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ForYouCVC.xib; path = "Tensend(new)/CollectionViewCells/ForYouCVC.xib"; sourceTree = SOURCE_ROOT; };
+		2F386C2323FC2F320058579E /* ForYouCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForYouCVC.swift; path = "Tensend(new)/CollectionViewCells/ForYouCVC.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C2423FC2F320058579E /* OnlyImageCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnlyImageCVC.swift; path = "Tensend(new)/CollectionViewCells/OnlyImageCVC.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C2523FC2F320058579E /* ImagesWithTitleCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImagesWithTitleCVC.xib; path = "Tensend(new)/CollectionViewCells/ImagesWithTitleCVC.xib"; sourceTree = SOURCE_ROOT; };
+		2F386C2623FC2F320058579E /* ImagesWithTitleCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesWithTitleCVC.swift; path = "Tensend(new)/CollectionViewCells/ImagesWithTitleCVC.swift"; sourceTree = SOURCE_ROOT; };
 		3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,16 +85,6 @@
 		AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdownCell.swift; sourceTree = "<group>"; };
 		AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDropdownCell.xib; sourceTree = "<group>"; };
 		AAB1300623EAFBE900D86BAC /* StandartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartResponse.swift; sourceTree = "<group>"; };
-		AAB1301323EB0D0E00D86BAC /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		AAB1301523EB0D0E00D86BAC /* SectionsName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsName.swift; sourceTree = "<group>"; };
-		AAB1301623EB0D0E00D86BAC /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
-		AAB1301723EB0D0E00D86BAC /* ForYou.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForYou.swift; sourceTree = "<group>"; };
-		AAB1301823EB0D0E00D86BAC /* FirstBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstBannerView.swift; sourceTree = "<group>"; };
-		AAB1301F23EB0D1800D86BAC /* ImagesWithTitleCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesWithTitleCVC.xib; sourceTree = "<group>"; };
-		AAB1302023EB0D1800D86BAC /* OnlyImageCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyImageCVC.swift; sourceTree = "<group>"; };
-		AAB1302123EB0D1800D86BAC /* ForYouCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForYouCVC.swift; sourceTree = "<group>"; };
-		AAB1302223EB0D1800D86BAC /* ForYouCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForYouCVC.xib; sourceTree = "<group>"; };
-		AAB1302323EB0D1800D86BAC /* ImagesWithTitleCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesWithTitleCVC.swift; sourceTree = "<group>"; };
 		AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordView.xib; sourceTree = "<group>"; };
 		AAB1302E23EC805E00D86BAC /* CreatePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordPresenter.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		AAB1301223EB0D0E00D86BAC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				AAB1301323EB0D0E00D86BAC /* HomeVC.swift */,
+				2F386C1823FC2EC50058579E /* HomeVC.swift */,
 				AAB1301423EB0D0E00D86BAC /* Home Views */,
 			);
 			name = Home;
@@ -172,10 +172,10 @@
 		AAB1301423EB0D0E00D86BAC /* Home Views */ = {
 			isa = PBXGroup;
 			children = (
-				AAB1301523EB0D0E00D86BAC /* SectionsName.swift */,
-				AAB1301623EB0D0E00D86BAC /* CategoriesView.swift */,
-				AAB1301723EB0D0E00D86BAC /* ForYou.swift */,
-				AAB1301823EB0D0E00D86BAC /* FirstBannerView.swift */,
+				2F386C1A23FC2F230058579E /* CategoriesView.swift */,
+				2F386C1C23FC2F230058579E /* FirstBannerView.swift */,
+				2F386C1B23FC2F230058579E /* ForYou.swift */,
+				2F386C1D23FC2F230058579E /* SectionsName.swift */,
 			);
 			path = "Home Views";
 			sourceTree = "<group>";
@@ -183,11 +183,11 @@
 		AAB1301E23EB0D1800D86BAC /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				AAB1301F23EB0D1800D86BAC /* ImagesWithTitleCVC.xib */,
-				AAB1302023EB0D1800D86BAC /* OnlyImageCVC.swift */,
-				AAB1302123EB0D1800D86BAC /* ForYouCVC.swift */,
-				AAB1302223EB0D1800D86BAC /* ForYouCVC.xib */,
-				AAB1302323EB0D1800D86BAC /* ImagesWithTitleCVC.swift */,
+				2F386C2323FC2F320058579E /* ForYouCVC.swift */,
+				2F386C2223FC2F320058579E /* ForYouCVC.xib */,
+				2F386C2623FC2F320058579E /* ImagesWithTitleCVC.swift */,
+				2F386C2523FC2F320058579E /* ImagesWithTitleCVC.xib */,
+				2F386C2423FC2F320058579E /* OnlyImageCVC.swift */,
 			);
 			name = CollectionViewCells;
 			path = ../../iOS/Tensend/Tensend/CollectionViewCells;
@@ -440,10 +440,10 @@
 				AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */,
 				AAD5DA8D23E169EE00D9F7D0 /* LaunchScreen.storyboard in Resources */,
 				AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */,
-				AAB1302423EB0D1800D86BAC /* ImagesWithTitleCVC.xib in Resources */,
+				2F386C2A23FC2F320058579E /* ImagesWithTitleCVC.xib in Resources */,
+				2F386C2723FC2F320058579E /* ForYouCVC.xib in Resources */,
 				AAD5DAA323E174B100D9F7D0 /* Assets.xcassets in Resources */,
 				AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */,
-				AAB1302723EB0D1800D86BAC /* ForYouCVC.xib in Resources */,
 				AAD5DA8823E169ED00D9F7D0 /* Main.storyboard in Resources */,
 				AAB1303423ED5D7300D86BAC /* CreatePasscodeView.xib in Resources */,
 				AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */,
@@ -529,30 +529,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE71B8823E40FD600CAFA47 /* UIViewExtensions.swift in Sources */,
+				2F386C2923FC2F320058579E /* OnlyImageCVC.swift in Sources */,
 				AAE71B8523E40FD600CAFA47 /* LabelExtensions.swift in Sources */,
-				AAB1302623EB0D1800D86BAC /* ForYouCVC.swift in Sources */,
-				AAB1302823EB0D1800D86BAC /* ImagesWithTitleCVC.swift in Sources */,
+				2F386C2B23FC2F320058579E /* ImagesWithTitleCVC.swift in Sources */,
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
-				AAB1301923EB0D0E00D86BAC /* HomeVC.swift in Sources */,
 				AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */,
-				AAB1302523EB0D1800D86BAC /* OnlyImageCVC.swift in Sources */,
 				AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */,
+				2F386C1923FC2EC60058579E /* HomeVC.swift in Sources */,
 				AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */,
 				AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */,
-				AAB1301C23EB0D0E00D86BAC /* ForYou.swift in Sources */,
+				2F386C2823FC2F320058579E /* ForYouCVC.swift in Sources */,
 				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
 				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
 				AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */,
-				AAB1301B23EB0D0E00D86BAC /* CategoriesView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
 				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
-				AAB1301A23EB0D0E00D86BAC /* SectionsName.swift in Sources */,
+				2F386C1E23FC2F230058579E /* CategoriesView.swift in Sources */,
 				AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */,
 				AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */,
+				2F386C1F23FC2F230058579E /* ForYou.swift in Sources */,
 				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
+				2F386C2023FC2F230058579E /* FirstBannerView.swift in Sources */,
+				2F386C2123FC2F230058579E /* SectionsName.swift in Sources */,
 				AAC3F89C23FC1CE700537254 /* UserDefaults.swift in Sources */,
 				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
-				AAB1301D23EB0D0E00D86BAC /* FirstBannerView.swift in Sources */,
 				AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */,
 				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
 				AAE71B8723E40FD600CAFA47 /* ScrollStackController.swift in Sources */,
@@ -721,7 +721,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BN62376H24;
+				DEVELOPMENT_TEAM = R5W6A2A7L3;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -740,7 +740,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BN62376H24;
+				DEVELOPMENT_TEAM = R5W6A2A7L3;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
