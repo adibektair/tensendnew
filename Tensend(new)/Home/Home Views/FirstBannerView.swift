@@ -11,7 +11,7 @@ import EasyPeasy
 
 class FirstBannerView: UIView,UICollectionViewDelegate {
     
-    //    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
+    var bannerData : BannersResponse?
     let stackView = UIStackView()
     private var pageControl = UIPageControl(frame: .zero)
     lazy var collectionView : UICollectionView = {
@@ -41,13 +41,19 @@ class FirstBannerView: UIView,UICollectionViewDelegate {
         super.init(frame: frame)
         sizes()
         setupPageControl()
+        getData()
     }
     
     func sizes(){
         self.addSubview(collectionView)
         collectionView.easy.layout(Edges(),Height(200),Bottom(30))
     }
-    
+    func getData(){
+        HomeRequests.sharedInstance.getBanners { (result) in
+            self.bannerData = result
+            self.collectionView.reloadData()
+        }
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -64,13 +70,20 @@ extension FirstBannerView: UICollectionViewDataSource, UICollectionViewDelegateF
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        if let count = bannerData?.banners?.count, count > 0 {
+            self.isHidden = false
+            pageControl.numberOfPages = count
+            return count
+        }
+        self.isHidden = true
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OnlyImageCVC
-        cell.layer.cornerRadius = 8
-        cell.image.image = #imageLiteral(resourceName: "grit")
+        if let data = bannerData?.banners {
+            cell.data = data[indexPath.row]
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -88,7 +101,7 @@ extension FirstBannerView: UICollectionViewDataSource, UICollectionViewDelegateF
         print("tapped \(indexPath.row)")
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        self.pageControl.currentPage = indexPath.row
+        //        self.pageControl.currentPage = indexPath.row
     }
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         if scrollView == collectionView {
@@ -113,7 +126,7 @@ extension FirstBannerView: UICollectionViewDataSource, UICollectionViewDelegateF
 
 extension FirstBannerView {
     func setupPageControl() {
-        pageControl.numberOfPages = 4
+        pageControl.numberOfPages = 0
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
         pageControl.subviews.forEach { (a) in
