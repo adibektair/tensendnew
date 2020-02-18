@@ -12,6 +12,7 @@ protocol AssemblyBuilderProtocol {
     func createCheckCodeVC(phone: String, router: Router) -> UIViewController
     func createCreatePasswordVC(phone: String, router: Router) -> UIViewController
     func createCreatePasscode() -> UIViewController
+    
 }
 
 class AssemblyModuleBuilder: AssemblyBuilderProtocol {

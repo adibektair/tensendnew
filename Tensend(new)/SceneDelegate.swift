@@ -21,16 +21,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         let navigationController = UINavigationController()
         navigationController.navigationBar.isTranslucent = true
-        if let token = UserDefault.getValue(byKey: "token"){
+        if let _ = UserDefault.getValue(byKey: "token"){
             window?.rootViewController = HomeVC()
-            window?.makeKeyAndVisible()
         }else{
             let builder = AssemblyModuleBuilder()
             let router = Router(navController: navigationController, assemblyProtocol: builder)
             router.initialViewController()
             window?.rootViewController = navigationController
-            window?.makeKeyAndVisible()
         }
+        
+        window?.makeKeyAndVisible()
         
     }
 

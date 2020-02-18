@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "18832D2E-BDF5-41DB-8DC1-48A665935817"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/Auth/Main/MainVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "changeCountryPressed(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4484A00B-C623-4080-815B-C073BEE4B742"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -34,54 +18,6 @@
             endingLineNumber = "65"
             landmarkName = "CheckCodeView"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D145C43D-3015-4D0C-89E6-466FB6F0AB54"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/Auth/CreatePassword/CreatePasswordPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "setPassword(password:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D145C43D-3015-4D0C-89E6-466FB6F0AB54 - 2790ff66b90d8557"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tensend_new_.CreatePasswordPresenter.setPassword(password: Swift.String) -&gt; ()"
-                  moduleName = "Tensend(new)"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookpro2015/Desktop/Tensend(new)/Tensend(new)/Auth/CreatePassword/CreatePasswordPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "D145C43D-3015-4D0C-89E6-466FB6F0AB54 - 40e81b9e747ac15d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Tensend_new_.CreatePasswordPresenter.setPassword(password: Swift.String) -&gt; ()"
-                  moduleName = "Tensend(new)"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookpro2015/Desktop/Tensend(new)/Tensend(new)/Auth/CreatePassword/CreatePasswordPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "100">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
