@@ -13,8 +13,9 @@ class SignInView: ScrollStackController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9764705882, alpha: 1)
         self.createTopView()
-        
+        self.createMiddleView()
     }
 
 
@@ -44,9 +45,25 @@ extension SignInView{
         let view = UIView()
         let label = UILabel()
         label.text = "Аккаунтыңызға кіріңіз"
-        label.font = UIFont(name: "Montserrat-Regular", size: 20)
+        label.font = label.font.withSize(20)
         label.textColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
+        label.textAlignment = .center
         view.addSubview(label)
-//        label.easy.layout(Top(50), CenterX(), )
+        label.easy.layout(Top(50), CenterX(), Height(20))
+        
+        let label1 = UILabel()
+        label1.text = "Tensend тегі өз жеке\nаккаунтыңызға кіру үшін логин\nмен құпия сөзді еңгізіңіз"
+        label1.font = UIFont(name: "Montserrat-Regular", size: 16)
+        label1.textColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
+        label1.numberOfLines = 0
+        label1.textAlignment = .center
+        view.addSubview(label1)
+        label1.easy.layout(Top(20).to(label), CenterX(), Left(30), Right(30))
+        view.addSubview(label1)
+        stackView.addArrangedSubview(view)
+    }
+    
+    func createTextFieldsView(){
+        
     }
 }
