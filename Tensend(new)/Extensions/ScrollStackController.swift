@@ -38,7 +38,7 @@ class ScrollStackController: UIViewController {
         stackView.distribution = .fill
         stackView.isLayoutMarginsRelativeArrangement = true
         if #available(iOS 11.0, *) {
-            stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0)
+            stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0)
         } else {
             stackView.layoutMargins = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         }

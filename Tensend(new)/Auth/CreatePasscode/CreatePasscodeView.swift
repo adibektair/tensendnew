@@ -86,11 +86,11 @@ extension CreatePasscodeView : CreatePasscodeProtocol{
     func repeatPasscode() {
         
         // MARK: SULA, POSMOTRI
-        let successView = CorrectCodeView()
+//        let successView = CorrectCodeView()
         
-        self.view.addSubview(successView)
-        
-        successView.easy.layout(Top(20).to(self.infoLabel), CenterX(0))
+//        self.view.addSubview(successView)
+//
+//        successView.easy.layout(Top(20).to(self.infoLabel), CenterX(0))
         
         self.infoLabel.text = "Еңгізген құпия саныңызды\nқайта теріңіз"
         self.clear()
