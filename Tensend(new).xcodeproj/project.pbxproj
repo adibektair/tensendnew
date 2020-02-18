@@ -29,6 +29,14 @@
 		2F386F0923FC6D8D0058579E /* MeditationCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F0223FC6D8D0058579E /* MeditationCVC.swift */; };
 		2F386F0A23FC6D8D0058579E /* ForYouCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F386F0323FC6D8D0058579E /* ForYouCVC.xib */; };
 		2F386F0B23FC6D8D0058579E /* OnlyImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F0423FC6D8D0058579E /* OnlyImageCVC.swift */; };
+		2F386F1423FC6DE70058579E /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F0C23FC6DE60058579E /* ViewControllerExtension.swift */; };
+		2F386F1523FC6DE70058579E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F0D23FC6DE60058579E /* StringExtension.swift */; };
+		2F386F1623FC6DE70058579E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F0E23FC6DE60058579E /* UIViewExtensions.swift */; };
+		2F386F1723FC6DE70058579E /* ScrollStackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F0F23FC6DE60058579E /* ScrollStackController.swift */; };
+		2F386F1823FC6DE70058579E /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F1023FC6DE70058579E /* ViewExtensions.swift */; };
+		2F386F1923FC6DE70058579E /* StackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F1123FC6DE70058579E /* StackViewExtensions.swift */; };
+		2F386F1A23FC6DE70058579E /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F1223FC6DE70058579E /* LabelExtensions.swift */; };
+		2F386F1B23FC6DE70058579E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F1323FC6DE70058579E /* Colors.swift */; };
 		69CACAC7F5AEA47A35CDCCA9 /* Pods_Tensend_new_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */; };
 		AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */; };
 		AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19B23E9704100617132 /* CheckCodeView.swift */; };
@@ -58,10 +66,6 @@
 		AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD5DAB323E1784F00D9F7D0 /* MainPresenter.swift */; };
 		AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B7A23E405DB00CAFA47 /* MainVC.swift */; };
 		AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE71B7B23E405DB00CAFA47 /* MainVC.xib */; };
-		AAE71B8523E40FD600CAFA47 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8123E40FD500CAFA47 /* LabelExtensions.swift */; };
-		AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8223E40FD500CAFA47 /* ViewControllerExtension.swift */; };
-		AAE71B8723E40FD600CAFA47 /* ScrollStackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8323E40FD500CAFA47 /* ScrollStackController.swift */; };
-		AAE71B8823E40FD600CAFA47 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8423E40FD600CAFA47 /* UIViewExtensions.swift */; };
 		AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */; };
 		CAD1B55D908B6BFCA02A070C /* Pods_Tensend_new_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +104,14 @@
 		2F386F0223FC6D8D0058579E /* MeditationCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeditationCVC.swift; path = "Tensend(new)/CollectionViewCells/MeditationCVC.swift"; sourceTree = SOURCE_ROOT; };
 		2F386F0323FC6D8D0058579E /* ForYouCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ForYouCVC.xib; path = "Tensend(new)/CollectionViewCells/ForYouCVC.xib"; sourceTree = SOURCE_ROOT; };
 		2F386F0423FC6D8D0058579E /* OnlyImageCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnlyImageCVC.swift; path = "Tensend(new)/CollectionViewCells/OnlyImageCVC.swift"; sourceTree = SOURCE_ROOT; };
+		2F386F0C23FC6DE60058579E /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		2F386F0D23FC6DE60058579E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		2F386F0E23FC6DE60058579E /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		2F386F0F23FC6DE60058579E /* ScrollStackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollStackController.swift; sourceTree = "<group>"; };
+		2F386F1023FC6DE70058579E /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		2F386F1123FC6DE70058579E /* StackViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewExtensions.swift; sourceTree = "<group>"; };
+		2F386F1223FC6DE70058579E /* LabelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
+		2F386F1323FC6DE70058579E /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,10 +147,6 @@
 		AAD5DAB323E1784F00D9F7D0 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		AAE71B7A23E405DB00CAFA47 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		AAE71B7B23E405DB00CAFA47 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
-		AAE71B8123E40FD500CAFA47 /* LabelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
-		AAE71B8223E40FD500CAFA47 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
-		AAE71B8323E40FD500CAFA47 /* ScrollStackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollStackController.swift; sourceTree = "<group>"; };
-		AAE71B8423E40FD600CAFA47 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayout.swift; sourceTree = "<group>"; };
 		EAA3C1192A90A8A41CD4BB81 /* Pods-Tensend(new).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new).debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)/Pods-Tensend(new).debug.xcconfig"; sourceTree = "<group>"; };
 		ED1983BC29CCFC1ED6CA7B58 /* Pods-Tensend(new).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new).release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)/Pods-Tensend(new).release.xcconfig"; sourceTree = "<group>"; };
@@ -370,10 +378,14 @@
 		AAE71B8023E40FC800CAFA47 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AAE71B8123E40FD500CAFA47 /* LabelExtensions.swift */,
-				AAE71B8323E40FD500CAFA47 /* ScrollStackController.swift */,
-				AAE71B8423E40FD600CAFA47 /* UIViewExtensions.swift */,
-				AAE71B8223E40FD500CAFA47 /* ViewControllerExtension.swift */,
+				2F386F1323FC6DE70058579E /* Colors.swift */,
+				2F386F1223FC6DE70058579E /* LabelExtensions.swift */,
+				2F386F0F23FC6DE60058579E /* ScrollStackController.swift */,
+				2F386F1123FC6DE70058579E /* StackViewExtensions.swift */,
+				2F386F0D23FC6DE60058579E /* StringExtension.swift */,
+				2F386F0E23FC6DE60058579E /* UIViewExtensions.swift */,
+				2F386F0C23FC6DE60058579E /* ViewControllerExtension.swift */,
+				2F386F1023FC6DE70058579E /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -574,8 +586,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAE71B8823E40FD600CAFA47 /* UIViewExtensions.swift in Sources */,
-				AAE71B8523E40FD600CAFA47 /* LabelExtensions.swift in Sources */,
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
 				2F386F0823FC6D8D0058579E /* ImagesWithTitleCVC.swift in Sources */,
 				2F386F0B23FC6D8D0058579E /* OnlyImageCVC.swift in Sources */,
@@ -584,36 +594,42 @@
 				2F386EE923FC6BD70058579E /* MeditationsResponse.swift in Sources */,
 				2F386EEC23FC6BD70058579E /* BannersResponse.swift in Sources */,
 				AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */,
-				AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */,
 				2F386EEA23FC6BD70058579E /* CategoriesResponse.swift in Sources */,
 				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
+				2F386F1B23FC6DE70058579E /* Colors.swift in Sources */,
 				2F386EDF23FC6B6F0058579E /* HomeRequests.swift in Sources */,
 				2F386EFD23FC6CD40058579E /* HomeVC.swift in Sources */,
 				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
 				AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
 				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
+				2F386F1723FC6DE70058579E /* ScrollStackController.swift in Sources */,
 				AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */,
 				2F386F0723FC6D8D0058579E /* ForYouCVC.swift in Sources */,
 				2F386EF923FC6C6E0058579E /* EachCourse.swift in Sources */,
 				AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */,
 				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
+				2F386F1823FC6DE70058579E /* ViewExtensions.swift in Sources */,
 				2F386EEB23FC6BD70058579E /* Data.swift in Sources */,
+				2F386F1A23FC6DE70058579E /* LabelExtensions.swift in Sources */,
+				2F386F1623FC6DE70058579E /* UIViewExtensions.swift in Sources */,
+				2F386F1923FC6DE70058579E /* StackViewExtensions.swift in Sources */,
 				AAC3F89C23FC1CE700537254 /* UserDefaults.swift in Sources */,
 				2F386EF723FC6C6E0058579E /* ForYou.swift in Sources */,
 				2F386EE823FC6BD70058579E /* Meditation.swift in Sources */,
 				2F386EFA23FC6C6E0058579E /* FirstBannerView.swift in Sources */,
 				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
 				2F386EFB23FC6C6E0058579E /* MyCourses.swift in Sources */,
+				2F386F1423FC6DE70058579E /* ViewControllerExtension.swift in Sources */,
 				AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */,
 				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
-				AAE71B8723E40FD600CAFA47 /* ScrollStackController.swift in Sources */,
 				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
 				2F386EF623FC6C6E0058579E /* MeditationView.swift in Sources */,
 				2F386EED23FC6BD70058579E /* Category.swift in Sources */,
 				2F386EF523FC6C6E0058579E /* CategoriesView.swift in Sources */,
 				AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */,
 				2F386F0923FC6D8D0058579E /* MeditationCVC.swift in Sources */,
+				2F386F1523FC6DE70058579E /* StringExtension.swift in Sources */,
 				2F386EF823FC6C6E0058579E /* SectionsName.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
 				AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */,
