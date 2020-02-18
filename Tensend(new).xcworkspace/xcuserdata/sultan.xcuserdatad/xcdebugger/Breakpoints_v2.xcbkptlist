@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7EF448BA-96EE-4494-A440-62850F3D225C"
+            uuid = "0F010FB1-DFFD-4787-A4F2-1ED5302DBFD3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../iOS/Tensend/Tensend/CollectionViewCells/MeditationCVC.swift"
+            filePath = "../iOS/Tensend/Tensend/Home/HomeVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "setData()"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "setElements()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

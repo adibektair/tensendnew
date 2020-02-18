@@ -7,21 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F28B84B23F6DA7B00AE77EA /* HomeRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B84A23F6DA7B00AE77EA /* HomeRequests.swift */; };
 		2F28B85123F6E63D00AE77EA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B85023F6E63D00AE77EA /* StringExtension.swift */; };
-		2F28B87123F6EDDE00AE77EA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B86C23F6EDDE00AE77EA /* Data.swift */; };
-		2F28B87223F6EDDE00AE77EA /* BannersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B86D23F6EDDE00AE77EA /* BannersResponse.swift */; };
-		2F28B87323F6EDDE00AE77EA /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B86E23F6EDDE00AE77EA /* Banner.swift */; };
-		2F28B87423F6EDDE00AE77EA /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B86F23F6EDDE00AE77EA /* CategoriesResponse.swift */; };
-		2F28B87523F6EDDE00AE77EA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B87023F6EDDE00AE77EA /* Category.swift */; };
-		2F28B87823F6F1F600AE77EA /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B87623F6F1F500AE77EA /* Meditation.swift */; };
-		2F28B87A23F6F3A300AE77EA /* MeditationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F28B87723F6F1F500AE77EA /* MeditationsResponse.swift */; };
-		2F4699E823F58D9800461E9C /* MyCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699E723F58D9700461E9C /* MyCourses.swift */; };
+		2F386BDD23FC28460058579E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BDC23FC28460058579E /* UserDefaults.swift */; };
+		2F386BE123FC29360058579E /* HomeRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BE023FC29360058579E /* HomeRequests.swift */; };
+		2F386BE323FC2A830058579E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BE223FC2A830058579E /* HomeVC.swift */; };
+		2F386BEB23FC2AA70058579E /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BE423FC2AA60058579E /* CategoriesResponse.swift */; };
+		2F386BEC23FC2AA70058579E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BE523FC2AA70058579E /* Meditation.swift */; };
+		2F386BED23FC2AA70058579E /* BannersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BE623FC2AA70058579E /* BannersResponse.swift */; };
+		2F386BEE23FC2AA70058579E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BE723FC2AA70058579E /* Category.swift */; };
+		2F386BEF23FC2AA70058579E /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BE823FC2AA70058579E /* Banner.swift */; };
+		2F386BF023FC2AA70058579E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BE923FC2AA70058579E /* Data.swift */; };
+		2F386BF123FC2AA70058579E /* MeditationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BEA23FC2AA70058579E /* MeditationsResponse.swift */; };
+		2F386BF923FC2AD50058579E /* OnlyImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BF223FC2AD50058579E /* OnlyImageCVC.swift */; };
+		2F386BFA23FC2AD50058579E /* MeditationCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BF323FC2AD50058579E /* MeditationCVC.swift */; };
+		2F386BFB23FC2AD50058579E /* MeditationCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F386BF423FC2AD50058579E /* MeditationCVC.xib */; };
+		2F386BFC23FC2AD50058579E /* ForYouCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F386BF523FC2AD50058579E /* ForYouCVC.xib */; };
+		2F386BFD23FC2AD50058579E /* ImagesWithTitleCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F386BF623FC2AD50058579E /* ImagesWithTitleCVC.xib */; };
+		2F386BFE23FC2AD50058579E /* ImagesWithTitleCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BF723FC2AD50058579E /* ImagesWithTitleCVC.swift */; };
+		2F386BFF23FC2AD50058579E /* ForYouCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386BF823FC2AD50058579E /* ForYouCVC.swift */; };
+		2F386C0723FC2B590058579E /* MyCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C0023FC2B590058579E /* MyCourses.swift */; };
+		2F386C0823FC2B590058579E /* EachCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C0123FC2B590058579E /* EachCourse.swift */; };
+		2F386C0923FC2B590058579E /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C0223FC2B590058579E /* MeditationView.swift */; };
+		2F386C0A23FC2B590058579E /* FirstBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C0323FC2B590058579E /* FirstBannerView.swift */; };
+		2F386C0B23FC2B590058579E /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C0423FC2B590058579E /* CategoriesView.swift */; };
+		2F386C0C23FC2B590058579E /* SectionsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C0523FC2B590058579E /* SectionsName.swift */; };
+		2F386C0D23FC2B590058579E /* ForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C0623FC2B590058579E /* ForYou.swift */; };
 		2F4699EA23F58DB500461E9C /* StackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699E923F58DB500461E9C /* StackViewExtensions.swift */; };
-		2F4699EC23F58DD300461E9C /* EachCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699EB23F58DD300461E9C /* EachCourse.swift */; };
-		2F4699EE23F58DF000461E9C /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699ED23F58DF000461E9C /* MeditationView.swift */; };
-		2F4699F123F58E3500461E9C /* MeditationCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4699EF23F58E3500461E9C /* MeditationCVC.xib */; };
-		2F4699F223F58E3500461E9C /* MeditationCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699F023F58E3500461E9C /* MeditationCVC.swift */; };
 		2F4699F423F58EB900461E9C /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699F323F58EB900461E9C /* ViewExtensions.swift */; };
 		2F4699F623F58F0900461E9C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4699F523F58F0900461E9C /* Colors.swift */; };
 		69CACAC7F5AEA47A35CDCCA9 /* Pods_Tensend_new_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */; };
@@ -31,16 +42,6 @@
 		AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */; };
 		AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */; };
 		AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1300623EAFBE900D86BAC /* StandartResponse.swift */; };
-		AAB1301923EB0D0E00D86BAC /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1301323EB0D0E00D86BAC /* HomeVC.swift */; };
-		AAB1301A23EB0D0E00D86BAC /* SectionsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1301523EB0D0E00D86BAC /* SectionsName.swift */; };
-		AAB1301B23EB0D0E00D86BAC /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1301623EB0D0E00D86BAC /* CategoriesView.swift */; };
-		AAB1301C23EB0D0E00D86BAC /* ForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1301723EB0D0E00D86BAC /* ForYou.swift */; };
-		AAB1301D23EB0D0E00D86BAC /* FirstBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1301823EB0D0E00D86BAC /* FirstBannerView.swift */; };
-		AAB1302423EB0D1800D86BAC /* ImagesWithTitleCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1301F23EB0D1800D86BAC /* ImagesWithTitleCVC.xib */; };
-		AAB1302523EB0D1800D86BAC /* OnlyImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302023EB0D1800D86BAC /* OnlyImageCVC.swift */; };
-		AAB1302623EB0D1800D86BAC /* ForYouCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302123EB0D1800D86BAC /* ForYouCVC.swift */; };
-		AAB1302723EB0D1800D86BAC /* ForYouCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302223EB0D1800D86BAC /* ForYouCVC.xib */; };
-		AAB1302823EB0D1800D86BAC /* ImagesWithTitleCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302323EB0D1800D86BAC /* ImagesWithTitleCVC.swift */; };
 		AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */; };
 		AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */; };
 		AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302E23EC805E00D86BAC /* CreatePasswordPresenter.swift */; };
@@ -80,21 +81,32 @@
 
 /* Begin PBXFileReference section */
 		0E62ED0DA18E2558035BEAEA /* Pods-Tensend(new)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2F28B84A23F6DA7B00AE77EA /* HomeRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRequests.swift; sourceTree = "<group>"; };
 		2F28B85023F6E63D00AE77EA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		2F28B86C23F6EDDE00AE77EA /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		2F28B86D23F6EDDE00AE77EA /* BannersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannersResponse.swift; sourceTree = "<group>"; };
-		2F28B86E23F6EDDE00AE77EA /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
-		2F28B86F23F6EDDE00AE77EA /* CategoriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
-		2F28B87023F6EDDE00AE77EA /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		2F28B87623F6F1F500AE77EA /* Meditation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
-		2F28B87723F6F1F500AE77EA /* MeditationsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationsResponse.swift; sourceTree = "<group>"; };
-		2F4699E723F58D9700461E9C /* MyCourses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCourses.swift; sourceTree = "<group>"; };
+		2F386BDC23FC28460058579E /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		2F386BE023FC29360058579E /* HomeRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeRequests.swift; path = "Tensend(new)/Home/HomeRequests.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BE223FC2A830058579E /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = "Tensend(new)/Home/HomeVC.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BE423FC2AA60058579E /* CategoriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesResponse.swift; path = "Tensend(new)/Home/Objects/CategoriesResponse.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BE523FC2AA70058579E /* Meditation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meditation.swift; path = "Tensend(new)/Home/Objects/Meditation.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BE623FC2AA70058579E /* BannersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BannersResponse.swift; path = "Tensend(new)/Home/Objects/BannersResponse.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BE723FC2AA70058579E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = "Tensend(new)/Home/Objects/Category.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BE823FC2AA70058579E /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Banner.swift; path = "Tensend(new)/Home/Objects/Banner.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BE923FC2AA70058579E /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = "Tensend(new)/Home/Objects/Data.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BEA23FC2AA70058579E /* MeditationsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeditationsResponse.swift; path = "Tensend(new)/Home/Objects/MeditationsResponse.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BF223FC2AD50058579E /* OnlyImageCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnlyImageCVC.swift; path = "Tensend(new)/CollectionViewCells/OnlyImageCVC.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BF323FC2AD50058579E /* MeditationCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeditationCVC.swift; path = "Tensend(new)/CollectionViewCells/MeditationCVC.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BF423FC2AD50058579E /* MeditationCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MeditationCVC.xib; path = "Tensend(new)/CollectionViewCells/MeditationCVC.xib"; sourceTree = SOURCE_ROOT; };
+		2F386BF523FC2AD50058579E /* ForYouCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ForYouCVC.xib; path = "Tensend(new)/CollectionViewCells/ForYouCVC.xib"; sourceTree = SOURCE_ROOT; };
+		2F386BF623FC2AD50058579E /* ImagesWithTitleCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImagesWithTitleCVC.xib; path = "Tensend(new)/CollectionViewCells/ImagesWithTitleCVC.xib"; sourceTree = SOURCE_ROOT; };
+		2F386BF723FC2AD50058579E /* ImagesWithTitleCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesWithTitleCVC.swift; path = "Tensend(new)/CollectionViewCells/ImagesWithTitleCVC.swift"; sourceTree = SOURCE_ROOT; };
+		2F386BF823FC2AD50058579E /* ForYouCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForYouCVC.swift; path = "Tensend(new)/CollectionViewCells/ForYouCVC.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C0023FC2B590058579E /* MyCourses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCourses.swift; path = "Tensend(new)/Home/Home Views/MyCourses.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C0123FC2B590058579E /* EachCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EachCourse.swift; path = "Tensend(new)/Home/Home Views/EachCourse.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C0223FC2B590058579E /* MeditationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeditationView.swift; path = "Tensend(new)/Home/Home Views/MeditationView.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C0323FC2B590058579E /* FirstBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstBannerView.swift; path = "Tensend(new)/Home/Home Views/FirstBannerView.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C0423FC2B590058579E /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesView.swift; path = "Tensend(new)/Home/Home Views/CategoriesView.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C0523FC2B590058579E /* SectionsName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionsName.swift; path = "Tensend(new)/Home/Home Views/SectionsName.swift"; sourceTree = SOURCE_ROOT; };
+		2F386C0623FC2B590058579E /* ForYou.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForYou.swift; path = "Tensend(new)/Home/Home Views/ForYou.swift"; sourceTree = SOURCE_ROOT; };
 		2F4699E923F58DB500461E9C /* StackViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewExtensions.swift; sourceTree = "<group>"; };
-		2F4699EB23F58DD300461E9C /* EachCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EachCourse.swift; sourceTree = "<group>"; };
-		2F4699ED23F58DF000461E9C /* MeditationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
-		2F4699EF23F58E3500461E9C /* MeditationCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeditationCVC.xib; sourceTree = "<group>"; };
-		2F4699F023F58E3500461E9C /* MeditationCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationCVC.swift; sourceTree = "<group>"; };
 		2F4699F323F58EB900461E9C /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		2F4699F523F58F0900461E9C /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,16 +118,6 @@
 		AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdownCell.swift; sourceTree = "<group>"; };
 		AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDropdownCell.xib; sourceTree = "<group>"; };
 		AAB1300623EAFBE900D86BAC /* StandartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartResponse.swift; sourceTree = "<group>"; };
-		AAB1301323EB0D0E00D86BAC /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		AAB1301523EB0D0E00D86BAC /* SectionsName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsName.swift; sourceTree = "<group>"; };
-		AAB1301623EB0D0E00D86BAC /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
-		AAB1301723EB0D0E00D86BAC /* ForYou.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForYou.swift; sourceTree = "<group>"; };
-		AAB1301823EB0D0E00D86BAC /* FirstBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstBannerView.swift; sourceTree = "<group>"; };
-		AAB1301F23EB0D1800D86BAC /* ImagesWithTitleCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesWithTitleCVC.xib; sourceTree = "<group>"; };
-		AAB1302023EB0D1800D86BAC /* OnlyImageCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlyImageCVC.swift; sourceTree = "<group>"; };
-		AAB1302123EB0D1800D86BAC /* ForYouCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForYouCVC.swift; sourceTree = "<group>"; };
-		AAB1302223EB0D1800D86BAC /* ForYouCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForYouCVC.xib; sourceTree = "<group>"; };
-		AAB1302323EB0D1800D86BAC /* ImagesWithTitleCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesWithTitleCVC.swift; sourceTree = "<group>"; };
 		AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordView.xib; sourceTree = "<group>"; };
 		AAB1302E23EC805E00D86BAC /* CreatePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordPresenter.swift; sourceTree = "<group>"; };
@@ -171,15 +173,23 @@
 		2F28B84323F6D90B00AE77EA /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				2F28B86E23F6EDDE00AE77EA /* Banner.swift */,
-				2F28B86D23F6EDDE00AE77EA /* BannersResponse.swift */,
-				2F28B86F23F6EDDE00AE77EA /* CategoriesResponse.swift */,
-				2F28B87023F6EDDE00AE77EA /* Category.swift */,
-				2F28B86C23F6EDDE00AE77EA /* Data.swift */,
-				2F28B87623F6F1F500AE77EA /* Meditation.swift */,
-				2F28B87723F6F1F500AE77EA /* MeditationsResponse.swift */,
+				2F386BE823FC2AA70058579E /* Banner.swift */,
+				2F386BE623FC2AA70058579E /* BannersResponse.swift */,
+				2F386BE423FC2AA60058579E /* CategoriesResponse.swift */,
+				2F386BE723FC2AA70058579E /* Category.swift */,
+				2F386BE923FC2AA70058579E /* Data.swift */,
+				2F386BE523FC2AA70058579E /* Meditation.swift */,
+				2F386BEA23FC2AA70058579E /* MeditationsResponse.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		2F386BDB23FC28460058579E /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				2F386BDC23FC28460058579E /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		AA30C19823E96E4700617132 /* CheckCode */ = {
@@ -204,8 +214,8 @@
 		AAB1301223EB0D0E00D86BAC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				AAB1301323EB0D0E00D86BAC /* HomeVC.swift */,
-				2F28B84A23F6DA7B00AE77EA /* HomeRequests.swift */,
+				2F386BE223FC2A830058579E /* HomeVC.swift */,
+				2F386BE023FC29360058579E /* HomeRequests.swift */,
 				2F28B84323F6D90B00AE77EA /* Objects */,
 				AAB1301423EB0D0E00D86BAC /* Home Views */,
 			);
@@ -216,13 +226,13 @@
 		AAB1301423EB0D0E00D86BAC /* Home Views */ = {
 			isa = PBXGroup;
 			children = (
-				AAB1301523EB0D0E00D86BAC /* SectionsName.swift */,
-				AAB1301623EB0D0E00D86BAC /* CategoriesView.swift */,
-				2F4699E723F58D9700461E9C /* MyCourses.swift */,
-				2F4699EB23F58DD300461E9C /* EachCourse.swift */,
-				AAB1301723EB0D0E00D86BAC /* ForYou.swift */,
-				2F4699ED23F58DF000461E9C /* MeditationView.swift */,
-				AAB1301823EB0D0E00D86BAC /* FirstBannerView.swift */,
+				2F386C0423FC2B590058579E /* CategoriesView.swift */,
+				2F386C0123FC2B590058579E /* EachCourse.swift */,
+				2F386C0323FC2B590058579E /* FirstBannerView.swift */,
+				2F386C0623FC2B590058579E /* ForYou.swift */,
+				2F386C0223FC2B590058579E /* MeditationView.swift */,
+				2F386C0023FC2B590058579E /* MyCourses.swift */,
+				2F386C0523FC2B590058579E /* SectionsName.swift */,
 			);
 			path = "Home Views";
 			sourceTree = "<group>";
@@ -230,13 +240,13 @@
 		AAB1301E23EB0D1800D86BAC /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				2F4699F023F58E3500461E9C /* MeditationCVC.swift */,
-				2F4699EF23F58E3500461E9C /* MeditationCVC.xib */,
-				AAB1301F23EB0D1800D86BAC /* ImagesWithTitleCVC.xib */,
-				AAB1302023EB0D1800D86BAC /* OnlyImageCVC.swift */,
-				AAB1302123EB0D1800D86BAC /* ForYouCVC.swift */,
-				AAB1302223EB0D1800D86BAC /* ForYouCVC.xib */,
-				AAB1302323EB0D1800D86BAC /* ImagesWithTitleCVC.swift */,
+				2F386BF823FC2AD50058579E /* ForYouCVC.swift */,
+				2F386BF523FC2AD50058579E /* ForYouCVC.xib */,
+				2F386BF723FC2AD50058579E /* ImagesWithTitleCVC.swift */,
+				2F386BF623FC2AD50058579E /* ImagesWithTitleCVC.xib */,
+				2F386BF323FC2AD50058579E /* MeditationCVC.swift */,
+				2F386BF423FC2AD50058579E /* MeditationCVC.xib */,
+				2F386BF223FC2AD50058579E /* OnlyImageCVC.swift */,
 			);
 			name = CollectionViewCells;
 			path = ../../iOS/Tensend/Tensend/CollectionViewCells;
@@ -324,6 +334,7 @@
 		AAD5DAAA23E177AD00D9F7D0 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				2F386BDB23FC28460058579E /* UserDefaults */,
 				AAB1303023ED5D5500D86BAC /* CreatePasscode */,
 				AAB1302923EC7D7100D86BAC /* CreatePassword */,
 				AA30C19823E96E4700617132 /* CheckCode */,
@@ -466,13 +477,13 @@
 				AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */,
 				AAD5DA8D23E169EE00D9F7D0 /* LaunchScreen.storyboard in Resources */,
 				AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */,
-				AAB1302423EB0D1800D86BAC /* ImagesWithTitleCVC.xib in Resources */,
-				2F4699F123F58E3500461E9C /* MeditationCVC.xib in Resources */,
 				AAD5DAA323E174B100D9F7D0 /* Assets.xcassets in Resources */,
 				AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */,
-				AAB1302723EB0D1800D86BAC /* ForYouCVC.xib in Resources */,
 				AAD5DA8823E169ED00D9F7D0 /* Main.storyboard in Resources */,
+				2F386BFD23FC2AD50058579E /* ImagesWithTitleCVC.xib in Resources */,
+				2F386BFB23FC2AD50058579E /* MeditationCVC.xib in Resources */,
 				AAB1303423ED5D7300D86BAC /* CreatePasscodeView.xib in Resources */,
+				2F386BFC23FC2AD50058579E /* ForYouCVC.xib in Resources */,
 				AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,50 +567,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE71B8823E40FD600CAFA47 /* UIViewExtensions.swift in Sources */,
-				2F28B87823F6F1F600AE77EA /* Meditation.swift in Sources */,
 				2F4699F623F58F0900461E9C /* Colors.swift in Sources */,
 				AAE71B8523E40FD600CAFA47 /* LabelExtensions.swift in Sources */,
-				AAB1302623EB0D1800D86BAC /* ForYouCVC.swift in Sources */,
+				2F386C0A23FC2B590058579E /* FirstBannerView.swift in Sources */,
 				2F4699EA23F58DB500461E9C /* StackViewExtensions.swift in Sources */,
-				AAB1302823EB0D1800D86BAC /* ImagesWithTitleCVC.swift in Sources */,
+				2F386BF923FC2AD50058579E /* OnlyImageCVC.swift in Sources */,
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
-				AAB1301923EB0D0E00D86BAC /* HomeVC.swift in Sources */,
 				AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */,
+				2F386C0B23FC2B590058579E /* CategoriesView.swift in Sources */,
+				2F386C0C23FC2B590058579E /* SectionsName.swift in Sources */,
+				2F386BF123FC2AA70058579E /* MeditationsResponse.swift in Sources */,
 				2F4699F423F58EB900461E9C /* ViewExtensions.swift in Sources */,
-				2F28B84B23F6DA7B00AE77EA /* HomeRequests.swift in Sources */,
 				2F28B85123F6E63D00AE77EA /* StringExtension.swift in Sources */,
-				2F28B87423F6EDDE00AE77EA /* CategoriesResponse.swift in Sources */,
-				AAB1302523EB0D1800D86BAC /* OnlyImageCVC.swift in Sources */,
+				2F386BDD23FC28460058579E /* UserDefaults.swift in Sources */,
+				2F386BE323FC2A830058579E /* HomeVC.swift in Sources */,
 				AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */,
 				AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */,
-				AAB1301C23EB0D0E00D86BAC /* ForYou.swift in Sources */,
-				2F4699F223F58E3500461E9C /* MeditationCVC.swift in Sources */,
-				2F4699EE23F58DF000461E9C /* MeditationView.swift in Sources */,
+				2F386BF023FC2AA70058579E /* Data.swift in Sources */,
 				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
-				2F4699EC23F58DD300461E9C /* EachCourse.swift in Sources */,
+				2F386C0923FC2B590058579E /* MeditationView.swift in Sources */,
 				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
-				AAB1301B23EB0D0E00D86BAC /* CategoriesView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
+				2F386BFF23FC2AD50058579E /* ForYouCVC.swift in Sources */,
 				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
-				2F28B87223F6EDDE00AE77EA /* BannersResponse.swift in Sources */,
-				AAB1301A23EB0D0E00D86BAC /* SectionsName.swift in Sources */,
+				2F386BFE23FC2AD50058579E /* ImagesWithTitleCVC.swift in Sources */,
+				2F386BED23FC2AA70058579E /* BannersResponse.swift in Sources */,
+				2F386BE123FC29360058579E /* HomeRequests.swift in Sources */,
 				AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */,
-				2F4699E823F58D9800461E9C /* MyCourses.swift in Sources */,
 				AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */,
 				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
-				2F28B87A23F6F3A300AE77EA /* MeditationsResponse.swift in Sources */,
 				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
-				AAB1301D23EB0D0E00D86BAC /* FirstBannerView.swift in Sources */,
+				2F386BEC23FC2AA70058579E /* Meditation.swift in Sources */,
+				2F386C0723FC2B590058579E /* MyCourses.swift in Sources */,
+				2F386BEB23FC2AA70058579E /* CategoriesResponse.swift in Sources */,
 				AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */,
 				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
+				2F386BEF23FC2AA70058579E /* Banner.swift in Sources */,
 				AAE71B8723E40FD600CAFA47 /* ScrollStackController.swift in Sources */,
-				2F28B87123F6EDDE00AE77EA /* Data.swift in Sources */,
 				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
+				2F386C0D23FC2B590058579E /* ForYou.swift in Sources */,
 				AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */,
-				2F28B87323F6EDDE00AE77EA /* Banner.swift in Sources */,
+				2F386BFA23FC2AD50058579E /* MeditationCVC.swift in Sources */,
+				2F386C0823FC2B590058579E /* EachCourse.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
 				AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */,
-				2F28B87523F6EDDE00AE77EA /* Category.swift in Sources */,
+				2F386BEE23FC2AA70058579E /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

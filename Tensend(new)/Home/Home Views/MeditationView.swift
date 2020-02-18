@@ -8,8 +8,9 @@
 
 import UIKit
 import EasyPeasy
-class Meditation: UIView {
+class MeditationView: UIView {
     
+    var meditationData : MeditationsResponse?
     lazy var collectionView : UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 13, right: 30)
@@ -32,8 +33,15 @@ class Meditation: UIView {
         super.init(frame: frame)
         addSubview(collectionView)
         collectionView.easy.layout(Edges(),Height(150))
+        getData()
     }
    
+    func getData(){
+        HomeRequests.sharedInstance.getMeditations(page: 0) { (result) in
+            self.meditationData = result
+            self.collectionView.reloadData()
+        }
+    }
 
 
     required init?(coder: NSCoder) {
@@ -41,17 +49,24 @@ class Meditation: UIView {
     }
 }
 
-extension Meditation: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+extension MeditationView: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        if let count = meditationData?.meditations?.data?.count, count > 0 {
+               self.isHidden = false
+               return count
+           }
+           self.isHidden = true
+           return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeditationCVC", for: indexPath) as! MeditationCVC
-        
+        if let data = meditationData?.meditations?.data {
+            cell.data = data[indexPath.row]
+        }
         return cell
     }
     
