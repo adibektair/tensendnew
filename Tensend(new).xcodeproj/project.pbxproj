@@ -18,6 +18,12 @@
 		2F386C2A23FC2F320058579E /* ImagesWithTitleCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F386C2523FC2F320058579E /* ImagesWithTitleCVC.xib */; };
 		2F386C2B23FC2F320058579E /* ImagesWithTitleCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C2623FC2F320058579E /* ImagesWithTitleCVC.swift */; };
 		2F386EDF23FC6B6F0058579E /* HomeRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EDE23FC6B6F0058579E /* HomeRequests.swift */; };
+		2F386EE823FC6BD70058579E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EE223FC6BD70058579E /* Meditation.swift */; };
+		2F386EE923FC6BD70058579E /* MeditationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EE323FC6BD70058579E /* MeditationsResponse.swift */; };
+		2F386EEA23FC6BD70058579E /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EE423FC6BD70058579E /* CategoriesResponse.swift */; };
+		2F386EEB23FC6BD70058579E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EE523FC6BD70058579E /* Data.swift */; };
+		2F386EEC23FC6BD70058579E /* BannersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EE623FC6BD70058579E /* BannersResponse.swift */; };
+		2F386EED23FC6BD70058579E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EE723FC6BD70058579E /* Category.swift */; };
 		69CACAC7F5AEA47A35CDCCA9 /* Pods_Tensend_new_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */; };
 		AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */; };
 		AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19B23E9704100617132 /* CheckCodeView.swift */; };
@@ -78,6 +84,12 @@
 		2F386C2523FC2F320058579E /* ImagesWithTitleCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImagesWithTitleCVC.xib; path = "Tensend(new)/CollectionViewCells/ImagesWithTitleCVC.xib"; sourceTree = SOURCE_ROOT; };
 		2F386C2623FC2F320058579E /* ImagesWithTitleCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesWithTitleCVC.swift; path = "Tensend(new)/CollectionViewCells/ImagesWithTitleCVC.swift"; sourceTree = SOURCE_ROOT; };
 		2F386EDE23FC6B6F0058579E /* HomeRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeRequests.swift; path = "Tensend(new)/Home/HomeRequests.swift"; sourceTree = SOURCE_ROOT; };
+		2F386EE223FC6BD70058579E /* Meditation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		2F386EE323FC6BD70058579E /* MeditationsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationsResponse.swift; sourceTree = "<group>"; };
+		2F386EE423FC6BD70058579E /* CategoriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
+		2F386EE523FC6BD70058579E /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2F386EE623FC6BD70058579E /* BannersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannersResponse.swift; sourceTree = "<group>"; };
+		2F386EE723FC6BD70058579E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +154,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F386EE123FC6BD70058579E /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2F386EE223FC6BD70058579E /* Meditation.swift */,
+				2F386EE323FC6BD70058579E /* MeditationsResponse.swift */,
+				2F386EE423FC6BD70058579E /* CategoriesResponse.swift */,
+				2F386EE523FC6BD70058579E /* Data.swift */,
+				2F386EE623FC6BD70058579E /* BannersResponse.swift */,
+				2F386EE723FC6BD70058579E /* Category.swift */,
+			);
+			name = Objects;
+			path = "Tensend(new)/Home/Objects";
+			sourceTree = SOURCE_ROOT;
+		};
 		AA30C19823E96E4700617132 /* CheckCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +192,7 @@
 			children = (
 				2F386C1823FC2EC50058579E /* HomeVC.swift */,
 				2F386EDE23FC6B6F0058579E /* HomeRequests.swift */,
+				2F386EE123FC6BD70058579E /* Objects */,
 				AAB1301423EB0D0E00D86BAC /* Home Views */,
 			);
 			name = Home;
@@ -538,10 +565,13 @@
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
 				AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */,
 				AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */,
+				2F386EE923FC6BD70058579E /* MeditationsResponse.swift in Sources */,
+				2F386EEC23FC6BD70058579E /* BannersResponse.swift in Sources */,
 				2F386C1923FC2EC60058579E /* HomeVC.swift in Sources */,
 				AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */,
 				AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */,
 				2F386C2823FC2F320058579E /* ForYouCVC.swift in Sources */,
+				2F386EEA23FC6BD70058579E /* CategoriesResponse.swift in Sources */,
 				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
 				2F386EDF23FC6B6F0058579E /* HomeRequests.swift in Sources */,
 				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
@@ -553,14 +583,17 @@
 				AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */,
 				2F386C1F23FC2F230058579E /* ForYou.swift in Sources */,
 				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
+				2F386EEB23FC6BD70058579E /* Data.swift in Sources */,
 				2F386C2023FC2F230058579E /* FirstBannerView.swift in Sources */,
 				2F386C2123FC2F230058579E /* SectionsName.swift in Sources */,
 				AAC3F89C23FC1CE700537254 /* UserDefaults.swift in Sources */,
+				2F386EE823FC6BD70058579E /* Meditation.swift in Sources */,
 				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
 				AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */,
 				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
 				AAE71B8723E40FD600CAFA47 /* ScrollStackController.swift in Sources */,
 				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
+				2F386EED23FC6BD70058579E /* Category.swift in Sources */,
 				AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
 				AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */,
