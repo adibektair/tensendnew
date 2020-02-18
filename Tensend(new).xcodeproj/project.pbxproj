@@ -507,6 +507,7 @@
 				AAD5DA8823E169ED00D9F7D0 /* Main.storyboard in Resources */,
 				2F386F0523FC6D8D0058579E /* MeditationCVC.xib in Resources */,
 				AAB1303423ED5D7300D86BAC /* CreatePasscodeView.xib in Resources */,
+				2F386BFC23FC2AD50058579E /* ForYouCVC.xib in Resources */,
 				AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +603,7 @@
 				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
 				AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
+				2F386BFF23FC2AD50058579E /* ForYouCVC.swift in Sources */,
 				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
 				2F386F1723FC6DE70058579E /* ScrollStackController.swift in Sources */,
 				2F386F2523FC6E710058579E /* Data.swift in Sources */,
@@ -637,6 +639,7 @@
 				2F386EF823FC6C6E0058579E /* SectionsName.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
 				AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */,
+				2F386BEE23FC2AA70058579E /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
