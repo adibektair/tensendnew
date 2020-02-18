@@ -17,6 +17,7 @@
 		2F386C2923FC2F320058579E /* OnlyImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C2423FC2F320058579E /* OnlyImageCVC.swift */; };
 		2F386C2A23FC2F320058579E /* ImagesWithTitleCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F386C2523FC2F320058579E /* ImagesWithTitleCVC.xib */; };
 		2F386C2B23FC2F320058579E /* ImagesWithTitleCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386C2623FC2F320058579E /* ImagesWithTitleCVC.swift */; };
+		2F386EDF23FC6B6F0058579E /* HomeRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EDE23FC6B6F0058579E /* HomeRequests.swift */; };
 		69CACAC7F5AEA47A35CDCCA9 /* Pods_Tensend_new_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */; };
 		AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */; };
 		AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19B23E9704100617132 /* CheckCodeView.swift */; };
@@ -76,6 +77,7 @@
 		2F386C2423FC2F320058579E /* OnlyImageCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnlyImageCVC.swift; path = "Tensend(new)/CollectionViewCells/OnlyImageCVC.swift"; sourceTree = SOURCE_ROOT; };
 		2F386C2523FC2F320058579E /* ImagesWithTitleCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImagesWithTitleCVC.xib; path = "Tensend(new)/CollectionViewCells/ImagesWithTitleCVC.xib"; sourceTree = SOURCE_ROOT; };
 		2F386C2623FC2F320058579E /* ImagesWithTitleCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesWithTitleCVC.swift; path = "Tensend(new)/CollectionViewCells/ImagesWithTitleCVC.swift"; sourceTree = SOURCE_ROOT; };
+		2F386EDE23FC6B6F0058579E /* HomeRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeRequests.swift; path = "Tensend(new)/Home/HomeRequests.swift"; sourceTree = SOURCE_ROOT; };
 		3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				2F386C1823FC2EC50058579E /* HomeVC.swift */,
+				2F386EDE23FC6B6F0058579E /* HomeRequests.swift */,
 				AAB1301423EB0D0E00D86BAC /* Home Views */,
 			);
 			name = Home;
@@ -540,6 +543,7 @@
 				AAE71B8623E40FD600CAFA47 /* ViewControllerExtension.swift in Sources */,
 				2F386C2823FC2F320058579E /* ForYouCVC.swift in Sources */,
 				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
+				2F386EDF23FC6B6F0058579E /* HomeRequests.swift in Sources */,
 				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
 				AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
