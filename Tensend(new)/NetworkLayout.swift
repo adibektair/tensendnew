@@ -11,6 +11,7 @@ import Alamofire
 import AlamofireObjectMapper
 
 let apiUrl = "https://tensend.me/api/v1/"
+let apiImgUrl = "https://tensend.me/"
 
 protocol NetworkLayoutProtocol {
     
