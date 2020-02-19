@@ -41,7 +41,7 @@ class CategoriesView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     func getData(){
-        HomeRequests.sharedInstance.getCategories { (result) in
+        HomeRequests.sharedInstance.getCategories(page: 0) { (result) in
             self.categories = result
             self.collectionView.reloadData()
         }
@@ -63,7 +63,13 @@ extension CategoriesView: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImagesWithTitleCVC", for: indexPath) as! ImagesWithTitleCVC
         if let data = self.categories?.categories?.data?[indexPath.row] {
             cell.categoryData = data
+            if indexPath.row == self.categories!.categories!.data!.count - 1 {
+                self.categories!.categories!.loadNextPage {
+                    self.collectionView.reloadData()
+                }
+            }
         }
+        
         print("indexpath row = \(indexPath.row)")
         return cell
     }

@@ -10,6 +10,7 @@ class Meditation : NSObject, NSCoding, Mappable{
 
 	var currentPage : Int?
 	var data : [Data]?
+    var dataAll = [Data]()
 	var firstPageUrl : String?
 	var from : Int?
 	var lastPage : Int?
@@ -20,8 +21,28 @@ class Meditation : NSObject, NSCoding, Mappable{
 	var prevPageUrl : String?
 	var to : Int?
 	var total : Int?
-
-
+    var inprogress = false
+    var counter = 2
+    
+    func resetList(){
+          self.dataAll.removeAll()
+          if let arr = data {
+              self.dataAll.append(contentsOf: arr)
+          }
+      }
+     func loadNextPage(done:@escaping (()-> Void)){
+         if inprogress { return }
+         if counter <= lastPage ?? 1{
+             inprogress = true
+            HomeRequests.sharedInstance.getMeditations(page: counter) { (result) in
+                self.data?.append(contentsOf: result.meditations?.data ?? [])
+                self.resetList()
+                self.counter += 1
+                self.inprogress = false
+                done()
+            }
+         }
+     }
 	class func newInstance(map: Map) -> Mappable?{
 		return Meditation()
 	}

@@ -37,7 +37,7 @@ class MeditationView: UIView {
     }
    
     func getData(){
-        HomeRequests.sharedInstance.getMeditations(page: 0) { (result) in
+        HomeRequests.sharedInstance.getMeditations(page: 1) { (result) in
             self.meditationData = result
             self.collectionView.reloadData()
         }
@@ -66,6 +66,11 @@ extension MeditationView: UICollectionViewDelegate, UICollectionViewDataSource,U
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeditationCVC", for: indexPath) as! MeditationCVC
         if let data = meditationData?.meditations?.data {
             cell.data = data[indexPath.row]
+            if indexPath.row == self.meditationData!.meditations!.data!.count - 1 {
+                self.meditationData?.meditations?.loadNextPage {
+                             self.collectionView.reloadData()
+                }
+            }
         }
         return cell
     }

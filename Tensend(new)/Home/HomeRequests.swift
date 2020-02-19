@@ -15,8 +15,8 @@ class HomeRequests {
         return HomeRequests()
     }()
     
-    public func getCategories(callback: @escaping (CategoriesResponse) -> ()){
-        Alamofire.request(apiUrl + "courses/categories", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject{
+    public func getCategories(page: Int, callback: @escaping (CategoriesResponse) -> ()){
+        Alamofire.request(apiUrl + "courses/categories?page=\(page)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject{
             (response: DataResponse<CategoriesResponse>) in
             if let _ = response.response{
                 let model  = response.result
@@ -38,6 +38,7 @@ class HomeRequests {
             (response: DataResponse<MeditationsResponse>) in
             if let _ = response.response{
                 let model  = response.result
+                model.value?.meditations?.currentPage = 2
                 callback(model.value!)
             }
         }
