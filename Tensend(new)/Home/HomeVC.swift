@@ -45,6 +45,7 @@ class HomeVC: ScrollStackController {
         
         let oneBanner = UIImageView()
         oneBanner.contentMode = .scaleToFill
+        oneBanner.image = #imageLiteral(resourceName: "oneBanner-1")
         oneBanner.easy.layout(Height(126))
         stackView.addArrangedSubview(oneBanner)
         
