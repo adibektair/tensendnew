@@ -31,6 +31,7 @@
 		AAB1303423ED5D7300D86BAC /* CreatePasscodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1303223ED5D7300D86BAC /* CreatePasscodeView.xib */; };
 		AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1303523ED5F0500D86BAC /* CreatePasscodePresenter.swift */; };
 		AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B77923FC219C00314455 /* SignInView.swift */; };
+		AAB9B77E23FC2C3300314455 /* SIgnInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B77D23FC2C3300314455 /* SIgnInPresenter.swift */; };
 		AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F89823FC1CD700537254 /* CorrectCodeView.swift */; };
 		AAC3F89C23FC1CE700537254 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F89B23FC1CE700537254 /* UserDefaults.swift */; };
 		AACC4DAD23E828310072F77D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC4DAC23E828310072F77D /* Country.swift */; };
@@ -92,6 +93,7 @@
 		AAB1303223ED5D7300D86BAC /* CreatePasscodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasscodeView.xib; sourceTree = "<group>"; };
 		AAB1303523ED5F0500D86BAC /* CreatePasscodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasscodePresenter.swift; sourceTree = "<group>"; };
 		AAB9B77923FC219C00314455 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		AAB9B77D23FC2C3300314455 /* SIgnInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnInPresenter.swift; sourceTree = "<group>"; };
 		AAC3F89823FC1CD700537254 /* CorrectCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectCodeView.swift; sourceTree = "<group>"; };
 		AAC3F89B23FC1CE700537254 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		AACC4DAC23E828310072F77D /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				AAB9B77923FC219C00314455 /* SignInView.swift */,
+				AAB9B77D23FC2C3300314455 /* SIgnInPresenter.swift */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */,
 				AAB1301B23EB0D0E00D86BAC /* CategoriesView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
+				AAB9B77E23FC2C3300314455 /* SIgnInPresenter.swift in Sources */,
 				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
 				AAB1301A23EB0D0E00D86BAC /* SectionsName.swift in Sources */,
 				AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */,

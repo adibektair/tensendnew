@@ -16,6 +16,7 @@ class SignInView: ScrollStackController {
         view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9764705882, alpha: 1)
         self.createTopView()
         self.createMiddleView()
+        
     }
 
 
@@ -61,9 +62,58 @@ extension SignInView{
         label1.easy.layout(Top(20).to(label), CenterX(), Left(30), Right(30))
         view.addSubview(label1)
         stackView.addArrangedSubview(view)
+        self.createTextFieldsView()
     }
     
     func createTextFieldsView(){
+      
+        let tfView = UIView()
+        tfView.backgroundColor = .white
+        tfView.cornerRadius(radius: 15, width: 0, color: .white)
+        
+        let textField = UITextField()
+        textField.borderStyle = .none
+        textField.placeholder = "E-mail немесе телефон нөміріңіз"
+        textField.textColor = .black
+        tfView.addSubview(textField)
+        textField.easy.layout(Top(5), Left(10), Right(10))
+        let borderLine = UIView()
+        borderLine.backgroundColor = .gray
+        tfView.addSubview(borderLine)
+        borderLine.easy.layout(CenterY().to(tfView), Left(), Right(), Height(1))
+        
+        let textField1 = UITextField()
+        textField1.borderStyle = .none
+        textField1.placeholder = "Құпия сөз"
+        textField1.textColor = .black
+        tfView.addSubview(textField1)
+        textField1.easy.layout(Top(5).to(borderLine), Left(10), Width(100))
+        
+        let button = UIButton()
+        button.setTitle("ЕСКЕ ТҮСІРУ", for: .normal)
+        button.setTitleColor(.darkGray, for: .normal)
+        tfView.addSubview(button)
+        button.easy.layout(Left(10), CenterX().to(textField1), Width(100))
+        tfView.easy.layout( Left(20), Right(20), Height(50))
+
+        stackView.addArrangedSubview(tfView)
+            
+        
         
     }
+}
+extension SignInView : SignInProtocol{
+    func goToResetPassword() {
+        
+    }
+    
+    func biometricAuth() {
+        
+    }
+    
+    func singIn() {
+        
+    }
+    
+    
 }
