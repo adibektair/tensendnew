@@ -10,7 +10,7 @@ import UIKit
 import EasyPeasy
 
 class SignInView: ScrollStackController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9764705882, alpha: 1)
@@ -18,9 +18,9 @@ class SignInView: ScrollStackController {
         self.createMiddleView()
         
     }
-
-
-
+    
+    
+    
 }
 extension SignInView{
     func createTopView(){
@@ -50,23 +50,25 @@ extension SignInView{
         label.textColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
         label.textAlignment = .center
         view.addSubview(label)
-        label.easy.layout(Top(50), CenterX(), Height(20))
+        label.easy.layout(Top(50), CenterX(), Height(20),Top(),Bottom())
+        stackView.addArrangedSubview(view)
         
+        let view2 = UIView()
         let label1 = UILabel()
         label1.text = "Tensend тегі өз жеке\nаккаунтыңызға кіру үшін логин\nмен құпия сөзді еңгізіңіз"
         label1.font = UIFont(name: "Montserrat-Regular", size: 16)
         label1.textColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
         label1.numberOfLines = 0
         label1.textAlignment = .center
-        view.addSubview(label1)
-        label1.easy.layout(Top(20).to(label), CenterX(), Left(30), Right(30))
-        view.addSubview(label1)
-        stackView.addArrangedSubview(view)
-        self.createTextFieldsView()
+        view2.addSubview(label1)
+        label1.easy.layout(Top(20), CenterX(), Left(30), Right(30),Bottom())
+        stackView.addArrangedSubview(view2)
+//        self.createTextFieldsView()
+        self.textFieldViewBySultan()
     }
     
     func createTextFieldsView(){
-      
+        
         let tfView = UIView()
         tfView.backgroundColor = .white
         tfView.cornerRadius(radius: 15, width: 0, color: .white)
@@ -95,11 +97,44 @@ extension SignInView{
         tfView.addSubview(button)
         button.easy.layout(Left(10), CenterX().to(textField1), Width(100))
         tfView.easy.layout( Left(20), Right(20), Height(50))
-
+        
         stackView.addArrangedSubview(tfView)
-            
+    }
+    func textFieldViewBySultan(){
+        let textStackView = UIStackView()
+        textStackView.setProperties(axis: .vertical, alignment: .fill, spacing: 0, distribution: .fill)
         
+        let textField = UITextField()
+        textField.borderStyle = .none
+        textField.placeholder = "E-mail немесе телефон нөміріңіз"
+        textField.textColor = .black
+        textStackView.addArrangedSubview(textField)
         
+        let borderLine = UIView()
+        borderLine.backgroundColor = .gray
+        borderLine.easy.layout(Height(1))
+        textStackView.addArrangedSubview(borderLine)
+        
+        let horizontStackView = UIStackView()
+        horizontStackView.setProperties(axis: .horizontal, alignment: .fill, spacing: 2, distribution: .fill)
+        
+        let textField1 = UITextField()
+        textField1.borderStyle = .none
+        textField1.placeholder = "Құпия сөз"
+        textField1.textColor = .black
+        horizontStackView.addArrangedSubview(textField1)
+        
+        let button = UIButton()
+        button.setTitle("ЕСКЕ ТҮСІРУ", for: .normal)
+        button.setTitleColor(.darkGray, for: .normal)
+        button.easy.layout(Height(50))
+        horizontStackView.addArrangedSubview(UIView())
+        horizontStackView.addArrangedSubview(button)
+        
+        textStackView.addArrangedSubview(horizontStackView)
+        textStackView.cornerRadius(radius: 15, width: 0, color: .white)
+        textStackView.setSpacing(top: 0, left: 30, right: 30, bottom: 0)
+        self.stackView.addArrangedSubview(textStackView)
     }
 }
 extension SignInView : SignInProtocol{
