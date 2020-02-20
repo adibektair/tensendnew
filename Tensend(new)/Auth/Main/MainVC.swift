@@ -114,7 +114,7 @@ class MainVC: UIViewController {
      
     }
     @IBAction func loginPressed(_ sender: Any) {
-        self.navigationController?.pushViewController(SignInView(), animated: true)
+        self.presenter.goToSignInt()
     }
     
 

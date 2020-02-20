@@ -47,7 +47,9 @@ class MainPresenter: MainViewPresenterProtocol {
     func login(phone: String) {
         router?.checkCodeViewController(phone: phone)
     }
-    
+    func goToSignInt(){
+        router?.openSignInController()
+    }
     func skip() {
         
     }

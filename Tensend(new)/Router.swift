@@ -17,9 +17,19 @@ protocol RouterProtocol : RouterMain {
     func createPasswordViewController(phone: String)
     func checkCodeViewController(phone: String)
     func openCreatePasscodeController()
+    func openSignInController()
     func popToRoot()
 }
 class Router: RouterProtocol {
+    func openSignInController() {
+        if let navigationController = navigationController{
+            guard let mainViewController = assemblyBuilder?.createSignInController(router: self) else {
+                return
+            }
+        navigationController.pushViewController(mainViewController, animated: true)
+        }
+    }
+    
     
     func openCreatePasscodeController() {
         if let navigationController = navigationController{

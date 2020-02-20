@@ -14,9 +14,14 @@ class SignInView: ScrollStackController {
     let passwordTextField = UITextField()
     let textField = UITextField()
 
+    var presenter : SignInPresenterProtocol? = nil
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9764705882, alpha: 1)
+        self.navigationController?.navigationBar.isHidden = false
+        self.makeNCTranslucent()
         self.createTopView()
         self.createMiddleView()
         self.createButtonsView()
@@ -25,6 +30,47 @@ class SignInView: ScrollStackController {
     
     
 }
+
+
+
+extension SignInView : SignInProtocol{
+    func error(message: String) {
+        self.showAlert(title: "Внимание", message: message)
+    }
+    
+    func success(){
+        self.navigationController?.present(HomeVC(), animated: true, completion: nil)
+    }
+    
+    func goToResetPassword() {
+        
+    }
+    
+    @objc func biometricAuth() {
+        if let _ = UserDefault.getValue(byKey: "token"){
+            self.authenticationWithTouchID()
+            self.success()
+        }else{
+            self.showAlert(title: "Внимание", message: "К сожалению, Вы прежде не входили в приложение, чтобы использовать биометрическую аутентификацию")
+        }
+    }
+    
+    @objc func singIn() {
+        if let phone = self.textField.text, let password = self.passwordTextField.text{
+            self.presenter?.signIn(phone: phone, password: password)
+        }else{
+            self.showAlert(title: "Внимание", message: "Заполните все поля")
+        }
+        
+    }
+    
+    
+}
+
+
+
+
+
 extension SignInView{
     func createTopView(){
         let view = UIView()
@@ -175,21 +221,6 @@ extension SignInView{
         self.stackView.addArrangedSubview(stackView)
     }
     
-    
-    
-}
-extension SignInView : SignInProtocol{
-    func goToResetPassword() {
-        
-    }
-    
-    @objc func biometricAuth() {
-        
-    }
-    
-    @objc func singIn() {
-        
-    }
     
     
 }

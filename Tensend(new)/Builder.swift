@@ -12,10 +12,23 @@ protocol AssemblyBuilderProtocol {
     func createCheckCodeVC(phone: String, router: Router) -> UIViewController
     func createCreatePasswordVC(phone: String, router: Router) -> UIViewController
     func createCreatePasscode() -> UIViewController
+    func createSignInController(router : Router) -> UIViewController
+
     
 }
 
 class AssemblyModuleBuilder: AssemblyBuilderProtocol {
+    func createSignInController(router : Router) -> UIViewController {
+        let view = SignInView()
+        let networkLayer = NetworkLayer()
+
+        let presenter = SignInPresenter(router: router, networkLayer : networkLayer, view : view)
+        view.presenter = presenter 
+        return view
+        
+        
+    }
+    
     
     func createCreatePasscode() -> UIViewController {
         let view = CreatePasscodeView()

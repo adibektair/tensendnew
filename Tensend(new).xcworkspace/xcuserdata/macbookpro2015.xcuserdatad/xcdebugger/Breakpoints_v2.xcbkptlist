@@ -30,8 +30,8 @@
             filePath = "Tensend(new)/Auth/Sign In/SignInView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "createMiddleView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "Tensend(new)/Auth/Sign In/SignInView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "createTextFieldsView()"
             landmarkType = "7">
          </BreakpointContent>
