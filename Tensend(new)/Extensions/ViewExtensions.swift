@@ -22,6 +22,17 @@ extension UIView {
         layer.rasterizationScale = UIScreen.main.scale
         layer.shouldRasterize = true
     }
+    func dropShadowBlue(scale: Bool = true) {
+          layer.shadowColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
+          layer.shadowOffset = CGSize(width: 3, height: 3)
+          layer.masksToBounds = false
+          
+          layer.shadowOpacity = 0.1
+          layer.shadowRadius = 5
+          //layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+          layer.rasterizationScale = UIScreen.main.scale
+          layer.shouldRasterize = true
+      }
     
     // OUTPUT 2
     func dropShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, scale: Bool = true) {
