@@ -11,12 +11,15 @@ import EasyPeasy
 
 class SignInView: ScrollStackController {
     
+    let passwordTextField = UITextField()
+    let textField = UITextField()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9764705882, alpha: 1)
         self.createTopView()
         self.createMiddleView()
-        
+        self.createButtonsView()
     }
     
     
@@ -104,7 +107,6 @@ extension SignInView{
         let textStackView = UIStackView()
         textStackView.setProperties(axis: .vertical, alignment: .fill, spacing: 0, distribution: .fill)
         
-        let textField = UITextField()
         textField.borderStyle = .none
         textField.placeholder = "E-mail немесе телефон нөміріңіз"
         textField.textColor = .black
@@ -118,35 +120,74 @@ extension SignInView{
         let horizontStackView = UIStackView()
         horizontStackView.setProperties(axis: .horizontal, alignment: .fill, spacing: 2, distribution: .fill)
         
-        let textField1 = UITextField()
-        textField1.borderStyle = .none
-        textField1.placeholder = "Құпия сөз"
-        textField1.textColor = .black
-        horizontStackView.addArrangedSubview(textField1)
         
+        passwordTextField.borderStyle = .none
+        passwordTextField.placeholder = "Құпия сөз"
+        passwordTextField.textColor = .black
+        passwordTextField.isSecureTextEntry = true
+        horizontStackView.addArrangedSubview(passwordTextField)
+        textField.easy.layout(Height(70))
+        passwordTextField.easy.layout(Height(70))
         let button = UIButton()
         button.setTitle("ЕСКЕ ТҮСІРУ", for: .normal)
         button.setTitleColor(.darkGray, for: .normal)
-        button.easy.layout(Height(50))
+//        button.easy.layout(Height(50))
         horizontStackView.addArrangedSubview(UIView())
         horizontStackView.addArrangedSubview(button)
-        
+        textStackView.addBackgroundColor(color: .white)
         textStackView.addArrangedSubview(horizontStackView)
         textStackView.cornerRadius(radius: 15, width: 0, color: .white)
-        textStackView.setSpacing(top: 0, left: 30, right: 30, bottom: 0)
-        self.stackView.addArrangedSubview(textStackView)
+        textStackView.setSpacing(top: 0, left: 15, right: 15, bottom: 0)
+        
+        let view = UIView()
+        view.addSubview(textStackView)
+        textStackView.easy.layout(Left(30), Right(30), Top(), Bottom())
+        view.cornerRadius(radius: 15, width: 0)
+        self.stackView.addArrangedSubview(view)
     }
+    
+    func createButtonsView(){
+        let stackView = UIStackView()
+        stackView.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
+        let buttonView = UIView()
+        let button = UIButton()
+        button.setTitleColor(.darkGray, for: .normal)
+        button.addTarget(self, action: #selector(self.biometricAuth), for: .touchUpInside)
+        button.setTitle("Touch/Face ID арқылы кіру", for: .normal)
+        buttonView.addSubview(button)
+        button.titleLabel?.textAlignment = .center
+        button.easy.layout(Top(40), Bottom(), Left(50), Right(50), Height(25))
+        stackView.addArrangedSubview(buttonView)
+        
+        
+        let buttonView1 = UIView()
+        let button1 = UIButton()
+        button1.setTitleColor(.white, for: .normal)
+        button1.setTitle("ЖАЛҒАСТЫРУ", for: .normal)
+        button1.addTarget(self, action: #selector(self.singIn), for: .touchUpInside)
+        button1.titleLabel?.font = button1.titleLabel?.font.withSize(18)
+        button1.backgroundColor = #colorLiteral(red: 0, green: 0.3019607843, blue: 0.7882352941, alpha: 1)
+        buttonView1.addSubview(button1)
+        button1.titleLabel?.textAlignment = .center
+        button1.easy.layout(Top(), Bottom(), Left(30), Right(30), Height(58))
+        button1.cornerRadius(radius: 15, width: 0)
+        stackView.addArrangedSubview(buttonView1)
+        self.stackView.addArrangedSubview(stackView)
+    }
+    
+    
+    
 }
 extension SignInView : SignInProtocol{
     func goToResetPassword() {
         
     }
     
-    func biometricAuth() {
+    @objc func biometricAuth() {
         
     }
     
-    func singIn() {
+    @objc func singIn() {
         
     }
     
