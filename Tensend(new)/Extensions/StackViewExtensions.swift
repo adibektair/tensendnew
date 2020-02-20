@@ -9,7 +9,22 @@
 import UIKit
 
 extension UIStackView {
-    
+    func customize(backgroundColor: UIColor = .clear, radiusSize: CGFloat = 0) {
+           let subView = UIView(frame: bounds)
+           subView.backgroundColor = backgroundColor
+           subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+           insertSubview(subView, at: 0)
+
+           subView.layer.cornerRadius = radiusSize
+           subView.layer.masksToBounds = true
+           subView.clipsToBounds = true
+       }
+    func addBackgroundColor(color: UIColor){
+        let subview = UIView(frame: bounds)
+        subview.backgroundColor = color
+        subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subview, at: 0)
+    }
     func removeAllArrangedSubviews() {
         
         let removedSubviews = arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
