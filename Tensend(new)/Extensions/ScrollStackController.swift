@@ -17,7 +17,7 @@ class ScrollStackController: UIViewController {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9764705882, alpha: 1)
         
         self.view.addSubview(scrollView)
         

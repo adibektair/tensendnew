@@ -32,10 +32,12 @@ class CoursesVC: ScrollStackController {
         }) {
             print("RIGHT")
         }
-        twoButtons.dropShadowBlue()
+//        twoButtons.dropShadowBlue()
     
         stackView.addArrangedSubview(twoButtons)
         
+        let cours = AllCoursesListView(parrentVC: self)
+        stackView.addArrangedSubview(cours)
     }
     
 
