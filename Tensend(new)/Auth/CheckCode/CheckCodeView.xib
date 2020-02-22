@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckCodeView" customModule="Tensend_new_" customModuleProvider="target">
             <connections>
+                <outlet property="constraint" destination="7pb-Oc-voO" id="bQB-83-znJ"/>
                 <outlet property="continueButton" destination="V5i-hu-BC6" id="5BH-t3-ewf"/>
                 <outlet property="firstTextField" destination="EwG-gp-NWq" id="O4n-dG-UZ3"/>
                 <outlet property="firstView" destination="6Ce-X9-ONW" id="91v-bt-mZ0"/>
@@ -112,21 +113,8 @@ SMS-тегі кодты еңгізіңіз.</string>
                         <constraint firstAttribute="width" constant="1" id="Hr3-1A-vtv"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzA-F8-dbi">
-                    <rect key="frame" x="122" y="349" width="170" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="ukm-2P-Zpp"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                    <state key="normal" title="КОДТЫ ҚАЙТА ЖІБЕРУ">
-                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="resendCodeButtonPressed:" destination="-1" eventType="touchUpInside" id="bcv-q4-NRq"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5i-hu-BC6">
-                    <rect key="frame" x="19" y="416" width="376" height="55"/>
+                    <rect key="frame" x="19" y="344" width="376" height="55"/>
                     <color key="backgroundColor" red="0.0" green="0.30196078431372547" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="d1d-xp-Avz"/>
@@ -163,9 +151,9 @@ SMS-тегі кодты еңгізіңіз.</string>
             <color key="backgroundColor" red="0.95294117649999999" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="6pe-Q0-747" firstAttribute="leading" secondItem="bRc-7S-Q5w" secondAttribute="trailing" constant="19" id="6Sf-gZ-E03"/>
+                <constraint firstItem="V5i-hu-BC6" firstAttribute="top" secondItem="6Ce-X9-ONW" secondAttribute="bottom" constant="35" id="7pb-Oc-voO"/>
                 <constraint firstItem="t5E-gk-7R9" firstAttribute="top" secondItem="o1A-b5-NbI" secondAttribute="bottom" constant="44" id="8lh-k3-rdK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="o1A-b5-NbI" secondAttribute="trailing" constant="30" id="Ctd-5g-pOg"/>
-                <constraint firstItem="GzA-F8-dbi" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FOv-TC-6mD"/>
                 <constraint firstItem="t5E-gk-7R9" firstAttribute="leading" secondItem="FRU-Op-bJL" secondAttribute="trailing" constant="9" id="OSc-dV-F2b"/>
                 <constraint firstItem="bRc-7S-Q5w" firstAttribute="centerY" secondItem="FRU-Op-bJL" secondAttribute="centerY" id="Otw-Dd-QZU"/>
                 <constraint firstItem="FRU-Op-bJL" firstAttribute="top" secondItem="o1A-b5-NbI" secondAttribute="bottom" constant="44" id="X6q-lC-hX5"/>
@@ -176,9 +164,7 @@ SMS-тегі кодты еңгізіңіз.</string>
                 <constraint firstItem="6Ce-X9-ONW" firstAttribute="top" secondItem="o1A-b5-NbI" secondAttribute="bottom" constant="44" id="gia-sl-rTk"/>
                 <constraint firstItem="bRc-7S-Q5w" firstAttribute="leading" secondItem="t5E-gk-7R9" secondAttribute="trailing" constant="9" id="h7y-Lg-PQL"/>
                 <constraint firstItem="Mdc-nS-UaT" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jO1-36-8YM"/>
-                <constraint firstItem="V5i-hu-BC6" firstAttribute="top" secondItem="GzA-F8-dbi" secondAttribute="bottom" constant="37" id="nsc-aX-TMe"/>
                 <constraint firstItem="t5E-gk-7R9" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="qMq-4w-vsO"/>
-                <constraint firstItem="GzA-F8-dbi" firstAttribute="top" secondItem="FRU-Op-bJL" secondAttribute="bottom" constant="40" id="tY0-fR-lpg"/>
                 <constraint firstItem="6pe-Q0-747" firstAttribute="centerY" secondItem="bRc-7S-Q5w" secondAttribute="centerY" id="uFr-Ur-5tk"/>
                 <constraint firstItem="o1A-b5-NbI" firstAttribute="top" secondItem="Mdc-nS-UaT" secondAttribute="bottom" constant="19" id="uML-t7-YQR"/>
                 <constraint firstItem="V5i-hu-BC6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="uOL-nU-vAh"/>

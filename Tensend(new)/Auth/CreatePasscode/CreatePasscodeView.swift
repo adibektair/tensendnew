@@ -53,6 +53,7 @@ class CreatePasscodeView: UIViewController, UITextFieldDelegate {
     
     
     override func viewDidLoad() {
+        self.makeNCTranslucent()
         super.viewDidLoad()
         self.firstTextField.becomeFirstResponder()
         self.firstTextField.delegate = self
@@ -200,10 +201,9 @@ extension UIViewController {
                 
                 if success {
                     
-                    //TODO: User authenticated successfully, take appropriate action
                     
                 } else {
-                    //TODO: User did not authenticate successfully, look at error and take appropriate action
+                    
                     guard let error = evaluateError else {
                         return
                     }

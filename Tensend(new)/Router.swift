@@ -14,13 +14,31 @@ protocol RouterMain {
 
 protocol RouterProtocol : RouterMain {
     func initialViewController()
-    func createPasswordViewController(phone: String)
-    func checkCodeViewController(phone: String)
+    func createPasswordViewController(phone: String,isRegister : Bool, code : String)
+    func checkCodeViewController(isRegister : Bool, phone: String)
     func openCreatePasscodeController()
     func openSignInController()
     func popToRoot()
 }
 class Router: RouterProtocol {
+    func createPasswordViewController(phone: String, isRegister: Bool, code : String) {
+        if let navigationController = navigationController{
+            guard let mainViewController = assemblyBuilder?.createCreatePasswordVC(phone: phone, router: self, isRegister: isRegister, code: code) else {
+                return
+            }
+        navigationController.pushViewController(mainViewController, animated: true)
+        }
+    }
+    
+    func checkCodeViewController(isRegister: Bool, phone: String) {
+        if let navigationController = navigationController{
+                   guard let mainViewController = assemblyBuilder?.createCheckCodeVC(phone: phone, router: self, isRegister : isRegister) else {
+                       return
+                   }
+               navigationController.pushViewController(mainViewController, animated: true)
+               }
+    }
+    
     func openSignInController() {
         if let navigationController = navigationController{
             guard let mainViewController = assemblyBuilder?.createSignInController(router: self) else {
@@ -41,16 +59,6 @@ class Router: RouterProtocol {
     }
     
     
-    
-    func createPasswordViewController(phone: String) {
-       if let navigationController = navigationController{
-           guard let mainViewController = assemblyBuilder?.createCreatePasswordVC(phone: phone, router: self) else {
-               return
-           }
-       navigationController.pushViewController(mainViewController, animated: true)
-       }
-    }
-    
 
     var navigationController: UINavigationController?
     
@@ -69,15 +77,7 @@ class Router: RouterProtocol {
             navigationController.viewControllers = [mainViewController]
         }
     }
-    func checkCodeViewController(phone: String){
-        if let navigationController = navigationController{
-            guard let mainViewController = assemblyBuilder?.createCheckCodeVC(phone: phone, router: self) else {
-                return
-            }
-        navigationController.pushViewController(mainViewController, animated: true)
-        }
-    }
-    
+ 
     func popToRoot() {
         if let navigationController = navigationController{
             navigationController.popViewController(animated: true)

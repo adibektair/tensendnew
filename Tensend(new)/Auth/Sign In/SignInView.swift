@@ -8,6 +8,7 @@
 
 import UIKit
 import EasyPeasy
+let statusBarHeight = UIApplication.shared.statusBarFrame.height
 
 class SignInView: ScrollStackController {
     
@@ -21,6 +22,7 @@ class SignInView: ScrollStackController {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9764705882, alpha: 1)
         self.navigationController?.navigationBar.isHidden = false
+        self.stackView.easy.layout(Top(-statusBarHeight))
         self.makeNCTranslucent()
         self.createTopView()
         self.createMiddleView()
@@ -42,8 +44,8 @@ extension SignInView : SignInProtocol{
         self.navigationController?.present(HomeVC(), animated: true, completion: nil)
     }
     
-    func goToResetPassword() {
-        
+    @objc func goToResetPassword() {
+        self.navigationController?.pushViewController(ResetPasswordVC(), animated: true)
     }
     
     @objc func biometricAuth() {
@@ -150,48 +152,50 @@ extension SignInView{
         stackView.addArrangedSubview(tfView)
     }
     func textFieldViewBySultan(){
-        let textStackView = UIStackView()
-        textStackView.setProperties(axis: .vertical, alignment: .fill, spacing: 0, distribution: .fill)
-        
-        textField.borderStyle = .none
-        textField.placeholder = "E-mail немесе телефон нөміріңіз"
-        textField.textColor = .black
-        textStackView.addArrangedSubview(textField)
-        
-        let borderLine = UIView()
-        borderLine.backgroundColor = .gray
-        borderLine.easy.layout(Height(1))
-        textStackView.addArrangedSubview(borderLine)
-        
-        let horizontStackView = UIStackView()
-        horizontStackView.setProperties(axis: .horizontal, alignment: .fill, spacing: 2, distribution: .fill)
-        
-        
-        passwordTextField.borderStyle = .none
-        passwordTextField.placeholder = "Құпия сөз"
-        passwordTextField.textColor = .black
-        passwordTextField.isSecureTextEntry = true
-        horizontStackView.addArrangedSubview(passwordTextField)
-        textField.easy.layout(Height(70))
-        passwordTextField.easy.layout(Height(70))
-        let button = UIButton()
-        button.setTitle("ЕСКЕ ТҮСІРУ", for: .normal)
-        button.setTitleColor(.darkGray, for: .normal)
-//        button.easy.layout(Height(50))
-        horizontStackView.addArrangedSubview(UIView())
-        horizontStackView.addArrangedSubview(button)
-        textStackView.addBackgroundColor(color: .white)
-        textStackView.addArrangedSubview(horizontStackView)
-        textStackView.cornerRadius(radius: 15, width: 0, color: .white)
-        textStackView.setSpacing(top: 0, left: 15, right: 15, bottom: 0)
-        
-        let view = UIView()
-        view.addSubview(textStackView)
-        textStackView.easy.layout(Left(30), Right(30), Top(), Bottom())
-        view.cornerRadius(radius: 15, width: 0)
-        self.stackView.addArrangedSubview(view)
-    }
-    
+            let textStackView = UIStackView()
+            textStackView.setProperties(axis: .vertical, alignment: .fill, spacing: 0, distribution: .fill)
+            
+            textField.borderStyle = .none
+            textField.placeholder = "E-mail немесе телефон нөміріңіз"
+            textField.textColor = .black
+            textStackView.addArrangedSubview(textField)
+            
+            let borderLine = UIView()
+            borderLine.backgroundColor = .gray
+            borderLine.easy.layout(Height(1))
+            textStackView.addArrangedSubview(borderLine)
+            
+            let horizontStackView = UIStackView()
+            horizontStackView.setProperties(axis: .horizontal, alignment: .fill, spacing: 2, distribution: .fill)
+            
+            
+            passwordTextField.borderStyle = .none
+            passwordTextField.placeholder = "Құпия сөз"
+            passwordTextField.textColor = .black
+            passwordTextField.isSecureTextEntry = true
+            horizontStackView.addArrangedSubview(passwordTextField)
+            textField.easy.layout(Height(70))
+            passwordTextField.easy.layout(Height(70))
+            let button = UIButton()
+            button.setTitle("ЕСКЕ ТҮСІРУ", for: .normal)
+            button.setTitleColor(.darkGray, for: .normal)
+    //        button.easy.layout(Height(50))
+            button.addTarget(self, action: #selector(self.goToResetPassword), for: .touchUpInside)
+            horizontStackView.addArrangedSubview(UIView())
+            horizontStackView.addArrangedSubview(button)
+            textStackView.addBackgroundColor(color: .white)
+            textStackView.addArrangedSubview(horizontStackView)
+            textStackView.setSpacing(top: 0, left: 15, right: 15, bottom: 0)
+            
+            let view = UIView()
+            view.addSubview(textStackView)
+            textStackView.easy.layout(Left(10), Right(10), Top(10), Bottom(10))
+            view.backgroundColor = .white
+            self.stackView.addArrangedSubview(view)
+            view.cornerRadius(radius: 15, width: 0)
+            view.easy.layout(Left(20), Right(20))
+        }
+   
     func createButtonsView(){
         let stackView = UIStackView()
         stackView.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
@@ -224,3 +228,6 @@ extension SignInView{
     
     
 }
+/**
+
+ */

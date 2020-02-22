@@ -53,6 +53,7 @@
 		AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1303523ED5F0500D86BAC /* CreatePasscodePresenter.swift */; };
 		AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B77923FC219C00314455 /* SignInView.swift */; };
 		AAB9B77E23FC2C3300314455 /* SIgnInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B77D23FC2C3300314455 /* SIgnInPresenter.swift */; };
+		AAB9B78124019CA500314455 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B78024019CA500314455 /* ResetPasswordVC.swift */; };
 		AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F89823FC1CD700537254 /* CorrectCodeView.swift */; };
 		AAC3F89C23FC1CE700537254 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F89B23FC1CE700537254 /* UserDefaults.swift */; };
 		AACC4DAD23E828310072F77D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC4DAC23E828310072F77D /* Country.swift */; };
@@ -132,6 +133,7 @@
 		AAB1303523ED5F0500D86BAC /* CreatePasscodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasscodePresenter.swift; sourceTree = "<group>"; };
 		AAB9B77923FC219C00314455 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		AAB9B77D23FC2C3300314455 /* SIgnInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnInPresenter.swift; sourceTree = "<group>"; };
+		AAB9B78024019CA500314455 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		AAC3F89823FC1CD700537254 /* CorrectCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectCodeView.swift; sourceTree = "<group>"; };
 		AAC3F89B23FC1CE700537254 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		AACC4DAC23E828310072F77D /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -280,6 +282,14 @@
 			path = "Sign In";
 			sourceTree = "<group>";
 		};
+		AAB9B77F24019B3900314455 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				AAB9B78024019CA500314455 /* ResetPasswordVC.swift */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
 		AAC3F89723FC1CD700537254 /* Additional Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +368,7 @@
 		AAD5DAAA23E177AD00D9F7D0 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				AAB9B77F24019B3900314455 /* ResetPassword */,
 				AAB9B77823FC1F0F00314455 /* Sign In */,
 				AAC3F89A23FC1CE700537254 /* UserDefaults */,
 				AAC3F89723FC1CD700537254 /* Additional Views */,
@@ -510,7 +521,6 @@
 				AAD5DA8823E169ED00D9F7D0 /* Main.storyboard in Resources */,
 				2F386F0523FC6D8D0058579E /* MeditationCVC.xib in Resources */,
 				AAB1303423ED5D7300D86BAC /* CreatePasscodeView.xib in Resources */,
-				2F386BFC23FC2AD50058579E /* ForYouCVC.xib in Resources */,
 				AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
+				AAB9B78124019CA500314455 /* ResetPasswordVC.swift in Sources */,
 				2F386F0823FC6D8D0058579E /* ImagesWithTitleCVC.swift in Sources */,
 				2F386F0B23FC6D8D0058579E /* OnlyImageCVC.swift in Sources */,
 				AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */,
@@ -606,7 +617,6 @@
 				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
 				AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
-				2F386BFF23FC2AD50058579E /* ForYouCVC.swift in Sources */,
 				AAB9B77E23FC2C3300314455 /* SIgnInPresenter.swift in Sources */,
 				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
 				2F386F1723FC6DE70058579E /* ScrollStackController.swift in Sources */,
@@ -643,7 +653,6 @@
 				2F386EF823FC6C6E0058579E /* SectionsName.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
 				AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */,
-				2F386BEE23FC2AA70058579E /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,7 +814,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R5W6A2A7L3;
+				DEVELOPMENT_TEAM = BN62376H24;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -824,7 +833,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R5W6A2A7L3;
+				DEVELOPMENT_TEAM = BN62376H24;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
