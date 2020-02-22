@@ -23,6 +23,18 @@ class CoursesVC: ScrollStackController {
         section.setData(title: "ҮЗДІК КУРСТАР", desc: "Сізге ұнауы мүмкін сабақтар тізімі")
         stackView.addArrangedSubview(section)
         
+        let bestCourses = BestCourses.init(parrentVC: self)
+        bestCourses.dropShadowBlue()
+        stackView.addArrangedSubview(bestCourses)
+        
+        let twoButtons = TwoButtons(parrentVC: self, leftPressed: {
+            print("LEFT")
+        }) {
+            print("RIGHT")
+        }
+        twoButtons.dropShadowBlue()
+    
+        stackView.addArrangedSubview(twoButtons)
         
     }
     

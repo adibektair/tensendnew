@@ -43,11 +43,15 @@ class HomeVC: ScrollStackController {
         let forYou = ForYou()
         stackView.addArrangedSubview(forYou)
         
+        let container = UIView()
+        
         let oneBanner = UIImageView()
         oneBanner.contentMode = .scaleToFill
         oneBanner.image = #imageLiteral(resourceName: "oneBanner-1")
         oneBanner.easy.layout(Height(126))
-        stackView.addArrangedSubview(oneBanner)
+        container.addSubview(oneBanner)
+        oneBanner.easy.layout(Left(30),Right(30),Top(),Bottom())
+        stackView.addArrangedSubview(container)
         
         let courseTitle = SectionsName()
         courseTitle.setData(title: "МЕНІҢ КУРСТАРЫМ", desc: "Сізге ұнайтын сабақтар тізімі")

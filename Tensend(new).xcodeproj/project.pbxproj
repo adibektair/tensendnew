@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F1BD58424018C97009E11B8 /* BestCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD58324018C97009E11B8 /* BestCourses.swift */; };
+		2F1BD58624018F5D009E11B8 /* TwoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD58524018F5D009E11B8 /* TwoButtons.swift */; };
+		2F1BD58A2401AAB6009E11B8 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD5882401AAB5009E11B8 /* Course.swift */; };
+		2F1BD58B2401AAB6009E11B8 /* ForMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD5892401AAB5009E11B8 /* ForMe.swift */; };
+		2F1BD58D2401AD63009E11B8 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD58C2401AD63009E11B8 /* Author.swift */; };
 		2F386EDF23FC6B6F0058579E /* HomeRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EDE23FC6B6F0058579E /* HomeRequests.swift */; };
 		2F386EF523FC6C6E0058579E /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EEE23FC6C6E0058579E /* CategoriesView.swift */; };
 		2F386EF623FC6C6E0058579E /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386EEF23FC6C6E0058579E /* MeditationView.swift */; };
@@ -86,6 +91,11 @@
 
 /* Begin PBXFileReference section */
 		0E62ED0DA18E2558035BEAEA /* Pods-Tensend(new)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F1BD58324018C97009E11B8 /* BestCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestCourses.swift; sourceTree = "<group>"; };
+		2F1BD58524018F5D009E11B8 /* TwoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtons.swift; sourceTree = "<group>"; };
+		2F1BD5882401AAB5009E11B8 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		2F1BD5892401AAB5009E11B8 /* ForMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForMe.swift; sourceTree = "<group>"; };
+		2F1BD58C2401AD63009E11B8 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		2F386EDE23FC6B6F0058579E /* HomeRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeRequests.swift; path = "Tensend(new)/Home/HomeRequests.swift"; sourceTree = SOURCE_ROOT; };
 		2F386EEE23FC6C6E0058579E /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesView.swift; path = "Tensend(new)/Home/Home Views/CategoriesView.swift"; sourceTree = SOURCE_ROOT; };
 		2F386EEF23FC6C6E0058579E /* MeditationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeditationView.swift; path = "Tensend(new)/Home/Home Views/MeditationView.swift"; sourceTree = SOURCE_ROOT; };
@@ -180,10 +190,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F1BD5872401A942009E11B8 /* Courses objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Courses objects";
+			sourceTree = "<group>";
+		};
 		2F386EE123FC6BD70058579E /* Objects */ = {
 			isa = PBXGroup;
 			children = (
 				2F386F2223FC6E710058579E /* Banner.swift */,
+				2F1BD5882401AAB5009E11B8 /* Course.swift */,
+				2F1BD58C2401AD63009E11B8 /* Author.swift */,
+				2F1BD5892401AAB5009E11B8 /* ForMe.swift */,
 				2F386F1C23FC6E700058579E /* BannersResponse.swift */,
 				2F386F1D23FC6E700058579E /* CategoriesResponse.swift */,
 				2F386F2023FC6E700058579E /* Category.swift */,
@@ -199,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				2F60140223FED38200D2A354 /* CoursesVC.swift */,
+				2F1BD5872401A942009E11B8 /* Courses objects */,
 				2F60140423FED38B00D2A354 /* CoursesView */,
 			);
 			path = Courses;
@@ -208,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				2F60140523FED3A600D2A354 /* SearchView.swift */,
+				2F1BD58324018C97009E11B8 /* BestCourses.swift */,
+				2F1BD58524018F5D009E11B8 /* TwoButtons.swift */,
 			);
 			path = CoursesView;
 			sourceTree = "<group>";
@@ -614,6 +637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1BD58A2401AAB6009E11B8 /* Course.swift in Sources */,
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
 				2F386F0823FC6D8D0058579E /* ImagesWithTitleCVC.swift in Sources */,
 				2F386F0B23FC6D8D0058579E /* OnlyImageCVC.swift in Sources */,
@@ -630,6 +654,7 @@
 				AAB9B77E23FC2C3300314455 /* SIgnInPresenter.swift in Sources */,
 				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
 				2F386F1723FC6DE70058579E /* ScrollStackController.swift in Sources */,
+				2F1BD58624018F5D009E11B8 /* TwoButtons.swift in Sources */,
 				2F386F2523FC6E710058579E /* Data.swift in Sources */,
 				AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */,
 				2F386F0723FC6D8D0058579E /* ForYouCVC.swift in Sources */,
@@ -638,6 +663,7 @@
 				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
 				2F386F1823FC6DE70058579E /* ViewExtensions.swift in Sources */,
 				2F386F1A23FC6DE70058579E /* LabelExtensions.swift in Sources */,
+				2F1BD58D2401AD63009E11B8 /* Author.swift in Sources */,
 				2F386F1623FC6DE70058579E /* UIViewExtensions.swift in Sources */,
 				2F386F1923FC6DE70058579E /* StackViewExtensions.swift in Sources */,
 				2F386F2323FC6E710058579E /* BannersResponse.swift in Sources */,
@@ -660,8 +686,10 @@
 				2F386EF523FC6C6E0058579E /* CategoriesView.swift in Sources */,
 				AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */,
 				2F386F2423FC6E710058579E /* CategoriesResponse.swift in Sources */,
+				2F1BD58424018C97009E11B8 /* BestCourses.swift in Sources */,
 				2F386F0923FC6D8D0058579E /* MeditationCVC.swift in Sources */,
 				2F386F1523FC6DE70058579E /* StringExtension.swift in Sources */,
+				2F1BD58B2401AAB6009E11B8 /* ForMe.swift in Sources */,
 				2F386EF823FC6C6E0058579E /* SectionsName.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
 				AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */,
