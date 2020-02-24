@@ -11,12 +11,42 @@ import Foundation
 protocol SignInProtocol {
     func goToResetPassword()
     func biometricAuth()
+    func error(message : String)
     func singIn()
+    func success()
 }
 
-protocol SignInPresenter {
+protocol SignInPresenterProtocol {
     init(router : Router, networkLayer : NetworkLayer, view : SignInProtocol)
-    func signIn()
+    func signIn(phone: String, password: String)
     func goToResetPassword()
 }
 
+class SignInPresenter: SignInPresenterProtocol {
+    let view : SignInProtocol?
+    let router : Router?
+    let networkLayer : NetworkLayer?
+    
+    required init(router: Router, networkLayer: NetworkLayer, view: SignInProtocol) {
+        self.router = router
+        self.view = view
+        self.networkLayer = networkLayer
+    }
+    
+    func signIn(phone: String, password: String) {
+        self.networkLayer?.signIn(parameters: ["phone" : phone, "password" : password,     "device_token" : "123", "platform" : "IOS"] as [String : AnyObject], callback: { (success) in
+            if !success{
+                self.view?.error(message: "Перепроверьте валидность данных")
+                return
+            }else{
+                
+            }
+        })
+    }
+    
+    func goToResetPassword() {
+        
+    }
+    
+    
+}

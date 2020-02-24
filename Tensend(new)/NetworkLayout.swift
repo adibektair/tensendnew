@@ -23,8 +23,43 @@ protocol NetworkLayoutProtocol {
     
     func register(phone: String, password: String, callback: @escaping (Bool) -> ())
     
+    func signIn(parameters: [String : AnyObject], callback: @escaping (Bool) -> ())
+    
+    func resetPassword(parameters: [String : AnyObject], callback: @escaping (Bool) -> ())
+    
 }
 class NetworkLayer: NetworkLayoutProtocol {
+    
+    
+    func resetPassword(parameters: [String : AnyObject], callback: @escaping (Bool) -> ()) {
+        Alamofire.request(apiUrl + "code/reset", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseObject{
+                          (response: DataResponse<RegisterResponse>) in
+                          if let _ = response.response{
+                               let model  = response.result
+                               if let token = model.value?.token{
+                                   UserDefault.saveToken(token: token)
+                               }
+                               callback(model.value?.success ?? false)
+            }
+        }
+    }
+    
+   
+    
+    
+    func signIn(parameters: [String : AnyObject], callback: @escaping (Bool) -> ()) {
+        Alamofire.request(apiUrl + "login", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseObject{
+                   (response: DataResponse<RegisterResponse>) in
+                   if let _ = response.response{
+                        let model  = response.result
+                        if let token = model.value?.token{
+                            UserDefault.saveToken(token: token)
+                        }
+                        callback(model.value?.success ?? false)
+                   }
+               }
+    }
+    
     
     func register(phone: String, password: String, callback: @escaping (Bool) -> ()) {
            let json = ["phone" : phone, "password" : password] as [String: AnyObject]

@@ -44,13 +44,15 @@ class CheckCodeView: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var secondTextField: UITextField!
     @IBOutlet weak var thirdTextField: UITextField!
     @IBOutlet weak var fouthTextField: UITextField!
-    
+    @IBOutlet weak var constraint: NSLayoutConstraint!
     
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        self.makeNCTranslucent()
         self.navigationController?.navigationBar.isHidden = false
-        self.navigationController?.navigationBar.isTranslucent = true
         self.phoneNumberLabel.text = "\(presenter.phone) нөміріне\n 4 саны бар SMS-хабарлама жіберілді.\n SMS-тегі кодты еңгізіңіз."
         self.firstTextField.becomeFirstResponder()
                self.firstTextField.delegate = self
@@ -106,6 +108,18 @@ extension CheckCodeView: CheckCodeProtocol{
 }
 
 extension CheckCodeView{
+    
+    @objc func keyboardWillAppear() {
+        UIView.animate(withDuration: 1) {
+            self.constraint.constant = 10
+        }
+    }
+
+    @objc func keyboardWillDisappear() {
+        UIView.animate(withDuration: 1) {
+            self.constraint.constant = 35
+        }
+    }
     
     func clear(){
           firstTextField.becomeFirstResponder()
