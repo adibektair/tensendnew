@@ -19,7 +19,7 @@ protocol CheckCodePresenterProtocol {
     func sendSmsCode(phone: String)
     func checkCode(code: String)
     func setView()
-    init(phone: String, view: CheckCodeProtocol, router: RouterProtocol, networkLayer: NetworkLayer)
+    init(phone: String, isRegister : Bool, view: CheckCodeProtocol, router: RouterProtocol, networkLayer: NetworkLayer)
 }
 class CheckCodePresenter: CheckCodePresenterProtocol {
     
@@ -27,6 +27,7 @@ class CheckCodePresenter: CheckCodePresenterProtocol {
     var view : CheckCodeProtocol
     var router : RouterProtocol?
     var networkLayer : NetworkLayer
+    var isRegister : Bool?
     
     func sendSmsCode(phone: String) {
         self.networkLayer.sendSMS(phone: "+7" + phone.filter("1234567890".contains), callback: { success in
@@ -43,19 +44,20 @@ class CheckCodePresenter: CheckCodePresenterProtocol {
         networkLayer.checkCode(phone: phoneNumber, code: code, callback: { success in
             if success{
                 self.view.correctCode()
-                   self.router?.createPasswordViewController(phone: phoneNumber)
+                self.router?.createPasswordViewController(phone: phoneNumber, isRegister: self.isRegister!, code: code)
             }else{
                 self.view.incorrectCode()
-                   self.router?.createPasswordViewController(phone: phoneNumber)
+                self.router?.createPasswordViewController(phone: phoneNumber, isRegister: self.isRegister!, code: code)
             }
         })
     }
     
-    required init(phone: String, view: CheckCodeProtocol, router: RouterProtocol, networkLayer: NetworkLayer) {
+    required init(phone: String, isRegister : Bool, view: CheckCodeProtocol, router: RouterProtocol, networkLayer: NetworkLayer) {
         self.phone = phone
         self.view = view
         self.router = router
         self.networkLayer = networkLayer
+        self.isRegister = isRegister
         self.setView()
         self.sendSmsCode(phone: phone)
     }
