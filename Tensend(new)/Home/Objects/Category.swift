@@ -39,7 +39,7 @@ class Category : NSObject, NSCoding, Mappable{
         if inprogress { return }
         if counter <= lastPage ?? 1{
             inprogress = true
-           HomeRequests.sharedInstance.getCategories(page: currentPage!) { (result) in
+           HomeRequests.sharedInstance.getCategories(page: counter) { (result) in
                self.data?.append(contentsOf: result.categories?.data ?? [])
                self.resetList()
                self.counter += 1
