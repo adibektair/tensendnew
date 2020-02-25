@@ -52,7 +52,7 @@
 		2FB73B1224040CF3004A0A3A /* CoursesByCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1124040CF3004A0A3A /* CoursesByCategoryVC.swift */; };
 		2FB73B1424041B70004A0A3A /* AboutCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1324041B70004A0A3A /* AboutCourseVC.swift */; };
 		2FB73B1624041BDD004A0A3A /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1524041BDD004A0A3A /* VideoView.swift */; };
-		2FB73B1824041F55004A0A3A /* courseAuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1724041F55004A0A3A /* courseAuthorView.swift */; };
+		2FB73B1824041F55004A0A3A /* CourseAuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1724041F55004A0A3A /* CourseAuthorView.swift */; };
 		69CACAC7F5AEA47A35CDCCA9 /* Pods_Tensend_new_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */; };
 		AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */; };
 		AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19B23E9704100617132 /* CheckCodeView.swift */; };
@@ -145,7 +145,7 @@
 		2FB73B1124040CF3004A0A3A /* CoursesByCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesByCategoryVC.swift; sourceTree = "<group>"; };
 		2FB73B1324041B70004A0A3A /* AboutCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutCourseVC.swift; path = "Courses objects/AboutCourseVC.swift"; sourceTree = "<group>"; };
 		2FB73B1524041BDD004A0A3A /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		2FB73B1724041F55004A0A3A /* courseAuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = courseAuthorView.swift; sourceTree = "<group>"; };
+		2FB73B1724041F55004A0A3A /* CourseAuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseAuthorView.swift; sourceTree = "<group>"; };
 		3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,7 +251,7 @@
 			children = (
 				2F60140523FED3A600D2A354 /* SearchView.swift */,
 				2FB73B1524041BDD004A0A3A /* VideoView.swift */,
-				2FB73B1724041F55004A0A3A /* courseAuthorView.swift */,
+				2FB73B1724041F55004A0A3A /* CourseAuthorView.swift */,
 				2F1BD58E2401B8CC009E11B8 /* AllCoursesListView.swift */,
 				2F1BD5902401B9A9009E11B8 /* IconWithTitleView.swift */,
 				2F1BD58324018C97009E11B8 /* BestCourses.swift */,
@@ -679,7 +679,7 @@
 				2F386F0B23FC6D8D0058579E /* OnlyImageCVC.swift in Sources */,
 				2FB73B1424041B70004A0A3A /* AboutCourseVC.swift in Sources */,
 				AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */,
-				2FB73B1824041F55004A0A3A /* courseAuthorView.swift in Sources */,
+				2FB73B1824041F55004A0A3A /* CourseAuthorView.swift in Sources */,
 				AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */,
 				AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */,
 				2FB73B0E24040488004A0A3A /* TabbarViewController.swift in Sources */,

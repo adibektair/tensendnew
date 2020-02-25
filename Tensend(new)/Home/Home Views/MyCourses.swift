@@ -11,6 +11,7 @@ import EasyPeasy
 
 class MyCourses: UIView {
 
+    var coursesList : ForMe?
     var parrentVC = UIViewController()
     let stackview = UIStackView()
     let allButton = UIButton()
@@ -27,7 +28,7 @@ class MyCourses: UIView {
         self.addSubview(stackview)
         allButton.setTitle("Барлығы", for: .normal)
         allButton.setTitleColor(#colorLiteral(red: 0.2039215686, green: 0.6509803922, blue: 0.337254902, alpha: 1), for: .normal)
-        subViews()
+        getData()
         addSubview(stackview)
         if (parrentVC as? HomeVC) != nil {
             addSubview(allButton)
@@ -36,17 +37,27 @@ class MyCourses: UIView {
         } else {
             stackview.easy.layout(Edges())
         }
-        
-        
-        
     }
+    func getData(){
+         HomeRequests.sharedInstance.coursesByCategory(id: "1") { (result) in
+            self.coursesList = result
+            self.subViews()
+         }
+     }
     
     func subViews(){
+        if let counter = coursesList?.courses?.data?.count, counter > 3 {
+            self.count = counter
+        }
         if (parrentVC as? HomeVC) != nil {
             self.count = 3
         }
-        for _ in 0..<count {
-            let a = EachCourse()
+        for i in 0..<count {
+            let data = coursesList!.courses!.data![i]
+            let a = EachCourse(data: data)
+            a.addTapGestureRecognizer {
+                AboutCourseVC.open(vc: self.parrentVC)
+            }
             stackview.addArrangedSubview(a)
         }
     }

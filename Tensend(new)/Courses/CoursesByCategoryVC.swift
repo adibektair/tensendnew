@@ -21,7 +21,7 @@ class CoursesByCategoryVC: ScrollStackController {
         let list = MyCourses(parrentVC: self)
         stackView.addArrangedSubview(list)
     }
-    
+ 
     static func open(vc: UIViewController) {
          let viewController = CoursesByCategoryVC()
          if let nav = vc.navigationController {

@@ -11,6 +11,7 @@ import EasyPeasy
 
 class EachCourse: UIView {
     
+    var data: Data?
     var title = UILabel()
     var loadView = UIView()
     var loadViewBack = UIView()
@@ -18,8 +19,9 @@ class EachCourse: UIView {
     let stackView = UIStackView()
     let icon = UIImageView()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(data:Data) {
+        super.init(frame: .zero)
+        self.data = data
         size()
         setData()
     }
@@ -29,9 +31,6 @@ class EachCourse: UIView {
         let c = b / a * 65.0
         loadView.easy.layout(Width(CGFloat(c)))
         icon.image = #imageLiteral(resourceName: "eachCourse")
-//        icon.layer.masksToBounds = true
-//        icon.layer.borderWidth = 1
-//        self.backgroundColor = .white
         self.dropShadowBlue()
     }
     
@@ -52,22 +51,30 @@ class EachCourse: UIView {
     }
     
     func stackViewSets() {
-        
-        title.setProperties(text: "Сымбатты мүсін", textColor: UIColor.titleDefault(UIColor())())
+        var titleText = ""
+        if let tit = data?.title {
+            titleText = tit
+        }
+        title.setProperties(text: titleText, textColor: UIColor.titleDefault(UIColor())())
         stackView.addArrangedSubview(title)
         if true {
             isauthor()
         } else {
             isLoadView()
         }
+        if let subjCount = data?.lessonsCount {
+            subjectCountLabel.setProperties(text: "\(subjCount)", textColor: UIColor.titleDefault(UIColor())(), font: .systemFont(ofSize: 13))
+        }
         
-        subjectCountLabel.setProperties(text: "24 сабақтан 4", textColor: UIColor.titleDefault(UIColor())(), font: .systemFont(ofSize: 13))
         stackView.addArrangedSubview(subjectCountLabel)
     }
     
     func isauthor(){
         let authorLabel = UILabel()
-        let authName = "Інжү Әнуарбекқызы"
+        var authName = "Інжү Әнуарбекқызы"
+        if let name = data?.author?.name {
+            authName = name
+        }
         authorLabel.setProperties(text: authName, textColor: #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1), font: .systemFont(ofSize: 10), numberLines: 1)
         stackView.addArrangedSubview(authorLabel)
     }
