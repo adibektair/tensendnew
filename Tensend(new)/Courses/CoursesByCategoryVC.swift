@@ -10,9 +10,10 @@ import UIKit
 
 class CoursesByCategoryVC: ScrollStackController {
 
+    var id = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let text = "Ұнаған сабақты таңдаңыз"
         let title = UILabel()
         title.setProperties(text: text, textColor: #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1), font: .systemFont(ofSize: 14), textAlignment: .center, numberLines: 1)
@@ -22,8 +23,9 @@ class CoursesByCategoryVC: ScrollStackController {
         stackView.addArrangedSubview(list)
     }
  
-    static func open(vc: UIViewController) {
+    static func open(vc: UIViewController,id:Int = 1) {
          let viewController = CoursesByCategoryVC()
+        viewController.id = id
          if let nav = vc.navigationController {
              nav.pushViewController(viewController, animated: true)
          }

@@ -55,6 +55,9 @@ class EachCourse: UIView {
         if let tit = data?.title {
             titleText = tit
         }
+        if let img = data?.imagePath, let url = URL(string: apiImgUrl + img.encodeUrl) {
+            self.icon.sd_setImage(with: url, completed: nil)
+        }
         title.setProperties(text: titleText, textColor: UIColor.titleDefault(UIColor())())
         stackView.addArrangedSubview(title)
         if true {
