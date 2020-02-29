@@ -15,9 +15,11 @@ class MyCourses: UIView {
     var parrentVC = UIViewController()
     let stackview = UIStackView()
     let allButton = UIButton()
-    var count = 15
-    init(parrentVC: UIViewController) {
+    var count = 0
+    var id = 1
+    init(parrentVC: UIViewController,id:Int) {
         super.init(frame: .zero)
+        self.id = id
         self.parrentVC = parrentVC
         size()
     }
@@ -39,7 +41,7 @@ class MyCourses: UIView {
         }
     }
     func getData(){
-         HomeRequests.sharedInstance.coursesByCategory(id: "1") { (result) in
+         HomeRequests.sharedInstance.coursesByCategory(id: "\(id)") { (result) in
             self.coursesList = result
             self.subViews()
          }
@@ -48,15 +50,20 @@ class MyCourses: UIView {
     func subViews(){
         if let counter = coursesList?.courses?.data?.count, counter > 3 {
             self.count = counter
+            if (parrentVC as? HomeVC) != nil, counter > 0, counter < 3 {
+                self.count = 3
+            }
         }
-        if (parrentVC as? HomeVC) != nil {
-            self.count = 3
-        }
+        
+        
         for i in 0..<count {
             let data = coursesList!.courses!.data![i]
             let a = EachCourse(data: data)
+            a.cornerRadius(radius: 8, width: 0)
             a.addTapGestureRecognizer {
-                AboutCourseVC.open(vc: self.parrentVC)
+                if let id = data.id {
+                    AboutCourseVC.open(vc: self.parrentVC,id: id)
+                }
             }
             stackview.addArrangedSubview(a)
         }

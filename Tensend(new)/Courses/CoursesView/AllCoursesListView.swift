@@ -27,7 +27,7 @@ class AllCoursesListView: UIView {
         self.addSubview(stackView)
         stackView.easy.layout(Edges())
         stackView.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
-      
+        
         
     }
     func tableViewDelegate(){
@@ -51,19 +51,19 @@ class AllCoursesListView: UIView {
             self.count = count
         }
         if (self.parrentVC as? CoursesVC) != nil && self.count > 0 && self.count >= 3 {
-                  count = 3
+            count = 3
         }
         for i in 0..<self.count {
             let data = self.categories!.categories!.data![i]
             let v = IconWithTitleView(parrentVC: self.parrentVC, data: data)
-                 v.addTapGestureRecognizer {
-                    CoursesByCategoryVC.open(vc: self.parrentVC, id: data.id!)
-                 }
-                 v.dropShadowBlue()
-                 stackView.addArrangedSubview(v)
-             }
+            v.addTapGestureRecognizer {
+                CoursesByCategoryVC.open(vc: self.parrentVC, id: data.id!)
+            }
+            v.dropShadowBlue()
+            stackView.addArrangedSubview(v)
+        }
         if (self.parrentVC as? CoursesVC) != nil {
-                  self.allButton()
+            self.allButton()
         }
     }
     func allButton(){
@@ -78,7 +78,7 @@ class AllCoursesListView: UIView {
         stackView.addArrangedSubview(allButton)
     }
     func getData(){
-          HomeRequests.sharedInstance.getCategories(page: 0) { (result) in
+        HomeRequests.sharedInstance.getCategories(page: 0) { (result) in
             self.categories = result
             if (self.parrentVC as? CoursesVC) != nil {
                 self.each()
@@ -86,8 +86,8 @@ class AllCoursesListView: UIView {
                 self.tableViewDelegate()
             }
             
-          }
-      }
+        }
+    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -114,19 +114,19 @@ extension AllCoursesListView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       if let d = self.categories?.categories?.data?[indexPath.row], let id = d.id {
-           CoursesByCategoryVC.open(vc: self.parrentVC, id: id)
-       }
+        if let d = self.categories?.categories?.data?[indexPath.row], let id = d.id {
+            CoursesByCategoryVC.open(vc: self.parrentVC, id: id)
+        }
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         if let datas = self.categories?.categories?.data{
-                   if indexPath.row == datas.count - 1 {
-                       self.categories?.categories!.loadNextPage {
-                           self.tableView.reloadData()
-                       }
-                   }
-               }
+            if indexPath.row == datas.count - 1 {
+                self.categories?.categories!.loadNextPage {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 }
 

@@ -57,7 +57,7 @@ class HomeVC: ScrollStackController {
         courseTitle.setData(title: "МЕНІҢ КУРСТАРЫМ", desc: "Сізге ұнайтын сабақтар тізімі")
         stackView.addArrangedSubview(courseTitle)
         
-        let coursesList = MyCourses(parrentVC: self)
+        let coursesList = MyCourses(parrentVC: self,id: 0)
         stackView.addArrangedSubview(coursesList)
         addLine()
         
