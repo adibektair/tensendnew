@@ -10,13 +10,14 @@ import UIKit
 import EasyPeasy
 
 class IconWithTitleView: UIView {
-    
+    var data : Data?
     var parrentVC = UIViewController()
     var stackView = UIStackView()
     
-    init(parrentVC: UIViewController) {
+    init(parrentVC: UIViewController, data: Data) {
         super.init(frame: .zero)
         self.parrentVC = parrentVC
+        self.data = data
         setViewws()
     }
     
@@ -37,6 +38,9 @@ class IconWithTitleView: UIView {
         viewForIcon.backgroundColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
         let icon = UIImageView()
         icon.image = #imageLiteral(resourceName: "Path 10")
+        if let img = data?.imgPath, let url = URL(string: apiImgUrl + img.encodeUrl) {
+            icon.sd_setImage(with: url, completed: nil)
+        }
         viewForIcon.addSubview(icon)
         icon.contentMode = .scaleAspectFit
         icon.easy.layout(CenterX(),CenterY(),Height(30),Width(30),Top(),Bottom())
@@ -53,6 +57,9 @@ class IconWithTitleView: UIView {
         
         let title = UILabel()
         title.setProperties(text: "Маркетинг", textColor: .black, textAlignment: .left, numberLines: 1)
+        if let name = data?.name  {
+            title.text = name
+        }
         stackView.addArrangedSubview(title)
         
         let arrowContainer = UIView()

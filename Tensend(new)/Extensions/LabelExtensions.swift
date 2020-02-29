@@ -11,7 +11,7 @@ import UIKit
 
 extension UILabel{
     func setProperties(text: String = "",
-                       textColor: UIColor = .black,
+                       textColor: UIColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1),
                        font: UIFont = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular),
                        textAlignment: NSTextAlignment = NSTextAlignment.left,
                        numberLines : Int = 1
