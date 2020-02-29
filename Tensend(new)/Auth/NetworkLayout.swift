@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
@@ -26,6 +27,9 @@ protocol NetworkLayoutProtocol {
     func signIn(parameters: [String : AnyObject], callback: @escaping (Bool) -> ())
     
     func resetPassword(parameters: [String : AnyObject], callback: @escaping (Bool) -> ())
+    
+    func getMeditations(callback: @escaping ([Data]) -> ())
+    func getSingleMeditation(id: Int, callback: @escaping (SingleMeditationResponse?) -> ())
     
 }
 class NetworkLayer: NetworkLayoutProtocol {
@@ -108,6 +112,27 @@ class NetworkLayer: NetworkLayoutProtocol {
             if let _ = response.response{
                 let model  = response.result
                 callback(model.value?.countries ?? [])
+            }
+        }
+    }
+    
+    func getMeditations(callback: @escaping ([Data]) -> ()) {
+        Alamofire.request(apiUrl + "meditations", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject{
+            (response: DataResponse<MeditationsResponse>) in
+            if let _ = response.response{
+                let model  = response.result
+                callback(model.value?.meditations?.data ?? [])
+            }
+        }
+    }
+    
+     func getSingleMeditation(id: Int, callback: @escaping (SingleMeditationResponse?) -> ()) {
+        
+        Alamofire.request(apiUrl + "meditation/\(id)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+            (response: DataResponse<SingleMeditationResponse>) in
+            if let _ = response.response{
+                let model  = response.result
+                callback(model.value ?? nil)
             }
         }
     }

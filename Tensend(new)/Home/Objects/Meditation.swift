@@ -133,3 +133,128 @@ class Meditation : NSObject, NSCoding, Mappable{
 	}
 
 }
+
+class SingleMeditation : NSObject, NSCoding, Mappable{
+
+    var access : Bool?
+    var audios : [Audio]?
+    var descriptionField : String?
+    var duration : Int?
+    var imgPath : String?
+    var scale : Float?
+    var title : String?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return SingleMeditation()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        access <- map["access"]
+        audios <- map["audios"]
+        descriptionField <- map["description"]
+        duration <- map["duration"]
+        imgPath <- map["img_path"]
+        scale <- map["scale"]
+        title <- map["title"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         access = aDecoder.decodeObject(forKey: "access") as? Bool
+         audios = aDecoder.decodeObject(forKey: "audios") as? [Audio]
+         descriptionField = aDecoder.decodeObject(forKey: "description") as? String
+         duration = aDecoder.decodeObject(forKey: "duration") as? Int
+         imgPath = aDecoder.decodeObject(forKey: "img_path") as? String
+         scale = aDecoder.decodeObject(forKey: "scale") as? Float
+         title = aDecoder.decodeObject(forKey: "title") as? String
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if access != nil{
+            aCoder.encode(access, forKey: "access")
+        }
+        if audios != nil{
+            aCoder.encode(audios, forKey: "audios")
+        }
+        if descriptionField != nil{
+            aCoder.encode(descriptionField, forKey: "description")
+        }
+        if duration != nil{
+            aCoder.encode(duration, forKey: "duration")
+        }
+        if imgPath != nil{
+            aCoder.encode(imgPath, forKey: "img_path")
+        }
+        if scale != nil{
+            aCoder.encode(scale, forKey: "scale")
+        }
+        if title != nil{
+            aCoder.encode(title, forKey: "title")
+        }
+
+    }
+
+}
+
+
+class SingleMeditationResponse : NSObject, NSCoding, Mappable{
+
+    var meditation : SingleMeditation?
+    var success : Bool?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return SingleMeditationResponse()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        meditation <- map["meditation"]
+        success <- map["success"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         meditation = aDecoder.decodeObject(forKey: "meditation") as? SingleMeditation
+         success = aDecoder.decodeObject(forKey: "success") as? Bool
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if meditation != nil{
+            aCoder.encode(meditation, forKey: "meditation")
+        }
+        if success != nil{
+            aCoder.encode(success, forKey: "success")
+        }
+
+    }
+
+}
