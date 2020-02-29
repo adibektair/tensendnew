@@ -19,7 +19,7 @@ class CoursesByCategoryVC: ScrollStackController {
         title.setProperties(text: text, textColor: #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1), font: .systemFont(ofSize: 14), textAlignment: .center, numberLines: 1)
         stackView.addArrangedSubview(title)
         
-        let list = MyCourses(parrentVC: self)
+        let list = MyCourses(parrentVC: self, id: id)
         stackView.addArrangedSubview(list)
     }
  

@@ -9,6 +9,7 @@ import ObjectMapper
 class ForMe : NSObject, NSCoding, Mappable{
 
 	var courses : Course?
+    var course : Course?
 	var success : Bool?
 
 
@@ -21,6 +22,7 @@ class ForMe : NSObject, NSCoding, Mappable{
 	func mapping(map: Map)
 	{
 		courses <- map["courses"]
+        courses <- map["course"]
 		success <- map["success"]
 		
 	}

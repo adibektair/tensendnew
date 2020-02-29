@@ -47,6 +47,7 @@
 		2F386F2923FC6E710058579E /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F2223FC6E710058579E /* Banner.swift */; };
 		2F60140323FED38200D2A354 /* CoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60140223FED38200D2A354 /* CoursesVC.swift */; };
 		2F60140623FED3A600D2A354 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60140523FED3A600D2A354 /* SearchView.swift */; };
+		2FB28DFB240AEC7600D2270E /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB28DFA240AEC7600D2270E /* Lesson.swift */; };
 		2FB73B0E24040488004A0A3A /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B0D24040488004A0A3A /* TabbarViewController.swift */; };
 		2FB73B1024040576004A0A3A /* CoursesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B0F24040576004A0A3A /* CoursesListVC.swift */; };
 		2FB73B1224040CF3004A0A3A /* CoursesByCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1124040CF3004A0A3A /* CoursesByCategoryVC.swift */; };
@@ -152,6 +153,7 @@
 		2F386F2223FC6E710058579E /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		2F60140223FED38200D2A354 /* CoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVC.swift; sourceTree = "<group>"; };
 		2F60140523FED3A600D2A354 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		2FB28DFA240AEC7600D2270E /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		2FB73B0D24040488004A0A3A /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		2FB73B0F24040576004A0A3A /* CoursesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListVC.swift; sourceTree = "<group>"; };
 		2FB73B1124040CF3004A0A3A /* CoursesByCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesByCategoryVC.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		2F1BD5872401A942009E11B8 /* Courses objects */ = {
 			isa = PBXGroup;
 			children = (
+				2FB28DFA240AEC7600D2270E /* Lesson.swift */,
 			);
 			path = "Courses objects";
 			sourceTree = "<group>";
@@ -819,6 +822,7 @@
 				AA77BD6924041EE4009BFFD0 /* MeditationEachView.swift in Sources */,
 				2F60140623FED3A600D2A354 /* SearchView.swift in Sources */,
 				2F386F2723FC6E710058579E /* Category.swift in Sources */,
+				2FB28DFB240AEC7600D2270E /* Lesson.swift in Sources */,
 				2F60140323FED38200D2A354 /* CoursesVC.swift in Sources */,
 				2F386EF523FC6C6E0058579E /* CategoriesView.swift in Sources */,
 				AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */,
