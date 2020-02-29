@@ -30,27 +30,37 @@ class MyCourses: UIView {
         self.addSubview(stackview)
         allButton.setTitle("Барлығы", for: .normal)
         allButton.setTitleColor(#colorLiteral(red: 0.2039215686, green: 0.6509803922, blue: 0.337254902, alpha: 1), for: .normal)
-        getData()
+        
         addSubview(stackview)
         if (parrentVC as? HomeVC) != nil {
+            getMyCourses()
             addSubview(allButton)
             allButton.easy.layout(Left(30),Bottom())
             stackview.easy.layout(Top(),Left(),Right(),Bottom().to(allButton))
         } else {
+            self.getData()
+            getMyCourses()
             stackview.easy.layout(Edges())
         }
     }
     func getData(){
+        
          HomeRequests.sharedInstance.coursesByCategory(id: "\(id)") { (result) in
             self.coursesList = result
             self.subViews()
          }
      }
+    func getMyCourses(){
+        HomeRequests.sharedInstance.getMyCourses { (result) in
+            self.coursesList = result
+            self.subViews()
+        }
+    }
     
     func subViews(){
-        if let counter = coursesList?.courses?.data?.count, counter > 3 {
+        if let counter = coursesList?.courses?.data?.count, counter > 0 {
             self.count = counter
-            if (parrentVC as? HomeVC) != nil, counter > 0, counter < 3 {
+            if (parrentVC as? HomeVC) != nil, counter > 0, counter >= 3 {
                 self.count = 3
             }
         }

@@ -73,6 +73,14 @@ extension CategoriesView: UICollectionViewDelegate, UICollectionViewDataSource, 
         print("indexpath row = \(indexPath.row)")
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if self.parentViewController != nil {
+            if let data = self.categories?.categories?.data?[indexPath.row], let id = data.id {
+                CoursesByCategoryVC.open(vc: self.parentViewController!, id: id)
+            }
+            
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 25

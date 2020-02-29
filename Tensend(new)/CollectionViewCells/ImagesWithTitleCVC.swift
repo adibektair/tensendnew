@@ -22,6 +22,7 @@ class ImagesWithTitleCVC: UICollectionViewCell {
         self.backgroundColor = .clear
     }
     func setData(){
+        title.setProperties(text: "", font: .systemFont(ofSize: 10), textAlignment: .center, numberLines: 2)
         if let img = categoryData?.imgPath, let url = URL(string: apiImgUrl + img.encodeUrl) {
             self.img.sd_setImage(with: url, completed: nil)
         }
