@@ -29,7 +29,11 @@ class TabbarViewController: UITabBarController {
         router.builder = builder
         router.initialController()
         self.addChild(meditationNavigationController)
-        
+     
+        let profileNav = UINavigationController()
+        let profileVC = ProfileVC()
+        profileNav.addChild(profileVC)
+        self.addChild(profileNav)
     }
     
 

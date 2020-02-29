@@ -77,5 +77,16 @@ class HomeRequests {
             }
         }
     }
+    public func getMyCourses( callback: @escaping (ForMe) -> ()){
+         let header = TokenHeaders.shared().getHeaders()
+         Alamofire.request(apiUrl + "users/courses", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseObject{
+                (response: DataResponse<ForMe>) in
+             if let _ = response.response{
+                 let model  = response.result
+                 model.value?.courses?.currentPage = 2
+                 callback(model.value!)
+             }
+         }
+     }
     
 }

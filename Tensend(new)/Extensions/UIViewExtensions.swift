@@ -51,7 +51,16 @@ extension UIView{
 }
 
 extension UIView {
-    
+    var parentViewController: UIViewController? {
+          var parentResponder: UIResponder? = self
+          while parentResponder != nil {
+              parentResponder = parentResponder?.next
+              if let viewController = parentResponder as? UIViewController {
+                  return viewController
+              }
+          }
+          return nil
+      }
     // In order to create computed properties for extensions, we need a key to
     // store and access the stored property
     fileprivate struct AssociatedObjectKeys {

@@ -17,6 +17,7 @@
                 <outlet property="meditationNameLabel" destination="nsd-no-xAW" id="QAZ-kO-V4k"/>
                 <outlet property="playImageView" destination="2xG-uY-Bpn" id="cJc-A9-fWn"/>
                 <outlet property="playView" destination="a8L-ny-xTM" id="iQw-ho-e22"/>
+                <outlet property="timerLabel" destination="WVp-Ch-WMM" id="Fbx-dP-Ekb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,7 +40,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="W6Y-jx-kBw"/>
                         <constraint firstItem="2xG-uY-Bpn" firstAttribute="centerY" secondItem="a8L-ny-xTM" secondAttribute="centerY" id="ajF-Wv-z9a"/>
@@ -85,6 +86,12 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVp-Ch-WMM">
+                    <rect key="frame" x="182" y="486" width="50.5" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -102,7 +109,9 @@
                 <constraint firstItem="Q8r-cS-IeN" firstAttribute="top" secondItem="a8L-ny-xTM" secondAttribute="bottom" constant="40" id="SDA-4r-OGA"/>
                 <constraint firstItem="Lu4-Hx-nUr" firstAttribute="leading" secondItem="kx7-om-Av0" secondAttribute="trailing" constant="10" id="Xg2-MR-a5H"/>
                 <constraint firstItem="a8L-ny-xTM" firstAttribute="centerY" secondItem="MTY-zs-gQE" secondAttribute="centerY" id="ZL2-Eh-gLw"/>
+                <constraint firstItem="WVp-Ch-WMM" firstAttribute="top" secondItem="a8L-ny-xTM" secondAttribute="bottom" constant="10.5" id="aMC-ff-3h5"/>
                 <constraint firstItem="Q8r-cS-IeN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mRj-0A-HuO"/>
+                <constraint firstItem="WVp-Ch-WMM" firstAttribute="centerX" secondItem="a8L-ny-xTM" secondAttribute="centerX" id="rTx-vY-sh5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MTY-zs-gQE" secondAttribute="trailing" id="v2v-jw-Ez2"/>
                 <constraint firstItem="kx7-om-Av0" firstAttribute="top" secondItem="nsd-no-xAW" secondAttribute="bottom" constant="20.5" id="yHu-5w-Zbb"/>
             </constraints>
