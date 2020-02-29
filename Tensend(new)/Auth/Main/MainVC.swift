@@ -11,7 +11,7 @@ import DropDown
 import SDWebImage
 import AKMaskField
 
-let imageUrl = "https://tensend.me/images/"
+let imageUrl = "https://tensend.me/"
 
 
 class MainVC: UIViewController {

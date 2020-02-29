@@ -37,7 +37,7 @@ class Data : NSObject, NSCoding, Mappable{
         return Data()
     }
     required init?(map: Map){}
-    private override init(){}
+    override init(){}
     
     func mapping(map: Map)
     {

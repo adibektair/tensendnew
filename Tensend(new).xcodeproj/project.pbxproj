@@ -55,6 +55,17 @@
 		AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA30C19C23E9704100617132 /* CheckCodeView.xib */; };
 		AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */; };
 		AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */; };
+		AA77BD5F2404091D009BFFD0 /* MeditationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD5E2404091D009BFFD0 /* MeditationRouter.swift */; };
+		AA77BD612404094B009BFFD0 /* MeditaionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD602404094B009BFFD0 /* MeditaionBuilder.swift */; };
+		AA77BD6424040BEA009BFFD0 /* MeditationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6324040BEA009BFFD0 /* MeditationPresenter.swift */; };
+		AA77BD6624040EDF009BFFD0 /* MeditationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6524040EDF009BFFD0 /* MeditationsView.swift */; };
+		AA77BD6924041EE4009BFFD0 /* MeditationEachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6824041EE4009BFFD0 /* MeditationEachView.swift */; };
+		AA77BD6C24080236009BFFD0 /* SingleMeditationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6B24080236009BFFD0 /* SingleMeditationPresenter.swift */; };
+		AA77BD6F240803F2009BFFD0 /* SingleMeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6D240803F2009BFFD0 /* SingleMeditationView.swift */; };
+		AA77BD70240803F2009BFFD0 /* SingleMeditationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA77BD6E240803F2009BFFD0 /* SingleMeditationView.xib */; };
+		AA77BD74240961CE009BFFD0 /* AuthorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD72240961CE009BFFD0 /* AuthorsCollectionViewCell.swift */; };
+		AA77BD75240961CE009BFFD0 /* AuthorsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA77BD73240961CE009BFFD0 /* AuthorsCollectionViewCell.xib */; };
+		AA77BD7724096478009BFFD0 /* TokenHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD7624096478009BFFD0 /* TokenHeaders.swift */; };
 		AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1300623EAFBE900D86BAC /* StandartResponse.swift */; };
 		AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */; };
 		AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */; };
@@ -146,6 +157,17 @@
 		AA30C19C23E9704100617132 /* CheckCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckCodeView.xib; sourceTree = "<group>"; };
 		AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdownCell.swift; sourceTree = "<group>"; };
 		AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDropdownCell.xib; sourceTree = "<group>"; };
+		AA77BD5E2404091D009BFFD0 /* MeditationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationRouter.swift; sourceTree = "<group>"; };
+		AA77BD602404094B009BFFD0 /* MeditaionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditaionBuilder.swift; sourceTree = "<group>"; };
+		AA77BD6324040BEA009BFFD0 /* MeditationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationPresenter.swift; sourceTree = "<group>"; };
+		AA77BD6524040EDF009BFFD0 /* MeditationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsView.swift; sourceTree = "<group>"; };
+		AA77BD6824041EE4009BFFD0 /* MeditationEachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationEachView.swift; sourceTree = "<group>"; };
+		AA77BD6B24080236009BFFD0 /* SingleMeditationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMeditationPresenter.swift; sourceTree = "<group>"; };
+		AA77BD6D240803F2009BFFD0 /* SingleMeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMeditationView.swift; sourceTree = "<group>"; };
+		AA77BD6E240803F2009BFFD0 /* SingleMeditationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleMeditationView.xib; sourceTree = "<group>"; };
+		AA77BD72240961CE009BFFD0 /* AuthorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA77BD73240961CE009BFFD0 /* AuthorsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorsCollectionViewCell.xib; sourceTree = "<group>"; };
+		AA77BD7624096478009BFFD0 /* TokenHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHeaders.swift; sourceTree = "<group>"; };
 		AAB1300623EAFBE900D86BAC /* StandartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartResponse.swift; sourceTree = "<group>"; };
 		AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordView.xib; sourceTree = "<group>"; };
@@ -263,6 +285,55 @@
 			children = (
 				AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */,
 				AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA77BD5D240406DA009BFFD0 /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD71240961B0009BFFD0 /* Cells */,
+				AA77BD6A24080218009BFFD0 /* Meditation */,
+				AA77BD6724041EBB009BFFD0 /* MeditationViews */,
+				AA77BD6224040BD6009BFFD0 /* Main */,
+				AA77BD5E2404091D009BFFD0 /* MeditationRouter.swift */,
+				AA77BD602404094B009BFFD0 /* MeditaionBuilder.swift */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
+		AA77BD6224040BD6009BFFD0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD6524040EDF009BFFD0 /* MeditationsView.swift */,
+				AA77BD6324040BEA009BFFD0 /* MeditationPresenter.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AA77BD6724041EBB009BFFD0 /* MeditationViews */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD6824041EE4009BFFD0 /* MeditationEachView.swift */,
+			);
+			path = MeditationViews;
+			sourceTree = "<group>";
+		};
+		AA77BD6A24080218009BFFD0 /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD6B24080236009BFFD0 /* SingleMeditationPresenter.swift */,
+				AA77BD6D240803F2009BFFD0 /* SingleMeditationView.swift */,
+				AA77BD6E240803F2009BFFD0 /* SingleMeditationView.xib */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
+		AA77BD71240961B0009BFFD0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD72240961CE009BFFD0 /* AuthorsCollectionViewCell.swift */,
+				AA77BD73240961CE009BFFD0 /* AuthorsCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -393,22 +464,21 @@
 		AAD5DA7F23E169ED00D9F7D0 /* Tensend(new) */ = {
 			isa = PBXGroup;
 			children = (
+				AA77BD5D240406DA009BFFD0 /* Meditation */,
 				AAE71B8023E40FC800CAFA47 /* Extensions */,
 				AAD5DAAA23E177AD00D9F7D0 /* Auth */,
 				AAD5DA8023E169ED00D9F7D0 /* AppDelegate.swift */,
 				AAD5DA8223E169ED00D9F7D0 /* SceneDelegate.swift */,
 				AAD5DA8423E169ED00D9F7D0 /* MainViewController.swift */,
-				AAD5DAA623E1774000D9F7D0 /* Builder.swift */,
 				2FB73B0D24040488004A0A3A /* TabbarViewController.swift */,
 				AAD5DA8B23E169EE00D9F7D0 /* LaunchScreen.storyboard */,
-				AAD5DAA723E1774000D9F7D0 /* Router.swift */,
 				AAD5DA8623E169ED00D9F7D0 /* Main.storyboard */,
 				2F60140123FED36A00D2A354 /* Courses */,
 				AAB1301223EB0D0E00D86BAC /* Home */,
 				AAB1301E23EB0D1800D86BAC /* CollectionViewCells */,
 				AAD5DA8E23E169EE00D9F7D0 /* Info.plist */,
 				AAD5DAA223E174B100D9F7D0 /* Assets.xcassets */,
-				AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */,
+				AA77BD7624096478009BFFD0 /* TokenHeaders.swift */,
 			);
 			path = "Tensend(new)";
 			sourceTree = "<group>";
@@ -425,6 +495,9 @@
 		AAD5DAAA23E177AD00D9F7D0 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				AAD5DAA723E1774000D9F7D0 /* Router.swift */,
+				AAD5DAA623E1774000D9F7D0 /* Builder.swift */,
+				AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */,
 				AAB9B77F24019B3900314455 /* ResetPassword */,
 				AAB9B77823FC1F0F00314455 /* Sign In */,
 				AAC3F89A23FC1CE700537254 /* UserDefaults */,
@@ -568,6 +641,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA77BD70240803F2009BFFD0 /* SingleMeditationView.xib in Resources */,
+				AA77BD75240961CE009BFFD0 /* AuthorsCollectionViewCell.xib in Resources */,
 				AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */,
 				AAD5DA8D23E169EE00D9F7D0 /* LaunchScreen.storyboard in Resources */,
 				AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */,
@@ -660,10 +735,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA77BD6F240803F2009BFFD0 /* SingleMeditationView.swift in Sources */,
 				2F1BD58A2401AAB6009E11B8 /* Course.swift in Sources */,
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
 				AAB9B78124019CA500314455 /* ResetPasswordVC.swift in Sources */,
 				2F386F0823FC6D8D0058579E /* ImagesWithTitleCVC.swift in Sources */,
+				AA77BD5F2404091D009BFFD0 /* MeditationRouter.swift in Sources */,
 				2F386F0B23FC6D8D0058579E /* OnlyImageCVC.swift in Sources */,
 				AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */,
 				AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */,
@@ -699,15 +776,20 @@
 				2F386F2923FC6E710058579E /* Banner.swift in Sources */,
 				2F386EFA23FC6C6E0058579E /* FirstBannerView.swift in Sources */,
 				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
+				AA77BD6C24080236009BFFD0 /* SingleMeditationPresenter.swift in Sources */,
+				AA77BD74240961CE009BFFD0 /* AuthorsCollectionViewCell.swift in Sources */,
 				2F386EFB23FC6C6E0058579E /* MyCourses.swift in Sources */,
 				2F386F1423FC6DE70058579E /* ViewControllerExtension.swift in Sources */,
 				2F1BD5912401B9A9009E11B8 /* IconWithTitleView.swift in Sources */,
+				AA77BD6424040BEA009BFFD0 /* MeditationPresenter.swift in Sources */,
+				AA77BD612404094B009BFFD0 /* MeditaionBuilder.swift in Sources */,
 				2F386F2623FC6E710058579E /* MeditationsResponse.swift in Sources */,
 				AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */,
 				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
 				2F1BD58F2401B8CC009E11B8 /* AllCoursesListView.swift in Sources */,
 				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
 				2F386EF623FC6C6E0058579E /* MeditationView.swift in Sources */,
+				AA77BD6924041EE4009BFFD0 /* MeditationEachView.swift in Sources */,
 				2F60140623FED3A600D2A354 /* SearchView.swift in Sources */,
 				2F386F2723FC6E710058579E /* Category.swift in Sources */,
 				2F60140323FED38200D2A354 /* CoursesVC.swift in Sources */,
@@ -716,7 +798,9 @@
 				2F386F2423FC6E710058579E /* CategoriesResponse.swift in Sources */,
 				2F1BD58424018C97009E11B8 /* BestCourses.swift in Sources */,
 				2F386F0923FC6D8D0058579E /* MeditationCVC.swift in Sources */,
+				AA77BD6624040EDF009BFFD0 /* MeditationsView.swift in Sources */,
 				2F386F1523FC6DE70058579E /* StringExtension.swift in Sources */,
+				AA77BD7724096478009BFFD0 /* TokenHeaders.swift in Sources */,
 				2F1BD58B2401AAB6009E11B8 /* ForMe.swift in Sources */,
 				2F386EF823FC6C6E0058579E /* SectionsName.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,

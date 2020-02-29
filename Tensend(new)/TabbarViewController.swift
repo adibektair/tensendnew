@@ -21,6 +21,15 @@ class TabbarViewController: UITabBarController {
         
         coursesNav.addChild(CoursesVC())
         self.addChild(coursesNav)
+        
+        let meditationNavigationController = UINavigationController()
+        let router = MeditationRouter()
+        let builder = MeditationBuilder()
+        router.navigationController = meditationNavigationController
+        router.builder = builder
+        router.initialController()
+        self.addChild(meditationNavigationController)
+        
     }
     
 
