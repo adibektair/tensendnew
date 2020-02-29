@@ -39,7 +39,6 @@ class MyCourses: UIView {
             stackview.easy.layout(Top(),Left(),Right(),Bottom().to(allButton))
         } else {
             self.getData()
-            getMyCourses()
             stackview.easy.layout(Edges())
         }
     }
