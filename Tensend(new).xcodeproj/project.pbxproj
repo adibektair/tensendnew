@@ -57,6 +57,7 @@
 		AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */; };
 		AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19B23E9704100617132 /* CheckCodeView.swift */; };
 		AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA30C19C23E9704100617132 /* CheckCodeView.xib */; };
+		AA3B5A78240AF8C1009AEEB3 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B5A77240AF8C1009AEEB3 /* ProfileVC.swift */; };
 		AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */; };
 		AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */; };
 		AA77BD5F2404091D009BFFD0 /* MeditationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD5E2404091D009BFFD0 /* MeditationRouter.swift */; };
@@ -163,6 +164,7 @@
 		AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodePresenter.swift; sourceTree = "<group>"; };
 		AA30C19B23E9704100617132 /* CheckCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeView.swift; sourceTree = "<group>"; };
 		AA30C19C23E9704100617132 /* CheckCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckCodeView.xib; sourceTree = "<group>"; };
+		AA3B5A77240AF8C1009AEEB3 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdownCell.swift; sourceTree = "<group>"; };
 		AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDropdownCell.xib; sourceTree = "<group>"; };
 		AA77BD5E2404091D009BFFD0 /* MeditationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationRouter.swift; sourceTree = "<group>"; };
@@ -290,6 +292,14 @@
 				AA30C19C23E9704100617132 /* CheckCodeView.xib */,
 			);
 			path = CheckCode;
+			sourceTree = "<group>";
+		};
+		AA3B5A76240AF89D009AEEB3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AA3B5A77240AF8C1009AEEB3 /* ProfileVC.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		AA47C4CC23E95E1D003FA110 /* Cells */ = {
@@ -476,6 +486,7 @@
 		AAD5DA7F23E169ED00D9F7D0 /* Tensend(new) */ = {
 			isa = PBXGroup;
 			children = (
+				AA3B5A76240AF89D009AEEB3 /* Profile */,
 				AA77BD5D240406DA009BFFD0 /* Meditation */,
 				AAE71B8023E40FC800CAFA47 /* Extensions */,
 				AAD5DAAA23E177AD00D9F7D0 /* Auth */,
@@ -777,6 +788,7 @@
 				2F386F0723FC6D8D0058579E /* ForYouCVC.swift in Sources */,
 				2FB73B1224040CF3004A0A3A /* CoursesByCategoryVC.swift in Sources */,
 				2F386EF923FC6C6E0058579E /* EachCourse.swift in Sources */,
+				AA3B5A78240AF8C1009AEEB3 /* ProfileVC.swift in Sources */,
 				AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */,
 				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
 				2F386F1823FC6DE70058579E /* ViewExtensions.swift in Sources */,

@@ -44,7 +44,7 @@ class HomeRequests {
         }
     }
     public func getForMe(page: Int, callback: @escaping (ForMe) -> ()){
-        let header = ["Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvdGVuc2VuZC5tZVwvYXBpXC92MVwvbG9naW4iLCJpYXQiOjE1ODIzOTU1NTEsIm5iZiI6MTU4MjM5NTU1MSwianRpIjoiNEtXRWlyWE1pUWlyZ29GMCIsInN1YiI6NTgsInBydiI6ImVlNWFjNjk0MjljNTU2ZDc1ZGJlN2ZmNGU1OGI5N2NkNGY3MTQyZWIifQ.aaLQcq5kSm0vfLfLn_DzVRLciWIhedUx5IIzl91Lx4Q"]
+        let header = TokenHeaders.shared().getHeaders()
           Alamofire.request(apiUrl + "courses/for/me?page=\(page)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseObject{
               (response: DataResponse<ForMe>) in
               if let _ = response.response{

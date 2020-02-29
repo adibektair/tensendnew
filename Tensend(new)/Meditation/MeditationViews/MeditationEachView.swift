@@ -33,7 +33,8 @@ class MeditationEachView: UIView {
         mainStackView.addArrangedSubview(middleStackView)
         middleStackView.addArrangedSubview(titleLabel)
         middleStackView.addArrangedSubview(timeLabel)
-        
+        titleLabel.textColor = .black
+        timeLabel.textColor = .black
         titleLabel.font = titleLabel.font.withSize(13)
         timeLabel.font = timeLabel.font.withSize(10)
         arrowImageView.image = #imageLiteral(resourceName: "Arrow")

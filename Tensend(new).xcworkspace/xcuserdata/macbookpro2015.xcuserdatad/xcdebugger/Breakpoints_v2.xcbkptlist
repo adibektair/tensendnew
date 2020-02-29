@@ -23,32 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6D5BB3AB-3626-4A05-855E-B1FBD7870A08"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/Meditation/Meditation/SingleMeditationView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "24FC1016-F411-4801-AA80-B757A52D82C3"
+            uuid = "00EF22F8-FD34-44D6-9B1D-2A11F78645B7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tensend(new)/Meditation/Meditation/SingleMeditationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "setUpViews()"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "fireTimer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

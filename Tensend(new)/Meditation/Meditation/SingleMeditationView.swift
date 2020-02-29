@@ -17,6 +17,7 @@ class SingleMeditationView: UIViewController, UICollectionViewDataSource, UIColl
     var player: AVPlayer!
     var selectedAuthorIndex = 0
     
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var meditationNameLabel: UILabel!
     @IBOutlet weak var dictorNameLabel: UILabel!
@@ -37,6 +38,10 @@ class SingleMeditationView: UIViewController, UICollectionViewDataSource, UIColl
     }
 
 
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+        player.pause()
+    }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AuthorsCollectionViewCell", for: indexPath) as! AuthorsCollectionViewCell
@@ -54,6 +59,11 @@ class SingleMeditationView: UIViewController, UICollectionViewDataSource, UIColl
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedAuthorIndex = indexPath.row
+        self.collectionView.reloadData()
+        let audio = self.presenter?.meditation?.meditation?.audios?[indexPath.row]
+        let url = URL.init(string: imageUrl + audio!.audioPath!)
+        let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
+        player = AVPlayer(playerItem: playerItem)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.presenter?.meditation?.meditation?.audios?.count ?? 0
@@ -84,12 +94,54 @@ extension SingleMeditationView : SingleMeditationProtocol{
 
 
         self.playView.addTapGestureRecognizer {
+            let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.fireTimer), userInfo: nil, repeats: true)
+
             self.play()
         }
         
     }
+    @objc func fireTimer() {
+        guard let item = self.player.currentItem else{
+            return
+        }
+        
+        self.timerLabel.text = formatTime(seconds: item.asset.duration.seconds - item.currentTime().seconds)
+    }
     
-  
+  func formatTime(seconds: Double) -> String {
+      let result = timeDivider(seconds: seconds)
+      let hoursString = "\(result.hours)"
+      var minutesString = "\(result.minutes)"
+      var secondsString = "\(result.seconds)"
+
+      if minutesString.count == 1 {
+          minutesString = "0\(result.minutes)"
+      }
+      if secondsString.count == 1 {
+          secondsString = "0\(result.seconds)"
+      }
+
+      var time = "\(hoursString):"
+      if result.hours >= 1 {
+          time.append("\(minutesString):\(secondsString)")
+      }
+      else {
+          time = "\(minutesString):\(secondsString)"
+      }
+      return time
+  }
+    
+    func timeDivider(seconds: Double) -> (hours: Int, minutes: Int, seconds: Int) {
+        guard !(seconds.isNaN || seconds.isInfinite) else {
+            return (0,0,0)
+        }
+        let secs: Int = Int(seconds)
+        let hours = secs / 3600
+        let minutes = (secs % 3600) / 60
+        let seconds = (secs % 3600) % 60
+        return (hours, minutes, seconds)
+    }
+    
     func play(){
       
         
@@ -97,7 +149,7 @@ extension SingleMeditationView : SingleMeditationProtocol{
             player.pause()
             self.playImageView.image = #imageLiteral(resourceName: "play")
         }else{
-
+            
             self.playImageView.image = #imageLiteral(resourceName: "1200px-Gtk-media-pause.svg")
             player.play()
         }
