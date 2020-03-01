@@ -15,6 +15,7 @@ class HomeVC: ScrollStackController {
         super.viewDidLoad()
         self.view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9803921569, alpha: 1)
         setElements()
+        self.tabBarItem.image =  #imageLiteral(resourceName: "Exclusion 1")
     }
     
     func setElements(){

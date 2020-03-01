@@ -56,15 +56,21 @@ class EachCourse: UIView {
         }
         title.setProperties(text: titleText, textColor: UIColor.titleDefault(UIColor())())
         stackView.addArrangedSubview(title)
-        
-        if self.data?.lessonsPassingCount == 0 {
-            isauthor()
-        } else {
-            isLoadView()
-        }
+        var sCountText = ""
         if let subjCount = data?.lessonsCount {
+            sCountText = "\(subjCount)"
             subjectCountLabel.setProperties(text: "\(subjCount)", textColor: UIColor.titleDefault(UIColor())(), font: .systemFont(ofSize: 13))
         }
+        if let data = self.data, data.started ?? false {
+            if let allL = data.lessonsCount, let passL = data.lessonsPassingCount {
+                sCountText = "\(allL) сабақтан \(passL)"
+                subjectCountLabel.text = sCountText
+            }
+            isLoadView()
+        } else {
+            isauthor()
+        }
+       
         
         stackView.addArrangedSubview(subjectCountLabel)
     }

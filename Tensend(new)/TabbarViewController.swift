@@ -34,8 +34,16 @@ class TabbarViewController: UITabBarController {
         let profileVC = ProfileVC()
         profileNav.addChild(profileVC)
         self.addChild(profileNav)
+        tabbarIcons()
     }
-    
+
+    func tabbarIcons(){
+        
+        for i in self.tabBar.items ?? []{
+            i.image = #imageLiteral(resourceName: "Exclusion 1")
+        }
+        self.tabBarItem.image = #imageLiteral(resourceName: "Exclusion 1")
+    }
 
     /*
     // MARK: - Navigation
