@@ -26,6 +26,7 @@ class AboutCourseVC: ScrollStackController {
     // MARK: - Navigation
 
     func sizes() {
+        self.additionalSafeAreaInsets.top = -145
         stackView.setSpacing(top: 0, left: 0, right: 0, bottom: 30)
     }
     

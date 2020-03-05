@@ -57,7 +57,9 @@ class AllCoursesListView: UIView {
             let data = self.categories!.categories!.data![i]
             let v = IconWithTitleView(parrentVC: self.parrentVC, data: data)
             v.addTapGestureRecognizer {
-                CoursesByCategoryVC.open(vc: self.parrentVC, id: data.id!)
+                let vc = CoursesByCategoryVC()
+                vc.title = data.name
+                CoursesByCategoryVC.open(vc: self.parrentVC, data: data)
             }
             v.dropShadowBlue()
             stackView.addArrangedSubview(v)
@@ -114,8 +116,8 @@ extension AllCoursesListView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let d = self.categories?.categories?.data?[indexPath.row], let id = d.id {
-            CoursesByCategoryVC.open(vc: self.parrentVC, id: id)
+        if let d = self.categories?.categories?.data?[indexPath.row]{
+            CoursesByCategoryVC.open(vc: self.parrentVC, data: d)
         }
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

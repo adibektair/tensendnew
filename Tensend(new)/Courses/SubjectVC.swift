@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import WebKit
 import EasyPeasy
 
-class SubjectVC: ScrollStackController {
+class SubjectVC: ScrollStackController, UIWebViewDelegate {
     
     var forMe: ForMe?
     var material: MaterialResponse?
@@ -18,6 +19,7 @@ class SubjectVC: ScrollStackController {
     var list : MaterialListView?
     var materialStackView = UIStackView()
     let materialsStack = UIStackView()
+    let materialsLabel = UILabel()
     let titleLabel = UILabel()
     let descLabel = UILabel()
     
@@ -25,8 +27,9 @@ class SubjectVC: ScrollStackController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSubview()
-        //        materialStackView.isHidden = true
+        
+        
+        self.additionalSafeAreaInsets.top = -145
         getData()
     }
     
@@ -47,19 +50,27 @@ class SubjectVC: ScrollStackController {
                         img.image = UIImage(named: type)
                         self.materialsStack.addArrangedSubview(img)
                         img.easy.layout(Height(41),Width(35))
-                        self.materialsStack.isHidden = false
                     }
                     img.addTapGestureRecognizer {
-                        self.docTapped()
+                        self.docTapped(doc: doc)
                     }
+                }
+                if !self.materialsStack.arrangedSubviews.isEmpty {
+                    materialsStack.addArrangedSubview(UIView())
+                    self.materialsLabel.isHidden = false
+                    self.materialsStack.isHidden = false
+                } else {
+                    self.materialsLabel.isHidden = true
                 }
             }
             
         }
         
     }
-    func docTapped(){
-        
+    func docTapped(doc: Document){
+        if let url = doc.docPath {
+            DocReaderVC.open(vc: self, url: apiImgUrl + url)
+        }
     }
     
     func setSubview(){
@@ -67,16 +78,16 @@ class SubjectVC: ScrollStackController {
         materialStackView.getProperties(stackView: self.stackView)
         materialStackView.setSpacing(top: 0, left: 31, right: 31, bottom: 0)
         
-        titleLabel.setProperties(text: "1. Алғашқы қадам", font: .systemFont(ofSize: 20, weight: .semibold), numberLines: 2)
+        titleLabel.setProperties(text: "", font: .systemFont(ofSize: 20, weight: .semibold), numberLines: 2)
         materialStackView.addArrangedSubview(titleLabel)
         
         
-        descLabel.setProperties(text: "description", font: .systemFont(ofSize: 14), numberLines: 0)
+        descLabel.setProperties(text: "", font: .systemFont(ofSize: 14), numberLines: 0)
         materialStackView.addArrangedSubview(descLabel)
         
-        let materials = UILabel()
-        materials.setProperties(text: "Қосымша материалдар", font: .systemFont(ofSize: 16, weight: .medium))
-        materialStackView.addArrangedSubview(materials)
+        materialsLabel.isHidden = true
+        materialsLabel.setProperties(text: "Қосымша материалдар", font: .systemFont(ofSize: 16, weight: .medium))
+        materialStackView.addArrangedSubview(materialsLabel)
         
         
         materialsStack.setProperties(axis: .horizontal, alignment: .leading, spacing: 14, distribution: .fill)
@@ -98,13 +109,13 @@ class SubjectVC: ScrollStackController {
         startButton.easy.layout(Height(58))
         materialStackView.addArrangedSubview(startButton)
         stackView.addArrangedSubview(materialStackView)
+        stackView.setSpacing(top: 0, left: 0, right: 0, bottom: 0)
     }
     func getData(){
-//        stackView.removeAllArrangedSubviews()
-//        materialStackView.removeAllArrangedSubviews()
         HomeRequests.sharedInstance.getCourse(id: "\(courseID)") { (result) in
             self.forMe = result
             if result.courses != nil {
+                self.setSubview()
                 self.reload()
                 self.getMaterial()
             }
@@ -134,12 +145,7 @@ class SubjectVC: ScrollStackController {
                 self.video = VideoView(parrentVC: self, material: self.material)
                 self.stackView.insertArrangedSubview(self.video!, at: 0)
             }
-            
-            
-            
             self.setData()
-            
-            
         }
     }
     

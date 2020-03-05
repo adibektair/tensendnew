@@ -18,12 +18,12 @@ class EachCourse: UIView {
     var subjectCountLabel = UILabel()
     let stackView = UIStackView()
     let icon = UIImageView()
-    
+    let container = UIView()
     init(data:Data) {
         super.init(frame: .zero)
         self.data = data
-        size()
         
+        size()
         self.dropShadowBlue()
         setData()
     }
@@ -32,17 +32,22 @@ class EachCourse: UIView {
     }
     
     func size(){
-        addSubview(icon)
-        addSubview(stackView)
-        
+        addSubview(container)
+        container.addSubview(icon)
+        container.addSubview(stackView)
+        container.clipsToBounds = true
+        container.easy.layout(Edges())
         icon.easy.layout(Top(),Left(),Bottom(),Right().to(stackView),Height(71),Width(88))
         icon.contentMode = .scaleToFill
         icon.layer.masksToBounds = true
+        
         stackView.setProperties(axis: .vertical, alignment: .leading, spacing: 4, distribution: .fill)
         stackView.setSpacing(top: 5, left: 15, right: 0, bottom: 5)
         stackView.easy.layout(Top(),Bottom(),Right())
         stackViewSets()
+        container.cornerRadius(radius: 8, width: 0)
         self.cornerRadius(radius: 8, width: 0)
+        self.clipsToBounds = true
         self.backgroundColor = .white
     }
     

@@ -24,12 +24,14 @@ class VideoView: UIView {
     init(parrentVC: UIViewController, obj: Course? = nil, material: MaterialResponse? = nil) {
         super.init(frame: .zero)
         self.parrent = parrentVC
-        size()
+        
         if obj != nil {
             self.obj = obj
+            self.size()
         } else if material != nil {
             self.material = material
-            if let videoUrl = material?.material?.videoPath, let url = URL(string: imageUrl + videoUrl){
+            self.size()
+            if let videoUrl = material?.material?.videoPath, let url = URL(string: imageUrl + videoUrl.encodeUrl){
                 playButton.isHidden = false
                 self.videoURL = url
             }
@@ -39,12 +41,13 @@ class VideoView: UIView {
             playButton.isHidden = false
             self.videoURL = url
         }
+//        self.relod()
     }
     func relod(){
         if let img = obj?.imagePath ?? self.material?.material?.imgPath {
-            imgView.sd_setImage(with: URL(string: apiImgUrl + img), completed: nil)
+            imgView.sd_setImage(with: URL(string: apiImgUrl + img.encodeUrl), completed: nil)
         }
-        if let video = obj?.trailer ?? material?.material?.videoPath ,let url = URL(string: imageUrl + video){
+        if let video = obj?.trailer ?? material?.material?.videoPath ,let url = URL(string: imageUrl + video.encodeUrl){
             self.videoURL = url
         }
     }
@@ -52,9 +55,8 @@ class VideoView: UIView {
         playVideo(url: self.videoURL!)
     }
     func size(){
+        self.addSubview(imgView)
         if let img = obj?.imagePath {
-            
-            self.addSubview(imgView)
             imgView.sd_setImage(with: URL(string: apiImgUrl + img), completed: nil)
             imgView.easy.layout(Edges())
         }

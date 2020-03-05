@@ -34,7 +34,20 @@ class MaterialListView: UIView {
     func sizes(){
         
         if let lessons = course?.lessons {
-            for i in lessons {
+            let gotAccess = lessons.filter({$0.access! == true})
+            for i in gotAccess {
+                let a = self.eachLesson(lesson: i)
+                self.stackView.addArrangedSubview(a)
+            }
+            
+            let inviteLabel = UILabel()
+            inviteLabel.easy.layout(Height(121))
+            inviteLabel.setProperties(text: "Tensend-ке жазылып,барлық курстарды ашыңыз", textColor: .white, font: .systemFont(ofSize: 17, weight: .semibold), textAlignment: .center, numberLines: 0)
+            inviteLabel.backgroundColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
+            self.stackView.addArrangedSubview(inviteLabel)
+            
+            let closedList = lessons.filter({$0.access! == false })
+            for i in closedList {
                 let a = self.eachLesson(lesson: i)
                 self.stackView.addArrangedSubview(a)
             }
