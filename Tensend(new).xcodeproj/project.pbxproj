@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F00396D240FFCCE000DE1A7 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00396C240FFCCE000DE1A7 /* Document.swift */; };
 		2F1BD58424018C97009E11B8 /* BestCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD58324018C97009E11B8 /* BestCourses.swift */; };
 		2F1BD58624018F5D009E11B8 /* TwoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD58524018F5D009E11B8 /* TwoButtons.swift */; };
 		2F1BD58A2401AAB6009E11B8 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD5882401AAB5009E11B8 /* Course.swift */; };
@@ -117,6 +118,7 @@
 
 /* Begin PBXFileReference section */
 		0E62ED0DA18E2558035BEAEA /* Pods-Tensend(new)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F00396C240FFCCE000DE1A7 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		2F1BD58324018C97009E11B8 /* BestCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestCourses.swift; sourceTree = "<group>"; };
 		2F1BD58524018F5D009E11B8 /* TwoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtons.swift; sourceTree = "<group>"; };
 		2F1BD5882401AAB5009E11B8 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				2FB28DFA240AEC7600D2270E /* Lesson.swift */,
 				2FB28DFF240C1BC000D2270E /* Material.swift */,
+				2F00396C240FFCCE000DE1A7 /* Document.swift */,
 				2FB28DFE240C1BC000D2270E /* MaterialResponse.swift */,
 			);
 			path = "Courses objects";
@@ -814,6 +817,7 @@
 				2F386F1623FC6DE70058579E /* UIViewExtensions.swift in Sources */,
 				2F386F1923FC6DE70058579E /* StackViewExtensions.swift in Sources */,
 				2F386F2323FC6E710058579E /* BannersResponse.swift in Sources */,
+				2F00396D240FFCCE000DE1A7 /* Document.swift in Sources */,
 				AAC3F89C23FC1CE700537254 /* UserDefaults.swift in Sources */,
 				2F386EF723FC6C6E0058579E /* ForYou.swift in Sources */,
 				2F386F2823FC6E710058579E /* Meditation.swift in Sources */,

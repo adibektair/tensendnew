@@ -12,7 +12,7 @@ class Material : NSObject, NSCoding, Mappable{
 	var courseId : Int?
 	var createdAt : String?
 	var descriptionField : String?
-	var documents : [AnyObject]?
+	var documents : [Document]?
 	var durationTime : Int?
 	var free : Int?
 	var id : Int?
@@ -59,7 +59,7 @@ class Material : NSObject, NSCoding, Mappable{
          courseId = aDecoder.decodeObject(forKey: "course_id") as? Int
          createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
          descriptionField = aDecoder.decodeObject(forKey: "description") as? String
-         documents = aDecoder.decodeObject(forKey: "documents") as? [AnyObject]
+         documents = aDecoder.decodeObject(forKey: "documents") as? [Document]
          durationTime = aDecoder.decodeObject(forKey: "duration_time") as? Int
          free = aDecoder.decodeObject(forKey: "free") as? Int
          id = aDecoder.decodeObject(forKey: "id") as? Int

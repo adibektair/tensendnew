@@ -19,13 +19,32 @@ class VideoView: UIView {
     let img = ""
     var videoURL : URL?
     var obj : Course?
-    init(parrentVC: UIViewController, obj: Course) {
+    var material : MaterialResponse?
+    let imgView = UIImageView()
+    init(parrentVC: UIViewController, obj: Course? = nil, material: MaterialResponse? = nil) {
         super.init(frame: .zero)
         self.parrent = parrentVC
-        self.obj = obj
         size()
-        if let videoUrl = obj.trailer, let url = URL(string: imageUrl + videoUrl){
+        if obj != nil {
+            self.obj = obj
+        } else if material != nil {
+            self.material = material
+            if let videoUrl = material?.material?.videoPath, let url = URL(string: imageUrl + videoUrl){
+                playButton.isHidden = false
+                self.videoURL = url
+            }
+        }
+        
+        if let videoUrl = obj?.trailer, let url = URL(string: imageUrl + videoUrl){
             playButton.isHidden = false
+            self.videoURL = url
+        }
+    }
+    func relod(){
+        if let img = obj?.imagePath ?? self.material?.material?.imgPath {
+            imgView.sd_setImage(with: URL(string: apiImgUrl + img), completed: nil)
+        }
+        if let video = obj?.trailer ?? material?.material?.videoPath ,let url = URL(string: imageUrl + video){
             self.videoURL = url
         }
     }
@@ -34,7 +53,12 @@ class VideoView: UIView {
     }
     func size(){
         if let img = obj?.imagePath {
-            let imgView = UIImageView()
+            
+            self.addSubview(imgView)
+            imgView.sd_setImage(with: URL(string: apiImgUrl + img), completed: nil)
+            imgView.easy.layout(Edges())
+        }
+        if let img = self.material?.material?.imgPath {
             self.addSubview(imgView)
             imgView.sd_setImage(with: URL(string: apiImgUrl + img), completed: nil)
             imgView.easy.layout(Edges())

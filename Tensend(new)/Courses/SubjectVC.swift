@@ -17,9 +17,11 @@ class SubjectVC: ScrollStackController {
     var materialId = 0
     var list : MaterialListView?
     var materialStackView = UIStackView()
-    
+    let materialsStack = UIStackView()
     let titleLabel = UILabel()
     let descLabel = UILabel()
+    
+    var video : VideoView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +38,32 @@ class SubjectVC: ScrollStackController {
             if let desc = m.descriptionField {
                 self.descLabel.text = desc
             }
+            self.materialsStack.removeAllArrangedSubviews()
+            self.materialsStack.isHidden = true
+            if let docs = m.documents {
+                for doc in docs {
+                    let img = UIImageView()
+                    if let type = doc.type {
+                        img.image = UIImage(named: type)
+                        self.materialsStack.addArrangedSubview(img)
+                        img.easy.layout(Height(41),Width(35))
+                        self.materialsStack.isHidden = false
+                    }
+                    img.addTapGestureRecognizer {
+                        self.docTapped()
+                    }
+                }
+            }
             
-            //            self.materialStackView.isHidden = false
         }
+        
+    }
+    func docTapped(){
         
     }
     
     func setSubview(){
-        //        let video = VideoView(parrentVC: self, obj: course!)
-        //        stackView.addArrangedSubview(video)
+        
         materialStackView.getProperties(stackView: self.stackView)
         materialStackView.setSpacing(top: 0, left: 31, right: 31, bottom: 0)
         
@@ -59,14 +78,17 @@ class SubjectVC: ScrollStackController {
         materials.setProperties(text: "Қосымша материалдар", font: .systemFont(ofSize: 16, weight: .medium))
         materialStackView.addArrangedSubview(materials)
         
-        let materialsStack = UIStackView()
+        
         materialsStack.setProperties(axis: .horizontal, alignment: .leading, spacing: 14, distribution: .fill)
         let docIMG = UIImageView()
         let pdfIMG = UIImageView()
         docIMG.easy.layout(Height(41),Width(36))
+        docIMG.image = #imageLiteral(resourceName: "check")
+        
         pdfIMG.easy.layout(Height(41),Width(36))
         materialsStack.addArrangedSubview(pdfIMG)
         materialsStack.addArrangedSubview(docIMG)
+        materialsStack.addArrangedSubview(UIView())
         materialStackView.addArrangedSubview(materialsStack)
         
         let startButton = UIButton()
@@ -105,7 +127,18 @@ class SubjectVC: ScrollStackController {
             if self.stackView.arrangedSubviews.count < 2 {
                 self.stackView.addArrangedSubview(self.list!)
             }
+            if let v = self.video {
+                v.material = result
+                v.relod()
+            } else {
+                self.video = VideoView(parrentVC: self, material: self.material)
+                self.stackView.insertArrangedSubview(self.video!, at: 0)
+            }
+            
+            
+            
             self.setData()
+            
             
         }
     }
