@@ -65,7 +65,8 @@ class IconWithTitleView: UIView {
         let arrowContainer = UIView()
         let arrow = UIImageView()
         arrow.easy.layout(Width(10),Height(10))
-        arrow.image = #imageLiteral(resourceName: "check-2")
+        arrow.image = #imageLiteral(resourceName: "Arrow")
+        arrow.contentMode = .scaleAspectFit
         arrowContainer.addSubview(arrow)
         arrow.easy.layout(CenterX(),CenterY(),Height(10),Width(10),Left(),Right())
         

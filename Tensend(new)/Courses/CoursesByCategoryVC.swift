@@ -23,9 +23,14 @@ class CoursesByCategoryVC: ScrollStackController {
         stackView.addArrangedSubview(list)
     }
  
-    static func open(vc: UIViewController,id:Int = 1) {
+    static func open(vc: UIViewController,data:Data) {
          let viewController = CoursesByCategoryVC()
-        viewController.id = id
+        if let id = data.id {
+            viewController.id = id
+        }
+        if let name = data.name  {
+            viewController.navigationItem.title = name
+        }
          if let nav = vc.navigationController {
              nav.pushViewController(viewController, animated: true)
          }

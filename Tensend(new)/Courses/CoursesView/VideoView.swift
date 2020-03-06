@@ -19,13 +19,35 @@ class VideoView: UIView {
     let img = ""
     var videoURL : URL?
     var obj : Course?
-    init(parrentVC: UIViewController, obj: Course) {
+    var material : MaterialResponse?
+    let imgView = UIImageView()
+    init(parrentVC: UIViewController, obj: Course? = nil, material: MaterialResponse? = nil) {
         super.init(frame: .zero)
         self.parrent = parrentVC
-        self.obj = obj
-        size()
-        if let videoUrl = obj.trailer, let url = URL(string: imageUrl + videoUrl){
+        
+        if obj != nil {
+            self.obj = obj
+            self.size()
+        } else if material != nil {
+            self.material = material
+            self.size()
+            if let videoUrl = material?.material?.videoPath, let url = URL(string: imageUrl + videoUrl.encodeUrl){
+                playButton.isHidden = false
+                self.videoURL = url
+            }
+        }
+        
+        if let videoUrl = obj?.trailer, let url = URL(string: imageUrl + videoUrl){
             playButton.isHidden = false
+            self.videoURL = url
+        }
+//        self.relod()
+    }
+    func relod(){
+        if let img = obj?.imagePath ?? self.material?.material?.imgPath {
+            imgView.sd_setImage(with: URL(string: apiImgUrl + img.encodeUrl), completed: nil)
+        }
+        if let video = obj?.trailer ?? material?.material?.videoPath ,let url = URL(string: imageUrl + video.encodeUrl){
             self.videoURL = url
         }
     }
@@ -33,8 +55,12 @@ class VideoView: UIView {
         playVideo(url: self.videoURL!)
     }
     func size(){
+        self.addSubview(imgView)
         if let img = obj?.imagePath {
-            let imgView = UIImageView()
+            imgView.sd_setImage(with: URL(string: apiImgUrl + img), completed: nil)
+            imgView.easy.layout(Edges())
+        }
+        if let img = self.material?.material?.imgPath {
             self.addSubview(imgView)
             imgView.sd_setImage(with: URL(string: apiImgUrl + img), completed: nil)
             imgView.easy.layout(Edges())
