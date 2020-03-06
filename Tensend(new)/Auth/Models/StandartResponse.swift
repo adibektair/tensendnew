@@ -105,3 +105,50 @@ class RegisterResponse : NSObject, NSCoding, Mappable{
     }
 
 }
+
+class LinkResponse : NSObject, NSCoding, Mappable{
+
+    var link : String?
+    var success : Bool?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return LinkResponse()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        link <- map["link"]
+        success <- map["success"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         link = aDecoder.decodeObject(forKey: "link") as? String
+         success = aDecoder.decodeObject(forKey: "success") as? Bool
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if link != nil{
+            aCoder.encode(link, forKey: "link")
+        }
+        if success != nil{
+            aCoder.encode(success, forKey: "success")
+        }
+
+    }
+
+}

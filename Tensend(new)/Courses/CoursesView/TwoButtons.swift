@@ -34,10 +34,7 @@ class TwoButtons: UIView {
             self.leftButton.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         }
     }
-    func set( action: (() -> Void)?,
-              ll: (() -> Void)?){
-        
-    }
+    
     
     func setViews() {
         self.backgroundColor = .white
@@ -61,9 +58,8 @@ class TwoButtons: UIView {
         stackView.addArrangedSubview(leftButton)
         stackView.addArrangedSubview(rightButton)
     }
-    @objc func righPressed(_ sender:UIButton){
-        
-    }
+    
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

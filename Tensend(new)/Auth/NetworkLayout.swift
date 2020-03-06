@@ -136,4 +136,14 @@ class NetworkLayer: NetworkLayoutProtocol {
             }
         }
     }
+    
+    func getLink(callback: @escaping (LinkResponse?) -> ()) {
+        Alamofire.request(apiUrl + "profile/promo-code", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+            (response: DataResponse<LinkResponse>) in
+            if let _ = response.response{
+                let model  = response.result
+                callback(model.value ?? nil)
+            }
+        }
+    }
 }
