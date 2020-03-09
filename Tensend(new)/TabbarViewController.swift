@@ -12,15 +12,20 @@ class TabbarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var controllers = [UIViewController]()
+        let icon1 = UITabBarItem(title: "Басты бет", image: UIImage(named: "home.png"), selectedImage: #imageLiteral(resourceName: "home"))
+        
         let homeNav = UINavigationController()
         homeNav.addChild(HomeVC())
-        self.addChild(homeNav)
+        homeNav.tabBarItem = icon1
+        controllers.append(homeNav)
+        
         
         let coursesNav = UINavigationController()
-        
+        let icon2 = UITabBarItem(title: "Курстар", image: #imageLiteral(resourceName: "coursesTab"), selectedImage: #imageLiteral(resourceName: "coursesTab"))
         coursesNav.addChild(CoursesVC())
-        self.addChild(coursesNav)
+        coursesNav.tabBarItem = icon2
+        controllers.append(coursesNav)
         
         let meditationNavigationController = UINavigationController()
         let router = MeditationRouter()
@@ -28,21 +33,21 @@ class TabbarViewController: UITabBarController {
         router.navigationController = meditationNavigationController
         router.builder = builder
         router.initialController()
-        self.addChild(meditationNavigationController)
+        let icon3 = UITabBarItem(title: "Медитация", image: #imageLiteral(resourceName: "coursesTab"), selectedImage: #imageLiteral(resourceName: "coursesTab"))
+        meditationNavigationController.tabBarItem = icon3
+        controllers.append(meditationNavigationController)
      
         let profileNav = UINavigationController()
         let profileVC = ProfileVC()
         profileNav.addChild(profileVC)
-        self.addChild(profileNav)
-        tabbarIcons()
-    }
-
-    func tabbarIcons(){
+        let icon4 = UITabBarItem(title: "Профиль", image: #imageLiteral(resourceName: "profileTab"), selectedImage: #imageLiteral(resourceName: "profileTab"))
+        profileNav.tabBarItem = icon4
+        controllers.append(profileNav)
         
-        for i in self.tabBar.items ?? []{
-            i.image = #imageLiteral(resourceName: "Exclusion 1")
-        }
-        self.tabBarItem.image = #imageLiteral(resourceName: "Exclusion 1")
+        self.tabBar.tintColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
+        self.tabBar.unselectedItemTintColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
+        self.viewControllers = controllers
+        
     }
 
     /*

@@ -16,7 +16,9 @@ class HomeVC: ScrollStackController {
         self.view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9803921569, alpha: 1)
         makeNCTranslucent()
         setElements()
-        self.tabBarItem.image =  #imageLiteral(resourceName: "Exclusion 1")
+        let homeTab = UITabBarItem(title: "Home", image: UIImage(named: "tabHome")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), tag: 1)
+        
+
     }
     
     func setElements(){
