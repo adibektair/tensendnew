@@ -62,7 +62,9 @@ class MyCourses: UIView {
             self.coursesList = result
             if let data = result.courses?.data, data.isEmpty {
                 self.isHidden = true
-                self.empty!(true)
+                if self.empty != nil {
+                    self.empty!(true)
+                }
             }
             self.subViews()
         }
