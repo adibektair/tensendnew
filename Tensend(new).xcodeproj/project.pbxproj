@@ -65,6 +65,8 @@
 		AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19B23E9704100617132 /* CheckCodeView.swift */; };
 		AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA30C19C23E9704100617132 /* CheckCodeView.xib */; };
 		AA3B5A78240AF8C1009AEEB3 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B5A77240AF8C1009AEEB3 /* ProfileVC.swift */; };
+		AA3B5A7B240C008A009AEEB3 /* ThreeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B5A7A240C008A009AEEB3 /* ThreeButtons.swift */; };
+		AA3B5A7D240C0997009AEEB3 /* SmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B5A7C240C0997009AEEB3 /* SmallView.swift */; };
 		AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */; };
 		AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */; };
 		AA77BD5F2404091D009BFFD0 /* MeditationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD5E2404091D009BFFD0 /* MeditationRouter.swift */; };
@@ -78,6 +80,12 @@
 		AA77BD74240961CE009BFFD0 /* AuthorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD72240961CE009BFFD0 /* AuthorsCollectionViewCell.swift */; };
 		AA77BD75240961CE009BFFD0 /* AuthorsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA77BD73240961CE009BFFD0 /* AuthorsCollectionViewCell.xib */; };
 		AA77BD7724096478009BFFD0 /* TokenHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD7624096478009BFFD0 /* TokenHeaders.swift */; };
+		AA9130612416A691003FD915 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91305F2416A691003FD915 /* SettingsVC.swift */; };
+		AA9130622416A691003FD915 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9130602416A691003FD915 /* SettingsVC.xib */; };
+		AA9130662416A772003FD915 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9130642416A772003FD915 /* SettingsTVC.swift */; };
+		AA9130672416A772003FD915 /* SettingsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9130652416A772003FD915 /* SettingsTVC.xib */; };
+		AA91306A2416B113003FD915 /* ProfileSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9130682416B113003FD915 /* ProfileSettingsVC.swift */; };
+		AA91306D2416B171003FD915 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91306C2416B171003FD915 /* TextFieldView.swift */; };
 		AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1300623EAFBE900D86BAC /* StandartResponse.swift */; };
 		AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */; };
 		AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */; };
@@ -179,6 +187,8 @@
 		AA30C19B23E9704100617132 /* CheckCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeView.swift; sourceTree = "<group>"; };
 		AA30C19C23E9704100617132 /* CheckCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckCodeView.xib; sourceTree = "<group>"; };
 		AA3B5A77240AF8C1009AEEB3 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		AA3B5A7A240C008A009AEEB3 /* ThreeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeButtons.swift; sourceTree = "<group>"; };
+		AA3B5A7C240C0997009AEEB3 /* SmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallView.swift; sourceTree = "<group>"; };
 		AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdownCell.swift; sourceTree = "<group>"; };
 		AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDropdownCell.xib; sourceTree = "<group>"; };
 		AA77BD5E2404091D009BFFD0 /* MeditationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationRouter.swift; sourceTree = "<group>"; };
@@ -192,6 +202,12 @@
 		AA77BD72240961CE009BFFD0 /* AuthorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA77BD73240961CE009BFFD0 /* AuthorsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorsCollectionViewCell.xib; sourceTree = "<group>"; };
 		AA77BD7624096478009BFFD0 /* TokenHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHeaders.swift; sourceTree = "<group>"; };
+		AA91305F2416A691003FD915 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		AA9130602416A691003FD915 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		AA9130642416A772003FD915 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
+		AA9130652416A772003FD915 /* SettingsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTVC.xib; sourceTree = "<group>"; };
+		AA9130682416B113003FD915 /* ProfileSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsVC.swift; sourceTree = "<group>"; };
+		AA91306C2416B171003FD915 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		AAB1300623EAFBE900D86BAC /* StandartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartResponse.swift; sourceTree = "<group>"; };
 		AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordView.xib; sourceTree = "<group>"; };
@@ -205,7 +221,7 @@
 		AAC3F89823FC1CD700537254 /* CorrectCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectCodeView.swift; sourceTree = "<group>"; };
 		AAC3F89B23FC1CE700537254 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		AACC4DAC23E828310072F77D /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		AAD5DA7D23E169ED00D9F7D0 /* Tensend(new).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tensend(new).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAD5DA7D23E169ED00D9F7D0 /* tsnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tsnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD5DA8023E169ED00D9F7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD5DA8223E169ED00D9F7D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AAD5DA8423E169ED00D9F7D0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -318,9 +334,22 @@
 		AA3B5A76240AF89D009AEEB3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				AA9130632416A758003FD915 /* Cells */,
+				AA91305E2416A66C003FD915 /* Settings */,
+				AA3B5A79240C0070009AEEB3 /* Views */,
 				AA3B5A77240AF8C1009AEEB3 /* ProfileVC.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		AA3B5A79240C0070009AEEB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA3B5A7A240C008A009AEEB3 /* ThreeButtons.swift */,
+				AA3B5A7C240C0997009AEEB3 /* SmallView.swift */,
+				AA91306C2416B171003FD915 /* TextFieldView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AA47C4CC23E95E1D003FA110 /* Cells */ = {
@@ -377,6 +406,25 @@
 			children = (
 				AA77BD72240961CE009BFFD0 /* AuthorsCollectionViewCell.swift */,
 				AA77BD73240961CE009BFFD0 /* AuthorsCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA91305E2416A66C003FD915 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AA91305F2416A691003FD915 /* SettingsVC.swift */,
+				AA9130602416A691003FD915 /* SettingsVC.xib */,
+				AA9130682416B113003FD915 /* ProfileSettingsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AA9130632416A758003FD915 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA9130642416A772003FD915 /* SettingsTVC.swift */,
+				AA9130652416A772003FD915 /* SettingsTVC.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -498,7 +546,7 @@
 		AAD5DA7E23E169ED00D9F7D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAD5DA7D23E169ED00D9F7D0 /* Tensend(new).app */,
+				AAD5DA7D23E169ED00D9F7D0 /* tsnb.app */,
 				AAD5DA9323E169EF00D9F7D0 /* Tensend(new)Tests.xctest */,
 			);
 			name = Products;
@@ -620,7 +668,7 @@
 			);
 			name = "Tensend(new)";
 			productName = "Tensend(new)";
-			productReference = AAD5DA7D23E169ED00D9F7D0 /* Tensend(new).app */;
+			productReference = AAD5DA7D23E169ED00D9F7D0 /* tsnb.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AAD5DA9223E169EF00D9F7D0 /* Tensend(new)Tests */ = {
@@ -690,12 +738,14 @@
 				AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */,
 				AAD5DA8D23E169EE00D9F7D0 /* LaunchScreen.storyboard in Resources */,
 				AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */,
+				AA9130672416A772003FD915 /* SettingsTVC.xib in Resources */,
 				2F386F0A23FC6D8D0058579E /* ForYouCVC.xib in Resources */,
 				2F386F0623FC6D8D0058579E /* ImagesWithTitleCVC.xib in Resources */,
 				AAD5DAA323E174B100D9F7D0 /* Assets.xcassets in Resources */,
 				AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */,
 				AAD5DA8823E169ED00D9F7D0 /* Main.storyboard in Resources */,
 				2F386F0523FC6D8D0058579E /* MeditationCVC.xib in Resources */,
+				AA9130622416A691003FD915 /* SettingsVC.xib in Resources */,
 				AAB1303423ED5D7300D86BAC /* CreatePasscodeView.xib in Resources */,
 				AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */,
 			);
@@ -783,6 +833,7 @@
 				AA77BD6F240803F2009BFFD0 /* SingleMeditationView.swift in Sources */,
 				2F1BD58A2401AAB6009E11B8 /* Course.swift in Sources */,
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
+				AA9130612416A691003FD915 /* SettingsVC.swift in Sources */,
 				AAB9B78124019CA500314455 /* ResetPasswordVC.swift in Sources */,
 				2F386F0823FC6D8D0058579E /* ImagesWithTitleCVC.swift in Sources */,
 				AA77BD5F2404091D009BFFD0 /* MeditationRouter.swift in Sources */,
@@ -804,6 +855,7 @@
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
 				AAB9B77E23FC2C3300314455 /* SIgnInPresenter.swift in Sources */,
 				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
+				AA91306D2416B171003FD915 /* TextFieldView.swift in Sources */,
 				2F386F1723FC6DE70058579E /* ScrollStackController.swift in Sources */,
 				2F1BD58624018F5D009E11B8 /* TwoButtons.swift in Sources */,
 				2F386F2523FC6E710058579E /* Data.swift in Sources */,
@@ -813,6 +865,7 @@
 				2FB73B1224040CF3004A0A3A /* CoursesByCategoryVC.swift in Sources */,
 				2F386EF923FC6C6E0058579E /* EachCourse.swift in Sources */,
 				AA3B5A78240AF8C1009AEEB3 /* ProfileVC.swift in Sources */,
+				AA3B5A7B240C008A009AEEB3 /* ThreeButtons.swift in Sources */,
 				AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */,
 				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
 				2F386F1823FC6DE70058579E /* ViewExtensions.swift in Sources */,
@@ -821,6 +874,7 @@
 				2F386F1623FC6DE70058579E /* UIViewExtensions.swift in Sources */,
 				2F386F1923FC6DE70058579E /* StackViewExtensions.swift in Sources */,
 				2F386F2323FC6E710058579E /* BannersResponse.swift in Sources */,
+				AA3B5A7D240C0997009AEEB3 /* SmallView.swift in Sources */,
 				2F00396D240FFCCE000DE1A7 /* Document.swift in Sources */,
 				AAC3F89C23FC1CE700537254 /* UserDefaults.swift in Sources */,
 				2F386EF723FC6C6E0058579E /* ForYou.swift in Sources */,
@@ -830,6 +884,7 @@
 				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
 				AA77BD6C24080236009BFFD0 /* SingleMeditationPresenter.swift in Sources */,
 				AA77BD74240961CE009BFFD0 /* AuthorsCollectionViewCell.swift in Sources */,
+				AA91306A2416B113003FD915 /* ProfileSettingsVC.swift in Sources */,
 				2F386EFB23FC6C6E0058579E /* MyCourses.swift in Sources */,
 				2F386F1423FC6DE70058579E /* ViewControllerExtension.swift in Sources */,
 				2F1BD5912401B9A9009E11B8 /* IconWithTitleView.swift in Sources */,
@@ -838,6 +893,7 @@
 				2F386F2623FC6E710058579E /* MeditationsResponse.swift in Sources */,
 				AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */,
 				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
+				AA9130662416A772003FD915 /* SettingsTVC.swift in Sources */,
 				2F1BD58F2401B8CC009E11B8 /* AllCoursesListView.swift in Sources */,
 				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
 				2F386EF623FC6C6E0058579E /* MeditationView.swift in Sources */,
@@ -1021,6 +1077,7 @@
 			baseConfigurationReference = EAA3C1192A90A8A41CD4BB81 /* Pods-Tensend(new).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R5W6A2A7L3;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
@@ -1028,8 +1085,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-a";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
+				PRODUCT_NAME = tsnb;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1040,6 +1098,7 @@
 			baseConfigurationReference = ED1983BC29CCFC1ED6CA7B58 /* Pods-Tensend(new).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R5W6A2A7L3;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
@@ -1047,8 +1106,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-a";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
+				PRODUCT_NAME = tsnb;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

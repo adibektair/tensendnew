@@ -7,32 +7,51 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1F44A2AD-C8D5-409B-8738-66F3828F0CA8"
+            uuid = "00EF22F8-FD34-44D6-9B1D-2A11F78645B7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/Auth/NetworkLayout.swift"
+            filePath = "Tensend(new)/Meditation/Meditation/SingleMeditationView.swift"
+            timestampString = "0"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "signIn(parameters:callback:)"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "fireTimer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "00EF22F8-FD34-44D6-9B1D-2A11F78645B7"
+            uuid = "9563D5EB-34E4-4839-B28A-AEC1845A10B9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/Meditation/Meditation/SingleMeditationView.swift"
+            filePath = "Tensend(new)/Profile/Views/SmallView.swift"
+            timestampString = "0"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "fireTimer()"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init(title:amount:image:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C00A09F8-C614-42B0-B532-BA62AF45A864"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tensend(new)/Profile/ProfileVC.swift"
+            timestampString = "0"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

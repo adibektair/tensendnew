@@ -29,8 +29,7 @@ class SignInView: ScrollStackController {
         self.createButtonsView()
     }
     
-    
-    
+   
 }
 
 
@@ -65,7 +64,12 @@ extension SignInView : SignInProtocol{
         }
         
     }
+
     
+    func goToTabBar(){
+        let tab = TabbarViewController()
+        self.navigationController?.pushViewController(tab, animated: true)
+    }
     
 }
 
