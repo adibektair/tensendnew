@@ -19,6 +19,7 @@ class ImagesWithTitleCVC: UICollectionViewCell {
         self.backView.layer.cornerRadius = 29
         self.backView.layer.borderWidth = 2
         self.backView.layer.borderColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 0.13)
+        self.backView.cornerRadius(radius: 29, width: 2,color:  #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 0.13))
         self.backgroundColor = .clear
     }
     func setData(){

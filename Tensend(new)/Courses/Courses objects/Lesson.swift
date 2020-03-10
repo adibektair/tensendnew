@@ -10,10 +10,10 @@ class Lesson : NSObject, NSCoding, Mappable{
 
 	var access : Bool?
 	var courseId : Int?
-	var durationTime : AnyObject?
+	var durationTime : Int?
 	var free : Int?
 	var id : Int?
-	var imgPath : AnyObject?
+	var imgPath : String?
 	var passed : Bool?
 	var title : String?
 
@@ -45,10 +45,10 @@ class Lesson : NSObject, NSCoding, Mappable{
 	{
          access = aDecoder.decodeObject(forKey: "access") as? Bool
          courseId = aDecoder.decodeObject(forKey: "course_id") as? Int
-         durationTime = aDecoder.decodeObject(forKey: "duration_time") as? AnyObject
+         durationTime = aDecoder.decodeObject(forKey: "duration_time") as? Int
          free = aDecoder.decodeObject(forKey: "free") as? Int
          id = aDecoder.decodeObject(forKey: "id") as? Int
-         imgPath = aDecoder.decodeObject(forKey: "img_path") as? AnyObject
+         imgPath = aDecoder.decodeObject(forKey: "img_path") as? String
          passed = aDecoder.decodeObject(forKey: "passed") as? Bool
          title = aDecoder.decodeObject(forKey: "title") as? String
 

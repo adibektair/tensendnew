@@ -14,7 +14,9 @@ class HomeVC: ScrollStackController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9803921569, alpha: 1)
+        makeNCTranslucent()
         setElements()
+        self.tabBarItem.image =  #imageLiteral(resourceName: "Exclusion 1")
     }
     
     func setElements(){
@@ -57,7 +59,7 @@ class HomeVC: ScrollStackController {
         courseTitle.setData(title: "МЕНІҢ КУРСТАРЫМ", desc: "Сізге ұнайтын сабақтар тізімі")
         stackView.addArrangedSubview(courseTitle)
         
-        let coursesList = MyCourses(parrentVC: self,id: 0)
+        let coursesList = MyCourses(parrentVC: self,id: 0,isMyCourses: true)
         stackView.addArrangedSubview(coursesList)
         addLine()
         

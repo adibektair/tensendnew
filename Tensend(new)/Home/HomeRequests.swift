@@ -88,5 +88,15 @@ class HomeRequests {
              }
          }
      }
+    public func getMaterial(id:String, callback: @escaping (MaterialResponse) -> ()){
+          let header = TokenHeaders.shared().getHeaders()
+          Alamofire.request(apiUrl + "courses/material/\(id)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseObject{
+                 (response: DataResponse<MaterialResponse>) in
+              if let _ = response.response{
+                  let model  = response.result
+                  callback(model.value!)
+              }
+          }
+      }
     
 }

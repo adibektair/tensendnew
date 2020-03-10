@@ -17,9 +17,17 @@ class MyCourses: UIView {
     let allButton = UIButton()
     var count = 0
     var id = 1
-    init(parrentVC: UIViewController,id:Int) {
+    var isMyCourses = false
+    var empty: ((Bool) -> Void)?
+    
+    init(parrentVC: UIViewController,
+         id:Int,
+         isMyCourses: Bool = false,
+         empty: ((Bool) -> Void)? = nil)  {
         super.init(frame: .zero)
         self.id = id
+        self.empty = empty
+        self.isMyCourses = isMyCourses
         self.parrentVC = parrentVC
         size()
     }
@@ -32,14 +40,13 @@ class MyCourses: UIView {
         allButton.setTitleColor(#colorLiteral(red: 0.2039215686, green: 0.6509803922, blue: 0.337254902, alpha: 1), for: .normal)
         
         addSubview(stackview)
-        if (parrentVC as? HomeVC) != nil {
+        if isMyCourses {
             getMyCourses()
             addSubview(allButton)
             allButton.easy.layout(Left(30),Bottom())
             stackview.easy.layout(Top(),Left(),Right(),Bottom().to(allButton))
         } else {
             self.getData()
-            getMyCourses()
             stackview.easy.layout(Edges())
         }
     }
@@ -53,6 +60,10 @@ class MyCourses: UIView {
     func getMyCourses(){
         HomeRequests.sharedInstance.getMyCourses { (result) in
             self.coursesList = result
+            if let data = result.courses?.data, data.isEmpty {
+                self.isHidden = true
+                self.empty!(true)
+            }
             self.subViews()
         }
     }
@@ -60,7 +71,7 @@ class MyCourses: UIView {
     func subViews(){
         if let counter = coursesList?.courses?.data?.count, counter > 0 {
             self.count = counter
-            if (parrentVC as? HomeVC) != nil, counter > 0, counter >= 3 {
+            if isMyCourses , counter > 0, counter >= 3 {
                 self.count = 3
             }
         }
@@ -72,7 +83,11 @@ class MyCourses: UIView {
             a.cornerRadius(radius: 8, width: 0)
             a.addTapGestureRecognizer {
                 if let id = data.id {
-                    AboutCourseVC.open(vc: self.parrentVC,id: id)
+                    if !data.started! ?? false {
+                        AboutCourseVC.open(vc: self.parrentVC,id: id)
+                    } else {
+                        SubjectVC.open(vc: self.parrentVC, courseID: id, materialId: 1)
+                    }
                 }
             }
             stackview.addArrangedSubview(a)
