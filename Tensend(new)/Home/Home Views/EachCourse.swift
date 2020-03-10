@@ -66,7 +66,7 @@ class EachCourse: UIView {
             sCountText = "\(subjCount)"
             subjectCountLabel.setProperties(text: "\(subjCount)", textColor: UIColor.titleDefault(UIColor())(), font: .systemFont(ofSize: 13))
         }
-        if let data = self.data, data.started ?? false {
+        if let data = self.data, data.started ?? false, data.lessonsPassingCount ?? 0 > 0 {
             if let allL = data.lessonsCount, let passL = data.lessonsPassingCount {
                 sCountText = "\(allL) сабақтан \(passL)"
                 subjectCountLabel.text = sCountText
@@ -96,11 +96,10 @@ class EachCourse: UIView {
         loadView.layer.cornerRadius = 5
         loadViewBack.addSubview(loadView)
         loadView.easy.layout(Height(10),Top(),Bottom(),Left())
-        if let d = data, let all = d.lessonsCount, let c = d.lessonsPassingCount {
+        if let d = data, let all = d.lessonsCount, let c = d.lessonsPassingCount , c > 0 {
             let w = CGFloat(Double(c) / Double(all) * 65.0)
             self.loadView.easy.layout(Width(w))
-        }
-        
+        }        
         loadViewBack.backgroundColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 0.5)
         loadView.backgroundColor = #colorLiteral(red: 0, green: 0.8509803922, blue: 0.8039215686, alpha: 1)
         stackView.addArrangedSubview(loadViewBack)
