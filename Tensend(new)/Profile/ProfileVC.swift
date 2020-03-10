@@ -20,6 +20,9 @@ class ProfileVC: ScrollStackController {
     var link = String()
     
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -27,6 +30,7 @@ class ProfileVC: ScrollStackController {
         self.setUpView()
         self.getData()
     }
+    
     func getData(){
         let network = NetworkLayer()
         network.getLink { (link) in
@@ -37,7 +41,10 @@ class ProfileVC: ScrollStackController {
             self.link = link
         }
     }
-
+    
+    @objc func openSettings(){
+        SettingsVC.open(vc: self)
+    }
 
 }
 extension ProfileVC{
@@ -48,6 +55,7 @@ extension ProfileVC{
         buttonStackView.addArrangedSubview(UIView())
         let settingsButton = UIButton()
         settingsButton.setImage(#imageLiteral(resourceName: "Exclusion 1"), for: .normal)
+        settingsButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
         buttonStackView.addArrangedSubview(settingsButton)
         settingsButton.easy.layout(Height(20), Width(20))
         self.stackView.addArrangedSubview(buttonStackView)
