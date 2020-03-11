@@ -52,6 +52,7 @@ class MaterialListView: UIView {
                 let a = self.eachLesson(lesson: i)
                 self.stackView.addArrangedSubview(a)
             }
+         
         }
     }
     

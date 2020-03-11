@@ -22,6 +22,7 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
     let materialsLabel = UILabel()
     let titleLabel = UILabel()
     let descLabel = UILabel()
+    let nextLessonButton = UIButton()
     
     var video : VideoView?
     
@@ -31,6 +32,12 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
         
         self.additionalSafeAreaInsets.top = -145
         getData()
+        nextLessonButton.addTapGestureRecognizer {
+                   self.nextLessonPressed()
+//            CongratulationVC.open(vc: self) {
+//                print("rated")
+//            }
+        }
     }
     
     func setData(){
@@ -102,19 +109,42 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
         materialsStack.addArrangedSubview(UIView())
         materialStackView.addArrangedSubview(materialsStack)
         
-        let startButton = UIButton()
-        startButton.setTitle("КЕЛЕСІ САБАҚ", for: .normal)
-        startButton.backgroundColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
-        startButton.cornerRadius(radius: 15, width: 0)
-        startButton.easy.layout(Height(58))
-        materialStackView.addArrangedSubview(startButton)
+        
+        nextLessonButton.setTitle("КЕЛЕСІ САБАҚ", for: .normal)
+        nextLessonButton.backgroundColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
+        nextLessonButton.cornerRadius(radius: 15, width: 0)
+        nextLessonButton.easy.layout(Height(58))
+        materialStackView.addArrangedSubview(nextLessonButton)
+       
         stackView.addArrangedSubview(materialStackView)
         stackView.setSpacing(top: 0, left: 0, right: 0, bottom: 0)
+    }
+    func nextLessonPressed(){
+        if let l =  self.forMe?.courses?.lessons {
+            for i in 0..<l.count {
+                if let id = l[i].id, i < l.count - 1, id == self.materialId {
+                    materialId = l[i + 1].id!
+                    self.getMaterial()
+                    self.list?.materialID = self.materialId
+                    self.list!.reload()
+                    break
+                }
+            }
+        }
     }
     func getData(){
         HomeRequests.sharedInstance.getCourse(id: "\(courseID)") { (result) in
             self.forMe = result
-            if result.courses != nil {
+            if let course = self.forMe?.courses {
+                for i in course.lessons! {
+                    if i.passed == false && i.id != nil {
+                        self.materialId = i.id!
+                        break
+                    }
+                }
+                if let passed = course.lessons?.last!.passed , passed == true {
+                    self.nextLessonButton.setTitle("КУРСТЫ АЯҚТАУ", for: .normal)
+                }
                 self.setSubview()
                 self.reload()
                 self.getMaterial()
