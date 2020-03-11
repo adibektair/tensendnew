@@ -33,6 +33,7 @@ class VideoView: UIView {
             self.size()
             if let videoUrl = material?.material?.videoPath, let url = URL(string: imageUrl + videoUrl.encodeUrl){
                 playButton.isHidden = false
+                NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
                 self.videoURL = url
             }
         }
@@ -53,6 +54,9 @@ class VideoView: UIView {
     }
     @objc func playPressed(_ sender: UIButton){
         playVideo(url: self.videoURL!)
+    }
+    @objc func playerDidFinishPlaying(note: NSNotification) {
+        print("Video Finished")
     }
     func size(){
         self.addSubview(imgView)

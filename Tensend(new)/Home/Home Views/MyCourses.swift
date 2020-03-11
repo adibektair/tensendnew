@@ -88,7 +88,7 @@ class MyCourses: UIView {
                     if !data.started! ?? false {
                         AboutCourseVC.open(vc: self.parrentVC,id: id)
                     } else {
-                        SubjectVC.open(vc: self.parrentVC, courseID: id, materialId: 1)
+                        SubjectVC.open(vc: self.parrentVC, courseID: id, materialId: id)
                     }
                 }
             }
