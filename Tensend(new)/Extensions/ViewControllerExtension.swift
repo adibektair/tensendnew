@@ -9,8 +9,8 @@
 import UIKit
 import EasyPeasy
 extension UIViewController {
-    func makeNCTranslucent(){
-        self.additionalSafeAreaInsets.top = -145
+    func makeNCTranslucent(top:CGFloat = -145){
+        self.additionalSafeAreaInsets.top = top
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) 
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true

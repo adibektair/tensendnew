@@ -226,7 +226,7 @@ class Profile : NSObject, NSCoding, Mappable{
     var rating : Int?
     var role : String?
     var subscriptions : [AnyObject]?
-    var surname : AnyObject?
+    var surname : String?
     var tensend : Int?
 
 
@@ -291,7 +291,7 @@ class Profile : NSObject, NSCoding, Mappable{
          rating = aDecoder.decodeObject(forKey: "rating") as? Int
          role = aDecoder.decodeObject(forKey: "role") as? String
          subscriptions = aDecoder.decodeObject(forKey: "subscriptions") as? [AnyObject]
-         surname = aDecoder.decodeObject(forKey: "surname") as? AnyObject
+         surname = aDecoder.decodeObject(forKey: "surname") as? String
          tensend = aDecoder.decodeObject(forKey: "tensend") as? Int
 
     }

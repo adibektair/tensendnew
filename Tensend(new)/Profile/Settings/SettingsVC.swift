@@ -12,7 +12,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     let titles = ["Жеке ақпарат" , "Құпия сөз"]
-    let images : [UIImage] = [#imageLiteral(resourceName: "profileset"), #imageLiteral(resourceName: "pwset")]
+    let images : [UIImage] = [#imageLiteral(resourceName: "Screen Shot 2020-03-11 at 9.00.28 PM"), #imageLiteral(resourceName: "pwset")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,12 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        ProfileSettingsVC.open(vc: self)
+        if indexPath.row == 0{
+            ProfileSettingsVC.open(vc: self)
+        }else if indexPath.row == 1{
+            CashoutGoVC.open(vc: self)
+        }
+        
     }
 
     static func open(vc: UIViewController) {

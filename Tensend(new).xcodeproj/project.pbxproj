@@ -112,6 +112,8 @@
 		AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B7A23E405DB00CAFA47 /* MainVC.swift */; };
 		AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE71B7B23E405DB00CAFA47 /* MainVC.xib */; };
 		AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */; };
+		AAF597FA241929A200E4578B /* CashoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF597F9241929A200E4578B /* CashoutVC.swift */; };
+		AAF597FC241935D500E4578B /* CashoutGoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF597FB241935D500E4578B /* CashoutGoVC.swift */; };
 		CAD1B55D908B6BFCA02A070C /* Pods_Tensend_new_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +240,8 @@
 		AAE71B7A23E405DB00CAFA47 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		AAE71B7B23E405DB00CAFA47 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayout.swift; sourceTree = "<group>"; };
+		AAF597F9241929A200E4578B /* CashoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutVC.swift; sourceTree = "<group>"; };
+		AAF597FB241935D500E4578B /* CashoutGoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutGoVC.swift; sourceTree = "<group>"; };
 		EAA3C1192A90A8A41CD4BB81 /* Pods-Tensend(new).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new).debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)/Pods-Tensend(new).debug.xcconfig"; sourceTree = "<group>"; };
 		ED1983BC29CCFC1ED6CA7B58 /* Pods-Tensend(new).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new).release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)/Pods-Tensend(new).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -416,6 +420,8 @@
 				AA91305F2416A691003FD915 /* SettingsVC.swift */,
 				AA9130602416A691003FD915 /* SettingsVC.xib */,
 				AA9130682416B113003FD915 /* ProfileSettingsVC.swift */,
+				AAF597F9241929A200E4578B /* CashoutVC.swift */,
+				AAF597FB241935D500E4578B /* CashoutGoVC.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -831,6 +837,7 @@
 			files = (
 				2F412E9824115FC9002B8B59 /* DocReaderVC.swift in Sources */,
 				AA77BD6F240803F2009BFFD0 /* SingleMeditationView.swift in Sources */,
+				AAF597FA241929A200E4578B /* CashoutVC.swift in Sources */,
 				2F1BD58A2401AAB6009E11B8 /* Course.swift in Sources */,
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
 				AA9130612416A691003FD915 /* SettingsVC.swift in Sources */,
@@ -842,6 +849,7 @@
 				AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */,
 				2FB73B1824041F55004A0A3A /* CourseAuthorView.swift in Sources */,
 				AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */,
+				AAF597FC241935D500E4578B /* CashoutGoVC.swift in Sources */,
 				AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */,
 				2FB73B0E24040488004A0A3A /* TabbarViewController.swift in Sources */,
 				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
