@@ -88,7 +88,6 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
         titleLabel.setProperties(text: "", font: .systemFont(ofSize: 20, weight: .semibold), numberLines: 2)
         materialStackView.addArrangedSubview(titleLabel)
         
-        
         descLabel.setProperties(text: "", font: .systemFont(ofSize: 14), numberLines: 0)
         materialStackView.addArrangedSubview(descLabel)
         
@@ -142,7 +141,7 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                         break
                     }
                 }
-                if let passed = course.lessons?.last!.passed , passed == true {
+                if let passed = course.lessons?.last?.passed , passed == true {
                     self.nextLessonButton.setTitle("КУРСТЫ АЯҚТАУ", for: .normal)
                 }
                 self.setSubview()
@@ -178,7 +177,10 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
             self.setData()
         }
     }
-    
+    func pay(){
+       // https://tensend.me/api/v1/pay?subscription_type_id={id}&token={user_token}
+        
+    }
     static func open(vc: UIViewController, courseID: Int, materialId: Int) {
         let viewController = SubjectVC()
         viewController.courseID = courseID

@@ -77,6 +77,17 @@ class HomeRequests {
             }
         }
     }
+    public func startLesson(id:String, callback: @escaping (SuccessMessageObject) -> ()){
+        let header = TokenHeaders.shared().getHeaders()
+        Alamofire.request(apiUrl + "courses/start/\(id)", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: header).responseObject{
+               (response: DataResponse<SuccessMessageObject>) in
+            if let _ = response.response{
+                let model  = response.result
+                callback(model.value!)
+            }
+        }
+    }
+    
     public func getMyCourses( callback: @escaping (ForMe) -> ()){
          let header = TokenHeaders.shared().getHeaders()
          Alamofire.request(apiUrl + "users/courses", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseObject{
@@ -98,5 +109,6 @@ class HomeRequests {
               }
           }
       }
+    
     
 }
