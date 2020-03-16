@@ -55,6 +55,9 @@ class ProfileVC: ScrollStackController {
 }
 extension ProfileVC{
     func setUpView(){
+        guard let _ = profile else{
+            return
+        }
         let buttonStackView = UIStackView()
         buttonStackView.setProperties(axis: .horizontal, alignment: .fill, spacing: 0, distribution: .fill)
         buttonStackView.setSpacing(right: 20)
@@ -98,12 +101,12 @@ extension ProfileVC{
     
     func setUpLeftView(){
         
-
+            
             leftView.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
             let horSV = UIStackView()
             horSV.setProperties(axis: .horizontal, alignment: .fill, spacing: 10, distribution: .fill)
-        let smallView = SmallView(title: "Белсенділік", amount: profile!.activity!, image: #imageLiteral(resourceName: "purple"))
-        let smallView1 = SmallView(title: "Рейтинг", amount: profile!.rating!, image: #imageLiteral(resourceName: "yellow"))
+            let smallView = SmallView(title: "Белсенділік", amount: profile!.activity!, image: #imageLiteral(resourceName: "purple"))
+            let smallView1 = SmallView(title: "Рейтинг", amount: profile!.rating!, image: #imageLiteral(resourceName: "yellow"))
             horSV.addArrangedSubview(UIView())
             horSV.addArrangedSubview(smallView)
             horSV.addArrangedSubview(smallView1)

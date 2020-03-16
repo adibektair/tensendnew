@@ -229,7 +229,7 @@
 		AAC3F89823FC1CD700537254 /* CorrectCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectCodeView.swift; sourceTree = "<group>"; };
 		AAC3F89B23FC1CE700537254 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		AACC4DAC23E828310072F77D /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		AAD5DA7D23E169ED00D9F7D0 /* Tensend_new_.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tensend_new_.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAD5DA7D23E169ED00D9F7D0 /* Tensend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tensend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD5DA8023E169ED00D9F7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD5DA8223E169ED00D9F7D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AAD5DA8423E169ED00D9F7D0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -561,7 +561,7 @@
 		AAD5DA7E23E169ED00D9F7D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAD5DA7D23E169ED00D9F7D0 /* Tensend_new_.app */,
+				AAD5DA7D23E169ED00D9F7D0 /* Tensend.app */,
 				AAD5DA9323E169EF00D9F7D0 /* Tensend(new)Tests.xctest */,
 			);
 			name = Products;
@@ -683,7 +683,7 @@
 			);
 			name = "Tensend(new)";
 			productName = "Tensend(new)";
-			productReference = AAD5DA7D23E169ED00D9F7D0 /* Tensend_new_.app */;
+			productReference = AAD5DA7D23E169ED00D9F7D0 /* Tensend.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AAD5DA9223E169EF00D9F7D0 /* Tensend(new)Tests */ = {
@@ -1106,10 +1106,10 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
-				PRODUCT_NAME = Tensend_new_;
+				PRODUCT_NAME = Tensend;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1127,10 +1127,10 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
-				PRODUCT_NAME = Tensend_new_;
+				PRODUCT_NAME = Tensend;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
