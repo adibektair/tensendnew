@@ -22,7 +22,7 @@ class SettingsTVC: UITableViewCell {
         super.awakeFromNib()
         self.backgroundColor = .white
         self.cornerRadius(radius: 10, width: 0)
-        self.dropShadowBlue()
+//        self.dropShadowBlue()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -68,6 +68,8 @@ extension SignInView : SignInProtocol{
     
     func goToTabBar(){
         let tab = TabbarViewController()
+        tab.modalPresentationStyle = .fullScreen
+        self.present(tab, animated: true, completion: nil)
         self.navigationController?.pushViewController(tab, animated: true)
     }
     

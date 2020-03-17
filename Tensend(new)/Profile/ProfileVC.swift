@@ -18,6 +18,7 @@ class ProfileVC: ScrollStackController {
     let innerView = UIView()
     let textField = UITextField()
     var link = String()
+    var profile : Profile?
     
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -27,18 +28,23 @@ class ProfileVC: ScrollStackController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         self.stackView.setProperties(axis: .vertical, alignment: .fill, spacing: 15, distribution: .fill)
-        self.setUpView()
+        
         self.getData()
     }
     
     func getData(){
         let network = NetworkLayer()
+        
         network.getLink { (link) in
             guard let link = link?.link else{
                 return
             }
             self.textField.text = link
             self.link = link
+        }
+        network.getProfile { (prof) in
+            self.profile = prof?.profile
+            self.setUpView()
         }
     }
     
@@ -49,6 +55,9 @@ class ProfileVC: ScrollStackController {
 }
 extension ProfileVC{
     func setUpView(){
+        guard let _ = profile else{
+            return
+        }
         let buttonStackView = UIStackView()
         buttonStackView.setProperties(axis: .horizontal, alignment: .fill, spacing: 0, distribution: .fill)
         buttonStackView.setSpacing(right: 20)
@@ -62,13 +71,13 @@ extension ProfileVC{
         
         let view = UIView()
         let profileImageView = UIImageView()
-        profileImageView.image = #imageLiteral(resourceName: "asset-10")
+        profileImageView.image = #imageLiteral(resourceName: "depositphotos_137014128-stock-illustration-user-profile-icon")
         view.addSubview(profileImageView)
         
         self.stackView.addArrangedSubview(view)
         profileImageView.easy.layout(Height(130), Width(130), CenterX(), Top(), Bottom())
         profileImageView.cornerRadius(radius: 65, width: 5, color: .white)
-        
+
         
         let threeButtons = ThreeButtons(leftPressed: {
             self.innerView.isHidden = true
@@ -92,12 +101,12 @@ extension ProfileVC{
     
     func setUpLeftView(){
         
-
+            
             leftView.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
             let horSV = UIStackView()
             horSV.setProperties(axis: .horizontal, alignment: .fill, spacing: 10, distribution: .fill)
-            let smallView = SmallView(title: "Белсенділік", amount: 10, image: #imageLiteral(resourceName: "purple"))
-            let smallView1 = SmallView(title: "Рейтинг", amount: 16, image: #imageLiteral(resourceName: "yellow"))
+            let smallView = SmallView(title: "Белсенділік", amount: profile!.activity!, image: #imageLiteral(resourceName: "purple"))
+            let smallView1 = SmallView(title: "Рейтинг", amount: profile!.rating!, image: #imageLiteral(resourceName: "yellow"))
             horSV.addArrangedSubview(UIView())
             horSV.addArrangedSubview(smallView)
             horSV.addArrangedSubview(smallView1)
@@ -107,8 +116,8 @@ extension ProfileVC{
             
             let horSV1 = UIStackView()
             horSV1.setProperties(axis: .horizontal, alignment: .fill, spacing: 10, distribution: .fill)
-            let smallView2 = SmallView(title: "Өткен\nсабақ саны", amount: 10, image: #imageLiteral(resourceName: "red"))
-            let smallView3 = SmallView(title: "TENSEND САНЫ", amount: 16, image: #imageLiteral(resourceName: "green"))
+        let smallView2 = SmallView(title: "Өткен\nсабақ саны", amount: profile!.passed!, image: #imageLiteral(resourceName: "red"))
+        let smallView3 = SmallView(title: "TENSEND САНЫ", amount: profile!.tensend!, image: #imageLiteral(resourceName: "green"))
             horSV1.addArrangedSubview(UIView())
             horSV1.addArrangedSubview(smallView2)
             horSV1.addArrangedSubview(smallView3)

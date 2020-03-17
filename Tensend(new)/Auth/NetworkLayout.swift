@@ -157,4 +157,13 @@ class NetworkLayer: NetworkLayoutProtocol {
                }
            }
     }
+    func setProfile(params : [String: AnyObject], callback: @escaping (StandartResponse?) -> ()) {
+             Alamofire.request(apiUrl + "profile/update", method: .post, parameters: params, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+                 (response: DataResponse<StandartResponse>) in
+                 if let _ = response.response{
+                     let model = response.result
+                     callback(model.value ?? nil)
+                 }
+             }
+      }
 }

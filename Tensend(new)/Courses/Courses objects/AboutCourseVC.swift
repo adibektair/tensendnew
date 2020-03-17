@@ -89,6 +89,9 @@ class AboutCourseVC: ScrollStackController {
         startButton.backgroundColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
         startButton.cornerRadius(radius: 15, width: 0)
         startButton.easy.layout(Height(58))
+        startButton.addTapGestureRecognizer {
+            self.startLesson()
+        }
         containerStack.addArrangedSubview(startButton)
     }
 
@@ -117,6 +120,18 @@ class AboutCourseVC: ScrollStackController {
         HomeRequests.sharedInstance.getCourse(id: "\(id)") { (result) in
             self.object = result
             self.views()
+        }
+    }
+    func startLesson(){
+        HomeRequests.sharedInstance.startLesson(id: "\(id)") { (result) in
+            if let success = result.success, success == true {
+                if let nav = self.navigationController {
+                    let c = nav.viewControllers.count
+                    let viewController = SubjectVC()
+                    viewController.courseID = self.object?.courses?.id ?? 0
+                    nav.viewControllers[c - 1] =  viewController
+                }
+            }
         }
     }
     /*
