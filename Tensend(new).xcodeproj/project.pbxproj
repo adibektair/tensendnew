@@ -56,6 +56,7 @@
 		2FB28DFD240C0F4F00D2270E /* SubjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB28DFC240C0F4F00D2270E /* SubjectVC.swift */; };
 		2FB28E00240C1BC000D2270E /* MaterialResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB28DFE240C1BC000D2270E /* MaterialResponse.swift */; };
 		2FB28E01240C1BC000D2270E /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB28DFF240C1BC000D2270E /* Material.swift */; };
+		2FB43567241FAA000096A22B /* SubscribeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB43566241FAA000096A22B /* SubscribeVC.swift */; };
 		2FB73B0E24040488004A0A3A /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B0D24040488004A0A3A /* TabbarViewController.swift */; };
 		2FB73B1024040576004A0A3A /* CoursesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B0F24040576004A0A3A /* CoursesListVC.swift */; };
 		2FB73B1224040CF3004A0A3A /* CoursesByCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1124040CF3004A0A3A /* CoursesByCategoryVC.swift */; };
@@ -181,6 +182,7 @@
 		2FB28DFC240C0F4F00D2270E /* SubjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectVC.swift; sourceTree = "<group>"; };
 		2FB28DFE240C1BC000D2270E /* MaterialResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialResponse.swift; sourceTree = "<group>"; };
 		2FB28DFF240C1BC000D2270E /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		2FB43566241FAA000096A22B /* SubscribeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeVC.swift; sourceTree = "<group>"; };
 		2FB73B0D24040488004A0A3A /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		2FB73B0F24040576004A0A3A /* CoursesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListVC.swift; sourceTree = "<group>"; };
 		2FB73B1124040CF3004A0A3A /* CoursesByCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesByCategoryVC.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				2FC6511624193ADE007F555A /* CongratulationVC.swift */,
 				2F412E9724115FC9002B8B59 /* DocReaderVC.swift */,
 				2F3BD0EC241D637E00CB4918 /* PayVC.swift */,
+				2FB43566241FAA000096A22B /* SubscribeVC.swift */,
 				2F1BD5872401A942009E11B8 /* Courses objects */,
 				2F60140423FED38B00D2A354 /* CoursesView */,
 			);
@@ -933,6 +936,7 @@
 				2FC6511724193ADE007F555A /* CongratulationVC.swift in Sources */,
 				AA77BD7724096478009BFFD0 /* TokenHeaders.swift in Sources */,
 				2F1BD58B2401AAB6009E11B8 /* ForMe.swift in Sources */,
+				2FB43567241FAA000096A22B /* SubscribeVC.swift in Sources */,
 				2FB73B1624041BDD004A0A3A /* VideoView.swift in Sources */,
 				2F386EF823FC6C6E0058579E /* SectionsName.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
