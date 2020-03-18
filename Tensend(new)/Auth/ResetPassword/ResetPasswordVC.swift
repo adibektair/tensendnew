@@ -124,6 +124,7 @@ extension ResetPasswordVC{
     
     func createButton(){
         
+        
         continueButton.backgroundColor = #colorLiteral(red: 0, green: 0.3019607843, blue: 0.7882352941, alpha: 1)
         continueButton.setTitleColor(.white, for: .normal)
         continueButton.setTitle("Жалғастыру", for: .normal)

@@ -24,6 +24,28 @@ class Course : NSObject, NSCoding, Mappable{
     var inprogress = false
     var counter = 2
 
+    
+    var access : Bool?
+    var author : Author?
+    var authorId : Int?
+    var categoryId : Int?
+    var createdAt : String?
+    var deletedAt : AnyObject?
+    var descriptionField : String?
+    var id : Int?
+    var imagePath : String?
+    var informationList : [String]?
+    var isVisible : Int?
+    var lessons : [Lesson]?
+    var lessonsCount : Int?
+    var lessonsPassingCount : Int?
+    var scale : Int?
+    var started : Bool?
+    var title : String?
+    var trailer : String?
+    var updatedAt : String?
+    var viewCount : Int?
+
     func resetList(){
          self.dataAll.removeAll()
          if let arr = data {
@@ -63,6 +85,27 @@ class Course : NSObject, NSCoding, Mappable{
 		prevPageUrl <- map["prev_page_url"]
 		to <- map["to"]
 		total <- map["total"]
+        
+        access <- map["access"]
+        author <- map["author"]
+        authorId <- map["author_id"]
+        categoryId <- map["category_id"]
+        createdAt <- map["created_at"]
+        deletedAt <- map["deleted_at"]
+        descriptionField <- map["description"]
+        id <- map["id"]
+        imagePath <- map["image_path"]
+        informationList <- map["information_list"]
+        isVisible <- map["is_visible"]
+        lessons <- map["lessons"]
+        lessonsCount <- map["lessons_count"]
+        lessonsPassingCount <- map["lessons_passing_count"]
+        scale <- map["scale"]
+        started <- map["started"]
+        title <- map["title"]
+        trailer <- map["trailer"]
+        updatedAt <- map["updated_at"]
+        viewCount <- map["view_count"]
 		
 	}
 

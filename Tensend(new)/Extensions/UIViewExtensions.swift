@@ -8,7 +8,27 @@
 
 import Foundation
 import UIKit
+
 extension UIView{
+    enum ViewSide {
+        case Left, Right, Top, Bottom
+    }
+    
+    func addBorder(toSide side: ViewSide, withColor color: CGColor, andThickness thickness: CGFloat) {
+        
+        let border = CALayer()
+        border.backgroundColor = color
+        
+        switch side {
+        case .Left: border.frame = CGRect(x: frame.minX, y: frame.minY, width: thickness, height: frame.height); break
+        case .Right: border.frame = CGRect(x: frame.maxX, y: frame.minY, width: thickness, height: frame.height); break
+        case .Top: border.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: thickness); break
+        case .Bottom: border.frame = CGRect(x: frame.minX, y: frame.maxY, width: frame.width, height: thickness); break
+        }
+        
+        layer.addSublayer(border)
+    }
+    
     func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
@@ -17,7 +37,7 @@ extension UIView{
     }
     
     func cornerRadius(radius: Int, width: CGFloat, color: UIColor = .white){
-         //  self.layer.masksToBounds = true
+           self.layer.masksToBounds = true
            self.layer.cornerRadius = CGFloat(radius)
            self.layer.borderWidth = width
            self.layer.borderColor = color.cgColor
@@ -32,7 +52,16 @@ extension UIView{
 }
 
 extension UIView {
-    
+    var parentViewController: UIViewController? {
+          var parentResponder: UIResponder? = self
+          while parentResponder != nil {
+              parentResponder = parentResponder?.next
+              if let viewController = parentResponder as? UIViewController {
+                  return viewController
+              }
+          }
+          return nil
+      }
     // In order to create computed properties for extensions, we need a key to
     // store and access the stored property
     fileprivate struct AssociatedObjectKeys {

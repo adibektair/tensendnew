@@ -31,13 +31,13 @@ class Data : NSObject, NSCoding, Mappable{
     var lessonsPassingCount : Int?
     var scale : Int?
     var viewCount : Int?
-    
+    var started : Bool?
     
     class func newInstance(map: Map) -> Mappable?{
         return Data()
     }
     required init?(map: Map){}
-    private override init(){}
+    override init(){}
     
     func mapping(map: Map)
     {
@@ -64,7 +64,7 @@ class Data : NSObject, NSCoding, Mappable{
         lessonsPassingCount <- map["lessons_passing_count"]
         scale <- map["scale"]
         viewCount <- map["view_count"]
-        
+        started <- map["started"]
     }
     
     /**

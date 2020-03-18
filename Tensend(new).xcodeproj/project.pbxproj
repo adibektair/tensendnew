@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F00396D240FFCCE000DE1A7 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F00396C240FFCCE000DE1A7 /* Document.swift */; };
 		2F1BD58424018C97009E11B8 /* BestCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD58324018C97009E11B8 /* BestCourses.swift */; };
 		2F1BD58624018F5D009E11B8 /* TwoButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD58524018F5D009E11B8 /* TwoButtons.swift */; };
 		2F1BD58A2401AAB6009E11B8 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1BD5882401AAB5009E11B8 /* Course.swift */; };
@@ -45,14 +46,49 @@
 		2F386F2723FC6E710058579E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F2023FC6E700058579E /* Category.swift */; };
 		2F386F2823FC6E710058579E /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F2123FC6E710058579E /* Meditation.swift */; };
 		2F386F2923FC6E710058579E /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F386F2223FC6E710058579E /* Banner.swift */; };
+		2F3BD0EB241D5DDB00CB4918 /* SuccessMessageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3BD0EA241D5DDB00CB4918 /* SuccessMessageObject.swift */; };
+		2F3BD0ED241D637E00CB4918 /* PayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3BD0EC241D637E00CB4918 /* PayVC.swift */; };
+		2F412E9824115FC9002B8B59 /* DocReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F412E9724115FC9002B8B59 /* DocReaderVC.swift */; };
 		2F60140323FED38200D2A354 /* CoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60140223FED38200D2A354 /* CoursesVC.swift */; };
 		2F60140623FED3A600D2A354 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60140523FED3A600D2A354 /* SearchView.swift */; };
+		2F85E1E3240D4C1400ABAF2C /* MaterialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85E1E2240D4C1400ABAF2C /* MaterialListView.swift */; };
+		2FB28DFB240AEC7600D2270E /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB28DFA240AEC7600D2270E /* Lesson.swift */; };
+		2FB28DFD240C0F4F00D2270E /* SubjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB28DFC240C0F4F00D2270E /* SubjectVC.swift */; };
+		2FB28E00240C1BC000D2270E /* MaterialResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB28DFE240C1BC000D2270E /* MaterialResponse.swift */; };
+		2FB28E01240C1BC000D2270E /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB28DFF240C1BC000D2270E /* Material.swift */; };
+		2FB73B0E24040488004A0A3A /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B0D24040488004A0A3A /* TabbarViewController.swift */; };
+		2FB73B1024040576004A0A3A /* CoursesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B0F24040576004A0A3A /* CoursesListVC.swift */; };
+		2FB73B1224040CF3004A0A3A /* CoursesByCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1124040CF3004A0A3A /* CoursesByCategoryVC.swift */; };
+		2FB73B1424041B70004A0A3A /* AboutCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1324041B70004A0A3A /* AboutCourseVC.swift */; };
+		2FB73B1624041BDD004A0A3A /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1524041BDD004A0A3A /* VideoView.swift */; };
+		2FB73B1824041F55004A0A3A /* CourseAuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB73B1724041F55004A0A3A /* CourseAuthorView.swift */; };
+		2FC6511724193ADE007F555A /* CongratulationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC6511624193ADE007F555A /* CongratulationVC.swift */; };
 		69CACAC7F5AEA47A35CDCCA9 /* Pods_Tensend_new_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */; };
 		AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */; };
 		AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA30C19B23E9704100617132 /* CheckCodeView.swift */; };
 		AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA30C19C23E9704100617132 /* CheckCodeView.xib */; };
+		AA3B5A78240AF8C1009AEEB3 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B5A77240AF8C1009AEEB3 /* ProfileVC.swift */; };
+		AA3B5A7B240C008A009AEEB3 /* ThreeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B5A7A240C008A009AEEB3 /* ThreeButtons.swift */; };
+		AA3B5A7D240C0997009AEEB3 /* SmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B5A7C240C0997009AEEB3 /* SmallView.swift */; };
 		AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */; };
 		AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */; };
+		AA77BD5F2404091D009BFFD0 /* MeditationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD5E2404091D009BFFD0 /* MeditationRouter.swift */; };
+		AA77BD612404094B009BFFD0 /* MeditaionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD602404094B009BFFD0 /* MeditaionBuilder.swift */; };
+		AA77BD6424040BEA009BFFD0 /* MeditationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6324040BEA009BFFD0 /* MeditationPresenter.swift */; };
+		AA77BD6624040EDF009BFFD0 /* MeditationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6524040EDF009BFFD0 /* MeditationsView.swift */; };
+		AA77BD6924041EE4009BFFD0 /* MeditationEachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6824041EE4009BFFD0 /* MeditationEachView.swift */; };
+		AA77BD6C24080236009BFFD0 /* SingleMeditationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6B24080236009BFFD0 /* SingleMeditationPresenter.swift */; };
+		AA77BD6F240803F2009BFFD0 /* SingleMeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6D240803F2009BFFD0 /* SingleMeditationView.swift */; };
+		AA77BD70240803F2009BFFD0 /* SingleMeditationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA77BD6E240803F2009BFFD0 /* SingleMeditationView.xib */; };
+		AA77BD74240961CE009BFFD0 /* AuthorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD72240961CE009BFFD0 /* AuthorsCollectionViewCell.swift */; };
+		AA77BD75240961CE009BFFD0 /* AuthorsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA77BD73240961CE009BFFD0 /* AuthorsCollectionViewCell.xib */; };
+		AA77BD7724096478009BFFD0 /* TokenHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD7624096478009BFFD0 /* TokenHeaders.swift */; };
+		AA9130612416A691003FD915 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91305F2416A691003FD915 /* SettingsVC.swift */; };
+		AA9130622416A691003FD915 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9130602416A691003FD915 /* SettingsVC.xib */; };
+		AA9130662416A772003FD915 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9130642416A772003FD915 /* SettingsTVC.swift */; };
+		AA9130672416A772003FD915 /* SettingsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9130652416A772003FD915 /* SettingsTVC.xib */; };
+		AA91306A2416B113003FD915 /* ProfileSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9130682416B113003FD915 /* ProfileSettingsVC.swift */; };
+		AA91306D2416B171003FD915 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91306C2416B171003FD915 /* TextFieldView.swift */; };
 		AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1300623EAFBE900D86BAC /* StandartResponse.swift */; };
 		AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */; };
 		AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */; };
@@ -63,6 +99,8 @@
 		AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B77923FC219C00314455 /* SignInView.swift */; };
 		AAB9B77E23FC2C3300314455 /* SIgnInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B77D23FC2C3300314455 /* SIgnInPresenter.swift */; };
 		AAB9B78124019CA500314455 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B78024019CA500314455 /* ResetPasswordVC.swift */; };
+		AAC07A2F2421441600BEA0C4 /* RatingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC07A2D2421441600BEA0C4 /* RatingTVC.swift */; };
+		AAC07A302421441600BEA0C4 /* RatingTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC07A2E2421441600BEA0C4 /* RatingTVC.xib */; };
 		AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F89823FC1CD700537254 /* CorrectCodeView.swift */; };
 		AAC3F89C23FC1CE700537254 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F89B23FC1CE700537254 /* UserDefaults.swift */; };
 		AACC4DAD23E828310072F77D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC4DAC23E828310072F77D /* Country.swift */; };
@@ -79,6 +117,8 @@
 		AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B7A23E405DB00CAFA47 /* MainVC.swift */; };
 		AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE71B7B23E405DB00CAFA47 /* MainVC.xib */; };
 		AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */; };
+		AAF597FA241929A200E4578B /* CashoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF597F9241929A200E4578B /* CashoutVC.swift */; };
+		AAF597FC241935D500E4578B /* CashoutGoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF597FB241935D500E4578B /* CashoutGoVC.swift */; };
 		CAD1B55D908B6BFCA02A070C /* Pods_Tensend_new_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +134,7 @@
 
 /* Begin PBXFileReference section */
 		0E62ED0DA18E2558035BEAEA /* Pods-Tensend(new)Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F00396C240FFCCE000DE1A7 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		2F1BD58324018C97009E11B8 /* BestCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestCourses.swift; sourceTree = "<group>"; };
 		2F1BD58524018F5D009E11B8 /* TwoButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtons.swift; sourceTree = "<group>"; };
 		2F1BD5882401AAB5009E11B8 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -132,16 +173,51 @@
 		2F386F2023FC6E700058579E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2F386F2123FC6E710058579E /* Meditation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		2F386F2223FC6E710058579E /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		2F3BD0EA241D5DDB00CB4918 /* SuccessMessageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessMessageObject.swift; sourceTree = "<group>"; };
+		2F3BD0EC241D637E00CB4918 /* PayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayVC.swift; sourceTree = "<group>"; };
+		2F412E9724115FC9002B8B59 /* DocReaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocReaderVC.swift; sourceTree = "<group>"; };
 		2F60140223FED38200D2A354 /* CoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVC.swift; sourceTree = "<group>"; };
 		2F60140523FED3A600D2A354 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		2F85E1E2240D4C1400ABAF2C /* MaterialListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialListView.swift; sourceTree = "<group>"; };
+		2FB28DFA240AEC7600D2270E /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		2FB28DFC240C0F4F00D2270E /* SubjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectVC.swift; sourceTree = "<group>"; };
+		2FB28DFE240C1BC000D2270E /* MaterialResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialResponse.swift; sourceTree = "<group>"; };
+		2FB28DFF240C1BC000D2270E /* Material.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		2FB73B0D24040488004A0A3A /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		2FB73B0F24040576004A0A3A /* CoursesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListVC.swift; sourceTree = "<group>"; };
+		2FB73B1124040CF3004A0A3A /* CoursesByCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesByCategoryVC.swift; sourceTree = "<group>"; };
+		2FB73B1324041B70004A0A3A /* AboutCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AboutCourseVC.swift; path = "Courses objects/AboutCourseVC.swift"; sourceTree = "<group>"; };
+		2FB73B1524041BDD004A0A3A /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		2FB73B1724041F55004A0A3A /* CourseAuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseAuthorView.swift; sourceTree = "<group>"; };
+		2FC6511624193ADE007F555A /* CongratulationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationVC.swift; sourceTree = "<group>"; };
 		3441CFBAAEC28BF348339BAA /* Pods-Tensend(new)Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new)Tests.release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)Tests/Pods-Tensend(new)Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9FEE3C11B2628762F667FC90 /* Pods_Tensend_new_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5CB3737D04107C58C01CC /* Pods_Tensend_new_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tensend_new_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA30C19923E96E5F00617132 /* CheckCodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodePresenter.swift; sourceTree = "<group>"; };
 		AA30C19B23E9704100617132 /* CheckCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckCodeView.swift; sourceTree = "<group>"; };
 		AA30C19C23E9704100617132 /* CheckCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckCodeView.xib; sourceTree = "<group>"; };
+		AA3B5A77240AF8C1009AEEB3 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		AA3B5A7A240C008A009AEEB3 /* ThreeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeButtons.swift; sourceTree = "<group>"; };
+		AA3B5A7C240C0997009AEEB3 /* SmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallView.swift; sourceTree = "<group>"; };
 		AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdownCell.swift; sourceTree = "<group>"; };
 		AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDropdownCell.xib; sourceTree = "<group>"; };
+		AA77BD5E2404091D009BFFD0 /* MeditationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationRouter.swift; sourceTree = "<group>"; };
+		AA77BD602404094B009BFFD0 /* MeditaionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditaionBuilder.swift; sourceTree = "<group>"; };
+		AA77BD6324040BEA009BFFD0 /* MeditationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationPresenter.swift; sourceTree = "<group>"; };
+		AA77BD6524040EDF009BFFD0 /* MeditationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsView.swift; sourceTree = "<group>"; };
+		AA77BD6824041EE4009BFFD0 /* MeditationEachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationEachView.swift; sourceTree = "<group>"; };
+		AA77BD6B24080236009BFFD0 /* SingleMeditationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMeditationPresenter.swift; sourceTree = "<group>"; };
+		AA77BD6D240803F2009BFFD0 /* SingleMeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMeditationView.swift; sourceTree = "<group>"; };
+		AA77BD6E240803F2009BFFD0 /* SingleMeditationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleMeditationView.xib; sourceTree = "<group>"; };
+		AA77BD72240961CE009BFFD0 /* AuthorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorsCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA77BD73240961CE009BFFD0 /* AuthorsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorsCollectionViewCell.xib; sourceTree = "<group>"; };
+		AA77BD7624096478009BFFD0 /* TokenHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenHeaders.swift; sourceTree = "<group>"; };
+		AA91305F2416A691003FD915 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		AA9130602416A691003FD915 /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		AA9130642416A772003FD915 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
+		AA9130652416A772003FD915 /* SettingsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTVC.xib; sourceTree = "<group>"; };
+		AA9130682416B113003FD915 /* ProfileSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsVC.swift; sourceTree = "<group>"; };
+		AA91306C2416B171003FD915 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		AAB1300623EAFBE900D86BAC /* StandartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartResponse.swift; sourceTree = "<group>"; };
 		AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordView.xib; sourceTree = "<group>"; };
@@ -152,10 +228,12 @@
 		AAB9B77923FC219C00314455 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		AAB9B77D23FC2C3300314455 /* SIgnInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnInPresenter.swift; sourceTree = "<group>"; };
 		AAB9B78024019CA500314455 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		AAC07A2D2421441600BEA0C4 /* RatingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTVC.swift; sourceTree = "<group>"; };
+		AAC07A2E2421441600BEA0C4 /* RatingTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingTVC.xib; sourceTree = "<group>"; };
 		AAC3F89823FC1CD700537254 /* CorrectCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectCodeView.swift; sourceTree = "<group>"; };
 		AAC3F89B23FC1CE700537254 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		AACC4DAC23E828310072F77D /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		AAD5DA7D23E169ED00D9F7D0 /* Tensend(new).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tensend(new).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAD5DA7D23E169ED00D9F7D0 /* Tensend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tensend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD5DA8023E169ED00D9F7D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD5DA8223E169ED00D9F7D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AAD5DA8423E169ED00D9F7D0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +250,8 @@
 		AAE71B7A23E405DB00CAFA47 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		AAE71B7B23E405DB00CAFA47 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayout.swift; sourceTree = "<group>"; };
+		AAF597F9241929A200E4578B /* CashoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutVC.swift; sourceTree = "<group>"; };
+		AAF597FB241935D500E4578B /* CashoutGoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashoutGoVC.swift; sourceTree = "<group>"; };
 		EAA3C1192A90A8A41CD4BB81 /* Pods-Tensend(new).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new).debug.xcconfig"; path = "Target Support Files/Pods-Tensend(new)/Pods-Tensend(new).debug.xcconfig"; sourceTree = "<group>"; };
 		ED1983BC29CCFC1ED6CA7B58 /* Pods-Tensend(new).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tensend(new).release.xcconfig"; path = "Target Support Files/Pods-Tensend(new)/Pods-Tensend(new).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +279,11 @@
 		2F1BD5872401A942009E11B8 /* Courses objects */ = {
 			isa = PBXGroup;
 			children = (
+				2FB28DFA240AEC7600D2270E /* Lesson.swift */,
+				2F3BD0EA241D5DDB00CB4918 /* SuccessMessageObject.swift */,
+				2FB28DFF240C1BC000D2270E /* Material.swift */,
+				2F00396C240FFCCE000DE1A7 /* Document.swift */,
+				2FB28DFE240C1BC000D2270E /* MaterialResponse.swift */,
 			);
 			path = "Courses objects";
 			sourceTree = "<group>";
@@ -225,6 +310,13 @@
 			isa = PBXGroup;
 			children = (
 				2F60140223FED38200D2A354 /* CoursesVC.swift */,
+				2FB73B0F24040576004A0A3A /* CoursesListVC.swift */,
+				2FB73B1124040CF3004A0A3A /* CoursesByCategoryVC.swift */,
+				2FB73B1324041B70004A0A3A /* AboutCourseVC.swift */,
+				2FB28DFC240C0F4F00D2270E /* SubjectVC.swift */,
+				2FC6511624193ADE007F555A /* CongratulationVC.swift */,
+				2F412E9724115FC9002B8B59 /* DocReaderVC.swift */,
+				2F3BD0EC241D637E00CB4918 /* PayVC.swift */,
 				2F1BD5872401A942009E11B8 /* Courses objects */,
 				2F60140423FED38B00D2A354 /* CoursesView */,
 			);
@@ -235,6 +327,9 @@
 			isa = PBXGroup;
 			children = (
 				2F60140523FED3A600D2A354 /* SearchView.swift */,
+				2F85E1E2240D4C1400ABAF2C /* MaterialListView.swift */,
+				2FB73B1524041BDD004A0A3A /* VideoView.swift */,
+				2FB73B1724041F55004A0A3A /* CourseAuthorView.swift */,
 				2F1BD58E2401B8CC009E11B8 /* AllCoursesListView.swift */,
 				2F1BD5902401B9A9009E11B8 /* IconWithTitleView.swift */,
 				2F1BD58324018C97009E11B8 /* BestCourses.swift */,
@@ -253,11 +348,104 @@
 			path = CheckCode;
 			sourceTree = "<group>";
 		};
+		AA3B5A76240AF89D009AEEB3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AA9130632416A758003FD915 /* Cells */,
+				AA91305E2416A66C003FD915 /* Settings */,
+				AA3B5A79240C0070009AEEB3 /* Views */,
+				AA3B5A77240AF8C1009AEEB3 /* ProfileVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AA3B5A79240C0070009AEEB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA3B5A7A240C008A009AEEB3 /* ThreeButtons.swift */,
+				AA3B5A7C240C0997009AEEB3 /* SmallView.swift */,
+				AA91306C2416B171003FD915 /* TextFieldView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AA47C4CC23E95E1D003FA110 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				AA47C4CF23E95E4E003FA110 /* CustomDropdownCell.swift */,
 				AA47C4D023E95E4E003FA110 /* CustomDropdownCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA77BD5D240406DA009BFFD0 /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD71240961B0009BFFD0 /* Cells */,
+				AA77BD6A24080218009BFFD0 /* Meditation */,
+				AA77BD6724041EBB009BFFD0 /* MeditationViews */,
+				AA77BD6224040BD6009BFFD0 /* Main */,
+				AA77BD5E2404091D009BFFD0 /* MeditationRouter.swift */,
+				AA77BD602404094B009BFFD0 /* MeditaionBuilder.swift */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
+		AA77BD6224040BD6009BFFD0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD6524040EDF009BFFD0 /* MeditationsView.swift */,
+				AA77BD6324040BEA009BFFD0 /* MeditationPresenter.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AA77BD6724041EBB009BFFD0 /* MeditationViews */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD6824041EE4009BFFD0 /* MeditationEachView.swift */,
+			);
+			path = MeditationViews;
+			sourceTree = "<group>";
+		};
+		AA77BD6A24080218009BFFD0 /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD6B24080236009BFFD0 /* SingleMeditationPresenter.swift */,
+				AA77BD6D240803F2009BFFD0 /* SingleMeditationView.swift */,
+				AA77BD6E240803F2009BFFD0 /* SingleMeditationView.xib */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
+		AA77BD71240961B0009BFFD0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD72240961CE009BFFD0 /* AuthorsCollectionViewCell.swift */,
+				AA77BD73240961CE009BFFD0 /* AuthorsCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA91305E2416A66C003FD915 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AA91305F2416A691003FD915 /* SettingsVC.swift */,
+				AA9130602416A691003FD915 /* SettingsVC.xib */,
+				AA9130682416B113003FD915 /* ProfileSettingsVC.swift */,
+				AAF597F9241929A200E4578B /* CashoutVC.swift */,
+				AAF597FB241935D500E4578B /* CashoutGoVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AA9130632416A758003FD915 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA9130642416A772003FD915 /* SettingsTVC.swift */,
+				AA9130652416A772003FD915 /* SettingsTVC.xib */,
+				AAC07A2D2421441600BEA0C4 /* RatingTVC.swift */,
+				AAC07A2E2421441600BEA0C4 /* RatingTVC.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -379,7 +567,7 @@
 		AAD5DA7E23E169ED00D9F7D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAD5DA7D23E169ED00D9F7D0 /* Tensend(new).app */,
+				AAD5DA7D23E169ED00D9F7D0 /* Tensend.app */,
 				AAD5DA9323E169EF00D9F7D0 /* Tensend(new)Tests.xctest */,
 			);
 			name = Products;
@@ -388,21 +576,22 @@
 		AAD5DA7F23E169ED00D9F7D0 /* Tensend(new) */ = {
 			isa = PBXGroup;
 			children = (
+				AA3B5A76240AF89D009AEEB3 /* Profile */,
+				AA77BD5D240406DA009BFFD0 /* Meditation */,
 				AAE71B8023E40FC800CAFA47 /* Extensions */,
 				AAD5DAAA23E177AD00D9F7D0 /* Auth */,
 				AAD5DA8023E169ED00D9F7D0 /* AppDelegate.swift */,
 				AAD5DA8223E169ED00D9F7D0 /* SceneDelegate.swift */,
 				AAD5DA8423E169ED00D9F7D0 /* MainViewController.swift */,
-				AAD5DAA623E1774000D9F7D0 /* Builder.swift */,
-				2F60140123FED36A00D2A354 /* Courses */,
-				AAD5DAA723E1774000D9F7D0 /* Router.swift */,
-				AAD5DA8623E169ED00D9F7D0 /* Main.storyboard */,
-				AAB1301223EB0D0E00D86BAC /* Home */,
+				2FB73B0D24040488004A0A3A /* TabbarViewController.swift */,
 				AAD5DA8B23E169EE00D9F7D0 /* LaunchScreen.storyboard */,
+				AAD5DA8623E169ED00D9F7D0 /* Main.storyboard */,
+				2F60140123FED36A00D2A354 /* Courses */,
+				AAB1301223EB0D0E00D86BAC /* Home */,
 				AAB1301E23EB0D1800D86BAC /* CollectionViewCells */,
 				AAD5DA8E23E169EE00D9F7D0 /* Info.plist */,
 				AAD5DAA223E174B100D9F7D0 /* Assets.xcassets */,
-				AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */,
+				AA77BD7624096478009BFFD0 /* TokenHeaders.swift */,
 			);
 			path = "Tensend(new)";
 			sourceTree = "<group>";
@@ -419,6 +608,9 @@
 		AAD5DAAA23E177AD00D9F7D0 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				AAD5DAA723E1774000D9F7D0 /* Router.swift */,
+				AAD5DAA623E1774000D9F7D0 /* Builder.swift */,
+				AAE71B8923E4129D00CAFA47 /* NetworkLayout.swift */,
 				AAB9B77F24019B3900314455 /* ResetPassword */,
 				AAB9B77823FC1F0F00314455 /* Sign In */,
 				AAC3F89A23FC1CE700537254 /* UserDefaults */,
@@ -497,7 +689,7 @@
 			);
 			name = "Tensend(new)";
 			productName = "Tensend(new)";
-			productReference = AAD5DA7D23E169ED00D9F7D0 /* Tensend(new).app */;
+			productReference = AAD5DA7D23E169ED00D9F7D0 /* Tensend.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AAD5DA9223E169EF00D9F7D0 /* Tensend(new)Tests */ = {
@@ -562,15 +754,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC07A302421441600BEA0C4 /* RatingTVC.xib in Resources */,
+				AA77BD70240803F2009BFFD0 /* SingleMeditationView.xib in Resources */,
+				AA77BD75240961CE009BFFD0 /* AuthorsCollectionViewCell.xib in Resources */,
 				AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */,
 				AAD5DA8D23E169EE00D9F7D0 /* LaunchScreen.storyboard in Resources */,
 				AA47C4D223E95E4E003FA110 /* CustomDropdownCell.xib in Resources */,
+				AA9130672416A772003FD915 /* SettingsTVC.xib in Resources */,
 				2F386F0A23FC6D8D0058579E /* ForYouCVC.xib in Resources */,
 				2F386F0623FC6D8D0058579E /* ImagesWithTitleCVC.xib in Resources */,
 				AAD5DAA323E174B100D9F7D0 /* Assets.xcassets in Resources */,
 				AA30C19E23E9704100617132 /* CheckCodeView.xib in Resources */,
 				AAD5DA8823E169ED00D9F7D0 /* Main.storyboard in Resources */,
 				2F386F0523FC6D8D0058579E /* MeditationCVC.xib in Resources */,
+				AA9130622416A691003FD915 /* SettingsVC.xib in Resources */,
 				AAB1303423ED5D7300D86BAC /* CreatePasscodeView.xib in Resources */,
 				AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */,
 			);
@@ -654,29 +851,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F412E9824115FC9002B8B59 /* DocReaderVC.swift in Sources */,
+				AA77BD6F240803F2009BFFD0 /* SingleMeditationView.swift in Sources */,
+				AAF597FA241929A200E4578B /* CashoutVC.swift in Sources */,
 				2F1BD58A2401AAB6009E11B8 /* Course.swift in Sources */,
 				AA30C19D23E9704100617132 /* CheckCodeView.swift in Sources */,
+				AA9130612416A691003FD915 /* SettingsVC.swift in Sources */,
 				AAB9B78124019CA500314455 /* ResetPasswordVC.swift in Sources */,
 				2F386F0823FC6D8D0058579E /* ImagesWithTitleCVC.swift in Sources */,
+				AA77BD5F2404091D009BFFD0 /* MeditationRouter.swift in Sources */,
 				2F386F0B23FC6D8D0058579E /* OnlyImageCVC.swift in Sources */,
+				2FB73B1424041B70004A0A3A /* AboutCourseVC.swift in Sources */,
 				AAD5DA8523E169ED00D9F7D0 /* MainViewController.swift in Sources */,
+				2FB73B1824041F55004A0A3A /* CourseAuthorView.swift in Sources */,
 				AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */,
+				AAF597FC241935D500E4578B /* CashoutGoVC.swift in Sources */,
 				AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */,
+				2FB73B0E24040488004A0A3A /* TabbarViewController.swift in Sources */,
 				AACC4DAD23E828310072F77D /* Country.swift in Sources */,
+				2F3BD0EB241D5DDB00CB4918 /* SuccessMessageObject.swift in Sources */,
 				2F386F1B23FC6DE70058579E /* Colors.swift in Sources */,
 				2F386EDF23FC6B6F0058579E /* HomeRequests.swift in Sources */,
 				2F386EFD23FC6CD40058579E /* HomeVC.swift in Sources */,
+				2FB28DFD240C0F4F00D2270E /* SubjectVC.swift in Sources */,
+				2FB73B1024040576004A0A3A /* CoursesListVC.swift in Sources */,
 				AAB1303323ED5D7300D86BAC /* CreatePasscodeView.swift in Sources */,
 				AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */,
 				AA30C19A23E96E5F00617132 /* CheckCodePresenter.swift in Sources */,
 				AAB9B77E23FC2C3300314455 /* SIgnInPresenter.swift in Sources */,
 				AAB1303623ED5F0500D86BAC /* CreatePasscodePresenter.swift in Sources */,
+				AA91306D2416B171003FD915 /* TextFieldView.swift in Sources */,
 				2F386F1723FC6DE70058579E /* ScrollStackController.swift in Sources */,
 				2F1BD58624018F5D009E11B8 /* TwoButtons.swift in Sources */,
 				2F386F2523FC6E710058579E /* Data.swift in Sources */,
+				2FB28E00240C1BC000D2270E /* MaterialResponse.swift in Sources */,
 				AAB1302F23EC805E00D86BAC /* CreatePasswordPresenter.swift in Sources */,
 				2F386F0723FC6D8D0058579E /* ForYouCVC.swift in Sources */,
+				2FB73B1224040CF3004A0A3A /* CoursesByCategoryVC.swift in Sources */,
 				2F386EF923FC6C6E0058579E /* EachCourse.swift in Sources */,
+				AA3B5A78240AF8C1009AEEB3 /* ProfileVC.swift in Sources */,
+				AA3B5A7B240C008A009AEEB3 /* ThreeButtons.swift in Sources */,
 				AAD5DA8123E169ED00D9F7D0 /* AppDelegate.swift in Sources */,
 				AAD5DAA923E1774000D9F7D0 /* Router.swift in Sources */,
 				2F386F1823FC6DE70058579E /* ViewExtensions.swift in Sources */,
@@ -685,31 +899,49 @@
 				2F386F1623FC6DE70058579E /* UIViewExtensions.swift in Sources */,
 				2F386F1923FC6DE70058579E /* StackViewExtensions.swift in Sources */,
 				2F386F2323FC6E710058579E /* BannersResponse.swift in Sources */,
+				AA3B5A7D240C0997009AEEB3 /* SmallView.swift in Sources */,
+				2F00396D240FFCCE000DE1A7 /* Document.swift in Sources */,
 				AAC3F89C23FC1CE700537254 /* UserDefaults.swift in Sources */,
 				2F386EF723FC6C6E0058579E /* ForYou.swift in Sources */,
 				2F386F2823FC6E710058579E /* Meditation.swift in Sources */,
 				2F386F2923FC6E710058579E /* Banner.swift in Sources */,
+				AAC07A2F2421441600BEA0C4 /* RatingTVC.swift in Sources */,
 				2F386EFA23FC6C6E0058579E /* FirstBannerView.swift in Sources */,
 				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
+				AA77BD6C24080236009BFFD0 /* SingleMeditationPresenter.swift in Sources */,
+				AA77BD74240961CE009BFFD0 /* AuthorsCollectionViewCell.swift in Sources */,
+				AA91306A2416B113003FD915 /* ProfileSettingsVC.swift in Sources */,
 				2F386EFB23FC6C6E0058579E /* MyCourses.swift in Sources */,
 				2F386F1423FC6DE70058579E /* ViewControllerExtension.swift in Sources */,
 				2F1BD5912401B9A9009E11B8 /* IconWithTitleView.swift in Sources */,
+				AA77BD6424040BEA009BFFD0 /* MeditationPresenter.swift in Sources */,
+				AA77BD612404094B009BFFD0 /* MeditaionBuilder.swift in Sources */,
 				2F386F2623FC6E710058579E /* MeditationsResponse.swift in Sources */,
 				AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */,
 				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
+				AA9130662416A772003FD915 /* SettingsTVC.swift in Sources */,
 				2F1BD58F2401B8CC009E11B8 /* AllCoursesListView.swift in Sources */,
 				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
 				2F386EF623FC6C6E0058579E /* MeditationView.swift in Sources */,
+				AA77BD6924041EE4009BFFD0 /* MeditationEachView.swift in Sources */,
 				2F60140623FED3A600D2A354 /* SearchView.swift in Sources */,
 				2F386F2723FC6E710058579E /* Category.swift in Sources */,
+				2F3BD0ED241D637E00CB4918 /* PayVC.swift in Sources */,
+				2FB28DFB240AEC7600D2270E /* Lesson.swift in Sources */,
 				2F60140323FED38200D2A354 /* CoursesVC.swift in Sources */,
 				2F386EF523FC6C6E0058579E /* CategoriesView.swift in Sources */,
 				AAE71B8A23E4129D00CAFA47 /* NetworkLayout.swift in Sources */,
 				2F386F2423FC6E710058579E /* CategoriesResponse.swift in Sources */,
 				2F1BD58424018C97009E11B8 /* BestCourses.swift in Sources */,
 				2F386F0923FC6D8D0058579E /* MeditationCVC.swift in Sources */,
+				AA77BD6624040EDF009BFFD0 /* MeditationsView.swift in Sources */,
+				2F85E1E3240D4C1400ABAF2C /* MaterialListView.swift in Sources */,
+				2FB28E01240C1BC000D2270E /* Material.swift in Sources */,
 				2F386F1523FC6DE70058579E /* StringExtension.swift in Sources */,
+				2FC6511724193ADE007F555A /* CongratulationVC.swift in Sources */,
+				AA77BD7724096478009BFFD0 /* TokenHeaders.swift in Sources */,
 				2F1BD58B2401AAB6009E11B8 /* ForMe.swift in Sources */,
+				2FB73B1624041BDD004A0A3A /* VideoView.swift in Sources */,
 				2F386EF823FC6C6E0058579E /* SectionsName.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
 				AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */,
@@ -873,17 +1105,19 @@
 			baseConfigurationReference = EAA3C1192A90A8A41CD4BB81 /* Pods-Tensend(new).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BN62376H24;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = GWSS3Q7L56;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-a";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
+				PRODUCT_NAME = Tensend;
+				PROVISIONING_PROFILE_SPECIFIER = appstore;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -892,17 +1126,19 @@
 			baseConfigurationReference = ED1983BC29CCFC1ED6CA7B58 /* Pods-Tensend(new).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BN62376H24;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = GWSS3Q7L56;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-a";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
+				PRODUCT_NAME = Tensend;
+				PROVISIONING_PROFILE_SPECIFIER = appstore;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

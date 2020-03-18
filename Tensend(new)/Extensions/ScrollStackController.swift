@@ -18,7 +18,7 @@ class ScrollStackController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9764705882, alpha: 1)
-        
+        setBackButton()
         self.view.addSubview(scrollView)
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +43,7 @@ class ScrollStackController: UIViewController {
             stackView.layoutMargins = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         }
         scrollView.addSubview(stackView)
-        
+        scrollView.keyboardDismissMode = .onDrag
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0),

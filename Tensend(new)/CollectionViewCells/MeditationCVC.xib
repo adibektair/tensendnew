@@ -18,19 +18,22 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asset-1" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-x9-c2j">
-                        <rect key="frame" x="0.0" y="0.0" width="166" height="100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="166" height="98"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="hM8-Ki-vW0"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="98" id="Zz7-TP-kNl"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Жан тыныштығы" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqx-8d-P3s">
-                        <rect key="frame" x="0.0" y="110" width="109" height="16"/>
+                        <rect key="frame" x="0.0" y="108" width="109" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="UgL-kv-XUL"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                         <color key="textColor" red="0.20392156862745098" green="0.2627450980392157" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l2m-d0-bJY">
-                        <rect key="frame" x="0.0" y="132.5" width="10" height="9"/>
+                        <rect key="frame" x="0.0" y="134.5" width="10" height="9"/>
                         <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="mUI-lt-ft2"/>
@@ -38,7 +41,10 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 минут" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fye-yB-JOu">
-                        <rect key="frame" x="16" y="131" width="40" height="12"/>
+                        <rect key="frame" x="16" y="133" width="40" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="jz9-R3-GDd"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.20392156862745098" green="0.2627450980392157" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>

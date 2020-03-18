@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
@@ -26,6 +27,9 @@ protocol NetworkLayoutProtocol {
     func signIn(parameters: [String : AnyObject], callback: @escaping (Bool) -> ())
     
     func resetPassword(parameters: [String : AnyObject], callback: @escaping (Bool) -> ())
+    
+    func getMeditations(callback: @escaping ([Data]) -> ())
+    func getSingleMeditation(id: Int, callback: @escaping (SingleMeditationResponse?) -> ())
     
 }
 class NetworkLayer: NetworkLayoutProtocol {
@@ -111,4 +115,78 @@ class NetworkLayer: NetworkLayoutProtocol {
             }
         }
     }
+    
+    func getMeditations(callback: @escaping ([Data]) -> ()) {
+        Alamofire.request(apiUrl + "meditations", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject{
+            (response: DataResponse<MeditationsResponse>) in
+            if let _ = response.response{
+                let model  = response.result
+                callback(model.value?.meditations?.data ?? [])
+            }
+        }
+    }
+    
+     func getSingleMeditation(id: Int, callback: @escaping (SingleMeditationResponse?) -> ()) {
+        
+        Alamofire.request(apiUrl + "meditation/\(id)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+            (response: DataResponse<SingleMeditationResponse>) in
+            if let _ = response.response{
+                let model  = response.result
+                callback(model.value ?? nil)
+            }
+        }
+    }
+    
+    func getLink(callback: @escaping (LinkResponse?) -> ()) {
+        Alamofire.request(apiUrl + "profile/promo-code", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+            (response: DataResponse<LinkResponse>) in
+            if let _ = response.response{
+                let model = response.result
+                callback(model.value ?? nil)
+            }
+        }
+    }
+    
+    
+    func getProfile(callback: @escaping (ProfileResponse?) -> ()) {
+           Alamofire.request(apiUrl + "profile", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+               (response: DataResponse<ProfileResponse>) in
+               if let _ = response.response{
+                   let model = response.result
+                   callback(model.value ?? nil)
+               }
+           }
+    }
+    func setProfile(params : [String: AnyObject], callback: @escaping (StandartResponse?) -> ()) {
+             Alamofire.request(apiUrl + "profile/update", method: .post, parameters: params, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+                 (response: DataResponse<StandartResponse>) in
+                 if let _ = response.response{
+                     let model = response.result
+                     callback(model.value ?? nil)
+                 }
+             }
+      }
+    
+    
+    func getRatings(callback: @escaping (RatingResponse?) -> ()) {
+             Alamofire.request(apiUrl + "evaluate/rating", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+                 (response: DataResponse<RatingResponse>) in
+                 
+                if let _ = response.response{
+                     let model = response.result
+                     callback(model.value ?? nil)
+                 }
+             }
+      }
+    
+    func getMaterials(callback: @escaping (MarketingResponse?) -> ()) {
+             Alamofire.request(apiUrl + "profile/marketing-materials", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+                 (response: DataResponse<MarketingResponse>) in
+                if let _ = response.response{
+                     let model = response.result
+                     callback(model.value ?? nil)
+                 }
+             }
+      }
+
 }

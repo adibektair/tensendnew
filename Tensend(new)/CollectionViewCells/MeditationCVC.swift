@@ -11,7 +11,9 @@ import UIKit
 class MeditationCVC: UICollectionViewCell {
     
     var data : Data? {
-        didSet {setData()}
+        didSet {
+            setData()
+        }
     }
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var title: UILabel!

@@ -14,6 +14,7 @@ protocol SignInProtocol {
     func error(message : String)
     func singIn()
     func success()
+    func goToTabBar()
 }
 
 protocol SignInPresenterProtocol {
@@ -39,7 +40,7 @@ class SignInPresenter: SignInPresenterProtocol {
                 self.view?.error(message: "Перепроверьте валидность данных")
                 return
             }else{
-                
+                self.view?.goToTabBar()
             }
         })
     }

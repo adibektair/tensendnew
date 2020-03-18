@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000.0, vertical: 0.0), for: .default)
+
         let navigationController = UINavigationController()
         navigationController.navigationBar.isTranslucent = true
-//        navigationController.navigationBar.setBackgroundImage(UIView(), for: .any)
         if let token = UserDefault.getValue(byKey: "token"){
             window?.rootViewController = HomeVC()
             window?.makeKeyAndVisible()

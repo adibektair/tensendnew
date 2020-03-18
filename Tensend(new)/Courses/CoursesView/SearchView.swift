@@ -35,7 +35,7 @@ class SearchView: UIView {
         searchButton.easy.layout(Height(50),Width(50))
         searchButton.backgroundColor = #colorLiteral(red: 0, green: 0.3019607843, blue: 0.7882352941, alpha: 1)
         searchButton.cornerRadius(radius: 9, width: 0)
-        searchButton.setImage(#imageLiteral(resourceName: "asset-7"), for: .normal)
+        searchButton.setImage(#imageLiteral(resourceName: "search"), for: .normal)
         stackView.addArrangedSubview(searchButton)
         
     }
