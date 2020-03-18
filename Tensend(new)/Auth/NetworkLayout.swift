@@ -166,4 +166,27 @@ class NetworkLayer: NetworkLayoutProtocol {
                  }
              }
       }
+    
+    
+    func getRatings(callback: @escaping (RatingResponse?) -> ()) {
+             Alamofire.request(apiUrl + "evaluate/rating", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+                 (response: DataResponse<RatingResponse>) in
+                 
+                if let _ = response.response{
+                     let model = response.result
+                     callback(model.value ?? nil)
+                 }
+             }
+      }
+    
+    func getMaterials(callback: @escaping (MarketingResponse?) -> ()) {
+             Alamofire.request(apiUrl + "profile/marketing-materials", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+                 (response: DataResponse<MarketingResponse>) in
+                if let _ = response.response{
+                     let model = response.result
+                     callback(model.value ?? nil)
+                 }
+             }
+      }
+
 }

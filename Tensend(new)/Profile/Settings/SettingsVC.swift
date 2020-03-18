@@ -11,8 +11,8 @@ import UIKit
 class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    let titles = ["Жеке ақпарат" , "Құпия сөз"]
-    let images : [UIImage] = [#imageLiteral(resourceName: "Screen Shot 2020-03-11 at 9.00.28 PM"), #imageLiteral(resourceName: "pwset")]
+    let titles = ["Жеке ақпарат" ]
+    let images : [UIImage] = [#imageLiteral(resourceName: "Screen Shot 2020-03-11 at 9.00.28 PM")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -99,6 +99,8 @@
 		AAB9B77B23FC219C00314455 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B77923FC219C00314455 /* SignInView.swift */; };
 		AAB9B77E23FC2C3300314455 /* SIgnInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B77D23FC2C3300314455 /* SIgnInPresenter.swift */; };
 		AAB9B78124019CA500314455 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B78024019CA500314455 /* ResetPasswordVC.swift */; };
+		AAC07A2F2421441600BEA0C4 /* RatingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC07A2D2421441600BEA0C4 /* RatingTVC.swift */; };
+		AAC07A302421441600BEA0C4 /* RatingTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC07A2E2421441600BEA0C4 /* RatingTVC.xib */; };
 		AAC3F89923FC1CD700537254 /* CorrectCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F89823FC1CD700537254 /* CorrectCodeView.swift */; };
 		AAC3F89C23FC1CE700537254 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F89B23FC1CE700537254 /* UserDefaults.swift */; };
 		AACC4DAD23E828310072F77D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC4DAC23E828310072F77D /* Country.swift */; };
@@ -226,6 +228,8 @@
 		AAB9B77923FC219C00314455 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		AAB9B77D23FC2C3300314455 /* SIgnInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIgnInPresenter.swift; sourceTree = "<group>"; };
 		AAB9B78024019CA500314455 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		AAC07A2D2421441600BEA0C4 /* RatingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTVC.swift; sourceTree = "<group>"; };
+		AAC07A2E2421441600BEA0C4 /* RatingTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingTVC.xib; sourceTree = "<group>"; };
 		AAC3F89823FC1CD700537254 /* CorrectCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectCodeView.swift; sourceTree = "<group>"; };
 		AAC3F89B23FC1CE700537254 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		AACC4DAC23E828310072F77D /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -440,6 +444,8 @@
 			children = (
 				AA9130642416A772003FD915 /* SettingsTVC.swift */,
 				AA9130652416A772003FD915 /* SettingsTVC.xib */,
+				AAC07A2D2421441600BEA0C4 /* RatingTVC.swift */,
+				AAC07A2E2421441600BEA0C4 /* RatingTVC.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -748,6 +754,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC07A302421441600BEA0C4 /* RatingTVC.xib in Resources */,
 				AA77BD70240803F2009BFFD0 /* SingleMeditationView.xib in Resources */,
 				AA77BD75240961CE009BFFD0 /* AuthorsCollectionViewCell.xib in Resources */,
 				AAE71B7D23E405DB00CAFA47 /* MainVC.xib in Resources */,
@@ -898,6 +905,7 @@
 				2F386EF723FC6C6E0058579E /* ForYou.swift in Sources */,
 				2F386F2823FC6E710058579E /* Meditation.swift in Sources */,
 				2F386F2923FC6E710058579E /* Banner.swift in Sources */,
+				AAC07A2F2421441600BEA0C4 /* RatingTVC.swift in Sources */,
 				2F386EFA23FC6C6E0058579E /* FirstBannerView.swift in Sources */,
 				AA47C4D123E95E4E003FA110 /* CustomDropdownCell.swift in Sources */,
 				AA77BD6C24080236009BFFD0 /* SingleMeditationPresenter.swift in Sources */,
@@ -1097,9 +1105,9 @@
 			baseConfigurationReference = EAA3C1192A90A8A41CD4BB81 /* Pods-Tensend(new).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R5W6A2A7L3;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = GWSS3Q7L56;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1107,7 +1115,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
 				PRODUCT_NAME = Tensend;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = appstore;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1118,9 +1126,9 @@
 			baseConfigurationReference = ED1983BC29CCFC1ED6CA7B58 /* Pods-Tensend(new).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R5W6A2A7L3;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = GWSS3Q7L56;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1128,7 +1136,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
 				PRODUCT_NAME = Tensend;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = appstore;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

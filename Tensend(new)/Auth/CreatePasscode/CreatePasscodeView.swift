@@ -77,8 +77,11 @@ extension CreatePasscodeView : CreatePasscodeProtocol{
         self.thirdView.cornerRadius(radius: 15, width: 1, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
         self.fourthView.cornerRadius(radius: 15, width: 1, color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
         
-        self.authenticationWithTouchID()
-        
+//        self.authenticationWithTouchID()
+        let tab = TabbarViewController()
+        tab.modalPresentationStyle = .fullScreen
+        self.present(tab, animated: true, completion: nil)
+                          
 //        let vc = HomeVC()
 //        vc.modalPresentationStyle = .fullScreen
 //        self.present(vc, animated: false, completion: nil)
@@ -201,7 +204,7 @@ extension UIViewController {
                 
                 if success {
                     
-                    
+                  
                 } else {
                     
                     guard let error = evaluateError else {
@@ -215,10 +218,16 @@ extension UIViewController {
                 }
             }
         } else {
+
+            let tab = TabbarViewController()
+                           tab.modalPresentationStyle = .fullScreen
+                           self.present(tab, animated: true, completion: nil)
+                           self.navigationController?.pushViewController(tab, animated: true)
             
             guard let error = authError else {
                 return
             }
+            
             //TODO: Show appropriate alert if biometry/TouchID/FaceID is lockout or not enrolled
             print(self.evaluateAuthenticationPolicyMessageForLA(errorCode: error.code))
         }

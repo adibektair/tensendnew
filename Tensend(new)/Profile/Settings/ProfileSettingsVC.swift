@@ -93,6 +93,8 @@ extension ProfileSettingsVC{
                     self.showAlert(title: "Ошибка", message: "Попробуйте позже")
                 }
             }
+        }else{
+            self.showAlert(title: "Қате", message: "Бүкіл ақпаратты толтырыңыз")
         }
     }
 }

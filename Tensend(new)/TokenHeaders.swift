@@ -20,6 +20,7 @@ public class TokenHeaders{
         let headers = [
             "Authorization" : "Bearer \(self.token)"
         ]
+        print("-----------------------TOKEN------------------------\n", headers)
         return headers as [String : String]
     }
     
