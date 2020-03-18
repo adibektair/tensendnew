@@ -121,7 +121,7 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
     func nextLessonPressed(){
         if let l =  self.forMe?.courses?.lessons {
             for i in 0..<l.count {
-                if let id = l[i].id, i < l.count - 1, id == self.materialId {
+                if let id = l[i].id, i < l.count - 1, id == self.materialId, l[i].access == true {
                     materialId = l[i + 1].id!
                     self.getMaterial()
                     self.list?.materialID = self.materialId

@@ -98,6 +98,9 @@ extension FirstBannerView: UICollectionViewDataSource, UICollectionViewDelegateF
         return s
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let url = bannerData?.banners?[indexPath.row].linkUrl else { return }
+        guard let vc = self.parentViewController else { return }
+        DocReaderVC.open(vc: vc, url: url)
         print("tapped \(indexPath.row)")
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

@@ -109,6 +109,16 @@ class HomeRequests {
               }
           }
       }
+    public func getSubscriptions(callback: @escaping (SubscriptionTypeResponse) -> ()){
+             let header = TokenHeaders.shared().getHeaders()
+             Alamofire.request(apiUrl + "subscription/types", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseObject{
+                    (response: DataResponse<SubscriptionTypeResponse>) in
+                 if let _ = response.response{
+                     let model  = response.result
+                     callback(model.value!)
+                 }
+             }
+         }
     
     
 }
