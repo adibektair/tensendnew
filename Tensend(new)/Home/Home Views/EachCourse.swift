@@ -86,6 +86,7 @@ class EachCourse: UIView {
         if let name = data?.author?.name {
             guard let surname = data?.author?.surname else {
                 authName = name
+                return
             }
             authName = name + " \(surname)"
         }
