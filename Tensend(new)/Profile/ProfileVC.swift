@@ -214,18 +214,31 @@ extension ProfileVC{
         imageView.addSubview(image)
         image.easy.layout(Edges(20))
         let clicks = UILabel()
-        clicks.text = "211"
+        clicks.text = "241"
         clicks.textColor = .white
         imageView.addSubview(clicks)
         clicks.easy.layout(Top(75), CenterX())
         centerView.addArrangedSubview(imageView)
         
         let requests = UILabel()
-        requests.text = "211"
+        requests.text = "7"
         requests.textColor = .white
         imageView.addSubview(requests)
         requests.easy.layout(Top(45).to(clicks), CenterX())
-        centerView.addArrangedSubview(imageView)
+        
+        let requests1 = UILabel()
+        requests1.text = "18"
+        requests1.textColor = .white
+        imageView.addSubview(requests1)
+        requests1.easy.layout(Top(45).to(requests), CenterX())
+        
+        
+        let requests2 = UILabel()
+        requests2.text = "3"
+        requests2.textColor = .white
+        imageView.addSubview(requests2)
+        requests2.easy.layout(Top(50).to(requests1), CenterX())
+        
         
         
             innerView.addSubview(centerView)
