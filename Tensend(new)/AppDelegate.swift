@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let navigationController = UINavigationController()
         navigationController.navigationBar.isTranslucent = true
-//        navigationController.navigationBar.setBackgroundImage(UIView(), for: .any)
         if let token = UserDefault.getValue(byKey: "token"){
             window?.rootViewController = HomeVC()
             window?.makeKeyAndVisible()

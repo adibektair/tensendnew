@@ -38,6 +38,7 @@ class MeditationsView: ScrollStackController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MeditationCVC
         cell.img.sd_setImage(with: URL(string: apiImgUrl + (self.presenter?.meditations?[0].imagePath?.encodeUrl ?? "") ), completed: nil)
+        cell.img.contentMode = .scaleAspectFill
         cell.title.text = self.presenter?.meditations?[0].title ?? ""
         cell.time.text = self.presenter?.meditations?[0].descriptionField ?? ""
         print("img url " + (self.presenter?.meditations?[0].imagePath ?? "") )
@@ -66,6 +67,7 @@ extension MeditationsView: UICollectionViewDelegateFlowLayout{
             eachView.easy.layout(Height(71) , Left(30), Right(30))
             eachView.cornerRadius(radius: 15, width: 0)
             eachView.tag = self.presenter?.meditations?[i].id ?? 0
+            eachView.imageView.contentMode = .scaleAspectFill
             eachView.addTapGestureRecognizer {
                 self.goToSingle(eachView)
             }

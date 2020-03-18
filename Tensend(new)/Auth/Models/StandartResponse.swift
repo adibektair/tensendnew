@@ -422,3 +422,255 @@ class ProfileResponse : NSObject, NSCoding, Mappable{
     }
 
 }
+
+
+class Rating : NSObject, NSCoding, Mappable{
+
+    var fatherName : String?
+    var id : Int?
+    var imagePath : String?
+    var levelId : Int?
+    var logo : String?
+    var name : String?
+    var rating : Int?
+    var surname : String?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return Rating()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        fatherName <- map["father_name"]
+        id <- map["id"]
+        imagePath <- map["image_path"]
+        levelId <- map["level_id"]
+        logo <- map["logo"]
+        name <- map["name"]
+        rating <- map["rating"]
+        surname <- map["surname"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         fatherName = aDecoder.decodeObject(forKey: "father_name") as? String
+         id = aDecoder.decodeObject(forKey: "id") as? Int
+         imagePath = aDecoder.decodeObject(forKey: "image_path") as? String
+         levelId = aDecoder.decodeObject(forKey: "level_id") as? Int
+         logo = aDecoder.decodeObject(forKey: "logo") as? String
+         name = aDecoder.decodeObject(forKey: "name") as? String
+         rating = aDecoder.decodeObject(forKey: "rating") as? Int
+         surname = aDecoder.decodeObject(forKey: "surname") as? String
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if fatherName != nil{
+            aCoder.encode(fatherName, forKey: "father_name")
+        }
+        if id != nil{
+            aCoder.encode(id, forKey: "id")
+        }
+        if imagePath != nil{
+            aCoder.encode(imagePath, forKey: "image_path")
+        }
+        if levelId != nil{
+            aCoder.encode(levelId, forKey: "level_id")
+        }
+        if logo != nil{
+            aCoder.encode(logo, forKey: "logo")
+        }
+        if name != nil{
+            aCoder.encode(name, forKey: "name")
+        }
+        if rating != nil{
+            aCoder.encode(rating, forKey: "rating")
+        }
+        if surname != nil{
+            aCoder.encode(surname, forKey: "surname")
+        }
+
+    }
+
+}
+
+
+class RatingResponse : NSObject, NSCoding, Mappable{
+
+    var ratings : [Rating]?
+    var success : Bool?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return RatingResponse()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        ratings <- map["ratings"]
+        success <- map["success"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         ratings = aDecoder.decodeObject(forKey: "ratings") as? [Rating]
+         success = aDecoder.decodeObject(forKey: "success") as? Bool
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if ratings != nil{
+            aCoder.encode(ratings, forKey: "ratings")
+        }
+        if success != nil{
+            aCoder.encode(success, forKey: "success")
+        }
+
+    }
+
+}
+
+
+class MarketingResponse : NSObject, NSCoding, Mappable{
+
+    var materials : [MarketingMaterial]?
+    var success : Bool?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return MarketingResponse()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        materials <- map["materials"]
+        success <- map["success"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         materials = aDecoder.decodeObject(forKey: "materials") as? [MarketingMaterial]
+         success = aDecoder.decodeObject(forKey: "success") as? Bool
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if materials != nil{
+            aCoder.encode(materials, forKey: "materials")
+        }
+        if success != nil{
+            aCoder.encode(success, forKey: "success")
+        }
+
+    }
+
+}
+
+
+class MarketingMaterial : NSObject, NSCoding, Mappable{
+
+    var createdAt : String?
+    var id : Int?
+    var imagePath : String?
+    var name : String?
+    var updatedAt : String?
+    var url : String?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return MarketingMaterial()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        createdAt <- map["created_at"]
+        id <- map["id"]
+        imagePath <- map["image_path"]
+        name <- map["name"]
+        updatedAt <- map["updated_at"]
+        url <- map["url"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
+         id = aDecoder.decodeObject(forKey: "id") as? Int
+         imagePath = aDecoder.decodeObject(forKey: "image_path") as? String
+         name = aDecoder.decodeObject(forKey: "name") as? String
+         updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String
+         url = aDecoder.decodeObject(forKey: "url") as? String
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if createdAt != nil{
+            aCoder.encode(createdAt, forKey: "created_at")
+        }
+        if id != nil{
+            aCoder.encode(id, forKey: "id")
+        }
+        if imagePath != nil{
+            aCoder.encode(imagePath, forKey: "image_path")
+        }
+        if name != nil{
+            aCoder.encode(name, forKey: "name")
+        }
+        if updatedAt != nil{
+            aCoder.encode(updatedAt, forKey: "updated_at")
+        }
+        if url != nil{
+            aCoder.encode(url, forKey: "url")
+        }
+
+    }
+
+}

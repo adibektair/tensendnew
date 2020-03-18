@@ -75,7 +75,7 @@ class ThreeButtons: UIView {
            
            stackView.addArrangedSubview(leftButton)
         stackView.addArrangedSubview(centerButton)
-//           stackView.addArrangedSubview(rightButton)
+           stackView.addArrangedSubview(rightButton)
             
 
     }

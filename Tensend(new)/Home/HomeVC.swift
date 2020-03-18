@@ -11,6 +11,9 @@ import EasyPeasy
 
 class HomeVC: ScrollStackController {
     
+    let network = NetworkLayer()
+    let titleLabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9803921569, alpha: 1)
@@ -18,16 +21,24 @@ class HomeVC: ScrollStackController {
         setElements()
         let homeTab = UITabBarItem(title: "Home", image: UIImage(named: "tabHome")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), tag: 1)
         
-
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        network.getProfile { (prof) in
+            
+            guard let name = prof?.profile?.name else{
+                return
+            }
+            self.titleLabel.text = "Cәлеместіз бе, \(name)!"
+        }
     }
     
     func setElements(){
-        let title = UILabel()
-        title.setProperties( textColor: #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1), textAlignment: .center)
-        title.setProperties(textColor: #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1), font: .systemFont(ofSize: 20, weight: .medium), textAlignment: .center)
-        title.text = "Cәлеместіз бе, Қайрат!"
-        title.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        stackView.addArrangedSubview(title)
+        
+        titleLabel.setProperties( textColor: #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1), textAlignment: .center)
+        titleLabel.setProperties(textColor: #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1), font: .systemFont(ofSize: 20, weight: .medium), textAlignment: .center)
+        titleLabel.text = "Cәлеместіз бе!"
+        titleLabel.layoutMargins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        stackView.addArrangedSubview(titleLabel)
         
         let info = UILabel()
         let infoText = "Tensend-ке саяхаттап, өзіңіз үшін әлемнің шексіз білімін ашыңыз"
