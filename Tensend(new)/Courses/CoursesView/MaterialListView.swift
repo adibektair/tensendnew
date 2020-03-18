@@ -101,6 +101,14 @@ class MaterialListView: UIView {
         }
         if let access = lesson.access, !access {
             let closed = self.closedView()
+            a.addTapGestureRecognizer {
+                guard let vc = self.parentViewController else {return}
+                SubscribeVC.open(vc: vc) { (item) in
+                    
+                }
+                let s = SubscribeVC()
+                self.parentViewController?.present(s, animated: true, completion: nil)
+            }
             img.addSubview(closed)
             closed.easy.layout(Edges())
         } else {
@@ -137,4 +145,8 @@ class MaterialListView: UIView {
         return v
     }
     
+    func paymentReq(item:SubscriptionType){
+        guard let id = item.id else { return }
+        
+    }
 }

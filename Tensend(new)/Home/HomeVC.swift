@@ -19,7 +19,7 @@ class HomeVC: ScrollStackController {
         self.view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9803921569, alpha: 1)
         makeNCTranslucent()
         setElements()
-        let homeTab = UITabBarItem(title: "Home", image: UIImage(named: "tabHome")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), tag: 1)
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -58,15 +58,6 @@ class HomeVC: ScrollStackController {
         let forYou = ForYou()
         stackView.addArrangedSubview(forYou)
         
-        let container = UIView()
-        
-        let oneBanner = UIImageView()
-        oneBanner.contentMode = .scaleToFill
-        oneBanner.image = #imageLiteral(resourceName: "oneBanner-1")
-        oneBanner.easy.layout(Height(126))
-        container.addSubview(oneBanner)
-        oneBanner.easy.layout(Left(30),Right(30),Top(),Bottom())
-        stackView.addArrangedSubview(container)
         
         let courseTitle = SectionsName()
         courseTitle.setData(title: "МЕНІҢ КУРСТАРЫМ", desc: "Сізге ұнайтын сабақтар тізімі")

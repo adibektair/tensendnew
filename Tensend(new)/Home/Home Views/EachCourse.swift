@@ -84,7 +84,10 @@ class EachCourse: UIView {
         let authorLabel = UILabel()
         var authName = "Інжү Әнуарбекқызы"
         if let name = data?.author?.name {
-            authName = name
+            guard let surname = data?.author?.surname else {
+                authName = name
+            }
+            authName = name + " \(surname)"
         }
         authorLabel.setProperties(text: authName, textColor: #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1), font: .systemFont(ofSize: 10), numberLines: 1)
         stackView.addArrangedSubview(authorLabel)
