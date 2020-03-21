@@ -69,7 +69,7 @@ class SubscribeVC: ScrollStackController {
                 s.addSubview(v)
                 v.easy.layout(Edges(10))
                 s.addTapGestureRecognizer {
-                    
+                    self.pay(item: types[i])
                 }
                 v.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
                 v.setSpacing(top: 15, left: 0, right: 0, bottom: 15)
@@ -88,12 +88,21 @@ class SubscribeVC: ScrollStackController {
                 s.cornerRadius(radius: 10, width: 1,color: borderColor)
                 self.stackView.addArrangedSubview(s)
             }
+            
         }
+        let closeButton = UILabel()
+        closeButton.setProperties(text: "Жабу", font: .systemFont(ofSize: 18, weight: .semibold), textAlignment: .center)
+        closeButton.addTapGestureRecognizer {
+            self.dismiss(animated: true, completion: nil)
+        }
+        stackView.addArrangedSubview(closeButton)
     }
     
     func pay(item: SubscriptionType){
         self.dismiss(animated: true) {
-            
+            if self.subscriptionType != nil {
+                self.subscriptionType!(item)
+            }
         }
     }
     
@@ -105,11 +114,9 @@ class SubscribeVC: ScrollStackController {
     }
     
     static func open(vc: UIViewController, subscriptionType: ((_ nameChanged: SubscriptionType?) -> Void)? = nil ) {
-           let renameVC = SubscribeVC()
-           renameVC.subscriptionType = subscriptionType
-           if let nav = vc.navigationController {
-               nav.pushViewController(renameVC, animated: true)
-           }
+        let subscribeVC = SubscribeVC()
+        subscribeVC.subscriptionType = subscriptionType
+        vc.present(subscribeVC, animated: true, completion: nil)
        }
 
 }
