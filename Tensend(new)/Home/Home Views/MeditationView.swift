@@ -74,6 +74,19 @@ extension MeditationView: UICollectionViewDelegate, UICollectionViewDataSource,U
         }
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let data = meditationData?.meditations?.data {
+            guard let id = data[indexPath.row].id else { return }
+            guard let nav = self.parentViewController?.navigationController else { return }
+            let bilder = MeditationBuilder()
+            let router = MeditationRouter()
+            router.navigationController = nav
+            router.builder = bilder
+            router.goToSingleMeditation(id: id)
+        }
+       
+     
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20

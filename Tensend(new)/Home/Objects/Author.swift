@@ -12,7 +12,7 @@ class Author : NSObject, NSCoding, Mappable{
     var id : Int?
     var imagePath : String?
     var name : String?
-
+    var surname: String?
 
     class func newInstance(map: Map) -> Mappable?{
         return Author()
@@ -26,6 +26,8 @@ class Author : NSObject, NSCoding, Mappable{
         id <- map["id"]
         imagePath <- map["image_path"]
         name <- map["name"]
+        surname <- map["surname"]
+        
         
     }
 

@@ -1,24 +1,23 @@
 //
-//	Banner.swift
+//	SubscriptionType.swift
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation 
 import ObjectMapper
 
 
-class Banner : NSObject, NSCoding, Mappable{
+class SubscriptionType : NSObject, NSCoding, Mappable{
 
 	var createdAt : String?
+	var expiredAt : Int?
 	var id : Int?
-	var imagePath : String?
-	var locationId : Int?
-	var newsId : Int?
-	var title : String?
+	var name : String?
+	var price : Int?
 	var updatedAt : String?
-    var linkUrl : String?
+
 
 	class func newInstance(map: Map) -> Mappable?{
-		return Banner()
+		return SubscriptionType()
 	}
 	required init?(map: Map){}
 	private override init(){}
@@ -26,13 +25,12 @@ class Banner : NSObject, NSCoding, Mappable{
 	func mapping(map: Map)
 	{
 		createdAt <- map["created_at"]
+		expiredAt <- map["expired_at"]
 		id <- map["id"]
-		imagePath <- map["image_path"]
-		locationId <- map["location_id"]
-		newsId <- map["news_id"]
-		title <- map["title"]
+		name <- map["name"]
+		price <- map["price"]
 		updatedAt <- map["updated_at"]
-        linkUrl <- map["link_url"]
+		
 	}
 
     /**
@@ -42,11 +40,10 @@ class Banner : NSObject, NSCoding, Mappable{
     @objc required init(coder aDecoder: NSCoder)
 	{
          createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
+         expiredAt = aDecoder.decodeObject(forKey: "expired_at") as? Int
          id = aDecoder.decodeObject(forKey: "id") as? Int
-         imagePath = aDecoder.decodeObject(forKey: "image_path") as? String
-         locationId = aDecoder.decodeObject(forKey: "location_id") as? Int
-         newsId = aDecoder.decodeObject(forKey: "news_id") as? Int
-         title = aDecoder.decodeObject(forKey: "title") as? String
+         name = aDecoder.decodeObject(forKey: "name") as? String
+         price = aDecoder.decodeObject(forKey: "price") as? Int
          updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String
 
 	}
@@ -60,20 +57,17 @@ class Banner : NSObject, NSCoding, Mappable{
 		if createdAt != nil{
 			aCoder.encode(createdAt, forKey: "created_at")
 		}
+		if expiredAt != nil{
+			aCoder.encode(expiredAt, forKey: "expired_at")
+		}
 		if id != nil{
 			aCoder.encode(id, forKey: "id")
 		}
-		if imagePath != nil{
-			aCoder.encode(imagePath, forKey: "image_path")
+		if name != nil{
+			aCoder.encode(name, forKey: "name")
 		}
-		if locationId != nil{
-			aCoder.encode(locationId, forKey: "location_id")
-		}
-		if newsId != nil{
-			aCoder.encode(newsId, forKey: "news_id")
-		}
-		if title != nil{
-			aCoder.encode(title, forKey: "title")
+		if price != nil{
+			aCoder.encode(price, forKey: "price")
 		}
 		if updatedAt != nil{
 			aCoder.encode(updatedAt, forKey: "updated_at")

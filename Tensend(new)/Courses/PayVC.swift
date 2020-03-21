@@ -10,31 +10,48 @@ import UIKit
 import WebKit
 import EasyPeasy
 
-class PayVC: UIViewController {
+class PayVC: UIViewController,UIWebViewDelegate {
 
-    let webView = WKWebView()
+    var webView = UIWebView()
     var urlString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setSize()
-        loadWeb()
+        super.viewDidLoad()
+        self.view.addSubview(webView)
+        webView.easy.layout(Edges())
+//        self.additionalSafeAreaInsets.top = -100
+        docOpen()
+        close()
     }
     
+    func docOpen(){
+        if let docUrl = URL(string: self.urlString.encodeUrl) {
+            let req = NSURLRequest(url: docUrl)
+            webView.delegate = self
+            webView.scalesPageToFit = true
+            webView.contentMode = .scaleAspectFit
+            webView.loadRequest(req as URLRequest)
+        }
+    }
     func setSize(){
         self.view.addSubview(webView)
         webView.easy.layout(Edges())
 
         webView.contentMode = .scaleAspectFit
     }
-    func loadWeb() {
-        
-        if let link = URL(string: urlString) {
-            let request = URLRequest(url: link)
-            webView.load(request)
-        }
 
+    func close() {
+        let closebutton = UIButton()
+        closebutton.setTitle("Жабу", for: .normal)
+        closebutton.setTitleColor( #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1), for: .normal)
+        self.view.addSubview(closebutton)
+        closebutton.easy.layout(Right(12),Top(64))
+        closebutton.addTapGestureRecognizer {
+            let tab = TabbarViewController()
+            tab.modalPresentationStyle = .fullScreen
+            self.present(tab, animated: true, completion: nil)
+        }
     }
     func pay(){
          
