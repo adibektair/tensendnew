@@ -216,6 +216,8 @@ class Profile : NSObject, NSCoding, Mappable{
     var followersCount : Int?
     var id : Int?
     var level : String?
+    var levelId : Int?
+
     var levelImage : String?
     var name : String?
     var nickname : AnyObject?
@@ -228,6 +230,11 @@ class Profile : NSObject, NSCoding, Mappable{
     var subscriptions : [AnyObject]?
     var surname : String?
     var tensend : Int?
+    var clicks_count : Int?
+    var registrations_count : Int?
+    var subscriptions_count : Int?
+    var requests_count : Int?
+    var levels : [Level]?
 
 
     class func newInstance(map: Map) -> Mappable?{
@@ -261,7 +268,12 @@ class Profile : NSObject, NSCoding, Mappable{
         subscriptions <- map["subscriptions"]
         surname <- map["surname"]
         tensend <- map["tensend"]
-        
+        requests_count <- map["requests_count"]
+        subscriptions_count <- map["subscriptions_count"]
+        registrations_count <- map["registrations_count"]
+        clicks_count <- map["clicks_count"]
+        levels <- map["levels"]
+        levelId <- map["levelId"]
     }
 
     /**
@@ -673,4 +685,99 @@ class MarketingMaterial : NSObject, NSCoding, Mappable{
 
     }
 
+}
+
+class Level : NSObject, NSCoding, Mappable{
+    
+    var createdAt : String?
+    var descriptionField : String?
+    var discountPercentage : Int?
+    var endCount : Int?
+    var id : Int?
+    var logo : String?
+    var name : String?
+    var periodDate : Int?
+    var startCount : Int?
+    var updatedAt : String?
+    
+    
+    class func newInstance(map: Map) -> Mappable?{
+        return Level()
+    }
+    required init?(map: Map){}
+    private override init(){}
+    
+    func mapping(map: Map)
+    {
+        createdAt <- map["created_at"]
+        descriptionField <- map["description"]
+        discountPercentage <- map["discount_percentage"]
+        endCount <- map["end_count"]
+        id <- map["id"]
+        logo <- map["logo"]
+        name <- map["name"]
+        periodDate <- map["period_date"]
+        startCount <- map["start_count"]
+        updatedAt <- map["updated_at"]
+        
+    }
+    
+    /**
+     * NSCoding required initializer.
+     * Fills the data from the passed decoder
+     */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+        createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
+        descriptionField = aDecoder.decodeObject(forKey: "description") as? String
+        discountPercentage = aDecoder.decodeObject(forKey: "discount_percentage") as? Int
+        endCount = aDecoder.decodeObject(forKey: "end_count") as? Int
+        id = aDecoder.decodeObject(forKey: "id") as? Int
+        logo = aDecoder.decodeObject(forKey: "logo") as? String
+        name = aDecoder.decodeObject(forKey: "name") as? String
+        periodDate = aDecoder.decodeObject(forKey: "period_date") as? Int
+        startCount = aDecoder.decodeObject(forKey: "start_count") as? Int
+        updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String
+        
+    }
+    
+    /**
+     * NSCoding required method.
+     * Encodes mode properties into the decoder
+     */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if createdAt != nil{
+            aCoder.encode(createdAt, forKey: "created_at")
+        }
+        if descriptionField != nil{
+            aCoder.encode(descriptionField, forKey: "description")
+        }
+        if discountPercentage != nil{
+            aCoder.encode(discountPercentage, forKey: "discount_percentage")
+        }
+        if endCount != nil{
+            aCoder.encode(endCount, forKey: "end_count")
+        }
+        if id != nil{
+            aCoder.encode(id, forKey: "id")
+        }
+        if logo != nil{
+            aCoder.encode(logo, forKey: "logo")
+        }
+        if name != nil{
+            aCoder.encode(name, forKey: "name")
+        }
+        if periodDate != nil{
+            aCoder.encode(periodDate, forKey: "period_date")
+        }
+        if startCount != nil{
+            aCoder.encode(startCount, forKey: "start_count")
+        }
+        if updatedAt != nil{
+            aCoder.encode(updatedAt, forKey: "updated_at")
+        }
+        
+    }
+    
 }

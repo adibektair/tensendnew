@@ -6,7 +6,7 @@ target 'Tensend(new)' do
   use_frameworks!
 
   # Pods for Tensend(new)
-
+pod 'Cosmos', '~> 21.0'
 pod "Alamofire"
 pod 'AlamofireObjectMapper', '~> 5.0'
 pod 'SDWebImage'

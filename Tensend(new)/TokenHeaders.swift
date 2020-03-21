@@ -15,7 +15,9 @@ public class TokenHeaders{
         let headers = TokenHeaders()
         return headers
     }
-    
+    func getToken() -> String{
+        return token
+    }
     func getHeaders() -> [String: String]{
         let headers = [
             "Authorization" : "Bearer \(self.token)"

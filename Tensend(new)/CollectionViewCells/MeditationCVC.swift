@@ -10,7 +10,7 @@ import UIKit
 
 class MeditationCVC: UICollectionViewCell {
     
-    var data : Data? {
+    var data : DataObject? {
         didSet {
             setData()
         }

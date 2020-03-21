@@ -11,7 +11,7 @@ import EasyPeasy
 
 class EachCourse: UIView {
     
-    var data: Data?
+    var data: DataObject?
     var title = UILabel()
     var loadView = UIView()
     var loadViewBack = UIView()
@@ -19,7 +19,7 @@ class EachCourse: UIView {
     let stackView = UIStackView()
     let icon = UIImageView()
     let container = UIView()
-    init(data:Data) {
+    init(data:DataObject) {
         super.init(frame: .zero)
         self.data = data
         

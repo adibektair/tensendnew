@@ -10,11 +10,11 @@ import UIKit
 import EasyPeasy
 
 class IconWithTitleView: UIView {
-    var data : Data?
+    var data : DataObject?
     var parrentVC = UIViewController()
     var stackView = UIStackView()
     
-    init(parrentVC: UIViewController, data: Data) {
+    init(parrentVC: UIViewController, data: DataObject) {
         super.init(frame: .zero)
         self.parrentVC = parrentVC
         self.data = data

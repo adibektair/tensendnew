@@ -26,9 +26,14 @@ class RatingTVC: UITableViewCell {
                 self.nameLabel.text = self.nameLabel.text! + name
             }
             if let image = self.data?.imagePath{
-                self.avatarImageView.sd_setImage(with: URL(string: imageUrl + image), completed: nil)
+                self.avatarImageView.sd_setImage(with: URL(string: imageUrl + image.encodeUrl), completed: nil)
             }else{
                 self.avatarImageView.image = #imageLiteral(resourceName: "depositphotos_137014128-stock-illustration-user-profile-icon")
+            }
+            if let logo = self.data?.logo{
+                self.logoImageView.sd_setImage(with: URL(string: imageUrl + logo.encodeUrl), completed: nil)
+            }else{
+                self.logoImageView.image = nil
             }
         }
     }
@@ -39,10 +44,12 @@ class RatingTVC: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!{
         didSet{
             self.avatarImageView.cornerRadius(radius: Int(20), width: 1)
+            self.avatarImageView.contentMode = .scaleAspectFill
         }
     }
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -14,12 +14,12 @@ protocol MeditationProtocol {
 
 protocol MeditationPresenterProtocol {
     var view : MeditationProtocol { get set }
-    var meditations : [Data]? { get set }
+    var meditations : [DataObject]? { get set }
     func goToSingle(id: Int)
     init(networkLayer : NetworkLayer, view: MeditationProtocol, router : MeditationRouterProtocol)
 }
 class MeditationPresenter: MeditationPresenterProtocol{
-    var meditations: [Data]?
+    var meditations: [DataObject]?
     
     var view: MeditationProtocol
     var networkLayer : NetworkLayer

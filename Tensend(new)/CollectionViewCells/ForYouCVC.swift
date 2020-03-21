@@ -14,7 +14,7 @@ class ForYouCVC: UICollectionViewCell {
     @IBOutlet weak var ava: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var name: UILabel!
-    var data : Data? {
+    var data : DataObject? {
           didSet {setData()}
       }
     override func awakeFromNib() {
