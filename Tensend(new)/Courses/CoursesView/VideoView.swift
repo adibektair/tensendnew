@@ -56,7 +56,13 @@ class VideoView: UIView {
         playVideo(url: self.videoURL!)
     }
     @objc func playerDidFinishPlaying(note: NSNotification) {
+        if material != nil {
+        }
         print("Video Finished")
+        
+    }
+    func pass(){
+        
     }
     func size(){
         self.addSubview(imgView)

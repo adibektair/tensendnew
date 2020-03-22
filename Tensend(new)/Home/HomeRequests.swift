@@ -119,6 +119,15 @@ class HomeRequests {
                  }
              }
          }
-    
+    public func passLesson(param: [String: Any],callback: @escaping (SubscriptionTypeResponse) -> ()){
+              let header = TokenHeaders.shared().getHeaders()
+              Alamofire.request(apiUrl + "courses/material/pass", method: .post, parameters: param, encoding: JSONEncoding.default, headers: header).responseObject{
+                     (response: DataResponse<SubscriptionTypeResponse>) in
+                  if let _ = response.response{
+                      let model  = response.result
+                      callback(model.value!)
+                  }
+              }
+          }
     
 }

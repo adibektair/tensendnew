@@ -104,10 +104,12 @@ class MaterialListView: UIView {
             a.addTapGestureRecognizer {
                 guard let vc = self.parentViewController else {return}
                 SubscribeVC.open(vc: vc) { (item) in
-                    
+                    if item != nil {
+                        self.paymentReq(item: item!)
+                    }
                 }
-                let s = SubscribeVC()
-                self.parentViewController?.present(s, animated: true, completion: nil)
+//                let s = SubscribeVC()
+//                self.parentViewController?.present(s, animated: true, completion: nil)
             }
             img.addSubview(closed)
             closed.easy.layout(Edges())
@@ -146,7 +148,15 @@ class MaterialListView: UIView {
     }
     
     func paymentReq(item:SubscriptionType){
+
         guard let id = item.id else { return }
-        
+        guard let vc = parentViewController else { return }
+        let token = UserDefault.getToken()
+        let url = "https://tensend.me/api/v1/pay?subscription_type_id=\(id)&token=\(token)}"
+         
+        let tab = PayVC()
+        tab.urlString = url
+        tab.modalPresentationStyle = .fullScreen
+        vc.present(tab, animated: true, completion: nil)
     }
 }
