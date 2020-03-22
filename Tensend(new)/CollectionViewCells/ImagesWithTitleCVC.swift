@@ -10,7 +10,7 @@ import UIKit
 
 class ImagesWithTitleCVC: UICollectionViewCell {
 
-    var categoryData : Data? {
+    var categoryData : DataObject? {
         didSet {setData()}
     }
     

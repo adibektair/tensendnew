@@ -28,7 +28,7 @@ protocol NetworkLayoutProtocol {
     
     func resetPassword(parameters: [String : AnyObject], callback: @escaping (Bool) -> ())
     
-    func getMeditations(callback: @escaping ([Data]) -> ())
+    func getMeditations(callback: @escaping ([DataObject]) -> ())
     func getSingleMeditation(id: Int, callback: @escaping (SingleMeditationResponse?) -> ())
     
 }
@@ -116,7 +116,7 @@ class NetworkLayer: NetworkLayoutProtocol {
         }
     }
     
-    func getMeditations(callback: @escaping ([Data]) -> ()) {
+    func getMeditations(callback: @escaping ([DataObject]) -> ()) {
         Alamofire.request(apiUrl + "meditations", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject{
             (response: DataResponse<MeditationsResponse>) in
             if let _ = response.response{
@@ -189,4 +189,13 @@ class NetworkLayer: NetworkLayoutProtocol {
              }
       }
 
+    func rateMeditation(params: [String: AnyObject], callback: @escaping (StandartResponse?) -> ()) {
+        Alamofire.request(apiUrl + "evaluate/meditation", method: .post, parameters: params, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+            (response: DataResponse<StandartResponse>) in
+            if let _ = response.response{
+                let model = response.result
+                callback(model.value ?? nil)
+            }
+        }
+    }
 }

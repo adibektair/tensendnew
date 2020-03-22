@@ -23,7 +23,7 @@ class CoursesByCategoryVC: ScrollStackController {
         stackView.addArrangedSubview(list)
     }
  
-    static func open(vc: UIViewController,data:Data) {
+    static func open(vc: UIViewController,data:DataObject) {
          let viewController = CoursesByCategoryVC()
         if let id = data.id {
             viewController.id = id

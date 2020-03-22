@@ -9,8 +9,8 @@ import ObjectMapper
 class Meditation : NSObject, NSCoding, Mappable{
 
 	var currentPage : Int?
-	var data : [Data]?
-    var dataAll = [Data]()
+	var data : [DataObject]?
+    var dataAll = [DataObject]()
 	var firstPageUrl : String?
 	var from : Int?
 	var lastPage : Int?
@@ -73,7 +73,7 @@ class Meditation : NSObject, NSCoding, Mappable{
     @objc required init(coder aDecoder: NSCoder)
 	{
          currentPage = aDecoder.decodeObject(forKey: "current_page") as? Int
-         data = aDecoder.decodeObject(forKey: "data") as? [Data]
+         data = aDecoder.decodeObject(forKey: "data") as? [DataObject]
          firstPageUrl = aDecoder.decodeObject(forKey: "first_page_url") as? String
          from = aDecoder.decodeObject(forKey: "from") as? Int
          lastPage = aDecoder.decodeObject(forKey: "last_page") as? Int

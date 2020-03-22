@@ -9,6 +9,7 @@
 import UIKit
 import EasyPeasy
 import SDWebImage
+import Cosmos
 
 class MeditationsView: ScrollStackController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -41,8 +42,21 @@ class MeditationsView: ScrollStackController, UICollectionViewDelegate, UICollec
         cell.img.contentMode = .scaleAspectFill
         cell.title.text = self.presenter?.meditations?[0].title ?? ""
         cell.time.text = self.presenter?.meditations?[0].descriptionField ?? ""
+        cell.tag = self.presenter!.meditations![0].id!
+        let cosmosView = CosmosView()
+        cell.addSubview(cosmosView)
+        cosmosView.easy.layout(Left(15).to(cell.title), CenterY().to(cell.title), Width(40), Height(20))
+        cosmosView.rating = Double(self.presenter?.meditations?[0].scale ?? 0)
+        cell.cornerRadius(radius: 10, width: 0)
+        cosmosView.isUserInteractionEnabled = false
+        cell.title.easy.layout(Left(10))
+        cell.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1).withAlphaComponent(0.2)
         print("img url " + (self.presenter?.meditations?[0].imagePath ?? "") )
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        self.goToSingle(cell!)
     }
     
 }
@@ -62,7 +76,7 @@ extension MeditationsView: UICollectionViewDelegateFlowLayout{
             let eachView = MeditationEachView()
             eachView.imageView.sd_setImage(with: URL(string: apiImgUrl + (self.presenter?.meditations?[i].imagePath ?? "") ), completed: nil)
             eachView.titleLabel.text = self.presenter?.meditations?[i].title ?? ""
-            eachView.timeLabel.text = self.presenter?.meditations?[i].descriptionField ?? ""
+            eachView.timeLabel.isHidden = true
             stackView.addArrangedSubview(eachView)
             eachView.easy.layout(Height(71) , Left(30), Right(30))
             eachView.cornerRadius(radius: 15, width: 0)
