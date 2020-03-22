@@ -23,6 +23,8 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
     let titleLabel = UILabel()
     let descLabel = UILabel()
     let nextLessonButton = UIButton()
+    let dateLabel = UILabel()
+    let viewsCount = UILabel()
     
     var video : VideoView?
     
@@ -47,6 +49,12 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
             }
             if let desc = m.descriptionField {
                 self.descLabel.text = desc
+            }
+            if let viewsC = m.viewCount {
+                self.viewsCount.text = "\(viewsC)"
+            }
+            if let date = m.createdAt {
+                self.dateLabel.text = date
             }
             self.materialsStack.removeAllArrangedSubviews()
             self.materialsStack.isHidden = true
@@ -85,8 +93,30 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
         materialStackView.getProperties(stackView: self.stackView)
         materialStackView.setSpacing(top: 0, left: 31, right: 31, bottom: 0)
         
-        titleLabel.setProperties(text: "", font: .systemFont(ofSize: 20, weight: .semibold), numberLines: 2)
+        titleLabel.setProperties(text: "", font: .systemFont(ofSize: 20, weight: .semibold), numberLines: 0)
         materialStackView.addArrangedSubview(titleLabel)
+        
+        let infoStackView = UIStackView()
+        infoStackView.setProperties(axis: .horizontal, alignment: .fill, spacing: 6, distribution: .fill)
+        let timeIcon = UIImageView()
+        timeIcon.image = #imageLiteral(resourceName: "time")
+        timeIcon.easy.layout(Width(12),Height(12))
+        dateLabel.setProperties(text: "", textColor: .lightGray, font: .systemFont(ofSize: 12))
+        let stick = UIView()
+        stick.easy.layout(Width(1))
+        stick.backgroundColor = .gray
+        let eyeIcon = UIImageView()
+        eyeIcon.easy.layout(Width(15), Height(12))
+        eyeIcon.image = #imageLiteral(resourceName: "eye")
+        viewsCount.setProperties(text: "", textColor: .lightGray, font: .systemFont(ofSize: 12))
+        
+        infoStackView.addArrangedSubview(timeIcon)
+        infoStackView.addArrangedSubview(dateLabel)
+        infoStackView.addArrangedSubview(stick)
+        infoStackView.addArrangedSubview(eyeIcon)
+        infoStackView.addArrangedSubview(viewsCount)
+        infoStackView.addArrangedSubview(UIView())
+        materialStackView.addArrangedSubview(infoStackView)
         
         descLabel.setProperties(text: "", font: .systemFont(ofSize: 14), numberLines: 0)
         materialStackView.addArrangedSubview(descLabel)
@@ -127,6 +157,12 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                     self.list?.materialID = self.materialId
                     self.list!.reload()
                     break
+                } else if let id = l[i].id, i < l.count - 1, id == self.materialId, l[i].access == false  {
+                    SubscribeVC.open(vc: self) { (item) in
+                        if item != nil {
+                            self.view.paymentReq(item: item!)
+                        }
+                    }
                 }
             }
         }
@@ -148,7 +184,7 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                 if let passed = course.lessons?.last?.passed , passed == true {
                     self.nextLessonButton.setTitle("КУРСТЫ АЯҚТАУ", for: .normal)
                     self.nextLessonButton.addTapGestureRecognizer {
-                        CongratulationVC.open(vc: self) {
+                        CongratulationVC.open(vc: self, courseId: self.courseID) {
                             print("PDF kakoito")
                         }
                     }

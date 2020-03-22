@@ -16,7 +16,8 @@ class Banner : NSObject, NSCoding, Mappable{
 	var title : String?
 	var updatedAt : String?
     var linkUrl : String?
-
+    var isPaymentEnabled : Int?
+    
 	class func newInstance(map: Map) -> Mappable?{
 		return Banner()
 	}
@@ -33,6 +34,7 @@ class Banner : NSObject, NSCoding, Mappable{
 		title <- map["title"]
 		updatedAt <- map["updated_at"]
         linkUrl <- map["link_url"]
+        isPaymentEnabled <- map["is_payment_enabled"]
 	}
 
     /**

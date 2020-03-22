@@ -8,6 +8,7 @@
 
 import UIKit
 import EasyPeasy
+import Cosmos
 
 class AboutCourseVC: ScrollStackController {
 
@@ -15,6 +16,7 @@ class AboutCourseVC: ScrollStackController {
     var id = 1
     var object : ForMe?
     var started = false
+    let cosmos = CosmosView()
     
     // MARK: - Navigation
     let containerStack = UIStackView()
@@ -42,16 +44,25 @@ class AboutCourseVC: ScrollStackController {
         stackView.addArrangedSubview(containerStack)
         
         
-        let courseNameLabel = UILabel()
+        let courseNameStackView = UIStackView()
         var name = ""
         if let text = object?.courses?.title {
             name = text
         }
-        courseNameLabel.setProperties(text: name, textColor: #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1), font: .systemFont(ofSize: 20, weight: .semibold), textAlignment: .left, numberLines: 1)
+        courseNameStackView.setProperties(axis: .horizontal, alignment: .fill, spacing: 2, distribution: .fill)
+        
         
         let titleLabel = UILabel()
-        titleLabel.setProperties(text: name, font: .systemFont(ofSize: 20, weight: .semibold))
-        containerStack.addArrangedSubview(titleLabel)
+        titleLabel.setProperties(text: name, font: .systemFont(ofSize: 20, weight: .semibold),numberLines: 3)
+        
+        cosmos.rating = Double(object?.courses?.scale ?? 0)
+        cosmos.settings.starMargin = 5
+        cosmos.easy.layout(Width(120))
+        cosmos.settings.updateOnTouch = false
+        courseNameStackView.addArrangedSubview(titleLabel)
+        
+        courseNameStackView.addArrangedSubview(cosmos)
+        containerStack.addArrangedSubview(courseNameStackView)
         
         if let authorData = object?.courses?.author {
             let author = CourseAuthorView(parrentVC: self, author: authorData)

@@ -132,5 +132,18 @@ class HomeRequests {
                   }
               }
           }
+    public func rateCourse(param: [String: Any],callback: @escaping (StandartResponse) -> ()){
+                 let header = TokenHeaders.shared().getHeaders()
+                 Alamofire.request(apiUrl + "evaluate/course", method: .post, parameters: param, encoding: JSONEncoding.default, headers: header).responseObject{
+                        (response: DataResponse<StandartResponse>) in
+                     if let _ = response.response{
+                         let model  = response.result
+                       if let value = model.value {
+                           callback(value)
+                       }
+                     }
+                 }
+             }
+    
     
 }
