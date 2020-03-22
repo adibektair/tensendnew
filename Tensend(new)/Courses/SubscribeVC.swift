@@ -117,6 +117,6 @@ class SubscribeVC: ScrollStackController {
         let subscribeVC = SubscribeVC()
         subscribeVC.subscriptionType = subscriptionType
         vc.present(subscribeVC, animated: true, completion: nil)
-       }
+    }
 
 }
