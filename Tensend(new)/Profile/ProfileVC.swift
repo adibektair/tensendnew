@@ -223,7 +223,7 @@ extension ProfileVC{
             titleLabel.textColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
             centerView.addArrangedSubview(titleLabel)
             let textLabel = UILabel()
-            textLabel.text = "Сату тренажеры сізге сату қабілетіңізді\nарттыруға және де қосымша табыс тауып,\nTensend ұтыс ойындарына қатысуға\nмүмкіндік береді.\n\nДостарыңызға жіберіңіз немесе жарнамалау\nарқылы ақшалай табыс табыңыз"
+            textLabel.text = "Сату тренажеры сізге сату қабілетіңізді\nарттыруға және де қосымша табыс тауып,\nTensend ұтыс ойындарына қатысуға\nмүмкіндік береді.\n\nЖеке сілтемеңізді достарыңызға жіберіңіз немесе жарнамалау\nарқылы ақшалай табыс табыңыз"
             textLabel.numberOfLines = 0
             textLabel.textColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
             centerView.addArrangedSubview(textLabel)

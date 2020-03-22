@@ -25,7 +25,8 @@ class HomeRequests {
         }
     }
     public func getBanners(callback: @escaping (BannersResponse) -> ()){
-        Alamofire.request(apiUrl + "banners", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseObject{
+        let header = TokenHeaders.shared().getHeaders()
+        Alamofire.request(apiUrl + "banners", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseObject{
             (response: DataResponse<BannersResponse>) in
             if let _ = response.response{
                 let model  = response.result
@@ -119,13 +120,15 @@ class HomeRequests {
                  }
              }
          }
-    public func passLesson(param: [String: Any],callback: @escaping (SubscriptionTypeResponse) -> ()){
+    public func passLesson(param: [String: Any],callback: @escaping (StandartResponse) -> ()){
               let header = TokenHeaders.shared().getHeaders()
               Alamofire.request(apiUrl + "courses/material/pass", method: .post, parameters: param, encoding: JSONEncoding.default, headers: header).responseObject{
-                     (response: DataResponse<SubscriptionTypeResponse>) in
+                     (response: DataResponse<StandartResponse>) in
                   if let _ = response.response{
                       let model  = response.result
-                      callback(model.value!)
+                    if let value = model.value {
+                        callback(value)
+                    }
                   }
               }
           }

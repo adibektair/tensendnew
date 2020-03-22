@@ -141,12 +141,18 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                         break
                     }
                 }
-                if let passed = course.lessons?.last?.passed , passed == true {
-                    self.nextLessonButton.setTitle("КУРСТЫ АЯҚТАУ", for: .normal)
-                }
+                
                 self.setSubview()
                 self.reload()
                 self.getMaterial()
+                if let passed = course.lessons?.last?.passed , passed == true {
+                    self.nextLessonButton.setTitle("КУРСТЫ АЯҚТАУ", for: .normal)
+                    self.nextLessonButton.addTapGestureRecognizer {
+                        CongratulationVC.open(vc: self) {
+                            print("PDF kakoito")
+                        }
+                    }
+                }
             }
         }
     }
@@ -171,7 +177,11 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                 v.material = result
                 v.relod()
             } else {
-                self.video = VideoView(parrentVC: self, material: self.material)
+                self.video = VideoView(parrentVC: self, material: self.material, done: { (result) in
+                    if let lessons = self.forMe?.courses?.lessons, let i = lessons.firstIndex(where: {$0.id == self.materialId}) {
+                        lessons[i].passed = true
+                    }
+                })
                 self.stackView.insertArrangedSubview(self.video!, at: 0)
             }
             self.setData()

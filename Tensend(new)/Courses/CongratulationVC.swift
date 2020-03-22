@@ -72,10 +72,11 @@ class CongratulationVC: UIViewController {
     }
     
     // MARK: - Navigation
-     static func open(vc: UIViewController, pdfPressed:@escaping (()-> Void) ){
+    static func open(vc: UIViewController, pdfPressed:@escaping (()-> Void) ){
         let receiptVC = CongratulationVC()
         receiptVC.pdfPressed = pdfPressed
-        vc.modalPresentationStyle = .fullScreen
-        vc.present(receiptVC, animated: true, completion: nil)
+        if let nav = vc.navigationController {
+            nav.pushViewController(receiptVC, animated: true)
         }
+    }
 }
