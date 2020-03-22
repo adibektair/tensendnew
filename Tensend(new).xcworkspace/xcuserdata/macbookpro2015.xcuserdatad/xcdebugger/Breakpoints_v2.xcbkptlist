@@ -12,11 +12,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tensend(new)/Meditation/Meditation/SingleMeditationView.swift"
-            timestampString = "0"
+            timestampString = "606426920.090443"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "fireTimer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -29,6 +29,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tensend(new)/Auth/NetworkLayout.swift"
+            timestampString = "606426920.0905091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "154"
@@ -45,6 +46,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tensend(new)/Auth/NetworkLayout.swift"
+            timestampString = "606426920.090556"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "156"
@@ -61,6 +63,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tensend(new)/Profile/Views/TextFieldView.swift"
+            timestampString = "0"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -77,6 +80,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tensend(new)/Profile/Views/TextFieldView.swift"
+            timestampString = "0"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -93,6 +97,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tensend(new)/Profile/Settings/ProfileSettingsVC.swift"
+            timestampString = "0"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
@@ -104,33 +109,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "50A7AE11-AF19-4D9F-ADB8-45041621FD05"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/Profile/Cells/RatingTVC.swift"
+            filePath = "Tensend(new)/Profile/ProfileVC.swift"
+            timestampString = "606426920.090655"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "data"
-            landmarkType = "24">
+            startingLineNumber = "429"
+            endingLineNumber = "429"
+            landmarkName = "uploadImage(image:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tensend.ProfileVC.uploadImage(image: __C.UIImage) -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Profile/ProfileVC.swift"
+                  timestampString = "606422780.045785"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "413"
+                  endingLineNumber = "413"
+                  offsetFromSymbolStart = "3716">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tensend.ProfileVC.uploadImage(image: __C.UIImage) -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Profile/ProfileVC.swift"
+                  timestampString = "606422780.047963"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "414"
+                  endingLineNumber = "414"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "94D5E294-D024-444C-919B-3C43CE2513A1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/Profile/Cells/RatingTVC.swift"
+            filePath = "Tensend(new)/Profile/ProfileVC.swift"
+            timestampString = "606426920.090706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "data"
-            landmarkType = "24">
+            startingLineNumber = "402"
+            endingLineNumber = "402"
+            landmarkName = "ProfileVC"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

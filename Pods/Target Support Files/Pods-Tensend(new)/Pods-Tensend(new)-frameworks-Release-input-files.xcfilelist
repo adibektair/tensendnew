@@ -2,6 +2,7 @@ ${PODS_ROOT}/Target Support Files/Pods-Tensend(new)/Pods-Tensend(new)-frameworks
 ${BUILT_PRODUCTS_DIR}/AKMaskField/AKMaskField.framework
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework
 ${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
 ${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework
 ${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework

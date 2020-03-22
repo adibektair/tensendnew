@@ -85,11 +85,8 @@ class MyCourses: UIView {
             a.cornerRadius(radius: 8, width: 0)
             a.addTapGestureRecognizer {
                 if let id = data.id {
-                    if !data.started! ?? false {
-                        AboutCourseVC.open(vc: self.parrentVC,id: id)
-                    } else {
-                        SubjectVC.open(vc: self.parrentVC, courseID: id, materialId: id)
-                    }
+                    let started = data.started ?? false
+                        AboutCourseVC.open(vc: self.parrentVC,id: id,started: started)
                 }
             }
             stackview.addArrangedSubview(a)

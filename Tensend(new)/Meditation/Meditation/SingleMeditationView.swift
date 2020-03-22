@@ -9,6 +9,8 @@
 import UIKit
 import SDWebImage
 import AVKit
+import Cosmos
+import EasyPeasy
 
 class SingleMeditationView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
@@ -16,10 +18,24 @@ class SingleMeditationView: UIViewController, UICollectionViewDataSource, UIColl
     var presenter : SingleMeditationPresenterProtocol?
     var player: AVPlayer!
     var selectedAuthorIndex = 0
+    var finishView = UIView()
+    let cosmosView = CosmosView()
+    let network = NetworkLayer()
+    let button = UIButton()
+    var rated = false
     
+    @IBOutlet weak var sliderView: UISlider!
     @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var meditationNameLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!{
+        didSet{
+            self.collectionView.isHidden = true
+        }
+    }
+    @IBOutlet weak var meditationNameLabel: UILabel!{
+        didSet{
+            self.meditationNameLabel.isHidden = true
+        }
+    }
     @IBOutlet weak var dictorNameLabel: UILabel!
     @IBOutlet weak var dictorImageView: UIImageView!
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -35,6 +51,8 @@ class SingleMeditationView: UIViewController, UICollectionViewDataSource, UIColl
         self.collectionView.dataSource = self
         self.collectionView.register(UINib(nibName: "AuthorsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AuthorsCollectionViewCell")
         self.tabBarController?.tabBar.isHidden = true
+        let btnShare = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(btnShare_clicked))
+        self.navigationItem.rightBarButtonItem = btnShare
     }
 
 
@@ -72,6 +90,31 @@ class SingleMeditationView: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 40)
     }
+    @objc func btnShare_clicked() {
+        print("Share button clicked")
+    }
+    
+    func setProgressBar(){
+        guard let item = self.player.currentItem else{
+            return
+        }
+        self.sliderView.maximumValue = Float(item.asset.duration.seconds)
+    }
+    @IBAction func forward(_ sender: Any) {
+        guard let item = self.player.currentItem else{
+            return
+        }
+        let time = CMTimeMake(value: Int64(item.currentTime().seconds + 15.0), timescale: 1)
+        self.player.seek(to: time)
+    }
+    @IBAction func backward(_ sender: Any) {
+        guard let item = self.player.currentItem else{
+            return
+        }
+        let time = CMTimeMake(value: Int64(item.currentTime().seconds - 15.0), timescale: 1)
+        self.player.seek(to: time)
+    }
+    
 }
 
 extension SingleMeditationView : SingleMeditationProtocol{
@@ -91,21 +134,28 @@ extension SingleMeditationView : SingleMeditationProtocol{
         let url = URL.init(string: imageUrl + audio!.audioPath!)
         let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
         player = AVPlayer(playerItem: playerItem)
+        self.setProgressBar()
 
 
         self.playView.addTapGestureRecognizer {
             let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.fireTimer), userInfo: nil, repeats: true)
-
             self.play()
         }
+        let cosmosView = CosmosView()
+        cosmosView.rating = Double(self.presenter?.meditation?.meditation?.scale ?? 0)
+        self.view.addSubview(cosmosView)
+        cosmosView.easy.layout(Leading(0).to(self.dictorImageView), Top(5).to(self.dictorImageView), Width(50), Height(20))
         
     }
+    
+    
     @objc func fireTimer() {
         guard let item = self.player.currentItem else{
             return
         }
-        
+        self.sliderView.setValue(Float(item.currentTime().seconds), animated: true)
         self.timerLabel.text = formatTime(seconds: item.asset.duration.seconds - item.currentTime().seconds)
+        
     }
     
   func formatTime(seconds: Double) -> String {
@@ -150,10 +200,73 @@ extension SingleMeditationView : SingleMeditationProtocol{
             self.playImageView.image = #imageLiteral(resourceName: "play")
         }else{
             
-            self.playImageView.image = #imageLiteral(resourceName: "1200px-Gtk-media-pause.svg")
+            self.playImageView.image = #imageLiteral(resourceName: "pause.png")
+            self.playImageView.backgroundColor = .white
+            self.setUpFinish()
             player.play()
         }
         isPlaying = !isPlaying
+        
+    }
+    
+    func setUpFinish(){
+        self.view.addSubview(finishView)
+        finishView.backgroundColor = .white
+        self.finishView.easy.layout(Height(UIScreen.main.bounds.height / 2), Left(), Right(), Bottom())
+        finishView.cornerRadius(radius: 25, width: 0)
+        let stackView = UIStackView()
+        stackView.setProperties(axis: .vertical, alignment: .center, spacing: 10, distribution: .equalCentering)
+        let label = UILabel()
+        label.font = label.font.withSize(20)
+        label.textColor = .black
+        label.text = "Медитация аяқталды!"
+        label.textAlignment = .center
+        stackView.addArrangedSubview(label)
+        
+        let label1 = UILabel()
+        label1.font = label1.font.withSize(16)
+        label1.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        label1.text = "Медитацияға бағаңызды\nқойыңыз"
+        label1.numberOfLines = 0
+        label1.textAlignment = .center
+        stackView.addArrangedSubview(label1)
+        
+        let v1 = UIView()
+        v1.addSubview(cosmosView)
+        cosmosView.easy.layout(Edges(), Height(30), Width(70), CenterX())
+        stackView.addArrangedSubview(cosmosView)
+        
+        button.backgroundColor = #colorLiteral(red: 0, green: 0.3019607843, blue: 0.7882352941, alpha: 1)
+        button.cornerRadius(radius: 10, width: 0)
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Жіберу", for: .normal)
+        let v = UIView()
+        v.addSubview(button)
+        button.easy.layout(Edges(20), Height(55), Width(250))
+        button.addTarget(self, action: #selector(self.rate), for: .touchUpInside)
+        stackView.addArrangedSubview(v)
+        finishView.addSubview(stackView)
+        stackView.easy.layout(Edges())
+    }
+    
+    @objc func rate(){
+        if rated{
+            self.navigationController?.popToRootViewController(animated: true)
+            return
+        }else{
+            let json = ["meditation_id" : self.presenter!.id,
+                        "scale" : self.cosmosView.rating] as [String : AnyObject]
+            self.network.rateMeditation(params: json) { (response) in
+                if response?.success ?? false{
+                    self.showAlert(title: "Рақмет", message: "Бағаңыз қабылданды")
+                    self.button.setTitle("Жалғастыру", for: .normal)
+                    self.rated = true
+                }else{
+                    self.showAlert(title: "Sorry", message: "Some error occured")
+                }
+            }
+            
+        }
         
     }
 }

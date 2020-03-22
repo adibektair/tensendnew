@@ -11,7 +11,7 @@ import EasyPeasy
 
 class EachCourse: UIView {
     
-    var data: Data?
+    var data: DataObject?
     var title = UILabel()
     var loadView = UIView()
     var loadViewBack = UIView()
@@ -19,7 +19,7 @@ class EachCourse: UIView {
     let stackView = UIStackView()
     let icon = UIImageView()
     let container = UIView()
-    init(data:Data) {
+    init(data:DataObject) {
         super.init(frame: .zero)
         self.data = data
         
@@ -64,7 +64,7 @@ class EachCourse: UIView {
         var sCountText = ""
         if let subjCount = data?.lessonsCount {
             sCountText = "\(subjCount)"
-            subjectCountLabel.setProperties(text: "\(subjCount)", textColor: UIColor.titleDefault(UIColor())(), font: .systemFont(ofSize: 13))
+            subjectCountLabel.setProperties(text: "\(subjCount) сабақ", textColor: UIColor.titleDefault(UIColor())(), font: .systemFont(ofSize: 13))
         }
         if let data = self.data, data.started ?? false, data.lessonsPassingCount ?? 0 > 0 {
             if let allL = data.lessonsCount, let passL = data.lessonsPassingCount {

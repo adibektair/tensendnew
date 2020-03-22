@@ -6,7 +6,7 @@ import Foundation
 import ObjectMapper
 
 
-class Data : NSObject, NSCoding, Mappable{
+class DataObject : NSObject, NSCoding, Mappable{
     
     var categoryTypeId : Int?
     var createdAt : String?
@@ -34,7 +34,7 @@ class Data : NSObject, NSCoding, Mappable{
     var started : Bool?
     
     class func newInstance(map: Map) -> Mappable?{
-        return Data()
+        return DataObject()
     }
     required init?(map: Map){}
     override init(){}

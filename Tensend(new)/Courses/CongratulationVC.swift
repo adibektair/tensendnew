@@ -8,6 +8,7 @@
 
 import UIKit
 import EasyPeasy
+import Cosmos
 
 class CongratulationVC: UIViewController {
 
@@ -15,6 +16,8 @@ class CongratulationVC: UIViewController {
     let percentIMG = UIImageView()
     var pdfPressed:(()-> Void)? = nil
     let stackView = UIStackView()
+    let cosmos = CosmosView()
+    var courseId = 0
     
     // MARK: - Navigation
     override func viewDidLoad() {
@@ -48,18 +51,22 @@ class CongratulationVC: UIViewController {
         forCert.setProperties(text: "Cертификат алу үшін курсқа баға беріңіз", textAlignment: .center, numberLines: 2)
         stackView.addArrangedSubview(forCert)
         
-        let rateView = UIView()
-        rateView.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
-        rateView.easy.layout(Height(25))
-        rateView.addTapGestureRecognizer {
-            if self.pdfPressed != nil {
-                self.dismiss(animated: true) {
-                    self.pdfPressed!()
+        cosmos.settings.starMargin = 5
+//        cosmos.settings.
+        cosmos.easy.layout(Height(25))
+        cosmos.didFinishTouchingCosmos = { rating in
+            let param = ["course_id" : self.courseId,
+                         "scale" : rating] as [String : Any]
+            HomeRequests.sharedInstance.rateCourse(param: param) { (result) in
+                if let success = result.success, success {
+                    
                 }
             }
         }
-        stackView.addArrangedSubview(rateView)
+    
+        stackView.addArrangedSubview(cosmos)
     }
+    
     
     // MARK: - Navigation
     func setImgs(){
@@ -72,10 +79,14 @@ class CongratulationVC: UIViewController {
     }
     
     // MARK: - Navigation
-     static func open(vc: UIViewController, pdfPressed:@escaping (()-> Void) ){
+    static func open(vc: UIViewController,
+                     courseId : Int,
+                     pdfPressed:@escaping (()-> Void) ){
         let receiptVC = CongratulationVC()
+        receiptVC.courseId = courseId
         receiptVC.pdfPressed = pdfPressed
-        vc.modalPresentationStyle = .fullScreen
-        vc.present(receiptVC, animated: true, completion: nil)
+        if let nav = vc.navigationController {
+            nav.pushViewController(receiptVC, animated: true)
         }
+    }
 }

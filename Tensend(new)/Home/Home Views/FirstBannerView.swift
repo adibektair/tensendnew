@@ -98,10 +98,22 @@ extension FirstBannerView: UICollectionViewDataSource, UICollectionViewDelegateF
         return s
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let url = bannerData?.banners?[indexPath.row].linkUrl else { return }
         guard let vc = self.parentViewController else { return }
-        DocReaderVC.open(vc: vc, url: url)
-        print("tapped \(indexPath.row)")
+        guard let banner = self.bannerData?.banners?[indexPath.row] else { return }
+        if let payment = banner.isPaymentEnabled, payment != 0 {
+                  SubscribeVC.open(vc: vc) { (item) in
+                      if item != nil {
+                          self.paymentReq(item: item!)
+                          return
+                      }
+                  }
+            return
+        }
+        if let url = banner.linkUrl  {
+            DocReaderVC.open(vc: vc, url: url)
+            print("tapped \(indexPath.row)")
+            return
+        }
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         //        self.pageControl.currentPage = indexPath.row
