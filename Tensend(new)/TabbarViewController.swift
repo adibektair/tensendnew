@@ -55,6 +55,15 @@ class TabbarViewController: UITabBarController {
         } catch(let error) {
             print(error.localizedDescription)
         }
+        NotificationCenter.default.addObserver(
+        self,
+        selector: #selector(unauthorized(notification:)),
+        name: NSNotification.Name(rawValue: "unauthorized"),
+        object: nil)
+    }
+    
+    @objc func unauthorized(notification: NSNotification) {
+        //TAIR SYUDA PRESENT AUTH ViewCONTROLLER
     }
 
     /*

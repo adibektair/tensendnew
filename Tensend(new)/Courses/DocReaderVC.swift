@@ -30,6 +30,73 @@ class DocReaderVC: UIViewController, UIWebViewDelegate {
             webView.loadRequest(req as URLRequest)
         }
     }
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+          if webView.isLoading {
+                     // still loading
+                     return
+                 }
+
+                 //Save the pdf document to file system
+                 savePdf()
+    }
+    func savePdf(){
+        let fileManager = FileManager.default
+        let p = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let paths = (p[0] as NSString).appendingPathComponent("documento.pdf")
+
+           
+        let pdfDoc = NSData(contentsOf:URL(string: urlString)!)
+           fileManager.createFile(atPath: paths as String, contents: pdfDoc as Data?, attributes: nil)
+       }
+    func shareButton(){
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(share(_:)))
+     
+    }
+    @objc func share(_ sender:UIButton) {
+        let fileManager = FileManager.default
+        let documentoPath = (self.getDirectoryPath() as NSString).appendingPathComponent("documento.pdf")
+        let url = URL(fileURLWithPath: documentoPath)
+        self.sharePdf(path: url)
+      
+//           loadPDFAndShare()
+    }
+    func loadPDFAndShare(){
+
+       let fileManager = FileManager.default
+       let documentoPath = (self.getDirectoryPath() as NSString).appendingPathComponent("documento.pdf")
+
+       if fileManager.fileExists(atPath: documentoPath){
+            let documento = NSData(contentsOfFile: documentoPath)
+            let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [documento!], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView=self.view
+            present(activityViewController, animated: true, completion: nil)
+        }
+        else {
+            print("document was not found")
+        }
+    }
+    func getDirectoryPath() ->String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    func sharePdf(path:URL) {
+
+        let fileManager = FileManager.default
+
+        if fileManager.fileExists(atPath: path.path) {
+            let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [path], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+        } else {
+            print("document was not found")
+            let alertController = UIAlertController(title: "Error", message: "Document was not found!", preferredStyle: .alert)
+            let defaultAction = UIAlertAction.init(title: "ok", style: UIAlertAction.Style.default, handler: nil)
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     static func open(vc:UIViewController, url: String) {
         let viewController = DocReaderVC()
         viewController.urlString = url

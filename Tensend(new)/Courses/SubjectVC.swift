@@ -57,7 +57,7 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                 self.dateLabel.text = date
             }
             self.materialsStack.removeAllArrangedSubviews()
-            self.materialsStack.isHidden = true
+//            self.materialsStack.isHidden = true
             if let docs = m.documents {
                 for doc in docs {
                     let img = UIImageView()
@@ -70,17 +70,52 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                         self.docTapped(doc: doc)
                     }
                 }
-                if !self.materialsStack.arrangedSubviews.isEmpty {
-                    materialsStack.addArrangedSubview(UIView())
-                    self.materialsLabel.isHidden = false
-                    self.materialsStack.isHidden = false
-                } else {
-                    self.materialsLabel.isHidden = true
+                self.materialsStack.addArrangedSubview(UIView())
+                let img = UIImageView()
+                img.easy.layout(Height(41),Width(35))
+                img.image = #imageLiteral(resourceName: "share")
+                materialsStack.addArrangedSubview(img)
+                img.addTapGestureRecognizer {
+                    self.share()
                 }
+//                if !self.materialsStack.arrangedSubviews.isEmpty {
+//                    materialsStack.addArrangedSubview(UIView())
+//                    self.materialsLabel.isHidden = false
+//                    self.materialsStack.isHidden = false
+//                } else {
+//                    self.materialsLabel.isHidden = true
+//                }
             }
             
         }
         
+    }
+    func share(){
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        var textToShare = "Tensend"
+        if let title = material?.material?.title {
+            textToShare = title
+        }
+        
+        NetworkLayer().getLink { (link) in
+            guard let link = link?.link else{
+                return
+            }
+            
+            if let myWebsite = URL(string: link) {
+                let objectsToShare = [textToShare, myWebsite, image ?? #imageLiteral(resourceName: "app-logo")] as [Any]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                
+                activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+                
+                
+                activityVC.popoverPresentationController?.sourceView = self.view
+                self.present(activityVC, animated: true, completion: nil)
+            }
+        }
     }
     func docTapped(doc: Document){
         if let url = doc.docPath {

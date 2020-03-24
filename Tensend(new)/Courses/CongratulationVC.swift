@@ -18,6 +18,9 @@ class CongratulationVC: UIViewController {
     let stackView = UIStackView()
     let cosmos = CosmosView()
     var courseId = 0
+    let congratLabel = UILabel()
+    let courseName = UILabel()
+    let forCert = UILabel()
     
     // MARK: - Navigation
     override func viewDidLoad() {
@@ -30,7 +33,7 @@ class CongratulationVC: UIViewController {
     func congratView(){
         let v = UIView()
         v.backgroundColor = .white
-        stackView.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
+        stackView.setProperties(axis: .vertical, alignment: .center, spacing: 10, distribution: .fill)
         v.addSubview(stackView)
         v.cornerRadius(radius: 10, width: 0)
         view.addSubview(v)
@@ -39,34 +42,44 @@ class CongratulationVC: UIViewController {
         arrangedViews()
     }
     func arrangedViews(){
-        let congratLabel = UILabel()
+        
         congratLabel.setProperties(text: "Құттықтаймыз!", font: .systemFont(ofSize: 22, weight: .semibold), textAlignment: .center, numberLines: 1)
         stackView.addArrangedSubview(congratLabel)
         
-        let courseName = UILabel()
-        courseName.setProperties(text: "Сіз «Сымбатты мүсін» курсын тәмамдадыңыз!", textAlignment: .center, numberLines: 2)
+        
+        courseName.setProperties(text: "Сіз «Сымбатты мүсін» курсын тәмамдадыңыз!", textAlignment: .center, numberLines: 0)
         stackView.addArrangedSubview(courseName)
         
-        let forCert = UILabel()
+        
         forCert.setProperties(text: "Cертификат алу үшін курсқа баға беріңіз", textAlignment: .center, numberLines: 2)
         stackView.addArrangedSubview(forCert)
         
         cosmos.settings.starMargin = 5
-//        cosmos.settings.
         cosmos.easy.layout(Height(25))
         cosmos.didFinishTouchingCosmos = { rating in
             let param = ["course_id" : self.courseId,
                          "scale" : rating] as [String : Any]
             HomeRequests.sharedInstance.rateCourse(param: param) { (result) in
                 if let success = result.success, success {
-                    
+                    self.rated()
                 }
             }
         }
-    
         stackView.addArrangedSubview(cosmos)
     }
-    
+    func rated(){
+        self.cosmos.isHidden = true
+        congratLabel.text = "Сертификат"
+        courseName.text = "Курсты аяқтағаныңыз жайлы жеке сертификатыңызды жүктеп алыңыз!"
+        
+        forCert.textColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
+        forCert.attributedText = NSAttributedString(string: "Сертификат жүктеу", attributes:
+        [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        forCert.addTapGestureRecognizer {
+            let url = "https://tensend.me/api/v1/courses/certificate/\(self.courseId)?token=\(UserDefault.getToken())"
+            DocReaderVC.open(vc: self, url: url)
+        }
+    }
     
     // MARK: - Navigation
     func setImgs(){
