@@ -1136,14 +1136,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = MLTGM7MLPY;
+				DEVELOPMENT_TEAM = GWSS3Q7L56;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab2";
+				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
 				PRODUCT_NAME = Tensend;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1159,14 +1159,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = MLTGM7MLPY;
+				DEVELOPMENT_TEAM = GWSS3Q7L56;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab2";
+				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
 				PRODUCT_NAME = Tensend;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

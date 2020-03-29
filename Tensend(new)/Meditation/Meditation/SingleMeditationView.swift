@@ -23,6 +23,7 @@ class SingleMeditationView: UIViewController, UICollectionViewDataSource, UIColl
     let network = NetworkLayer()
     let button = UIButton()
     var rated = false
+    var shown = false
     
     @IBOutlet weak var sliderView: UISlider!
     @IBOutlet weak var timerLabel: UILabel!
@@ -155,7 +156,11 @@ extension SingleMeditationView : SingleMeditationProtocol{
         }
         self.sliderView.setValue(Float(item.currentTime().seconds), animated: true)
         self.timerLabel.text = formatTime(seconds: item.asset.duration.seconds - item.currentTime().seconds)
-        
+        if item.currentTime().seconds > (item.asset.duration.seconds - 5) && !shown{
+            shown = true
+            self.setUpFinish()
+            
+        }
     }
     
   func formatTime(seconds: Double) -> String {
@@ -202,7 +207,6 @@ extension SingleMeditationView : SingleMeditationProtocol{
             
             self.playImageView.image = #imageLiteral(resourceName: "pause.png")
             self.playImageView.backgroundColor = .white
-            self.setUpFinish()
             player.play()
         }
         isPlaying = !isPlaying
