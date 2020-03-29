@@ -21,10 +21,12 @@ class VideoView: UIView {
     var obj : Course?
     var material : MaterialResponse?
     let imgView = UIImageView()
-    init(parrentVC: UIViewController, obj: Course? = nil, material: MaterialResponse? = nil) {
+    var done: ((_ success: Bool) -> Void)?
+    
+    init(parrentVC: UIViewController, obj: Course? = nil, material: MaterialResponse? = nil, done: ((_ success: Bool) -> Void)?) {
         super.init(frame: .zero)
         self.parrent = parrentVC
-        
+        self.done = done
         if obj != nil {
             self.obj = obj
             self.size()
@@ -56,7 +58,20 @@ class VideoView: UIView {
         playVideo(url: self.videoURL!)
     }
     @objc func playerDidFinishPlaying(note: NSNotification) {
+        if let id = material?.material?.id {
+            let param = ["lessonId": id]
+            HomeRequests.sharedInstance.passLesson(param: param) { (result) in
+                if let succcess = result.success, succcess {
+                    if self.done != nil {
+                        self.done!(true)
+                    }
+                }
+            }
+        }
         print("Video Finished")
+    }
+    func pass(){
+        
     }
     func size(){
         self.addSubview(imgView)

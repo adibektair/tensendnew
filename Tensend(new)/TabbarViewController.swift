@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class TabbarViewController: UITabBarController {
 
@@ -48,6 +49,21 @@ class TabbarViewController: UITabBarController {
         self.tabBar.unselectedItemTintColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
         self.viewControllers = controllers
         self.tabBar.barTintColor = UIColor.white
+        
+        do {
+           try AVAudioSession.sharedInstance().setCategory(.playback)
+        } catch(let error) {
+            print(error.localizedDescription)
+        }
+        NotificationCenter.default.addObserver(
+        self,
+        selector: #selector(unauthorized(notification:)),
+        name: NSNotification.Name(rawValue: "unauthorized"),
+        object: nil)
+    }
+    
+    @objc func unauthorized(notification: NSNotification) {
+        //TAIR SYUDA PRESENT AUTH ViewCONTROLLER
     }
 
     /*

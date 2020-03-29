@@ -76,6 +76,13 @@ class HomeVC: ScrollStackController {
         bottomImage.image = #imageLiteral(resourceName: "bottomIMG")
         bottomImage.easy.layout(Height(379))
         stackView.addArrangedSubview(bottomImage)
+        bottomImage.addTapGestureRecognizer {
+            SubscribeVC.open(vc: self) { (item) in
+                if item != nil {
+                    self.view.paymentReq(item: item!)
+                }
+            }
+        }
     }
     
     

@@ -64,7 +64,7 @@ class EachCourse: UIView {
         var sCountText = ""
         if let subjCount = data?.lessonsCount {
             sCountText = "\(subjCount)"
-            subjectCountLabel.setProperties(text: "\(subjCount)", textColor: UIColor.titleDefault(UIColor())(), font: .systemFont(ofSize: 13))
+            subjectCountLabel.setProperties(text: "\(subjCount) сабақ", textColor: UIColor.titleDefault(UIColor())(), font: .systemFont(ofSize: 13))
         }
         if let data = self.data, data.started ?? false, data.lessonsPassingCount ?? 0 > 0 {
             if let allL = data.lessonsCount, let passL = data.lessonsPassingCount {

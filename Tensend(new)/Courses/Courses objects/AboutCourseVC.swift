@@ -8,12 +8,16 @@
 
 import UIKit
 import EasyPeasy
+import Cosmos
 
 class AboutCourseVC: ScrollStackController {
 
     // MARK: - Navigation
     var id = 1
     var object : ForMe?
+    var started = false
+    let cosmos = CosmosView()
+    
     // MARK: - Navigation
     let containerStack = UIStackView()
     override func viewDidLoad() {
@@ -32,7 +36,7 @@ class AboutCourseVC: ScrollStackController {
     
     func views() {
         if let obj = object?.courses {
-            let video = VideoView(parrentVC: self, obj: obj)
+            let video = VideoView(parrentVC: self, obj: obj,done: nil)
             stackView.addArrangedSubview(video)
         }
         containerStack.setProperties(axis: .vertical, alignment: .fill, spacing: 16, distribution: .fill)
@@ -40,16 +44,25 @@ class AboutCourseVC: ScrollStackController {
         stackView.addArrangedSubview(containerStack)
         
         
-        let courseNameLabel = UILabel()
+        let courseNameStackView = UIStackView()
         var name = ""
         if let text = object?.courses?.title {
             name = text
         }
-        courseNameLabel.setProperties(text: name, textColor: #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1), font: .systemFont(ofSize: 20, weight: .semibold), textAlignment: .left, numberLines: 1)
+        courseNameStackView.setProperties(axis: .horizontal, alignment: .fill, spacing: 2, distribution: .fill)
+        
         
         let titleLabel = UILabel()
-        titleLabel.setProperties(text: name, font: .systemFont(ofSize: 20, weight: .semibold))
-        containerStack.addArrangedSubview(titleLabel)
+        titleLabel.setProperties(text: name, font: .systemFont(ofSize: 20, weight: .semibold),numberLines: 3)
+        
+        cosmos.rating = Double(object?.courses?.scale ?? 0)
+        cosmos.settings.starMargin = 5
+        cosmos.easy.layout(Width(120))
+        cosmos.settings.updateOnTouch = false
+        courseNameStackView.addArrangedSubview(titleLabel)
+        
+        courseNameStackView.addArrangedSubview(cosmos)
+        containerStack.addArrangedSubview(courseNameStackView)
         
         if let authorData = object?.courses?.author {
             let author = CourseAuthorView(parrentVC: self, author: authorData)
@@ -57,7 +70,7 @@ class AboutCourseVC: ScrollStackController {
         }
         
        
-        var descText = "Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей."
+        var descText = ""
         if let desc = object?.courses?.descriptionField {
             descText = desc
         }
@@ -86,6 +99,9 @@ class AboutCourseVC: ScrollStackController {
         
         let startButton = UIButton()
         startButton.setTitle("БАСТАЙМЫН", for: .normal)
+        if self.started {
+            startButton.setTitle("ЖАЛҒАСТЫРУ", for: .normal)
+        }
         startButton.backgroundColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
         startButton.cornerRadius(radius: 15, width: 0)
         startButton.easy.layout(Height(58))
@@ -98,19 +114,25 @@ class AboutCourseVC: ScrollStackController {
     func blueDot(text:String) -> UIStackView{
         let blueDotStack = UIStackView()
         let dot = UIView()
+        let dotStack = UIStackView()
+        dotStack.setProperties(axis: .vertical, alignment: .fill, spacing: 0, distribution: .fill)
+        
         dot.backgroundColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
         dot.cornerRadius(radius: 7, width: 2,color: #colorLiteral(red: 0.5725490196, green: 0.6823529412, blue: 0.9098039216, alpha: 1))
         dot.easy.layout(Height(14),Width(14))
-        blueDotStack.addArrangedSubview(dot)
+        dotStack.addArrangedSubview(dot)
+        dotStack.addArrangedSubview(UIView())
+        blueDotStack.addArrangedSubview(dotStack)
         blueDotStack.setProperties(axis: .horizontal, alignment: .fill, spacing: 25, distribution: .fill)
         let titleLabel = UILabel()
-        titleLabel.setProperties(text: text, font: .systemFont(ofSize: 14), numberLines: 2)
+        titleLabel.setProperties(text: text, font: .systemFont(ofSize: 14), numberLines: 0)
         blueDotStack.addArrangedSubview(titleLabel)
         return blueDotStack
     }
-    static func open(vc: UIViewController,id: Int) {
+    static func open(vc: UIViewController,id: Int,started: Bool) {
         let viewController = AboutCourseVC()
         viewController.id = id
+        viewController.started = started
         if let nav = vc.navigationController {
             nav.pushViewController(viewController, animated: true)
         }
@@ -125,12 +147,8 @@ class AboutCourseVC: ScrollStackController {
     func startLesson(){
         HomeRequests.sharedInstance.startLesson(id: "\(id)") { (result) in
             if let success = result.success, success == true {
-                if let nav = self.navigationController {
-                    let c = nav.viewControllers.count
-                    let viewController = SubjectVC()
-                    viewController.courseID = self.object?.courses?.id ?? 0
-                    nav.viewControllers[c - 1] =  viewController
-                }
+                let courseId = self.object?.courses?.id ?? 0
+                SubjectVC.open(vc: self, courseID: courseId, materialId: courseId)
             }
         }
     }

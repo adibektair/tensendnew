@@ -102,5 +102,16 @@ extension UIView {
             print("no action")
         }
     }
-    
+    func paymentReq(item:SubscriptionType){
+
+           guard let id = item.id else { return }
+           guard let vc = parentViewController else { return }
+           let token = UserDefault.getToken()
+           let url = "https://tensend.me/api/v1/pay?subscription_type_id=\(id)&token=\(token)}"
+            
+           let tab = PayVC()
+           tab.urlString = url
+           tab.modalPresentationStyle = .fullScreen
+           vc.present(tab, animated: true, completion: nil)
+       }
 }

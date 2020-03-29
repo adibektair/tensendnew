@@ -23,6 +23,8 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
     let titleLabel = UILabel()
     let descLabel = UILabel()
     let nextLessonButton = UIButton()
+    let dateLabel = UILabel()
+    let viewsCount = UILabel()
     
     var video : VideoView?
     
@@ -48,8 +50,14 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
             if let desc = m.descriptionField {
                 self.descLabel.text = desc
             }
+            if let viewsC = m.viewCount {
+                self.viewsCount.text = "\(viewsC)"
+            }
+            if let date = m.createdAt {
+                self.dateLabel.text = date
+            }
             self.materialsStack.removeAllArrangedSubviews()
-            self.materialsStack.isHidden = true
+//            self.materialsStack.isHidden = true
             if let docs = m.documents {
                 for doc in docs {
                     let img = UIImageView()
@@ -62,17 +70,52 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                         self.docTapped(doc: doc)
                     }
                 }
-                if !self.materialsStack.arrangedSubviews.isEmpty {
-                    materialsStack.addArrangedSubview(UIView())
-                    self.materialsLabel.isHidden = false
-                    self.materialsStack.isHidden = false
-                } else {
-                    self.materialsLabel.isHidden = true
+                self.materialsStack.addArrangedSubview(UIView())
+                let img = UIImageView()
+                img.easy.layout(Height(41),Width(35))
+                img.image = #imageLiteral(resourceName: "share")
+                materialsStack.addArrangedSubview(img)
+                img.addTapGestureRecognizer {
+                    self.share()
                 }
+//                if !self.materialsStack.arrangedSubviews.isEmpty {
+//                    materialsStack.addArrangedSubview(UIView())
+//                    self.materialsLabel.isHidden = false
+//                    self.materialsStack.isHidden = false
+//                } else {
+//                    self.materialsLabel.isHidden = true
+//                }
             }
             
         }
         
+    }
+    func share(){
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        var textToShare = "Tensend"
+        if let title = material?.material?.title {
+            textToShare = title
+        }
+        
+        NetworkLayer().getLink { (link) in
+            guard let link = link?.link else{
+                return
+            }
+            
+            if let myWebsite = URL(string: link) {
+                let objectsToShare = [textToShare, myWebsite, image ?? #imageLiteral(resourceName: "app-logo")] as [Any]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                
+                activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+                
+                
+                activityVC.popoverPresentationController?.sourceView = self.view
+                self.present(activityVC, animated: true, completion: nil)
+            }
+        }
     }
     func docTapped(doc: Document){
         if let url = doc.docPath {
@@ -85,8 +128,30 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
         materialStackView.getProperties(stackView: self.stackView)
         materialStackView.setSpacing(top: 0, left: 31, right: 31, bottom: 0)
         
-        titleLabel.setProperties(text: "", font: .systemFont(ofSize: 20, weight: .semibold), numberLines: 2)
+        titleLabel.setProperties(text: "", font: .systemFont(ofSize: 20, weight: .semibold), numberLines: 0)
         materialStackView.addArrangedSubview(titleLabel)
+        
+        let infoStackView = UIStackView()
+        infoStackView.setProperties(axis: .horizontal, alignment: .fill, spacing: 6, distribution: .fill)
+        let timeIcon = UIImageView()
+        timeIcon.image = #imageLiteral(resourceName: "time")
+        timeIcon.easy.layout(Width(12),Height(12))
+        dateLabel.setProperties(text: "", textColor: .lightGray, font: .systemFont(ofSize: 12))
+        let stick = UIView()
+        stick.easy.layout(Width(1))
+        stick.backgroundColor = .gray
+        let eyeIcon = UIImageView()
+        eyeIcon.easy.layout(Width(15), Height(12))
+        eyeIcon.image = #imageLiteral(resourceName: "eye")
+        viewsCount.setProperties(text: "", textColor: .lightGray, font: .systemFont(ofSize: 12))
+        
+        infoStackView.addArrangedSubview(timeIcon)
+        infoStackView.addArrangedSubview(dateLabel)
+        infoStackView.addArrangedSubview(stick)
+        infoStackView.addArrangedSubview(eyeIcon)
+        infoStackView.addArrangedSubview(viewsCount)
+        infoStackView.addArrangedSubview(UIView())
+        materialStackView.addArrangedSubview(infoStackView)
         
         descLabel.setProperties(text: "", font: .systemFont(ofSize: 14), numberLines: 0)
         materialStackView.addArrangedSubview(descLabel)
@@ -127,6 +192,12 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                     self.list?.materialID = self.materialId
                     self.list!.reload()
                     break
+                } else if let id = l[i].id, i < l.count - 1, id == self.materialId, l[i].access == false  {
+                    SubscribeVC.open(vc: self) { (item) in
+                        if item != nil {
+                            self.view.paymentReq(item: item!)
+                        }
+                    }
                 }
             }
         }
@@ -141,12 +212,18 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                         break
                     }
                 }
-                if let passed = course.lessons?.last?.passed , passed == true {
-                    self.nextLessonButton.setTitle("КУРСТЫ АЯҚТАУ", for: .normal)
-                }
+                
                 self.setSubview()
                 self.reload()
                 self.getMaterial()
+                if let passed = course.lessons?.last?.passed , passed == true {
+                    self.nextLessonButton.setTitle("КУРСТЫ АЯҚТАУ", for: .normal)
+                    self.nextLessonButton.addTapGestureRecognizer {
+                        CongratulationVC.open(vc: self, courseId: self.courseID) {
+                            print("PDF kakoito")
+                        }
+                    }
+                }
             }
         }
     }
@@ -171,7 +248,11 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                 v.material = result
                 v.relod()
             } else {
-                self.video = VideoView(parrentVC: self, material: self.material)
+                self.video = VideoView(parrentVC: self, material: self.material, done: { (result) in
+                    if let lessons = self.forMe?.courses?.lessons, let i = lessons.firstIndex(where: {$0.id == self.materialId}) {
+                        lessons[i].passed = true
+                    }
+                })
                 self.stackView.insertArrangedSubview(self.video!, at: 0)
             }
             self.setData()

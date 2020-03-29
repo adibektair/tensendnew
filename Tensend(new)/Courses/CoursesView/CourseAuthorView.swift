@@ -36,10 +36,10 @@ class CourseAuthorView: UIView {
         let authorLabel = UILabel()
         authorLabel.setProperties(text: "Автор", font: .systemFont(ofSize: 13, weight: .medium))
         let nameLabel = UILabel()
-        nameLabel.setProperties(text: "Інжү Әнуарбекқызы", font: .systemFont(ofSize: 10, weight: .medium))
-        if let name = author?.name {
-            nameLabel.text = name
-        }
+        nameLabel.setProperties(text: "", font: .systemFont(ofSize: 10, weight: .medium))
+        let name = author?.name ?? ""
+        let surname = author?.surname ?? ""
+        nameLabel.text = name + " " + surname
         if let img = author?.imagePath {
             ava.sd_setImage(with: URL(string: imageUrl + (img.encodeUrl)))
         }
