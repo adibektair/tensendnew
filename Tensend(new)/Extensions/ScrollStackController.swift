@@ -94,6 +94,7 @@ class ScrollStackController: UIViewController {
         line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         line.easy.layout(Left(30),Right(30))
         stackView.addArrangedSubview(line)
-        
     }
+    
+
 }

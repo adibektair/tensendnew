@@ -20,6 +20,7 @@ class HomeRequests {
             (response: DataResponse<CategoriesResponse>) in
             if let statusCode = response.response?.statusCode, statusCode == 401 {
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "unauthorized"), object: nil)
+                           
                 return
             }
             if let _ = response.response{
