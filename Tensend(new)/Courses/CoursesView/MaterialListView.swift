@@ -106,6 +106,8 @@ class MaterialListView: UIView {
                 SubscribeVC.open(vc: vc) { (item) in
                     if item != nil {
                         self.paymentReq(item: item!)
+                    } else {
+                        self.paymentReq()
                     }
                 }
 //                let s = SubscribeVC()

@@ -38,7 +38,8 @@ class SubscribeVC: ScrollStackController {
         let infoLabel = UILabel()
         infoLabel.setProperties(text: "Өзіңізге қолайлы пакетті таңдаңыз", textColor: #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1), font: .systemFont(ofSize: 14), textAlignment: .center, numberLines: 2)
         stackView.addArrangedSubview(infoLabel)
-        getSubscription()
+        payButtons()
+//        getSubscription()
     }
 
     func horizontStack(text:String) -> UIStackView {
@@ -61,35 +62,36 @@ class SubscribeVC: ScrollStackController {
         return s
     }
     func payButtons(){
-        if let types = self.object?.subscriptionTypes {
-            for i in 0..<types.count {
+//        if let types = self.object?.subscriptionTypes {
+//            for i in 0..<types.count {
                 let s = UIView()
                 let v = UIStackView()
                 var borderColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
                 s.addSubview(v)
                 v.easy.layout(Edges(10))
                 s.addTapGestureRecognizer {
-                    self.pay(item: types[i])
+                    self.pay()
                 }
                 v.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
                 v.setSpacing(top: 15, left: 0, right: 0, bottom: 15)
                 let title = UILabel()
-                title.setProperties(text: types[i].name ?? "", textColor: .black, textAlignment: .center, numberLines: 2)
+//                title.setProperties(text: types[i].name ?? "", textColor: .black, textAlignment: .center, numberLines: 2)
+        title.setProperties(text: "Tensend-тің барлық курстарын ашыңыз!", textColor: .black, textAlignment: .center, numberLines: 2)
                 let price = UILabel()
-                price.setProperties(text: "\(types[i].price ?? 0)", textColor: .black, textAlignment: .center)
+//                price.setProperties(text: "\(types[i].price ?? 0)", textColor: .black, textAlignment: .center)
+        
                 v.addArrangedSubview(title)
-                v.addArrangedSubview(price)
-                if i % 2 == 0 {
+//                v.addArrangedSubview(price)
+//                if i % 2 == 0 {
                     borderColor = #colorLiteral(red: 0, green: 0.2823529412, blue: 0.8039215686, alpha: 1)
                     s.backgroundColor = borderColor
                     price.textColor = .white
                     title.textColor = .white
-                }
+//                }
                 s.cornerRadius(radius: 10, width: 1,color: borderColor)
                 self.stackView.addArrangedSubview(s)
-            }
-            
-        }
+//            }
+//        }
         let closeButton = UILabel()
         closeButton.setProperties(text: "Жабу", font: .systemFont(ofSize: 18, weight: .semibold), textAlignment: .center)
         closeButton.addTapGestureRecognizer {
@@ -102,6 +104,14 @@ class SubscribeVC: ScrollStackController {
         self.dismiss(animated: true) {
             if self.subscriptionType != nil {
                 self.subscriptionType!(item)
+            }
+        }
+    }
+    
+    func pay(){
+       self.dismiss(animated: true) {
+            if self.subscriptionType != nil {
+                self.subscriptionType!(nil)
             }
         }
     }

@@ -80,6 +80,8 @@ class HomeVC: ScrollStackController {
             SubscribeVC.open(vc: self) { (item) in
                 if item != nil {
                     self.view.paymentReq(item: item!)
+                } else {
+                    self.view.paymentReq()
                 }
             }
         }

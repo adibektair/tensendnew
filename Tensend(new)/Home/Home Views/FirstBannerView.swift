@@ -105,6 +105,8 @@ extension FirstBannerView: UICollectionViewDataSource, UICollectionViewDelegateF
                       if item != nil {
                           self.paymentReq(item: item!)
                           return
+                      } else {
+                          self.paymentReq()
                       }
                   }
             return
