@@ -13,6 +13,9 @@ class TabbarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        }
         var controllers = [UIViewController]()
         let icon1 = UITabBarItem(title: "Басты бет", image: UIImage(named: "home.png"), selectedImage: #imageLiteral(resourceName: "home"))
         
@@ -63,17 +66,19 @@ class TabbarViewController: UITabBarController {
     }
     
     @objc func unauthorized(notification: NSNotification) {
-        //TAIR SYUDA PRESENT AUTH ViewCONTROLLER
+        unauthorizedCase()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func unauthorizedCase(){
+            let navigationController = UINavigationController()
+            navigationController.navigationBar.isTranslucent = true
+            let builder = AssemblyModuleBuilder()
+            let router = Router(navController: navigationController, assemblyProtocol: builder)
+            let mainViewController = builder.createAuthModule(router: router)
+            navigationController.viewControllers = [mainViewController]
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
     }
-    */
+   
 
 }

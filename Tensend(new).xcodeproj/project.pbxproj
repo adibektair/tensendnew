@@ -96,6 +96,9 @@
 		AA9130672416A772003FD915 /* SettingsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9130652416A772003FD915 /* SettingsTVC.xib */; };
 		AA91306A2416B113003FD915 /* ProfileSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9130682416B113003FD915 /* ProfileSettingsVC.swift */; };
 		AA91306D2416B171003FD915 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA91306C2416B171003FD915 /* TextFieldView.swift */; };
+		AA9163B12434B2A200EF1E8A /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9163B02434B2A200EF1E8A /* ChangePasswordVC.swift */; };
+		AA9163B62434E85800EF1E8A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9163B52434E85700EF1E8A /* Helpers.swift */; };
+		AA9163B82434EE2400EF1E8A /* MyCertificatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9163B72434EE2300EF1E8A /* MyCertificatesVC.swift */; };
 		AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1300623EAFBE900D86BAC /* StandartResponse.swift */; };
 		AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */; };
 		AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */; };
@@ -232,6 +235,9 @@
 		AA9130652416A772003FD915 /* SettingsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTVC.xib; sourceTree = "<group>"; };
 		AA9130682416B113003FD915 /* ProfileSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsVC.swift; sourceTree = "<group>"; };
 		AA91306C2416B171003FD915 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		AA9163B02434B2A200EF1E8A /* ChangePasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		AA9163B52434E85700EF1E8A /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		AA9163B72434EE2300EF1E8A /* MyCertificatesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCertificatesVC.swift; sourceTree = "<group>"; };
 		AAB1300623EAFBE900D86BAC /* StandartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartResponse.swift; sourceTree = "<group>"; };
 		AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordView.xib; sourceTree = "<group>"; };
@@ -368,6 +374,7 @@
 		AA3B5A76240AF89D009AEEB3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				AA9163B22434E7F700EF1E8A /* Helpers */,
 				AA9130632416A758003FD915 /* Cells */,
 				AA91305E2416A66C003FD915 /* Settings */,
 				AA3B5A79240C0070009AEEB3 /* Views */,
@@ -454,6 +461,8 @@
 				AA9130682416B113003FD915 /* ProfileSettingsVC.swift */,
 				AAF597F9241929A200E4578B /* CashoutVC.swift */,
 				AAF597FB241935D500E4578B /* CashoutGoVC.swift */,
+				AA9163B02434B2A200EF1E8A /* ChangePasswordVC.swift */,
+				AA9163B72434EE2300EF1E8A /* MyCertificatesVC.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -469,6 +478,14 @@
 				AA43553B24254EAA0007C19F /* LevelTVC.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA9163B22434E7F700EF1E8A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AA9163B52434E85700EF1E8A /* Helpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		AAB1301223EB0D0E00D86BAC /* Home */ = {
@@ -946,8 +963,10 @@
 				AAD5DA8323E169ED00D9F7D0 /* SceneDelegate.swift in Sources */,
 				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
 				AA9130662416A772003FD915 /* SettingsTVC.swift in Sources */,
+				AA9163B82434EE2400EF1E8A /* MyCertificatesVC.swift in Sources */,
 				2F1BD58F2401B8CC009E11B8 /* AllCoursesListView.swift in Sources */,
 				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
+				AA9163B62434E85800EF1E8A /* Helpers.swift in Sources */,
 				2F386EF623FC6C6E0058579E /* MeditationView.swift in Sources */,
 				AA77BD6924041EE4009BFFD0 /* MeditationEachView.swift in Sources */,
 				2F60140623FED3A600D2A354 /* SearchView.swift in Sources */,
@@ -961,6 +980,7 @@
 				2F1BD58424018C97009E11B8 /* BestCourses.swift in Sources */,
 				2F386F0923FC6D8D0058579E /* MeditationCVC.swift in Sources */,
 				AA77BD6624040EDF009BFFD0 /* MeditationsView.swift in Sources */,
+				AA9163B12434B2A200EF1E8A /* ChangePasswordVC.swift in Sources */,
 				2F85E1E3240D4C1400ABAF2C /* MaterialListView.swift in Sources */,
 				2FB28E01240C1BC000D2270E /* Material.swift in Sources */,
 				2F386F1523FC6DE70058579E /* StringExtension.swift in Sources */,
@@ -1136,14 +1156,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = MLTGM7MLPY;
+				DEVELOPMENT_TEAM = GWSS3Q7L56;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab2";
+				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
 				PRODUCT_NAME = Tensend;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1159,14 +1179,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = MLTGM7MLPY;
+				DEVELOPMENT_TEAM = GWSS3Q7L56;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab2";
+				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
 				PRODUCT_NAME = Tensend;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

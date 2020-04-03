@@ -45,6 +45,7 @@ class TextFieldView: UIView {
     
     func set(text:String){
         self.label.text = text
+        self.textField.placeholder = text
     }
     
 }

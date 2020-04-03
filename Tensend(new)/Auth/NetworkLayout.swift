@@ -151,6 +151,12 @@ class NetworkLayer: NetworkLayoutProtocol {
     func getProfile(callback: @escaping (ProfileResponse?) -> ()) {
            Alamofire.request(apiUrl + "profile", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
                (response: DataResponse<ProfileResponse>) in
+            
+            if let statusCode = response.response?.statusCode{
+                if statusCode == 401{
+                    self.unauthorizedCase()
+                }
+            }
                if let _ = response.response{
                    let model = response.result
                    callback(model.value ?? nil)
@@ -198,4 +204,42 @@ class NetworkLayer: NetworkLayoutProtocol {
             }
         }
     }
+    
+    func getCash(params: [String: AnyObject], callback: @escaping (StandartResponse?) -> ()) {
+        Alamofire.request(apiUrl + "withdrawal/make", method: .post, parameters: params, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+            (response: DataResponse<StandartResponse>) in
+            if let _ = response.response{
+                let model = response.result
+                callback(model.value ?? nil)
+            }
+        }
+    }
+    
+    func resetPasswordByToken(params: [String: AnyObject], callback: @escaping (StandartResponse?) -> ()) {
+          Alamofire.request(apiUrl + "reset/password", method: .post, parameters: params, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+              (response: DataResponse<StandartResponse>) in
+              if let _ = response.response{
+                  let model = response.result
+                  callback(model.value ?? nil)
+              }
+          }
+      }
+    
+    func getCertificates(callback: @escaping (CertificatesResponse?) -> ()) {
+               Alamofire.request(apiUrl + "profile/certificates", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+                   (response: DataResponse<CertificatesResponse>) in
+                  if let _ = response.response{
+                       let model = response.result
+                       callback(model.value ?? nil)
+                   }
+               }
+        }
+    func unauthorizedCase(){
+        let navigationController = UINavigationController()
+        navigationController.navigationBar.isTranslucent = true
+        let builder = AssemblyModuleBuilder()
+        let router = Router(navController: navigationController, assemblyProtocol: builder)
+        router.initialViewController()
+    }
+    
 }

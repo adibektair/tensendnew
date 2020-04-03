@@ -13,7 +13,7 @@ class ProfileSettingsVC: ScrollStackController {
 
     let tFV = TextFieldView()
     let tFV1 = TextFieldView()
-    let tFV3 = TextFieldView()
+    
     let network = NetworkLayer()
 
     var profile : Profile?
@@ -53,13 +53,7 @@ extension ProfileSettingsVC{
         tFV1.textField.autocapitalizationType = .words
         self.stackView.addArrangedSubview(tFV1)
 
-        
-        
-        tFV3.label.text = "Электродные поштаңыз"
-        tFV3.textField.text = self.profile?.surname
-        tFV3.textField.autocapitalizationType = .words
-        tFV3.textField.keyboardType = .emailAddress
-        self.stackView.addArrangedSubview(tFV3)
+
 
         let view = UIView()
         let button = UIButton()
@@ -77,12 +71,11 @@ extension ProfileSettingsVC{
     @objc func saveData(){
         if self.tFV.textField.text != nil && self.tFV.textField.text != ""
         && self.tFV1.textField.text != nil && self.tFV1.textField.text != ""
-            && self.tFV3.textField.text != nil && self.tFV3.textField.text != ""{
+           {
            
             let params = [
                  "name" : tFV.textField.text! ,
-                 "surname" : tFV1.textField.text! ,
-                 "email" : tFV3.textField.text!
+                 "surname" : tFV1.textField.text! 
              ] as [String: AnyObject]
             
             network.setProfile(params: params) { (res) in

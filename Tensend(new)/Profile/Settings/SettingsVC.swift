@@ -11,8 +11,8 @@ import UIKit
 class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    let titles = ["Жеке ақпарат" ]
-    let images : [UIImage] = [#imageLiteral(resourceName: "Screen Shot 2020-03-11 at 9.00.28 PM")]
+    let titles = ["Жеке ақпарат", "Төлемдер мен табыс", "Құпия сөз", "Менің сертификаттарым"]
+    let images : [UIImage] = [#imageLiteral(resourceName: "Screen Shot 2020-03-11 at 9.00.28 PM"), #imageLiteral(resourceName: "paymts"), #imageLiteral(resourceName: "pw"), #imageLiteral(resourceName: "cert")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,23 +37,37 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     @IBOutlet weak var tableView: UITableView!
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return titles.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTVC", for: indexPath) as! SettingsTVC
-        cell.titleLabel.text = titles[indexPath.row]
-        cell.logoImageView.image = images[indexPath.row]
+        cell.titleLabel.text = titles[indexPath.section]
+        cell.logoImageView.image = images[indexPath.section]
         cell.selectionStyle = .none
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0{
+        if indexPath.section == 0{
             ProfileSettingsVC.open(vc: self)
-        }else if indexPath.row == 1{
+        }else if indexPath.section == 1{
             CashoutGoVC.open(vc: self)
+        }else if indexPath.section == 2{
+            ChangePasswordVC.open(vc: self)
+        }
+        else if indexPath.section == 3{
+            MyCertificatesVC.open(vc: self)
         }
         
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
     }
 
     static func open(vc: UIViewController) {

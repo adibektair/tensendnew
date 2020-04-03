@@ -42,3 +42,29 @@ class SmallView: UIView {
     
     
 }
+
+
+
+class InfoTextView: UIView {
+    
+    let titleLabel = UILabel()
+   
+    
+    init(title: String) {
+        super.init(frame: .zero)
+        self.titleLabel.text = title
+        self.titleLabel.textColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
+        self.titleLabel.textAlignment = .center
+        self.titleLabel.font = self.titleLabel.font.withSize(13)
+        self.titleLabel.numberOfLines = 0
+        self.addSubview(titleLabel)
+        titleLabel.easy.layout(Edges(20))
+       
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+}

@@ -781,3 +781,116 @@ class Level : NSObject, NSCoding, Mappable{
     }
     
 }
+
+class Certificate : NSObject, NSCoding, Mappable{
+
+    var author : Author?
+    var id : Int?
+    var imagePath : String?
+    var lessonsCount : Int?
+    var title : String?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return Certificate()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        author <- map["author"]
+        id <- map["id"]
+        imagePath <- map["image_path"]
+        lessonsCount <- map["lessons_count"]
+        title <- map["title"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         author = aDecoder.decodeObject(forKey: "author") as? Author
+         id = aDecoder.decodeObject(forKey: "id") as? Int
+         imagePath = aDecoder.decodeObject(forKey: "image_path") as? String
+         lessonsCount = aDecoder.decodeObject(forKey: "lessons_count") as? Int
+         title = aDecoder.decodeObject(forKey: "title") as? String
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if author != nil{
+            aCoder.encode(author, forKey: "author")
+        }
+        if id != nil{
+            aCoder.encode(id, forKey: "id")
+        }
+        if imagePath != nil{
+            aCoder.encode(imagePath, forKey: "image_path")
+        }
+        if lessonsCount != nil{
+            aCoder.encode(lessonsCount, forKey: "lessons_count")
+        }
+        if title != nil{
+            aCoder.encode(title, forKey: "title")
+        }
+
+    }
+
+}
+
+
+class CertificatesResponse : NSObject, NSCoding, Mappable{
+
+    var certificates : [DataObject]?
+    var success : Bool?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return CertificatesResponse()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        certificates <- map["certificates"]
+        success <- map["success"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         certificates = aDecoder.decodeObject(forKey: "certificates") as? [DataObject]
+         success = aDecoder.decodeObject(forKey: "success") as? Bool
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if certificates != nil{
+            aCoder.encode(certificates, forKey: "certificates")
+        }
+        if success != nil{
+            aCoder.encode(success, forKey: "success")
+        }
+
+    }
+
+}
