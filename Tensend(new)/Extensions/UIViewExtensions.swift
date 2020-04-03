@@ -114,4 +114,12 @@ extension UIView {
            tab.modalPresentationStyle = .fullScreen
            vc.present(tab, animated: true, completion: nil)
        }
+    func paymentReq(){
+        guard let vc = parentViewController else { return }
+        let url = "https://tensend.me"
+        let tab = PayVC()
+        tab.urlString = url
+        tab.modalPresentationStyle = .fullScreen
+        vc.present(tab, animated: true, completion: nil)
+    }
 }
