@@ -71,7 +71,14 @@ extension ForYou: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         }
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let parrentVC = self.parentViewController else { return }
+        guard let data = self.object?.courses?.data?[indexPath.row] else { return }
+        if let id = data.id {
+            let started = data.started ?? false
+            AboutCourseVC.open(vc: parrentVC,id: id,started: started)
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
     }

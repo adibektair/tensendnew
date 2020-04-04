@@ -115,11 +115,17 @@ extension UIView {
            vc.present(tab, animated: true, completion: nil)
        }
     func paymentReq(){
-        guard let vc = parentViewController else { return }
-        let url = "https://tensend.me"
-        let tab = PayVC()
-        tab.urlString = url
-        tab.modalPresentationStyle = .fullScreen
-        vc.present(tab, animated: true, completion: nil)
+//        guard let vc = parentViewController else { return }
+//        let url = "https://tensend.me"
+//        let tab = PayVC()
+//        tab.urlString = url
+//        tab.modalPresentationStyle = .fullScreen
+//        vc.present(tab, animated: true, completion: nil)
+        guard let url = URL(string: "https://tensend.me") else {
+             return
+         }
+        if UIApplication.shared.canOpenURL(url) {
+             UIApplication.shared.open(url, options: [:], completionHandler: nil)
+         }
     }
 }
