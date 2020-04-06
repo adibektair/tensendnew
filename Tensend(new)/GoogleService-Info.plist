@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>635082363018-q376pcdcgn5lnlgcftk591ofg7reajq5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.635082363018-q376pcdcgn5lnlgcftk591ofg7reajq5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDrvvdq9OTrFRuJXZhBlTMUtB8FDwPmA38</string>
+	<key>GCM_SENDER_ID</key>
+	<string>635082363018</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kz.Tensend-new-ab</string>
+	<key>PROJECT_ID</key>
+	<string>tensend-19236</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tensend-19236.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:635082363018:ios:6015220487125c84f45d73</string>
+	<key>DATABASE_URL</key>
+	<string>https://tensend-19236.firebaseio.com</string>
+</dict>
+</plist>

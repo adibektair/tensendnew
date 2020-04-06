@@ -143,7 +143,7 @@ class SingleMeditation : NSObject, NSCoding, Mappable{
     var imgPath : String?
     var scale : Float?
     var title : String?
-
+    
 
     class func newInstance(map: Map) -> Mappable?{
         return SingleMeditation()

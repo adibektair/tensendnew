@@ -8,6 +8,8 @@
 
 import UIKit
 import EasyPeasy
+import AKMaskField
+
 let statusBarHeight = UIApplication.shared.statusBarFrame.height
 
 class SignInView: ScrollStackController {
@@ -58,7 +60,8 @@ extension SignInView : SignInProtocol{
     
     @objc func singIn() {
         if let phone = self.textField.text, let password = self.passwordTextField.text{
-            self.presenter?.signIn(phone: phone, password: password)
+            
+            self.presenter?.signIn(phone: phone.filter("1234567890".contains), password: password)
         }else{
             self.showAlert(title: "Внимание", message: "Заполните все поля")
         }
@@ -129,10 +132,12 @@ extension SignInView{
         tfView.backgroundColor = .white
         tfView.cornerRadius(radius: 15, width: 0, color: .white)
         
-        let textField = UITextField()
+        let textField = AKMaskField()
         textField.borderStyle = .none
-        textField.placeholder = "E-mail немесе телефон нөміріңіз"
+        textField.keyboardType = .phonePad
+        textField.placeholder = "Телефон нөміріңіз"
         textField.textColor = .black
+        textField.maskExpression = "+d({ddd}) {ddd} {dd} {dd}"
         tfView.addSubview(textField)
         textField.easy.layout(Top(5), Left(10), Right(10))
         let borderLine = UIView()
@@ -212,7 +217,7 @@ extension SignInView{
         buttonView.addSubview(button)
         button.titleLabel?.textAlignment = .center
         button.easy.layout(Top(40), Bottom(), Left(50), Right(50), Height(25))
-        stackView.addArrangedSubview(buttonView)
+      //  stackView.addArrangedSubview(buttonView)
         
         
         let buttonView1 = UIView()

@@ -234,6 +234,17 @@ class NetworkLayer: NetworkLayoutProtocol {
                    }
                }
         }
+    
+    func getFaq(callback: @escaping (FaqResponse?) -> ()) {
+                  Alamofire.request(apiUrl + "faqs", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+                      (response: DataResponse<FaqResponse>) in
+                     if let _ = response.response{
+                          let model = response.result
+                          callback(model.value ?? nil)
+                      }
+                  }
+           }
+    
     func unauthorizedCase(){
         let navigationController = UINavigationController()
         navigationController.navigationBar.isTranslucent = true

@@ -45,7 +45,8 @@ class MyCertificatesVC: ScrollStackController {
             let a = EachCourse(data: data)
             a.cornerRadius(radius: 8, width: 0)
             a.addTapGestureRecognizer {
-                
+                let url = "https://tensend.me/api/v1/courses/certificate/\(certificates[i].id!)?token=\(UserDefault.getToken())"
+                DocReaderVC.open(vc: self, url: url)
             }
             view.addSubview(a)
             a.easy.layout(Edges(10))

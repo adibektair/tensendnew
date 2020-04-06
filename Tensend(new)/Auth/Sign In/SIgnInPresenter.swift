@@ -35,7 +35,9 @@ class SignInPresenter: SignInPresenterProtocol {
     }
     
     func signIn(phone: String, password: String) {
-        self.networkLayer?.signIn(parameters: ["phone" : phone, "password" : password,     "device_token" : "123", "platform" : "IOS"] as [String : AnyObject], callback: { (success) in
+        self.networkLayer?.signIn(parameters: ["phone" : phone, "password" : password,
+                                               "device_token" : UserDefault.getFcmToken(),
+                                               "platform" : "IOS"] as [String : AnyObject], callback: { (success) in
             if !success{
                 self.view?.error(message: "Перепроверьте валидность данных")
                 return

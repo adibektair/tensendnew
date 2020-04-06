@@ -11,8 +11,8 @@ import UIKit
 class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    let titles = ["Жеке ақпарат", "Төлемдер мен табыс", "Құпия сөз", "Менің сертификаттарым"]
-    let images : [UIImage] = [#imageLiteral(resourceName: "Screen Shot 2020-03-11 at 9.00.28 PM"), #imageLiteral(resourceName: "paymts"), #imageLiteral(resourceName: "pw"), #imageLiteral(resourceName: "cert")]
+    let titles = ["Жеке ақпарат", "Төлемдер мен табыс", "Құпия сөз", "Менің сертификаттарым", "Сұрақ/Жауап"]
+    let images : [UIImage] = [#imageLiteral(resourceName: "Screen Shot 2020-03-11 at 9.00.28 PM"), #imageLiteral(resourceName: "paymts"), #imageLiteral(resourceName: "pw"), #imageLiteral(resourceName: "cert"), #imageLiteral(resourceName: "faq")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,13 +53,18 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0{
             ProfileSettingsVC.open(vc: self)
-        }else if indexPath.section == 1{
+        }
+        else if indexPath.section == 1{
             CashoutGoVC.open(vc: self)
-        }else if indexPath.section == 2{
+        }
+        else if indexPath.section == 2{
             ChangePasswordVC.open(vc: self)
         }
         else if indexPath.section == 3{
             MyCertificatesVC.open(vc: self)
+        }
+        else if indexPath.section == 4{
+            FAQViewController.open(vc: self)
         }
         
     }

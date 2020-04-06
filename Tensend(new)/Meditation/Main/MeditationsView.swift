@@ -19,16 +19,12 @@ class MeditationsView: ScrollStackController, UICollectionViewDelegate, UICollec
     let moreButton = UIButton()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.makeNCTranslucent()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.register(UINib(nibName: "MeditationCVC", bundle: nil), forCellWithReuseIdentifier: "cell")
-        
-       
-        
     }
     
 
@@ -83,17 +79,30 @@ extension MeditationsView: UICollectionViewDelegateFlowLayout{
             eachView.tag = self.presenter?.meditations?[i].id ?? 0
             eachView.imageView.contentMode = .scaleAspectFill
             eachView.addTapGestureRecognizer {
-                self.goToSingle(eachView)
+                if self.presenter?.meditations?[i].isVisible ?? 0 == 1{
+                    self.goToSingle(eachView)
+                }else{
+                    SubscribeVC.open(vc: self) { (item) in
+                        if item != nil {
+                            self.view.paymentReq(item: item!)
+                        } else {
+                            self.view.paymentReq()
+                            }
+                        }
+                }
+                
             }
         }
 
         moreButton.addBorder(toSide: .Bottom, withColor: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), andThickness: 1)
         moreButton.setTitle("БАРЛЫҒЫ", for: .normal)
         moreButton.setTitleColor(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), for: .normal)
-        stackView.addArrangedSubview(moreButton)
+//        stackView.addArrangedSubview(moreButton)
         
         
     }
+
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

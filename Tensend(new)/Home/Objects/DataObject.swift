@@ -32,12 +32,15 @@ class DataObject : NSObject, NSCoding, Mappable{
     var scale : Int?
     var viewCount : Int?
     var started : Bool?
+
     
     class func newInstance(map: Map) -> Mappable?{
         return DataObject()
     }
     required init?(map: Map){}
     override init(){}
+   
+
     
     func mapping(map: Map)
     {

@@ -16,6 +16,7 @@ class ProfileVC: ScrollStackController, UITableViewDelegate, UITableViewDataSour
     let rightView = UIStackView()
     let centerView = UIStackView()
     var isLeft = false
+    var shownMaterials = false
     let innerView = UIView()
     let textField = UITextField()
     var link = String()
@@ -66,7 +67,7 @@ class ProfileVC: ScrollStackController, UITableViewDelegate, UITableViewDataSour
         network.getMaterials { (result) in
             if let array = result?.materials{
                 self.materials = array
-                self.fillMaterials()
+                    self.fillMaterials()
             }
         }
         
@@ -275,7 +276,25 @@ extension ProfileVC{
         imageView.addSubview(requests2)
         requests2.easy.layout(Top(50).to(requests1), CenterX())
         
+        let tazaLabel = UILabel()
+        tazaLabel.text = "ТАЗА ТАБЫС"
+        tazaLabel.font = tazaLabel.font.withSize(18)
+        tazaLabel.textColor = .black
         
+        let amountLabel = UILabel()
+        amountLabel.text = "\(self.profile!.balance!) KZT"
+        amountLabel.font = tazaLabel.font.withSize(15)
+        amountLabel.textColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
+        let c = UIView()
+        c.addSubview(tazaLabel)
+        tazaLabel.easy.layout(Edges(7), Center())
+        let s = UIView()
+        s.addSubview(amountLabel)
+        amountLabel.easy.layout(Edges(7), Center())
+        centerView.addArrangedSubview(c)
+        centerView.addArrangedSubview(UIView())
+        centerView.addArrangedSubview(s)
+
         
             innerView.addSubview(centerView)
         
@@ -338,7 +357,6 @@ extension ProfileVC{
         self.stackView.addArrangedSubview(rightView)
         
     }
-    
     func fillMaterials(){
  
         for materail in materials{
@@ -353,7 +371,8 @@ extension ProfileVC{
                 guard let url = materail.url else{
                     return
                 }
-                DocReaderVC.open(vc: self, url: url)
+                guard let urlLink = URL(string: url) else { return }
+                UIApplication.shared.open(urlLink)
             }
             self.rightView.addArrangedSubview(Iview)
         }
@@ -403,12 +422,10 @@ extension ProfileVC{
     func uploadImage(image: UIImage) {
         let url = URL(string: "https://tensend.me/api/v1/profile/avatar")
         
-        // generate boundary string using a unique per-app string
         let boundary = UUID().uuidString
         
         let session = URLSession.shared
         
-        // Set the URLRequest to POST and to the specified URL
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = "POST"
         
@@ -446,10 +463,10 @@ extension ProfileVC{
                let image = UIGraphicsGetImageFromCurrentImageContext()
                UIGraphicsEndImageContext()
 
-               let textToShare = "Check out my app"
+               let textToShare = "Білім ал, табыс тап. Tensend қосымшасын тегін жүктеп ал \(link)"
 
                if let myWebsite = URL(string: link) {
-                   let objectsToShare = [textToShare, myWebsite, image ?? #imageLiteral(resourceName: "app-logo")] as [Any]
+                   let objectsToShare = [textToShare] as [Any]
                    let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
 
                    //Excluded Activities

@@ -13,7 +13,8 @@ pod 'SDWebImage'
 pod 'AKMaskField'
 pod 'DropDown'
 pod "EasyPeasy"
-
+pod 'Firebase/Analytics'
+pod 'Firebase/Messaging'
 
   target 'Tensend(new)Tests' do
     inherit! :search_paths

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class UserDefault: UserDefaults {
+    
     static func save(forKey : String, value : String){
         super.standard.set(value, forKey: forKey)
     }
@@ -23,11 +24,29 @@ class UserDefault: UserDefaults {
     
     static func getToken() -> String{
         guard let token = self.getValue(byKey: "token") else {
-            let builder = AssemblyModuleBuilder()
-            Router(navController: UINavigationController(), assemblyProtocol: builder).initialViewController()
             return ""
         }
+        
         return token
+    }
+    
+    static func setFcmToken(fcmToken: String?){
+        guard let token = fcmToken else{
+            return
+        }
+        self.save(forKey: "fcmToken", value: token)
+        self.sendFcmTokenToServer(token: token)
+    }
+    static func getFcmToken() -> String{
+        return self.getValue(byKey: "fcmToken") ?? ""
+    }
+    static func sendFcmTokenToServer(token: String){
+        let appToken = self.getToken()
+        if appToken == ""{
+            return
+        }
+        
+        
     }
     
 }

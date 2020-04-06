@@ -894,3 +894,128 @@ class CertificatesResponse : NSObject, NSCoding, Mappable{
     }
 
 }
+
+
+class FaqResponse : NSObject, NSCoding, Mappable{
+
+    var faqs : [Faq]?
+    var success : Bool?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return FaqResponse()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        faqs <- map["faqs"]
+        success <- map["success"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         faqs = aDecoder.decodeObject(forKey: "faqs") as? [Faq]
+         success = aDecoder.decodeObject(forKey: "success") as? Bool
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if faqs != nil{
+            aCoder.encode(faqs, forKey: "faqs")
+        }
+        if success != nil{
+            aCoder.encode(success, forKey: "success")
+        }
+
+    }
+
+}
+
+class Faq : NSObject, NSCoding, Mappable{
+
+    var answer : String?
+    var createdAt : String?
+    var deletedAt : AnyObject?
+    var id : Int?
+    var imagePath : String?
+    var question : String?
+    var updatedAt : String?
+
+
+    class func newInstance(map: Map) -> Mappable?{
+        return Faq()
+    }
+    required init?(map: Map){}
+    private override init(){}
+
+    func mapping(map: Map)
+    {
+        answer <- map["answer"]
+        createdAt <- map["created_at"]
+        deletedAt <- map["deleted_at"]
+        id <- map["id"]
+        imagePath <- map["image_path"]
+        question <- map["question"]
+        updatedAt <- map["updated_at"]
+        
+    }
+
+    /**
+    * NSCoding required initializer.
+    * Fills the data from the passed decoder
+    */
+    @objc required init(coder aDecoder: NSCoder)
+    {
+         answer = aDecoder.decodeObject(forKey: "answer") as? String
+         createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
+         deletedAt = aDecoder.decodeObject(forKey: "deleted_at") as? AnyObject
+         id = aDecoder.decodeObject(forKey: "id") as? Int
+         imagePath = aDecoder.decodeObject(forKey: "image_path") as? String
+         question = aDecoder.decodeObject(forKey: "question") as? String
+         updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String
+
+    }
+
+    /**
+    * NSCoding required method.
+    * Encodes mode properties into the decoder
+    */
+    @objc func encode(with aCoder: NSCoder)
+    {
+        if answer != nil{
+            aCoder.encode(answer, forKey: "answer")
+        }
+        if createdAt != nil{
+            aCoder.encode(createdAt, forKey: "created_at")
+        }
+        if deletedAt != nil{
+            aCoder.encode(deletedAt, forKey: "deleted_at")
+        }
+        if id != nil{
+            aCoder.encode(id, forKey: "id")
+        }
+        if imagePath != nil{
+            aCoder.encode(imagePath, forKey: "image_path")
+        }
+        if question != nil{
+            aCoder.encode(question, forKey: "question")
+        }
+        if updatedAt != nil{
+            aCoder.encode(updatedAt, forKey: "updated_at")
+        }
+
+    }
+
+}

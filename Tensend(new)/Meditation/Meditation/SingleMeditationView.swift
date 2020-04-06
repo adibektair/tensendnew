@@ -24,6 +24,7 @@ class SingleMeditationView: UIViewController, UICollectionViewDataSource, UIColl
     let button = UIButton()
     var rated = false
     var shown = false
+    var link = String()
     
     @IBOutlet weak var sliderView: UISlider!
     @IBOutlet weak var timerLabel: UILabel!
@@ -54,6 +55,13 @@ class SingleMeditationView: UIViewController, UICollectionViewDataSource, UIColl
         self.tabBarController?.tabBar.isHidden = true
         let btnShare = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(btnShare_clicked))
         self.navigationItem.rightBarButtonItem = btnShare
+        let network = NetworkLayer()
+        network.getLink { (link) in
+            guard let link = link?.link else{
+                return
+            }
+            self.link = link
+        }
     }
 
 
@@ -92,7 +100,27 @@ class SingleMeditationView: UIViewController, UICollectionViewDataSource, UIColl
         return CGSize(width: 100, height: 40)
     }
     @objc func btnShare_clicked() {
-        print("Share button clicked")
+        
+    UIGraphicsBeginImageContext(view.frame.size)
+            view.layer.render(in: UIGraphicsGetCurrentContext()!)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+
+            let textToShare = "Сәлем. Білім ал, табыс тап. 400ден астам қазақ тіліндегі курстар. Tensend-ті тегін жүкте! \(link)"
+
+                   if let myWebsite = URL(string: link) {
+                       let objectsToShare = [textToShare] as [Any]
+                       let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+
+                       //Excluded Activities
+                       activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+                       
+
+                    activityVC.popoverPresentationController?.sourceView = self.view
+                       self.present(activityVC, animated: true, completion: nil)
+                   }
+        
+
     }
     
     func setProgressBar(){

@@ -28,7 +28,6 @@ class AllCoursesListView: UIView {
         stackView.easy.layout(Edges())
         stackView.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
         
-        
     }
     func tableViewDelegate(){
         self.tableView.delegate = self
