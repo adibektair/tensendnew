@@ -43,7 +43,6 @@ class FAQViewController: ScrollStackController {
                 view.showAnswer(text: faq.answer!)
             }
             self.stackView.addArrangedSubview(view)
-            view.easy.layout(Edges(10))
         }
     }
      
@@ -53,7 +52,7 @@ class FAQViewController: ScrollStackController {
              nav.pushViewController(viewController, animated: true)
          }
      }
-    
+     
 }
 
 
@@ -63,30 +62,42 @@ class FAQView : UIView{
     var questionLabel = UILabel()
     var separatorView = UIView()
     var answerLabel = UILabel()
-    
+    var shown = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.stackView.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
         self.addSubview(stackView)
+        stackView.easy.layout(Edges())
         questionLabel.numberOfLines = 0
+        questionLabel.font =  questionLabel.font.withSize(15)
         let v = UIView()
         v.addSubview(questionLabel)
         self.stackView.addArrangedSubview(v)
         questionLabel.easy.layout(Edges(10))
-
+        self.backgroundColor = .white
+        self.cornerRadius(radius: 10, width: 0)
+        
     }
+    
     func showAnswer(text : String){
-        separatorView.backgroundColor = .gray
-        self.stackView.addArrangedSubview(separatorView)
-        separatorView.easy.layout(Height(1))
-        answerLabel.numberOfLines = 0
-        answerLabel.text = text
-        let v = UIView()
-        v.addSubview(answerLabel)
-        self.stackView.addArrangedSubview(v)
-        answerLabel.easy.layout(Edges(10))
+        if !shown{
+            separatorView.backgroundColor = .gray
+            self.stackView.addArrangedSubview(separatorView)
+            separatorView.easy.layout(Height(1))
+            answerLabel.numberOfLines = 0
+            answerLabel.text = text
+            answerLabel.font =  questionLabel.font.withSize(15)
 
+            let v = UIView()
+            v.addSubview(answerLabel)
+            self.stackView.addArrangedSubview(v)
+            answerLabel.easy.layout(Edges(10))
+        }else{
+            self.separatorView.removeFromSuperview()
+            self.answerLabel.removeFromSuperview()
+        }
+        shown = !shown
     }
     
     required init?(coder: NSCoder) {

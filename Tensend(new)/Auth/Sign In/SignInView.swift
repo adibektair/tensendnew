@@ -9,6 +9,9 @@
 import UIKit
 import EasyPeasy
 import AKMaskField
+import SDWebImage
+import DropDown
+
 
 let statusBarHeight = UIApplication.shared.statusBarFrame.height
 
@@ -16,7 +19,8 @@ class SignInView: ScrollStackController {
     
     let passwordTextField = UITextField()
     let textField = AKMaskField()
-
+    var flagImageVew = UIImageView()
+    var prefixLabel = UILabel()
     var presenter : SignInPresenterProtocol? = nil
     
     
@@ -29,6 +33,8 @@ class SignInView: ScrollStackController {
         self.createTopView()
         self.createMiddleView()
         self.createButtonsView()
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
+
     }
     
    
@@ -37,6 +43,13 @@ class SignInView: ScrollStackController {
 
 
 extension SignInView : SignInProtocol{
+    func gotCountries() {
+        if self.presenter?.countries!.count ?? 0 > 0 {
+            self.flagImageVew.sd_setImage(with: URL(string: imageUrl + (self.presenter?.countries![0].imagePath!)!), completed: nil)
+            self.prefixLabel.text = self.presenter?.countries![0].phonePrefix
+        }
+    }
+    
     func error(message: String) {
         self.showAlert(title: "Внимание", message: message)
     }
@@ -126,52 +139,53 @@ extension SignInView{
         self.textFieldViewBySultan()
     }
     
-    func createTextFieldsView(){
-        
-        let tfView = UIView()
-        tfView.backgroundColor = .white
-        tfView.cornerRadius(radius: 15, width: 0, color: .white)
-        
-        let textField = AKMaskField()
-        textField.borderStyle = .none
-        textField.keyboardType = .phonePad
-        textField.placeholder = "Телефон нөміріңіз"
-        textField.textColor = .black
-        textField.maskExpression = "+d({ddd}) {ddd} {dd} {dd}"
-        tfView.addSubview(textField)
-        textField.easy.layout(Top(5), Left(10), Right(10))
-        let borderLine = UIView()
-        borderLine.backgroundColor = .gray
-        tfView.addSubview(borderLine)
-        borderLine.easy.layout(CenterY().to(tfView), Left(), Right(), Height(1))
-        
-        let textField1 = UITextField()
-        textField1.borderStyle = .none
-        textField1.placeholder = "Құпия сөз"
-        textField1.textColor = .black
-        tfView.addSubview(textField1)
-        textField1.easy.layout(Top(5).to(borderLine), Left(10), Width(100))
-        
-        let button = UIButton()
-        button.setTitle("ЕСКЕ ТҮСІРУ", for: .normal)
-        button.setTitleColor(.darkGray, for: .normal)
-        tfView.addSubview(button)
-        button.easy.layout(Left(10), CenterX().to(textField1), Width(100))
-        tfView.easy.layout( Left(20), Right(20), Height(50))
-        
-        stackView.addArrangedSubview(tfView)
-    }
+   
     func textFieldViewBySultan(){
             let textStackView = UIStackView()
-            textStackView.setProperties(axis: .vertical, alignment: .fill, spacing: 0, distribution: .fill)
-            
+            textStackView.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
+
+            let horizontStackView1 = UIStackView()
+            horizontStackView1.setProperties(axis: .horizontal, alignment: .fill, spacing: 10, distribution: .fill)
+        horizontStackView1.addArrangedSubview(flagImageVew)
+        flagImageVew.easy.layout(Width(45))
+        flagImageVew.contentMode = .scaleAspectFit
+        flagImageVew.addTapGestureRecognizer {
+            var arr = [String]()
+            for country in self.presenter?.countries ?? []{
+                arr.append(country.phonePrefix!)
+            }
+            let dropDown = DropDown()
+
+            // The view to which the drop down will appear on
+            dropDown.anchorView = self.flagImageVew  // UIView or UIBarButtonItem
+
+            // The list of items to display. Can be changed dynamically
+            dropDown.dataSource = arr
+
+            dropDown.show()
+            dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                self.flagImageVew.sd_setImage(with: URL(string: imageUrl + (self.presenter?.countries![index].imagePath!)!), completed: nil)
+                self.prefixLabel.text = item
+            }
+        }
+        
+        
+        horizontStackView1.addArrangedSubview(prefixLabel)
+            let sepView = UIView()
+        sepView.backgroundColor = .lightGray
+        horizontStackView1.addArrangedSubview(sepView)
+        sepView.easy.layout(Width(1))
+        prefixLabel.easy.layout(Width(40))
+        prefixLabel.font = prefixLabel.font.withSize(15)
             textField.borderStyle = .none
             textField.keyboardType = .phonePad
-                textField.placeholder = "Телефон нөміріңіз"
-                textField.textColor = .black
-                textField.maskExpression = "+7({ddd}) {ddd} {dd} {dd}"
-            textStackView.addArrangedSubview(textField)
-            
+            textField.placeholder = "Телефон нөміріңіз"
+            textField.textColor = .black
+            textField.maskExpression = "({ddd}) {ddd} {dd} {dd}"
+            horizontStackView1.addArrangedSubview(textField)
+        textStackView.addArrangedSubview(horizontStackView1)
+
+        
             let borderLine = UIView()
             borderLine.backgroundColor = .gray
             borderLine.easy.layout(Height(1))

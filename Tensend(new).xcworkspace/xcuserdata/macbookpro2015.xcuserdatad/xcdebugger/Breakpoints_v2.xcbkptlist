@@ -87,6 +87,38 @@
             endingLineNumber = "445"
             landmarkName = "uploadImage(image:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F7D200EF-F0B5-41E5-A401-ED79EE9DB2C1 - c83504de6113ce2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tensend.ProfileVC.uploadImage(image: __C.UIImage) -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Profile/ProfileVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "446"
+                  endingLineNumber = "446"
+                  offsetFromSymbolStart = "3840">
+               </Location>
+               <Location
+                  uuid = "F7D200EF-F0B5-41E5-A401-ED79EE9DB2C1 - ac88069ffc7ab838"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tensend.ProfileVC.uploadImage(image: __C.UIImage) -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Profile/ProfileVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "447"
+                  endingLineNumber = "447"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -279,6 +311,22 @@
             startingLineNumber = "69"
             endingLineNumber = "69"
             landmarkName = "application(_:didReceiveRemoteNotification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "33208DBD-25B9-4403-BC02-DA74D415F7EE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tensend(new)/Profile/Settings/FAQViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "setView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

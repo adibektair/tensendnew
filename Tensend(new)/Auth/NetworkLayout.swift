@@ -244,6 +244,15 @@ class NetworkLayer: NetworkLayoutProtocol {
                       }
                   }
            }
+    func getAboutTensend(callback: @escaping (AboutTensend?) -> ()) {
+                    Alamofire.request(apiUrl + "about/app", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: TokenHeaders.shared().getHeaders()).responseObject{
+                        (response: DataResponse<AboutTensend>) in
+                       if let _ = response.response{
+                            let model = response.result
+                            callback(model.value ?? nil)
+                        }
+                    }
+             }
     
     func unauthorizedCase(){
         let navigationController = UINavigationController()
