@@ -20,7 +20,10 @@ class ScrollStackController: UIViewController {
         self.view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9764705882, alpha: 1)
         setBackButton()
         self.view.addSubview(scrollView)
-        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
+        if #available(iOS 13.0, *) {
+             overrideUserInterfaceStyle = .light
+         }
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         let bottomAnchorCalc = self.tabBarController?.tabBar.frame.size.height ?? 0
         bottomAnchor = scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -bottomAnchorCalc)

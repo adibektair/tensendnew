@@ -48,7 +48,9 @@ class MainVC: UIViewController {
         // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if #available(iOS 13.0, *) {
+             overrideUserInterfaceStyle = .light
+         }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         self.continueButton.isHidden = true
@@ -122,7 +124,10 @@ class MainVC: UIViewController {
 }
 extension MainVC : MainViewProtocol{
     func success() {
-        print("got countries")
+        if self.presenter.countries!.count > 0 {
+            self.flagImageView.sd_setImage(with: URL(string: imageUrl + self.presenter.countries![0].imagePath!), completed: nil)
+                self.prefixLabel.text = self.presenter.countries![0].phonePrefix
+        }
     }
 
     

@@ -15,7 +15,7 @@ let statusBarHeight = UIApplication.shared.statusBarFrame.height
 class SignInView: ScrollStackController {
     
     let passwordTextField = UITextField()
-    let textField = UITextField()
+    let textField = AKMaskField()
 
     var presenter : SignInPresenterProtocol? = nil
     
@@ -166,8 +166,10 @@ extension SignInView{
             textStackView.setProperties(axis: .vertical, alignment: .fill, spacing: 0, distribution: .fill)
             
             textField.borderStyle = .none
-            textField.placeholder = "E-mail немесе телефон нөміріңіз"
-            textField.textColor = .black
+            textField.keyboardType = .phonePad
+                textField.placeholder = "Телефон нөміріңіз"
+                textField.textColor = .black
+                textField.maskExpression = "+d ({ddd}) {ddd} {dd} {dd}"
             textStackView.addArrangedSubview(textField)
             
             let borderLine = UIView()

@@ -91,34 +91,34 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNe-P9-rFB">
                     <rect key="frame" x="30" y="524.5" width="354" height="70"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="asset-2" translatesAutoresizingMaskIntoConstraints="NO" id="ppF-MJ-mpt">
-                            <rect key="frame" x="14" y="20" width="30" height="30"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ppF-MJ-mpt">
+                            <rect key="frame" x="14" y="20" width="50" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="vjd-pw-Krx"/>
-                                <constraint firstAttribute="width" constant="30" id="xbj-ee-HOm"/>
+                                <constraint firstAttribute="width" constant="50" id="xbj-ee-HOm"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtI-SE-wsO">
-                            <rect key="frame" x="50" y="25.5" width="19" height="19"/>
+                            <rect key="frame" x="70" y="25.5" width="19" height="19"/>
                             <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
                             <color key="textColor" red="0.2097616196" green="0.26554808019999998" blue="0.33209526540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOM-v5-hNe">
-                            <rect key="frame" x="100" y="20" width="1" height="30"/>
+                            <rect key="frame" x="104" y="20" width="1" height="30"/>
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="Jeo-5v-jFa"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUF-Bj-YBf">
-                            <rect key="frame" x="0.0" y="0.0" width="95" height="70"/>
+                            <rect key="frame" x="0.0" y="0.0" width="99" height="70"/>
                             <connections>
                                 <action selector="changeCountryPressed:" destination="-1" eventType="touchUpInside" id="eVT-gS-tIf"/>
                             </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Телефон нөміріңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RtB-LC-p6e" customClass="AKMaskField" customModule="AKMaskField">
-                            <rect key="frame" x="111" y="15" width="233" height="40"/>
+                            <rect key="frame" x="115" y="15" width="229" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="e0Y-cu-GCJ"/>
                             </constraints>
@@ -132,7 +132,7 @@
                         <constraint firstItem="DtI-SE-wsO" firstAttribute="centerY" secondItem="tNe-P9-rFB" secondAttribute="centerY" id="39n-P0-hU4"/>
                         <constraint firstItem="xUF-Bj-YBf" firstAttribute="top" secondItem="tNe-P9-rFB" secondAttribute="top" id="8u4-ND-z0f"/>
                         <constraint firstItem="ppF-MJ-mpt" firstAttribute="top" secondItem="tNe-P9-rFB" secondAttribute="top" constant="20" id="9sn-W8-341"/>
-                        <constraint firstItem="oOM-v5-hNe" firstAttribute="leading" secondItem="DtI-SE-wsO" secondAttribute="trailing" constant="31" id="AA0-Go-aTm"/>
+                        <constraint firstItem="oOM-v5-hNe" firstAttribute="leading" secondItem="DtI-SE-wsO" secondAttribute="trailing" constant="15" id="AA0-Go-aTm"/>
                         <constraint firstItem="RtB-LC-p6e" firstAttribute="leading" secondItem="oOM-v5-hNe" secondAttribute="trailing" constant="10" id="BYF-SJ-le7"/>
                         <constraint firstAttribute="trailing" secondItem="RtB-LC-p6e" secondAttribute="trailing" constant="10" id="Cjq-yq-29y"/>
                         <constraint firstAttribute="bottom" secondItem="ppF-MJ-mpt" secondAttribute="bottom" constant="20" id="MtN-WZ-luX"/>
@@ -246,7 +246,6 @@
     </objects>
     <resources>
         <image name="Path 10" width="52.666667938232422" height="40.666667938232422"/>
-        <image name="asset-2" width="15" height="15"/>
         <image name="Монтажная область -3" width="187.5" height="163"/>
     </resources>
 </document>
