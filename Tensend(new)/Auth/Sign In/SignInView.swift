@@ -169,7 +169,7 @@ extension SignInView{
             textField.keyboardType = .phonePad
                 textField.placeholder = "Телефон нөміріңіз"
                 textField.textColor = .black
-                textField.maskExpression = "+d ({ddd}) {ddd} {dd} {dd}"
+                textField.maskExpression = "+7({ddd}) {ddd} {dd} {dd}"
             textStackView.addArrangedSubview(textField)
             
             let borderLine = UIView()
