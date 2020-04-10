@@ -49,6 +49,7 @@
 		2F3BD0EB241D5DDB00CB4918 /* SuccessMessageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3BD0EA241D5DDB00CB4918 /* SuccessMessageObject.swift */; };
 		2F3BD0ED241D637E00CB4918 /* PayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3BD0EC241D637E00CB4918 /* PayVC.swift */; };
 		2F412E9824115FC9002B8B59 /* DocReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F412E9724115FC9002B8B59 /* DocReaderVC.swift */; };
+		2F5CDD8D2439C654009176D9 /* AllMycoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5CDD8C2439C654009176D9 /* AllMycoursesVC.swift */; };
 		2F60140323FED38200D2A354 /* CoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60140223FED38200D2A354 /* CoursesVC.swift */; };
 		2F60140623FED3A600D2A354 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60140523FED3A600D2A354 /* SearchView.swift */; };
 		2F85E1E3240D4C1400ABAF2C /* MaterialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85E1E2240D4C1400ABAF2C /* MaterialListView.swift */; };
@@ -190,6 +191,7 @@
 		2F3BD0EA241D5DDB00CB4918 /* SuccessMessageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessMessageObject.swift; sourceTree = "<group>"; };
 		2F3BD0EC241D637E00CB4918 /* PayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayVC.swift; sourceTree = "<group>"; };
 		2F412E9724115FC9002B8B59 /* DocReaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocReaderVC.swift; sourceTree = "<group>"; };
+		2F5CDD8C2439C654009176D9 /* AllMycoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMycoursesVC.swift; sourceTree = "<group>"; };
 		2F60140223FED38200D2A354 /* CoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesVC.swift; sourceTree = "<group>"; };
 		2F60140523FED3A600D2A354 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2F85E1E2240D4C1400ABAF2C /* MaterialListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialListView.swift; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 			children = (
 				2F386EDE23FC6B6F0058579E /* HomeRequests.swift */,
 				2F386EFC23FC6CD40058579E /* HomeVC.swift */,
+				2F5CDD8C2439C654009176D9 /* AllMycoursesVC.swift */,
 				2F386EE123FC6BD70058579E /* Objects */,
 				AAB1301423EB0D0E00D86BAC /* Home Views */,
 			);
@@ -980,6 +983,7 @@
 				AAE71B7C23E405DB00CAFA47 /* MainVC.swift in Sources */,
 				AA9130662416A772003FD915 /* SettingsTVC.swift in Sources */,
 				AA9163B82434EE2400EF1E8A /* MyCertificatesVC.swift in Sources */,
+				2F5CDD8D2439C654009176D9 /* AllMycoursesVC.swift in Sources */,
 				2F1BD58F2401B8CC009E11B8 /* AllCoursesListView.swift in Sources */,
 				AAD5DAB423E1784F00D9F7D0 /* MainPresenter.swift in Sources */,
 				AA9163B62434E85800EF1E8A /* Helpers.swift in Sources */,
@@ -1174,8 +1178,8 @@
 				CODE_SIGN_ENTITLEMENTS = "Tensend(new)/Tensend.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
-				DEVELOPMENT_TEAM = GWSS3Q7L56;
+				CURRENT_PROJECT_VERSION = 1.1;
+				DEVELOPMENT_TEAM = R5W6A2A7L3;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1198,8 +1202,8 @@
 				CODE_SIGN_ENTITLEMENTS = "Tensend(new)/Tensend.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
-				DEVELOPMENT_TEAM = GWSS3Q7L56;
+				CURRENT_PROJECT_VERSION = 1.1;
+				DEVELOPMENT_TEAM = R5W6A2A7L3;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

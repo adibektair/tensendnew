@@ -9,9 +9,10 @@
 import UIKit
 import WebKit
 import EasyPeasy
+import Alamofire
 
 class DocReaderVC: UIViewController, UIWebViewDelegate {
-
+    
     var webView = UIWebView()
     var urlString = ""
     override func viewDidLoad() {
@@ -20,6 +21,7 @@ class DocReaderVC: UIViewController, UIWebViewDelegate {
         webView.easy.layout(Edges())
         self.additionalSafeAreaInsets.top = -145
         docOpen()
+        
     }
     func docOpen(){
         if let docUrl = URL(string: self.urlString.encodeUrl) {
@@ -31,59 +33,35 @@ class DocReaderVC: UIViewController, UIWebViewDelegate {
         }
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
-          if webView.isLoading {
-                     // still loading
-                     return
-                 }
-
-                 //Save the pdf document to file system
-                 savePdf()
+        if webView.isLoading {
+            // still loading
+            return
+        }
+        shareButton()
     }
-    func savePdf(){
-        let fileManager = FileManager.default
-        let p = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let paths = (p[0] as NSString).appendingPathComponent("documento.pdf")
-
-           
-        let pdfDoc = NSData(contentsOf:URL(string: urlString)!)
-           fileManager.createFile(atPath: paths as String, contents: pdfDoc as Data?, attributes: nil)
-       }
+    
     func shareButton(){
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(share(_:)))
-     
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Браузерде ашу", style: .plain, target: self, action: #selector(share(_:)))
     }
+    
     @objc func share(_ sender:UIButton) {
-        let fileManager = FileManager.default
-        let documentoPath = (self.getDirectoryPath() as NSString).appendingPathComponent("documento.pdf")
-        let url = URL(fileURLWithPath: documentoPath)
-        self.sharePdf(path: url)
-      
-//           loadPDFAndShare()
-    }
-    func loadPDFAndShare(){
-
-       let fileManager = FileManager.default
-       let documentoPath = (self.getDirectoryPath() as NSString).appendingPathComponent("documento.pdf")
-
-       if fileManager.fileExists(atPath: documentoPath){
-            let documento = NSData(contentsOfFile: documentoPath)
-            let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [documento!], applicationActivities: nil)
-            activityViewController.popoverPresentationController?.sourceView=self.view
-            present(activityViewController, animated: true, completion: nil)
+        guard let url = URL(string: urlString) else {
+            return
         }
-        else {
-            print("document was not found")
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
+
     func getDirectoryPath() ->String {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
         return documentsDirectory
     }
     func sharePdf(path:URL) {
-
+        
         let fileManager = FileManager.default
-
+        
         if fileManager.fileExists(atPath: path.path) {
             let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [path], applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
@@ -104,16 +82,48 @@ class DocReaderVC: UIViewController, UIWebViewDelegate {
             nav.pushViewController(viewController, animated: true)
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func saveTarget() {
+        guard let actionUrl = URL(string: self.urlString) else { return}
+        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+            var documentsURL = FileManager.default.urls(
+                for: .documentDirectory,
+                in: .userDomainMask
+                )[0]
+            documentsURL.appendPathComponent("pdfreport")
+            return (documentsURL, [.removePreviousFile])
+        }
+        
+        Alamofire.download(
+            actionUrl,
+            method: .get,
+            encoding: JSONEncoding.default,
+            headers: nil,
+            to: destination
+        )
+            .responseData(completionHandler: { (response) in
+                if let data = response.result.value {
+                    let activityViewController = UIActivityViewController(
+                        activityItems: [data],
+                        applicationActivities: nil
+                    )
+                    self.present(
+                        activityViewController,
+                        animated: true,
+                        completion: {}
+                    )
+                }
+            })
     }
-    */
-
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

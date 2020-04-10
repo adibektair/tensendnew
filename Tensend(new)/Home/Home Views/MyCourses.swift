@@ -15,6 +15,8 @@ class MyCourses: UIView {
     var parrentVC = UIViewController()
     let stackview = UIStackView()
     let allButton = UIButton()
+    
+    var listAll = false
     var count = 0
     var id = 1
     var isMyCourses = false
@@ -23,10 +25,12 @@ class MyCourses: UIView {
     init(parrentVC: UIViewController,
          id:Int,
          isMyCourses: Bool = false,
+         listAll: Bool = false,
          empty: ((Bool) -> Void)? = nil)  {
         super.init(frame: .zero)
         self.id = id
         self.empty = empty
+        self.listAll = listAll
         self.isMyCourses = isMyCourses
         self.parrentVC = parrentVC
         size()
@@ -38,7 +42,10 @@ class MyCourses: UIView {
         self.addSubview(stackview)
         allButton.setTitle("Барлығы", for: .normal)
         allButton.setTitleColor(#colorLiteral(red: 0.2039215686, green: 0.6509803922, blue: 0.337254902, alpha: 1), for: .normal)
-        
+        allButton.addTapGestureRecognizer {
+            AllMycoursesVC.open(vc: self.parrentVC)
+        }
+        allButton.isHidden = listAll
         addSubview(stackview)
         if isMyCourses {
             getMyCourses()
@@ -73,7 +80,7 @@ class MyCourses: UIView {
     func subViews(){
         if let counter = coursesList?.courses?.data?.count, counter > 0 {
             self.count = counter
-            if isMyCourses , counter > 0, counter >= 3 {
+            if isMyCourses, !listAll, counter > 0, counter >= 3 {
                 self.count = 3
             }
         }
