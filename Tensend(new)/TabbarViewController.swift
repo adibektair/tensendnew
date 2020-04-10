@@ -37,7 +37,7 @@ class TabbarViewController: UITabBarController {
         router.navigationController = meditationNavigationController
         router.builder = builder
         router.initialController()
-        let icon3 = UITabBarItem(title: "Медитация", image: #imageLiteral(resourceName: "coursesTab"), selectedImage: #imageLiteral(resourceName: "coursesTab"))
+        let icon3 = UITabBarItem(title: "Медитация", image: #imageLiteral(resourceName: "meditationTab"), selectedImage: #imageLiteral(resourceName: "meditationTab"))
         meditationNavigationController.tabBarItem = icon3
         controllers.append(meditationNavigationController)
      

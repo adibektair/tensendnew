@@ -10,7 +10,7 @@ import UIKit
 import EasyPeasy
 
 class CoursesVC: ScrollStackController {
-
+    
     let container = UIView()
     var cours : AllCoursesListView?
     let stackV = UIStackView()
@@ -28,31 +28,31 @@ class CoursesVC: ScrollStackController {
         
     }
     func setSubViews(){
-          let search = SearchView(parrnetVC: self)
-                search.dropShadowBlue()
-                stackView.addArrangedSubview(search)
-                
-                let section = SectionsName()
-                section.setData(title: "ҮЗДІК КУРСТАР", desc: "Сізге ұнауы мүмкін сабақтар тізімі")
-                stackView.addArrangedSubview(section)
-                
-                let bestCourses = BestCourses.init(parrentVC: self)
-                bestCourses.dropShadowBlue()
-//                stackView.addArrangedSubview(bestCourses)
-                
+        let search = SearchView(parrnetVC: self)
+        search.dropShadowBlue()
+        //                stackView.addArrangedSubview(search)
+        
+        let section = SectionsName()
+        section.setData(title: "ҮЗДІК КУРСТАР", desc: "Сізге ұнауы мүмкін сабақтар тізімі")
+        stackView.addArrangedSubview(section)
+        
+        let bestCourses = BestCourses.init(parrentVC: self)
+        bestCourses.dropShadowBlue()
+        //                stackView.addArrangedSubview(bestCourses)
+        
         let forYou = ForYou()
         stackView.addArrangedSubview(forYou)
-                let twoButtons = TwoButtons(parrentVC: self, leftPressed: {
-                    print("LEFT")
-                    self.coursesList()
-                }) {
-                    print("RIGHT")
-                    self.inProccess()
-                }
+        let twoButtons = TwoButtons(parrentVC: self, leftPressed: {
+            print("LEFT")
+            self.coursesList()
+        }) {
+            print("RIGHT")
+            self.inProccess()
+        }
         //        twoButtons.dropShadowBlue()
-            
-                stackView.addArrangedSubview(twoButtons)
-                coursesList()
+        
+        stackView.addArrangedSubview(twoButtons)
+        coursesList()
     }
     
     func coursesList(){
@@ -91,13 +91,13 @@ class CoursesVC: ScrollStackController {
         
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
