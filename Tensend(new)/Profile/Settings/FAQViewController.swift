@@ -22,18 +22,16 @@ class FAQViewController: ScrollStackController {
         self.networkLayer.getFaq { (response) in
             if let faqs = response?.faqs{
                 self.faqs = faqs
-                self.setViews()
+                self.setView()
             }else{
                 Helper.shared().makeUserResponse(response: response!) { (title, text) in
                     self.showAlert(title: title, message: text)
                 }
             }
         }
-        
-        
     }
     
-    func setViews(){
+    func setView(){
         self.stackView.setProperties(axis: .vertical, alignment: .fill, spacing: 10, distribution: .fill)
         let infoView = InfoTextView(title: "Tensend жайлы, немеcе оны қалай қолдану\nжайлы негізгі сұрақтар мен оларға берілген\nжауаптар осы бөлімде жиналған.")
         self.stackView.addArrangedSubview(infoView)

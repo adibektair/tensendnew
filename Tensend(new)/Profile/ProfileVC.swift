@@ -64,12 +64,7 @@ class ProfileVC: ScrollStackController, UITableViewDelegate, UITableViewDataSour
             self.profile = prof?.profile
             self.setUpView()
         }
-        network.getMaterials { (result) in
-            if let array = result?.materials{
-                self.materials = array
-                    self.fillMaterials()
-            }
-        }
+  
         
     }
     
@@ -278,12 +273,12 @@ extension ProfileVC{
         
         let tazaLabel = UILabel()
         tazaLabel.text = "ТАЗА ТАБЫС"
-        tazaLabel.font = tazaLabel.font.withSize(18)
+        tazaLabel.font = tazaLabel.font.withSize(22)
         tazaLabel.textColor = .black
         
         let amountLabel = UILabel()
         amountLabel.text = "\(self.profile!.balance!) KZT"
-        amountLabel.font = tazaLabel.font.withSize(15)
+        amountLabel.font = tazaLabel.font.withSize(20)
         amountLabel.textColor = #colorLiteral(red: 0.2039215686, green: 0.262745098, blue: 0.337254902, alpha: 1)
         let c = UIView()
         c.addSubview(tazaLabel)
@@ -352,9 +347,13 @@ extension ProfileVC{
         self.rightView.addArrangedSubview(view2)
         self.rightView.addArrangedSubview(view3)
         
-        
-        
         self.stackView.addArrangedSubview(rightView)
+        network.getMaterials { (result) in
+              if let array = result?.materials{
+                  self.materials = array
+                      self.fillMaterials()
+              }
+          }
         
     }
     func fillMaterials(){
