@@ -41,7 +41,7 @@ class DocReaderVC: UIViewController, UIWebViewDelegate {
     }
     
     func shareButton(){
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(share(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Браузерде ашу", style: .plain, target: self, action: #selector(share(_:)))
     }
     
     @objc func share(_ sender:UIButton) {
