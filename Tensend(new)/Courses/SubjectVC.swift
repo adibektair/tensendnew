@@ -91,27 +91,20 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
         
     }
     func share(){
-        UIGraphicsBeginImageContext(view.frame.size)
-        view.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        var textToShare = "Tensend"
-        if let title = material?.material?.title {
-            textToShare = title
-        }
         
         NetworkLayer().getLink { (link) in
             guard let link = link?.link else{
                 return
             }
-            
+            var textToShare = " \(link)"
+            if let title = self.material?.material?.title {
+                      textToShare = title + textToShare
+            }
             if let myWebsite = URL(string: link) {
-                let objectsToShare = [textToShare, myWebsite, image ?? #imageLiteral(resourceName: "app-logo")] as [Any]
+                let objectsToShare = [textToShare] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
                 
                 activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
-                
-                
                 activityVC.popoverPresentationController?.sourceView = self.view
                 self.present(activityVC, animated: true, completion: nil)
             }
