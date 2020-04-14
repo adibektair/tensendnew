@@ -96,10 +96,7 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
             guard let link = link?.link else{
                 return
             }
-            var textToShare = " \(link)"
-            if let title = self.material?.material?.title {
-                      textToShare = title + textToShare
-            }
+            var textToShare = "Сәлем. Білім ал, табыс тап. 400ден астам қазақ тіліндегі курстар. Tensend-ті тегін жүкте! \(link)"
             if let myWebsite = URL(string: link) {
                 let objectsToShare = [textToShare] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
