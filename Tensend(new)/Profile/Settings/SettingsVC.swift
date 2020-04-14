@@ -11,8 +11,8 @@ import UIKit
 class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    let titles = ["Жеке ақпарат", "Төлемдер мен табыс", "Құпия сөз", "Менің сертификаттарым", "Сұрақ/Жауап"]
-    let images : [UIImage] = [#imageLiteral(resourceName: "Screen Shot 2020-03-11 at 9.00.28 PM"), #imageLiteral(resourceName: "paymts"), #imageLiteral(resourceName: "pw"), #imageLiteral(resourceName: "cert"), #imageLiteral(resourceName: "faq")]
+    let titles = ["Жеке ақпарат", "Төлемдер мен табыс", "Құпия сөз", "Менің сертификаттарым", "Сұрақ/Жауап", "Автор болу", "Tensend жайлы"]
+    let images : [UIImage] = [#imageLiteral(resourceName: "Screen Shot 2020-03-11 at 9.00.28 PM"), #imageLiteral(resourceName: "paymts"), #imageLiteral(resourceName: "pw"), #imageLiteral(resourceName: "cert"), #imageLiteral(resourceName: "faq"), #imageLiteral(resourceName: "author"), #imageLiteral(resourceName: "about")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +25,34 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.tableView.separatorStyle = .none
         self.tableView.backgroundColor = .clear
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        
+//        let btnShare = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(btnShare_clicked))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Шығу", style: .plain, target: self, action: #selector(btnShare_clicked))
+
+
     }
 
-    
+    @objc func btnShare_clicked() {
+        let alert = UIAlertController(title: "Шығу", message: "", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Ия", style: .default, handler: { action in
+           let navigationController = UINavigationController()
+           navigationController.navigationBar.isTranslucent = true
+            let builder = AssemblyModuleBuilder()
+            let router = Router(navController: navigationController, assemblyProtocol: builder)
+            let mainViewController = builder.createAuthModule(router: router)
+            navigationController.viewControllers = [mainViewController]
+            navigationController.modalPresentationStyle = .fullScreen
+            UserDefault.clear()
+            self.present(navigationController, animated: true, completion: nil)
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Жоқ", style: .destructive, handler: { action in
+           
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+
     
     @IBOutlet weak var topConstraint: NSLayoutConstraint!{
         didSet{
@@ -66,7 +90,11 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         else if indexPath.section == 4{
             FAQViewController.open(vc: self)
         }
-        
+        else if indexPath.section == 5{
+            BeAnAuthorVC.open(vc: self)
+        }else{
+            AboutTensendVC.open(vc: self)
+        }
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10

@@ -28,3 +28,4 @@ class AllMycoursesVC: ScrollStackController {
          }
      }
 }
+

@@ -51,16 +51,19 @@ class MainVC: UIViewController {
         if #available(iOS 13.0, *) {
              overrideUserInterfaceStyle = .light
          }
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+       
         self.continueButton.isHidden = true
         phoneNumberTextField.maskExpression = "({ddd}) {ddd} {dd} {dd}"
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+               NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
+    
 
     @objc func keyboardWillAppear() {
+        
         self.logoImageView.isHidden = true
         
         self.topImageHeightConstraint.constant = 0
@@ -82,7 +85,8 @@ class MainVC: UIViewController {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
         self.continueButton.isHidden = true
-        
+        self.keyboardWillDisappear()
+        self.view.endEditing(true)
     }
     
     

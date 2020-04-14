@@ -15,15 +15,19 @@ protocol SignInProtocol {
     func singIn()
     func success()
     func goToTabBar()
+    func gotCountries()
 }
 
 protocol SignInPresenterProtocol {
+    var countries  : [Country]? { get set }
     init(router : Router, networkLayer : NetworkLayer, view : SignInProtocol)
     func signIn(phone: String, password: String)
     func goToResetPassword()
 }
 
 class SignInPresenter: SignInPresenterProtocol {
+    var countries: [Country]?
+    
     let view : SignInProtocol?
     let router : Router?
     let networkLayer : NetworkLayer?
@@ -32,6 +36,10 @@ class SignInPresenter: SignInPresenterProtocol {
         self.router = router
         self.view = view
         self.networkLayer = networkLayer
+        networkLayer.getCountries { (arr) in
+            self.countries = arr
+            self.view?.gotCountries()
+        }
     }
     
     func signIn(phone: String, password: String) {

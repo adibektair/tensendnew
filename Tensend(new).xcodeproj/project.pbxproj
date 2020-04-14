@@ -102,6 +102,8 @@
 		AA9163B82434EE2400EF1E8A /* MyCertificatesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9163B72434EE2300EF1E8A /* MyCertificatesVC.swift */; };
 		AA9C8BE6243A05F8006AA09F /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C8BE5243A05F8006AA09F /* FAQViewController.swift */; };
 		AA9C8BE9243A39CD006AA09F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA9C8BE8243A39CC006AA09F /* GoogleService-Info.plist */; };
+		AA9E85332440C61400F12977 /* BeAnAuthorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9E85322440C61400F12977 /* BeAnAuthorVC.swift */; };
+		AA9E85352440C9AC00F12977 /* AboutTensendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9E85342440C9AC00F12977 /* AboutTensendVC.swift */; };
 		AAB1300723EAFBE900D86BAC /* StandartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1300623EAFBE900D86BAC /* StandartResponse.swift */; };
 		AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */; };
 		AAB1302D23EC7D9500D86BAC /* CreatePasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */; };
@@ -245,6 +247,8 @@
 		AA9C8BE5243A05F8006AA09F /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		AA9C8BE7243A3965006AA09F /* Tensend.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tensend.entitlements; sourceTree = "<group>"; };
 		AA9C8BE8243A39CC006AA09F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AA9E85322440C61400F12977 /* BeAnAuthorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeAnAuthorVC.swift; sourceTree = "<group>"; };
+		AA9E85342440C9AC00F12977 /* AboutTensendVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTensendVC.swift; sourceTree = "<group>"; };
 		AAB1300623EAFBE900D86BAC /* StandartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartResponse.swift; sourceTree = "<group>"; };
 		AAB1302A23EC7D9500D86BAC /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		AAB1302B23EC7D9500D86BAC /* CreatePasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordView.xib; sourceTree = "<group>"; };
@@ -471,6 +475,8 @@
 				AA9163B02434B2A200EF1E8A /* ChangePasswordVC.swift */,
 				AA9163B72434EE2300EF1E8A /* MyCertificatesVC.swift */,
 				AA9C8BE5243A05F8006AA09F /* FAQViewController.swift */,
+				AA9E85322440C61400F12977 /* BeAnAuthorVC.swift */,
+				AA9E85342440C9AC00F12977 /* AboutTensendVC.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1001,12 +1007,14 @@
 				2FC6511724193ADE007F555A /* CongratulationVC.swift in Sources */,
 				2FD779742422926F005A0D2B /* SubscriptionType.swift in Sources */,
 				AA77BD7724096478009BFFD0 /* TokenHeaders.swift in Sources */,
+				AA9E85352440C9AC00F12977 /* AboutTensendVC.swift in Sources */,
 				2F1BD58B2401AAB6009E11B8 /* ForMe.swift in Sources */,
 				2FB43567241FAA000096A22B /* SubscribeVC.swift in Sources */,
 				2FB73B1624041BDD004A0A3A /* VideoView.swift in Sources */,
 				2F386EF823FC6C6E0058579E /* SectionsName.swift in Sources */,
 				AAD5DAA823E1774000D9F7D0 /* Builder.swift in Sources */,
 				AAB1302C23EC7D9500D86BAC /* CreatePasswordView.swift in Sources */,
+				AA9E85332440C61400F12977 /* BeAnAuthorVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1171,13 +1179,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = R5W6A2A7L3;
+				DEVELOPMENT_TEAM = GWSS3Q7L56;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
 				PRODUCT_NAME = Tensend;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1195,13 +1203,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = R5W6A2A7L3;
+				DEVELOPMENT_TEAM = GWSS3Q7L56;
 				INFOPLIST_FILE = "Tensend(new)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "kz.Tensend-new-ab";
 				PRODUCT_NAME = Tensend;
 				PROVISIONING_PROFILE_SPECIFIER = "";

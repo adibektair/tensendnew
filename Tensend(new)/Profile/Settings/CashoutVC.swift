@@ -88,7 +88,7 @@ class CashoutVC: ScrollStackController {
                 if result?.success ?? false{
                     self.showAlert(title: "Рақмет", message: "Өтінішіңіз жіберілді")
                 }else{
-                    self.showAlert(title: "Қате", message: "not enought balance")
+                    self.showAlert(title: "Қате", message: "Балансыңыздағы сома жеткіліксіз")
                 }
             }
         }else{
