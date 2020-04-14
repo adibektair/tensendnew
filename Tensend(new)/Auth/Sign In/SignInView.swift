@@ -73,8 +73,8 @@ extension SignInView : SignInProtocol{
     
     @objc func singIn() {
         if let phone = self.textField.text, let password = self.passwordTextField.text{
-            
-            self.presenter?.signIn(phone: phone.filter("1234567890".contains), password: password)
+            let phoneNumber = self.prefixLabel.text! + phone
+            self.presenter?.signIn(phone: phoneNumber.filter("1234567890".contains), password: password)
         }else{
             self.showAlert(title: "Внимание", message: "Заполните все поля")
         }

@@ -25,8 +25,9 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.tableView.separatorStyle = .none
         self.tableView.backgroundColor = .clear
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        let btnShare = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(btnShare_clicked))
-        self.navigationItem.rightBarButtonItem = btnShare
+//        let btnShare = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(btnShare_clicked))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Шығу", style: .plain, target: self, action: #selector(btnShare_clicked))
+
 
     }
 
