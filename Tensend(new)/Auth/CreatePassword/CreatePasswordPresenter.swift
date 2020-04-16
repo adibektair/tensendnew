@@ -63,7 +63,7 @@ class CreatePasswordPresenter: CreatePasswordPresenterProtocol {
             let params = [
                 "code" : code!,
                 "password" : password,
-                "phone" : phone
+                "phone" : "7" + phone
             ] as [String : AnyObject]
             networkManager.resetPassword(parameters: params) { (success) in
                 if success{

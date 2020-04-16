@@ -81,13 +81,13 @@ class NetworkLayer: NetworkLayoutProtocol {
        }
     
     func checkCode(phone: String, code: String, callback: @escaping (Bool) -> ()) {
-        let json = ["phone" : phone, "code" : code] as [String: AnyObject]
+        let json = ["login" : phone, "code" : code] as [String: AnyObject]
         
          Alamofire.request(apiUrl + "code/check", method: .post, parameters: json, encoding: JSONEncoding.default, headers: nil).responseObject{
                     (response: DataResponse<StandartResponse>) in
                     if let _ = response.response{
                         let model  = response.result
-                        callback(model.value?.success ?? false)
+                        callback(model.value?.right ?? false)
                     }
                 }
     }
@@ -95,7 +95,10 @@ class NetworkLayer: NetworkLayoutProtocol {
     
     
     func sendSMS(phone: String, callback: @escaping (Bool) -> ()) {
-        let json = ["phone" : phone] as [String: AnyObject]
+        
+        let phoneNumber = phone.filter("1234567890".contains)
+        let json = ["phone" : phoneNumber] as [String: AnyObject]
+        
         Alamofire.request(apiUrl + "code/send", method: .post, parameters: json, encoding: JSONEncoding.default, headers: nil).responseObject{
             (response: DataResponse<StandartResponse>) in
             if let _ = response.response{

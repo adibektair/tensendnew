@@ -41,13 +41,13 @@ class CheckCodePresenter: CheckCodePresenterProtocol {
     func checkCode(code: String) {
         let phoneNumber = self.phone.filter("1234567890".contains)
         
-        networkLayer.checkCode(phone: phoneNumber, code: code, callback: { success in
+        networkLayer.checkCode(phone: "7" + phoneNumber, code: code, callback: { success in
             if success{
                 self.view.correctCode()
                 self.router?.createPasswordViewController(phone: phoneNumber, isRegister: self.isRegister!, code: code)
             }else{
                 self.view.incorrectCode()
-                self.router?.createPasswordViewController(phone: phoneNumber, isRegister: self.isRegister!, code: code)
+//                self.router?.createPasswordViewController(phone: phoneNumber, isRegister: self.isRegister!, code: code)
             }
         })
     }

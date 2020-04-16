@@ -72,12 +72,13 @@ class TabbarViewController: UITabBarController {
     func unauthorizedCase(){
             let navigationController = UINavigationController()
             navigationController.navigationBar.isTranslucent = true
-            let builder = AssemblyModuleBuilder()
-            let router = Router(navController: navigationController, assemblyProtocol: builder)
-            let mainViewController = builder.createAuthModule(router: router)
-            navigationController.viewControllers = [mainViewController]
-            navigationController.modalPresentationStyle = .fullScreen
-            self.present(navigationController, animated: true, completion: nil)
+             let builder = AssemblyModuleBuilder()
+             let router = Router(navController: navigationController, assemblyProtocol: builder)
+             let mainViewController = builder.createAuthModule(router: router)
+             navigationController.viewControllers = [mainViewController]
+             navigationController.modalPresentationStyle = .fullScreen
+             UserDefault.clear()
+             self.present(navigationController, animated: true, completion: nil)
     }
    
 

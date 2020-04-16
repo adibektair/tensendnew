@@ -14,6 +14,7 @@ class StandartResponse : NSObject, NSCoding, Mappable{
 
     var message : String?
     var success : Bool?
+    var right : Bool?
 
 
     class func newInstance(map: Map) -> Mappable?{
@@ -26,7 +27,8 @@ class StandartResponse : NSObject, NSCoding, Mappable{
     {
         message <- map["message"]
         success <- map["success"]
-        
+        right <- map["is_right"]
+
     }
 
     /**
@@ -37,6 +39,7 @@ class StandartResponse : NSObject, NSCoding, Mappable{
     {
          message = aDecoder.decodeObject(forKey: "message") as? String
          success = aDecoder.decodeObject(forKey: "success") as? Bool
+        right = aDecoder.decodeObject(forKey: "is_right") as? Bool
 
     }
 
@@ -75,7 +78,7 @@ class RegisterResponse : NSObject, NSCoding, Mappable{
     {
         token <- map["token"]
         success <- map["success"]
-        
+
     }
 
     /**
