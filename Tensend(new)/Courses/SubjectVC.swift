@@ -206,10 +206,11 @@ class SubjectVC: ScrollStackController, UIWebViewDelegate {
                 self.setSubview()
                 self.reload()
                 self.getMaterial()
+                let name = self.forMe?.courses?.title ?? ""
                 if let passed = course.lessons?.last?.passed , passed == true {
                     self.nextLessonButton.setTitle("КУРСТЫ АЯҚТАУ", for: .normal)
                     self.nextLessonButton.addTapGestureRecognizer {
-                        CongratulationVC.open(vc: self, courseId: self.courseID) {
+                        CongratulationVC.open(vc: self, courseId: self.courseID,courseName: name) {
                             print("PDF kakoito")
                         }
                     }
