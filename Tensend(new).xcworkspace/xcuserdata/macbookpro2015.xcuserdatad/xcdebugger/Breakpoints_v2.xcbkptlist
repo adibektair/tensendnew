@@ -141,38 +141,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CEC82232-1AB0-44E2-B919-B47228A6883E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/TabbarViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "unauthorizedCase()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "196B65C6-83EA-4B24-BEEA-FF964B5F4391"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/TabbarViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "unauthorized(notification:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1C0CBC15-0E12-4980-A94F-9954FCEA4CB3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -269,22 +237,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4AA7E230-E4F7-4058-BF55-929C347E0324"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tensend(new)/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1FCC19D4-0E03-4238-B8BB-43B372391B16"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -328,6 +280,182 @@
             endingLineNumber = "42"
             landmarkName = "setView()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "33208DBD-25B9-4403-BC02-DA74D415F7EE - 772b44878055d10e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tensend.FAQViewController.setView() -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Profile/Settings/FAQViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "1008">
+               </Location>
+               <Location
+                  uuid = "33208DBD-25B9-4403-BC02-DA74D415F7EE - c0de6e6438629275"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Tensend.FAQViewController.setView() -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Profile/Settings/FAQViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01F7C775-4401-4466-B023-B5CF72FB460E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tensend(new)/Auth/CreatePassword/CreatePasswordPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "setPassword(password:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "01F7C775-4401-4466-B023-B5CF72FB460E - c63fbaac97c523eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tensend.CreatePasswordPresenter.setPassword(password: Swift.String) -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Auth/CreatePassword/CreatePasswordPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1220">
+               </Location>
+               <Location
+                  uuid = "01F7C775-4401-4466-B023-B5CF72FB460E - 8bf9e9c22300dc9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in Tensend.CreatePasswordPresenter.setPassword(password: Swift.String) -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Auth/CreatePassword/CreatePasswordPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28A7818A-6FA5-455E-98FB-75CE26E9034F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tensend(new)/Auth/NetworkLayout.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "sendSMS(phone:callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "28A7818A-6FA5-455E-98FB-75CE26E9034F - e016d1fcf989399c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tensend.NetworkLayer.sendSMS(phone: Swift.String, callback: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Auth/NetworkLayout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "368">
+               </Location>
+               <Location
+                  uuid = "28A7818A-6FA5-455E-98FB-75CE26E9034F - a07117a7c167b68f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Tensend.StandartResponse&gt;) -&gt; () in Tensend.NetworkLayer.sendSMS(phone: Swift.String, callback: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Auth/NetworkLayout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE6FDA81-D70D-476B-8181-93C4B6955BDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tensend(new)/Auth/NetworkLayout.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "checkCode(phone:code:callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CE6FDA81-D70D-476B-8181-93C4B6955BDE - 9e50eb40f9d22682"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tensend.NetworkLayer.checkCode(phone: Swift.String, code: Swift.String, callback: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Auth/NetworkLayout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "496">
+               </Location>
+               <Location
+                  uuid = "CE6FDA81-D70D-476B-8181-93C4B6955BDE - 110dbffe3820511"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Tensend.StandartResponse&gt;) -&gt; () in Tensend.NetworkLayer.checkCode(phone: Swift.String, code: Swift.String, callback: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tensend"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro2015/Desktop/iOS/Tensend(new)/Tensend(new)/Auth/NetworkLayout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
