@@ -47,7 +47,7 @@ class CongratulationVC: UIViewController {
         stackView.addArrangedSubview(congratLabel)
         
         
-        courseName.setProperties(text: "Сіз «Сымбатты мүсін» курсын тәмамдадыңыз!", textAlignment: .center, numberLines: 0)
+        courseName.setProperties(text: "Сіз курсты толықтай игердіңіз!", textAlignment: .center, numberLines: 0)
         stackView.addArrangedSubview(courseName)
         
         
