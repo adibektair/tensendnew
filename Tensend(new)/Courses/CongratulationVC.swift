@@ -12,6 +12,7 @@ import Cosmos
 
 class CongratulationVC: UIViewController {
 
+    var courseNameString = ""
     let backIMG = UIImageView()
     let percentIMG = UIImageView()
     var pdfPressed:(()-> Void)? = nil
@@ -47,7 +48,7 @@ class CongratulationVC: UIViewController {
         stackView.addArrangedSubview(congratLabel)
         
         
-        courseName.setProperties(text: "Сіз «Сымбатты мүсін» курсын тәмамдадыңыз!", textAlignment: .center, numberLines: 0)
+        courseName.setProperties(text: "Сіз <\(self.courseNameString)> курсын тәмәмдадыңыз!", textAlignment: .center, numberLines: 0)
         stackView.addArrangedSubview(courseName)
         
         
@@ -94,9 +95,11 @@ class CongratulationVC: UIViewController {
     // MARK: - Navigation
     static func open(vc: UIViewController,
                      courseId : Int,
+                     courseName: String = "",
                      pdfPressed:@escaping (()-> Void) ){
         let receiptVC = CongratulationVC()
         receiptVC.courseId = courseId
+        receiptVC.courseNameString = courseName
         receiptVC.pdfPressed = pdfPressed
         if let nav = vc.navigationController {
             nav.pushViewController(receiptVC, animated: true)

@@ -28,7 +28,7 @@ class HomeVC: ScrollStackController {
             guard let name = prof?.profile?.name else{
                 return
             }
-            self.titleLabel.text = "Cәлеместіз бе, \(name)!"
+            self.titleLabel.text = "Cәлеметcіз бе" + ", \(name)!"
         }
     }
     
